@@ -1,0 +1,9 @@
+li.open-dropdown-delayed ul {
+    display: none;
+    transition: display 1s;
+}
+
+li.open-dropdown-delayed:hover ul{
+    display: block;
+    transition: display 1s;
+}

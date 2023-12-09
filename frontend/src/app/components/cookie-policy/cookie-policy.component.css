@@ -1,0 +1,51 @@
+.elementor-3 .elementor-element.elementor-element-896ca15 > .elementor-container {
+    min-height: 140px;
+}
+
+.elementor-3 .elementor-element.elementor-element-896ca15:not(.elementor-motion-effects-element-type-background), .elementor-3 .elementor-element.elementor-element-896ca15 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-color: #FDF7F6;
+}
+
+.elementor-3 .elementor-element.elementor-element-896ca15 > .elementor-background-overlay {
+    background-image: url("https://valentinafilippini.it/wp-content/uploads/2021/02/book_pattern_org.svg");
+    background-repeat: repeat;
+    background-size: 20% auto;
+    opacity: 0.15;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-3 .elementor-element.elementor-element-896ca15 {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: -15px;
+    margin-bottom: 0px;
+}
+
+.elementor-3 .elementor-element.elementor-element-621134f {
+    text-align: center;
+}
+
+.elementor-3 .elementor-element.elementor-element-621134f .elementor-heading-title {
+    color: var( --e-global-color-text );
+    font-family: "DM Serif Display", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 39px;
+    font-weight: 500;
+}
+
+.elementor-3 .elementor-element.elementor-element-2105ba2 {
+    padding: 0px 30px 0px 30px;
+}
+
+.elementor-3 .elementor-element.elementor-element-251268d > .elementor-widget-container {
+    padding: 20px 20px 20px 20px;
+    background-color: #E9E9E9;
+}
+
+.elementor-3 .elementor-element.elementor-element-251268d:hover .elementor-widget-container {
+    background-color: var( --e-global-color-primary );
+}
+
+@media(max-width: 767px) {
+    .elementor-3 .elementor-element.elementor-element-2105ba2 {
+        padding:0px 7px 0px 7px;
+    }
+}

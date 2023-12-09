@@ -1,0 +1,51 @@
+.amelia-app-booking {
+    position: relative;
+}
+
+.amelia-app-booking {
+    font-size: 16px;
+}
+
+.amelia-app-booking #amelia-booking-wrap, #am-modal.am-modal.am-in-body {
+    font-family: Amelia Roboto;
+}
+
+.amelia-app-booking #amelia-booking-wrap div, #am-modal.am-modal.am-in-body div {
+    color: #354052;
+}
+
+.amelia-app-booking #amelia-booking-wrap .am-spinner, #am-modal.am-modal.am-in-body .am-spinner {
+    margin: 0 auto;
+    position: relative;
+}
+
+.amelia-app-booking #amelia-booking-wrap .am-spinner {
+    text-align: center;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.amelia-app-booking #amelia-booking-wrap .am-spinner .am-spin, #am-modal.am-modal.am-in-body .am-spinner .am-spin {
+    width: 80px;
+    padding: 0;
+    margin: 0;
+}
+
+.amelia-app-booking #amelia-booking-wrap .am-spinner .am-spin path, #am-modal.am-modal.am-in-body .am-spinner .am-spin path {
+    stroke: var(--e-global-color-primary);
+}
+
+.amelia-app-booking #amelia-booking-wrap .am-spinner .am-hourglass, #am-modal.am-modal.am-in-body .am-spinner .am-hourglass {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 24px;
+    padding: 0;
+    margin-left: -9px;
+    margin-top: -16px;
+}
+
+.amelia-app-booking #amelia-booking-wrap .am-spinner .am-hourglass path, #am-modal.am-modal.am-in-body .am-spinner .am-hourglass path {
+    fill: var(--e-global-color-primary);
+}

@@ -1,0 +1,218 @@
+<div
+  data-elementor-type="wp-page"
+  data-elementor-id="3895"
+  class="elementor elementor-3895"
+  data-elementor-post-type="page"
+>
+  <section
+    class="elementor-section elementor-top-section elementor-element elementor-element-47acb98 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle"
+    data-id="47acb98"
+    data-element_type="section"
+    data-settings='{"background_background":"classic"}'
+  >
+    <div class="elementor-background-overlay"></div>
+    <div class="elementor-container elementor-column-gap-default">
+      <div
+        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c2f6f40"
+        data-id="c2f6f40"
+        data-element_type="column"
+      >
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div
+            class="elementor-element elementor-element-d33947a elementor-widget elementor-widget-heading"
+            data-id="d33947a"
+            data-element_type="widget"
+            data-widget_type="heading.default"
+          >
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">
+                Area Riservata
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="elementor-section elementor-top-section elementor-element elementor-element-1b9bc7b6 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+    data-id="1b9bc7b6"
+    data-element_type="section"
+  >
+    <div class="elementor-container elementor-column-gap-default">
+      <div
+        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-75c3f2bd"
+        data-id="75c3f2bd"
+        data-element_type="column"
+      >
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div
+            class="elementor-element elementor-element-6b4cb2f e-my-account-tabs-vertical elementor-widget elementor-widget-woocommerce-my-account"
+            data-id="6b4cb2f"
+            data-element_type="widget"
+            data-widget_type="woocommerce-my-account.default"
+          >
+            <div class="elementor-widget-container">
+              <div class="e-my-account-tab e-my-account-tab__dashboard">
+                <span class="elementor-hidden">[woocommerce_my_account]</span>
+                <div class="woocommerce">
+                  <app-notices-block *ngIf="message" [message]="message.description" [status]="message.status" ></app-notices-block>
+                  <div class="u-columns col2-set" id="customer_login">
+                    <div class="u-column1 col-1">
+                      <h2>Accedi</h2>
+                      <form
+                        class="woocommerce-form woocommerce-form-login login"
+                        method="post"
+                        style="min-height: 352px"
+                      >
+                        <p
+                          class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+                        >
+                          <label for="username"
+                            >Nome utente o indirizzo email&nbsp;<span
+                              class="required"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            class="woocommerce-Input woocommerce-Input--text input-text"
+                            name="username"
+                            id="username"
+                            autocomplete="username"
+                            value=""
+                          />
+                        </p>
+                        <p
+                          class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+                        >
+                          <label for="password"
+                            >Password&nbsp;<span class="required"
+                              >*</span
+                            ></label
+                          >
+                          <span class="password-input"
+                            ><input
+                              class="woocommerce-Input woocommerce-Input--text input-text"
+                              type="password"
+                              name="password"
+                              id="password"
+                              autocomplete="current-password" /><span
+                              class="show-password-input"
+                            ></span
+                          ></span>
+                        </p>
+                        <p class="form-row">
+                          <button
+                            type="submit"
+                            class="woocommerce-button button woocommerce-form-login__submit"
+                            name="login"
+                            value="Accedi"
+                          >
+                            Accedi
+                          </button>
+                          <label
+                            class="d-flex align-items-center woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme"
+                          >
+                            <input
+                              class="woocommerce-form__input woocommerce-form__input-checkbox"
+                              name="rememberme"
+                              type="checkbox"
+                              id="rememberme"
+                              value="forever"
+                            />
+                            <span class="ml-1 mt-1n">Ricordami</span>
+                          </label>
+                          <input
+                            type="hidden"
+                            id="woocommerce-login-nonce"
+                            name="woocommerce-login-nonce"
+                            value="534c578387"
+                          /><input
+                            type="hidden"
+                            name="_wp_http_referer"
+                            value="/mio-account/"
+                          />
+                        </p>
+                        <p class="woocommerce-LostPassword lost_password">
+                          <a
+                            routerLink="/recupera-password"
+                            >Password dimenticata?</a
+                          >
+                        </p>
+                      </form>
+                    </div>
+                    <div class="u-column2 col-2">
+                      <h2>Registrati</h2>
+                      <form
+                        method="post"
+                        class="woocommerce-form woocommerce-form-register register"
+                        style="min-height: 352px"
+                      >
+                        <p
+                          class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
+                        >
+                          <label for="reg_email"
+                            >Indirizzo email&nbsp;<span class="required"
+                              >*</span
+                            ></label
+                          >
+                          <input
+                            type="email"
+                            class="woocommerce-Input woocommerce-Input--text input-text"
+                            name="email"
+                            id="reg_email"
+                            autocomplete="email"
+                            value=""
+                          />
+                        </p>
+                        <p>
+                          Un link per impostare una nuova password verrà inviato
+                          al tuo indirizzo email.
+                        </p>
+                        <div class="woocommerce-privacy-policy-text">
+                          <p>
+                            I tuoi dati personali verranno utilizzati per
+                            supportare la tua esperienza su questo sito web, per
+                            gestire l'accesso al tuo account e per altri scopi
+                            descritti nella nostra
+                            <a
+                              routerLink="/privacy-policy"
+                              class="woocommerce-privacy-policy-link"
+                              target="_blank"
+                              >privacy policy</a
+                            >.
+                          </p>
+                        </div>
+                        <p class="woocommerce-form-row form-row">
+                          <input
+                            type="hidden"
+                            id="woocommerce-register-nonce"
+                            name="woocommerce-register-nonce"
+                            value="748fdea07d"
+                          /><input
+                            type="hidden"
+                            name="_wp_http_referer"
+                            value="/mio-account/"
+                          />
+                          <button
+                            type="submit"
+                            class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit"
+                            name="register"
+                            value="Registrati"
+                          >
+                            Registrati
+                          </button>
+                        </p>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
