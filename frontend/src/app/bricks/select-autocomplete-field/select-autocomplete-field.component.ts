@@ -13,7 +13,7 @@ export interface AutoCompleteCompleteEvent {
   templateUrl: './select-autocomplete-field.component.html',
   styleUrls: ['./select-autocomplete-field.component.css']
 })
-export class SelectAutocompleteFieldComponent implements OnInit, AfterViewInit {
+export class SelectAutocompleteFieldComponent implements OnInit {
 
   @Input() optionsList = PAESI_LIST.map((elem) => elem.description);
 
@@ -24,7 +24,6 @@ export class SelectAutocompleteFieldComponent implements OnInit, AfterViewInit {
   @ViewChild('input')
   input!: ElementRef<HTMLInputElement>;
   myControl = new FormControl('');
-  // filteredOptions: string[];
 
 
   filter(): void {
@@ -32,16 +31,11 @@ export class SelectAutocompleteFieldComponent implements OnInit, AfterViewInit {
     this.filteredOptions = this.optionsList.filter(o => o.toLowerCase().includes(filterValue));
   }
 
-  constructor(private renderer: Renderer2, private el: ElementRef) { 
+  constructor() { 
     this.filteredOptions = this.optionsList.slice();
   }
 
   ngOnInit(): void {
-  }
-
-  ngAfterViewInit() {
-    // const inputElement = this.el.nativeElement.querySelector('.p-autocomplete-input');
-    // this.renderer.setAttribute(inputElement, 'autocomplete', 'off');
   }
 
   filterCountry(event: AutoCompleteCompleteEvent) {
