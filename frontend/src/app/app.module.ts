@@ -48,6 +48,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { AsyncPipe } from '@angular/common';
+import { InputWithValidationComponent } from './bricks/input-with-validation/input-with-validation.component';
+import { DettagliAccountComponent } from './components/dettagli-account/dettagli-account.component';
 
 export function playerFactory() {
   return player;
@@ -87,7 +89,9 @@ export function playerFactory() {
     OrdiniComponent,
     IndirizziComponent,
     AggiungiIndirizzoComponent,
-    SelectAutocompleteFieldComponent
+    SelectAutocompleteFieldComponent,
+    InputWithValidationComponent,
+    DettagliAccountComponent
   ],
   imports: [
     BrowserModule,

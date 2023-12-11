@@ -26,6 +26,7 @@ import { GestisciAppuntamentiComponent } from './components/gestisci-appuntament
 import { OrdiniComponent } from './components/ordini/ordini.component';
 import { IndirizziComponent } from './components/indirizzi/indirizzi.component';
 import { AggiungiIndirizzoComponent } from './components/aggiungi-indirizzo/aggiungi-indirizzo.component';
+import { DettagliAccountComponent } from './components/dettagli-account/dettagli-account.component';
 
 const routes: Routes = [
 
@@ -49,6 +50,7 @@ const routes: Routes = [
   { path: 'area-riservata/ordini', component: OrdiniComponent },
   { path: 'area-riservata/indirizzi', component: IndirizziComponent },
   { path: 'area-riservata/indirizzi/aggiungi', component: AggiungiIndirizzoComponent },
+  { path: 'area-riservata/dettaglio-account', component: DettagliAccountComponent },
 
 
   { path: 'home', component: HomeComponent },

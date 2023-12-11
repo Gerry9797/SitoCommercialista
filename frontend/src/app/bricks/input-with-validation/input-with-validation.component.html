@@ -1,0 +1,23 @@
+<ng-container *ngIf="formRef" [formGroup]="formRef">
+    
+    <!-- TYPE INPUT != PASSWORD  -->
+    <input *ngIf="type !== 'password'" id="{{id}}" type="{{type}}" placeholder="{{placeholder}}" formControlName="{{controlName}}"
+    [class.border-error]="formControlInput?.invalid && (formControlInput?.dirty || formControlInput?.touched)"/>
+    
+    <!-- TYPE INPUT PASSWORD  -->
+    <div *ngIf="type == 'password'" style="position: relative;">
+        <input  class="input-passw" id="{{id}}" type="{{currentTypePassword}}" placeholder="{{placeholder}}" formControlName="{{controlName}}"
+        [class.border-error]="formControlInput?.invalid && (formControlInput?.dirty || formControlInput?.touched)">
+        <i *ngIf="currentTypePassword === 'password'" class="fas fa-eye" (click)="changeTypePasswordInText()"></i>
+        <i *ngIf="currentTypePassword === 'text'" class="fas fa-eye-slash" (click)="changeTypePasswordInPassword()"></i>
+    </div>
+    
+    <div *ngIf="formControlInput?.invalid && formControlInput?.errors && (formControlInput?.dirty || formControlInput?.touched)" class="alert mt-10neg">
+        <small class="text-danger" *ngIf="formControlInput?.errors?.required">{{"general.validations.requiredField" }}</small>
+        <small class="text-danger" *ngIf="formControlInput?.errors?.email">{{"general.validations.validEmailRequired" }}</small>
+        <small class="text-danger" *ngIf="formControlInput?.errors?.pattern && type == 'password'">{{"general.validations.patternPassword" }}</small>
+        <small class="text-danger" *ngIf="formControlInput?.errors?.maxlength">{{"general.validations.maxLength"}} </small>
+        <small class="text-danger" *ngIf="formControlInput?.errors?.confirmedValidator && type == 'password'">{{"general.validations.matchPassword"}} </small>
+
+    </div>
+</ng-container>

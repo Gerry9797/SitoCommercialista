@@ -311,12 +311,12 @@
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-span.woocommerce-input-wrapper {
+/* End custom CSS */
+
+.password-input {
     width: 100%;
 }
 
-address {
-    line-height: 1.5;
+.password-input ::ng-deep input {
+    text-align: left !important;
 }
-
-/* End custom CSS */

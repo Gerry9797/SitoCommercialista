@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    background: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  font-size: 16px;
+  font-weight: 200px;
+  transition: border 0.5s;
+  outline: none;
+  /* color: #60666c; */
+  font-weight: bold;
+  border-radius: 14px;
+}
+
+.fa-eye, .fa-eye-slash {
+  position: absolute;
+  top: 24px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.input-passw {
+  padding-right: 35px;
+}

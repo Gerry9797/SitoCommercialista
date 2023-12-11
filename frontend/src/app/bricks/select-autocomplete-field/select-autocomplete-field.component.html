@@ -1,10 +1,9 @@
-<!-- <p-autoComplete [(ngModel)]="selectedOption" [dropdown]="true" [suggestions]="filteredOptions" (completeMethod)="filterCountry($event)" field="description" [style]="{'autocomplete': 'off'}"></p-autoComplete> -->
 <form class="example-form" class="my-autocomplete">
   <mat-form-field class="example-full-width">
     <!-- <mat-label>Number</mat-label> -->
     <input #input
            type="text"
-           placeholder="Seleziona un Paese/una regione…"
+           placeholder="{{placeholder}}"
            matInput
            [formControl]="myControl"
            [matAutocomplete]="auto"
@@ -12,7 +11,7 @@
            (focus)="filter()">
     <mat-autocomplete requireSelection #auto="matAutocomplete">
       @for (option of filteredOptions; track option) {
-        <mat-option [value]="option">{{option}}</mat-option>
+        <mat-option [value]="option[valueField]">{{option[descriptionField]}}</mat-option>
       }
     </mat-autocomplete>
   </mat-form-field>

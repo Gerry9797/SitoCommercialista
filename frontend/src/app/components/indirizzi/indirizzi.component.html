@@ -125,8 +125,7 @@
                           <li
                             class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address is-active"
                           >
-                            <a
-                              routerLink="/area-riservata/indirizzi"
+                            <a routerLink="/area-riservata/indirizzi"
                               >Indirizzi</a
                             >
                           </li>
@@ -151,7 +150,11 @@
 
                       <div class="woocommerce-MyAccount-content">
                         <div class="woocommerce-MyAccount-content-wrapper">
-                          <div class="woocommerce-notices-wrapper"></div>
+                          <app-notices-block
+                            *ngIf="message"
+                            [message]="message.description"
+                            [status]="message.status"
+                          ></app-notices-block>
 
                           <p>
                             I seguenti indirizzi saranno usati come predefiniti
@@ -162,13 +165,25 @@
                             <header class="woocommerce-Address-title title">
                               <h3>Indirizzo di fatturazione</h3>
                               <a
+                                *ngIf="!address"
                                 routerLink="/area-riservata/indirizzi/aggiungi"
                                 class="edit"
                                 >Aggiungi</a
                               >
+                              <a
+                              *ngIf="address"
+                              routerLink="/area-riservata/indirizzi/aggiungi"
+                              class="edit"
+                              >Modifica</a
+                            >
                             </header>
-                            <address style="height: 87px">
+                            <address *ngIf="!address" style="height: 87px">
                               Non hai ancora impostato questo tipo di indirizzo.
+                            </address>
+                            <address *ngIf="address" style="height: 231px">
+                              corbisiero srl<br />Gerardo Corbisiero<br />Via
+                              Ciorani, fraz. Lombardi<br />4<br />84085<br />MERCATO
+                              SAN SEVERINO<br />SALERNO
                             </address>
                           </div>
                         </div>

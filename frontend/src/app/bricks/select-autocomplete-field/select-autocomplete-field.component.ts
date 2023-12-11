@@ -15,11 +15,15 @@ export interface AutoCompleteCompleteEvent {
 })
 export class SelectAutocompleteFieldComponent implements OnInit {
 
-  @Input() optionsList = PAESI_LIST.map((elem) => elem.description);
+  // @Input() optionsList = PAESI_LIST.map((elem) => elem.description);
+  @Input() optionsList: any[] = PAESI_LIST;
+  @Input() valueField: string = "description";
+  @Input() descriptionField: string = "description";
+  @Input() placeholder: string = "Seleziona un Paese/una regione..."
 
   selectedOption: any | undefined;
 
-  filteredOptions: string[] = [];
+  filteredOptions: any[] = [];
 
   @ViewChild('input')
   input!: ElementRef<HTMLInputElement>;
@@ -28,7 +32,7 @@ export class SelectAutocompleteFieldComponent implements OnInit {
 
   filter(): void {
     const filterValue = this.input.nativeElement.value.toLowerCase();
-    this.filteredOptions = this.optionsList.filter(o => o.toLowerCase().includes(filterValue));
+    this.filteredOptions = this.optionsList.filter(o => o[this.descriptionField].toLowerCase().includes(filterValue));
   }
 
   constructor() { 
@@ -37,19 +41,5 @@ export class SelectAutocompleteFieldComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  filterCountry(event: AutoCompleteCompleteEvent) {
-    let filtered: any[] = [];
-    let query = event.query;
-
-    for (let i = 0; i < (this.optionsList as any[]).length; i++) {
-        let currOption = (this.optionsList as any[])[i];
-        if (currOption.description.toLowerCase().indexOf(query.toLowerCase()) == 0) {
-            filtered.push(currOption);
-        }
-    }
-
-    this.filteredOptions = filtered;
-}
 
 }
