@@ -27,6 +27,10 @@ import { OrdiniComponent } from './components/ordini/ordini.component';
 import { IndirizziComponent } from './components/indirizzi/indirizzi.component';
 import { AggiungiIndirizzoComponent } from './components/aggiungi-indirizzo/aggiungi-indirizzo.component';
 import { DettagliAccountComponent } from './components/dettagli-account/dettagli-account.component';
+import { ConsulenzaAziendaComponent } from './components/consulenza-azienda/consulenza-azienda.component';
+import { ConsulenzaPrivatiComponent } from './components/consulenza-privati/consulenza-privati.component';
+import { PrenotaConsulenzaComponent } from './prenota-consulenza/prenota-consulenza.component';
+import { LoadingPlaceholderComponent } from './bricks/loading-placeholder/loading-placeholder.component';
 
 const routes: Routes = [
 
@@ -43,6 +47,9 @@ const routes: Routes = [
   { path: 'cookie-policy', component: CookiePolicyComponent },
   { path: 'termini-e-condizioni', component: TerminiECondizioniComponent },
   { path: 'recupera-password', component: RecuperaPasswordComponent },
+  { path: 'aziende/consulenza', component: ConsulenzaAziendaComponent },
+  { path: 'privati/consulenza', component: ConsulenzaPrivatiComponent },
+  { path: 'prenota-consulenza', component: PrenotaConsulenzaComponent },
 
   // AREA RISERVATA 
   { path: 'area-riservata/bacheca', component: BachecaComponent },
@@ -61,6 +68,8 @@ const routes: Routes = [
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },
   // { path: '', redirectTo: 'home', pathMatch: 'full' }
+
+  {  path: 'loading-placeholder', component: LoadingPlaceholderComponent }
 ];
 
 @NgModule({

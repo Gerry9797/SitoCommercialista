@@ -50,6 +50,10 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { AsyncPipe } from '@angular/common';
 import { InputWithValidationComponent } from './bricks/input-with-validation/input-with-validation.component';
 import { DettagliAccountComponent } from './components/dettagli-account/dettagli-account.component';
+import { ConsulenzaAziendaComponent } from './components/consulenza-azienda/consulenza-azienda.component';
+import { ConsulenzaPrivatiComponent } from './components/consulenza-privati/consulenza-privati.component';
+import { PrenotaConsulenzaComponent } from './prenota-consulenza/prenota-consulenza.component';
+import { LoadingPlaceholderComponent } from './bricks/loading-placeholder/loading-placeholder.component';
 
 export function playerFactory() {
   return player;
@@ -91,7 +95,11 @@ export function playerFactory() {
     AggiungiIndirizzoComponent,
     SelectAutocompleteFieldComponent,
     InputWithValidationComponent,
-    DettagliAccountComponent
+    DettagliAccountComponent,
+    ConsulenzaAziendaComponent,
+    ConsulenzaPrivatiComponent,
+    PrenotaConsulenzaComponent,
+    LoadingPlaceholderComponent
   ],
   imports: [
     BrowserModule,

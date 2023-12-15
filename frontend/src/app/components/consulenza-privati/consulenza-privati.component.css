@@ -1,0 +1,398 @@
+.elementor-4812 .elementor-element.elementor-element-17bbc54 > .elementor-container {
+    min-height: 140px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-17bbc54:not(.elementor-motion-effects-element-type-background), .elementor-4812 .elementor-element.elementor-element-17bbc54 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-color: #FDF7F6;
+}
+
+.elementor-4812 .elementor-element.elementor-element-17bbc54 > .elementor-background-overlay {
+    background-image: url("https://valentinafilippini.it/wp-content/uploads/2021/02/book_pattern_org.svg");
+    background-repeat: repeat;
+    background-size: 20% auto;
+    opacity: 0.15;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-4812 .elementor-element.elementor-element-17bbc54 {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: -14px;
+    margin-bottom: 50px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-94fb315 .elementor-heading-title {
+    color: #DE805E;
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.elementor-4812 .elementor-element.elementor-element-94fb315 > .elementor-widget-container {
+    margin: 10px 35px -10px 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-1d5020c {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-c79dab6 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    margin-bottom: 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-c79dab6 > .elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-42d20ff .elementor-icon-box-wrapper {
+    text-align: left;
+}
+
+.elementor-4812 .elementor-element.elementor-element-42d20ff.elementor-view-stacked .elementor-icon:hover {
+    background-color: var( --e-global-color-accent );
+}
+
+.elementor-4812 .elementor-element.elementor-element-42d20ff.elementor-view-framed .elementor-icon:hover, .elementor-4812 .elementor-element.elementor-element-42d20ff.elementor-view-default .elementor-icon:hover {
+    fill: var( --e-global-color-accent );
+    color: var( --e-global-color-accent );
+    border-color: var( --e-global-color-accent );
+}
+
+.elementor-4812 .elementor-element.elementor-element-42d20ff {
+    --icon-box-icon-margin: 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-42d20ff .elementor-icon {
+    font-size: 123px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-42d20ff .elementor-icon-box-title {
+    margin-bottom: 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-42d20ff .elementor-icon-box-title, .elementor-4812 .elementor-element.elementor-element-42d20ff .elementor-icon-box-title a {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.elementor-4812 .elementor-element.elementor-element-42d20ff .elementor-icon-box-description {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.elementor-4812 .elementor-element.elementor-element-42d20ff > .elementor-widget-container {
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: var( --e-global-color-0482cab );
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 10px 27px -5px rgba(161, 111, 87.99999999999999, 0.61);
+}
+
+.elementor-4812 .elementor-element.elementor-element-73055ff > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    margin-bottom: 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-73055ff > .elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-3359d0a .elementor-icon-box-wrapper {
+    text-align: left;
+}
+
+.elementor-4812 .elementor-element.elementor-element-3359d0a.elementor-view-stacked .elementor-icon:hover {
+    background-color: var( --e-global-color-accent );
+}
+
+.elementor-4812 .elementor-element.elementor-element-3359d0a.elementor-view-framed .elementor-icon:hover, .elementor-4812 .elementor-element.elementor-element-3359d0a.elementor-view-default .elementor-icon:hover {
+    fill: var( --e-global-color-accent );
+    color: var( --e-global-color-accent );
+    border-color: var( --e-global-color-accent );
+}
+
+.elementor-4812 .elementor-element.elementor-element-3359d0a {
+    --icon-box-icon-margin: 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-3359d0a .elementor-icon {
+    font-size: 123px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-3359d0a .elementor-icon-box-title {
+    margin-bottom: 4px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-3359d0a .elementor-icon-box-title, .elementor-4812 .elementor-element.elementor-element-3359d0a .elementor-icon-box-title a {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.elementor-4812 .elementor-element.elementor-element-3359d0a .elementor-icon-box-description {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.elementor-4812 .elementor-element.elementor-element-3359d0a > .elementor-widget-container {
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: var( --e-global-color-0482cab );
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 10px 27px -5px rgba(161, 111, 87.99999999999999, 0.61);
+}
+
+.elementor-4812 .elementor-element.elementor-element-1408a75 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    margin-bottom: 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-1408a75 > .elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-ee9f6d1 .elementor-icon-box-wrapper {
+    text-align: left;
+}
+
+.elementor-4812 .elementor-element.elementor-element-ee9f6d1.elementor-view-stacked .elementor-icon:hover {
+    background-color: var( --e-global-color-accent );
+}
+
+.elementor-4812 .elementor-element.elementor-element-ee9f6d1.elementor-view-framed .elementor-icon:hover, .elementor-4812 .elementor-element.elementor-element-ee9f6d1.elementor-view-default .elementor-icon:hover {
+    fill: var( --e-global-color-accent );
+    color: var( --e-global-color-accent );
+    border-color: var( --e-global-color-accent );
+}
+
+.elementor-4812 .elementor-element.elementor-element-ee9f6d1 {
+    --icon-box-icon-margin: 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-ee9f6d1 .elementor-icon {
+    font-size: 123px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-ee9f6d1 .elementor-icon-box-title {
+    margin-bottom: 14px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-ee9f6d1 .elementor-icon-box-title, .elementor-4812 .elementor-element.elementor-element-ee9f6d1 .elementor-icon-box-title a {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.elementor-4812 .elementor-element.elementor-element-ee9f6d1 .elementor-icon-box-description {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.elementor-4812 .elementor-element.elementor-element-ee9f6d1 > .elementor-widget-container {
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: var( --e-global-color-0482cab );
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 10px 27px -5px rgba(161, 111, 87.99999999999999, 0.61);
+}
+
+.elementor-4812 .elementor-element.elementor-element-986482c > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    margin-bottom: 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-986482c > .elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-cf241e2 .elementor-icon-box-wrapper {
+    text-align: left;
+}
+
+.elementor-4812 .elementor-element.elementor-element-cf241e2.elementor-view-stacked .elementor-icon:hover {
+    background-color: var( --e-global-color-accent );
+}
+
+.elementor-4812 .elementor-element.elementor-element-cf241e2.elementor-view-framed .elementor-icon:hover, .elementor-4812 .elementor-element.elementor-element-cf241e2.elementor-view-default .elementor-icon:hover {
+    fill: var( --e-global-color-accent );
+    color: var( --e-global-color-accent );
+    border-color: var( --e-global-color-accent );
+}
+
+.elementor-4812 .elementor-element.elementor-element-cf241e2 {
+    --icon-box-icon-margin: 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-cf241e2 .elementor-icon {
+    font-size: 123px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-cf241e2 .elementor-icon-box-title {
+    margin-bottom: 14px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-cf241e2 .elementor-icon-box-title, .elementor-4812 .elementor-element.elementor-element-cf241e2 .elementor-icon-box-title a {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.elementor-4812 .elementor-element.elementor-element-cf241e2 .elementor-icon-box-description {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.elementor-4812 .elementor-element.elementor-element-cf241e2 > .elementor-widget-container {
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: var( --e-global-color-0482cab );
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 10px 27px -5px rgba(161, 111, 87.99999999999999, 0.61);
+}
+
+.elementor-4812 .elementor-element.elementor-element-3dc5354 {
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-8d216cf > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    margin-bottom: 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-8d216cf > .elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-7888263 .elementor-icon-box-wrapper {
+    text-align: left;
+}
+
+.elementor-4812 .elementor-element.elementor-element-7888263.elementor-view-stacked .elementor-icon:hover {
+    background-color: var( --e-global-color-accent );
+}
+
+.elementor-4812 .elementor-element.elementor-element-7888263.elementor-view-framed .elementor-icon:hover, .elementor-4812 .elementor-element.elementor-element-7888263.elementor-view-default .elementor-icon:hover {
+    fill: var( --e-global-color-accent );
+    color: var( --e-global-color-accent );
+    border-color: var( --e-global-color-accent );
+}
+
+.elementor-4812 .elementor-element.elementor-element-7888263 {
+    --icon-box-icon-margin: 0px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-7888263 .elementor-icon {
+    font-size: 123px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-7888263 .elementor-icon-box-title {
+    margin-bottom: 4px;
+}
+
+.elementor-4812 .elementor-element.elementor-element-7888263 .elementor-icon-box-title, .elementor-4812 .elementor-element.elementor-element-7888263 .elementor-icon-box-title a {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.elementor-4812 .elementor-element.elementor-element-7888263 .elementor-icon-box-description {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.elementor-4812 .elementor-element.elementor-element-7888263 > .elementor-widget-container {
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: var( --e-global-color-0482cab );
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 10px 27px -5px rgba(161, 111, 87.99999999999999, 0.61);
+}
+
+@media(max-width: 1024px) and (min-width:768px) {
+    .elementor-4812 .elementor-element.elementor-element-c79dab6 {
+        width:50%;
+    }
+
+    .elementor-4812 .elementor-element.elementor-element-73055ff {
+        width: 50%;
+    }
+
+    .elementor-4812 .elementor-element.elementor-element-1408a75 {
+        width: 50%;
+    }
+
+    .elementor-4812 .elementor-element.elementor-element-986482c {
+        width: 50%;
+    }
+
+    .elementor-4812 .elementor-element.elementor-element-8d216cf {
+        width: 50%;
+    }
+}
+
+@media(max-width: 1024px) {
+    .elementor-4812 .elementor-element.elementor-element-17bbc54 {
+        padding:0px 30px 0px 30px;
+    }
+}
+
+@media(max-width: 767px) {
+    .elementor-4812 .elementor-element.elementor-element-94fb315 {
+        text-align:left;
+    }
+
+    .elementor-4812 .elementor-element.elementor-element-94fb315 .elementor-heading-title {
+        font-size: 30px;
+    }
+
+    .elementor-4812 .elementor-element.elementor-element-94fb315 > .elementor-widget-container {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 5px 0px 5px;
+    }
+}
+
+/* Start custom CSS */
+.more {
+    display: none;
+}
+
+.myBtn {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.subt {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #DE805E;
+}
+
+.elementor-icon-box-title {
+    height: 44px;
+}
+
+/* End custom CSS */
