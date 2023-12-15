@@ -64294,3 +64294,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .elementor-2955 .elementor-element.elementor-element-0f3655a, .elementor-2955 .elementor-element.elementor-element-0f3655a > .elementor-container{
     z-index: 9;
 }
+
+.mat-typography h2.elementor-heading-title {
+    margin: 0 0 0;
+}
