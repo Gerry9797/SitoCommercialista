@@ -55,6 +55,7 @@ import { ConsulenzaPrivatiComponent } from './components/consulenza-privati/cons
 import { PrenotaConsulenzaComponent } from './prenota-consulenza/prenota-consulenza.component';
 import { LoadingPlaceholderComponent } from './bricks/loading-placeholder/loading-placeholder.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
+import { BusinessButtonsComponent } from './components/bricks/business-buttons/business-buttons.component';
 
 export function playerFactory() {
   return player;
@@ -101,7 +102,8 @@ export function playerFactory() {
     ConsulenzaPrivatiComponent,
     PrenotaConsulenzaComponent,
     LoadingPlaceholderComponent,
-    PresentationComponent
+    PresentationComponent,
+    BusinessButtonsComponent
   ],
   imports: [
     BrowserModule,

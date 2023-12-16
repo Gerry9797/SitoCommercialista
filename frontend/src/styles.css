@@ -52316,9 +52316,9 @@ body.rtl .elementor-homepage .elementor-element.elementor-element-presentation-l
     background-color: var( --e-global-color-accent );
 }
 
-.elementor-homepage .elementor-element.elementor-element-business-button-base:first-of-type > .elementor-element-populated, .elementor-homepage .elementor-element.elementor-element-business-button-base > .elementor-element-populated > .elementor-background-overlay, .elementor-homepage .elementor-element.elementor-element-business-button-base > .elementor-background-slideshow {
+/* .elementor-homepage .elementor-element.elementor-element-business-button-base:first-of-type > .elementor-element-populated, .elementor-homepage .elementor-element.elementor-element-business-button-base > .elementor-element-populated > .elementor-background-overlay, .elementor-homepage .elementor-element.elementor-element-business-button-base > .elementor-background-slideshow {
     border-radius: 10px 0px 0px 10px;
-}
+} */
 
 .elementor-homepage .elementor-element.elementor-element-business-button-base > .elementor-element-populated {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
@@ -52353,70 +52353,6 @@ body.rtl .elementor-homepage .elementor-element.elementor-element-presentation-l
 }
 
 .elementor-homepage .elementor-element.elementor-element-business-btn-text-2 .elementor-heading-title {
-    color: var( --e-global-color-0482cab );
-    font-family: "Poppins";
-    font-size: 35px;
-    font-weight: 600;
-}
-
-.elementor-bc-flex-widget .elementor-homepage .elementor-element.elementor-element-26a5ee9.elementor-column .elementor-widget-wrap {
-    align-items: center;
-}
-
-.elementor-homepage .elementor-element.elementor-element-26a5ee9.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
-    align-content: center;
-    align-items: center;
-}
-
-.elementor-homepage .elementor-element.elementor-element-26a5ee9.elementor-column > .elementor-widget-wrap {
-    justify-content: center;
-}
-
-.elementor-homepage .elementor-element.elementor-element-26a5ee9:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-homepage .elementor-element.elementor-element-26a5ee9 > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-    background-color: var( --e-global-color-secondary );
-}
-
-.elementor-homepage .elementor-element.elementor-element-26a5ee9:hover > .elementor-element-populated {
-    background-color: var(--e-global-color-secondary-hover);
-}
-
-.elementor-homepage .elementor-element.elementor-element-26a5ee9 > .elementor-element-populated, .elementor-homepage .elementor-element.elementor-element-26a5ee9 > .elementor-element-populated > .elementor-background-overlay, .elementor-homepage .elementor-element.elementor-element-26a5ee9 > .elementor-background-slideshow {
-    border-radius: 0px 10px 10px 0px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-26a5ee9 > .elementor-element-populated {
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-}
-
-.elementor-homepage .elementor-element.elementor-element-26a5ee9 > .elementor-element-populated > .elementor-background-overlay {
-    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-}
-
-.elementor-homepage .elementor-element.elementor-element-96bddeb {
-    text-align: center;
-    width: auto;
-    max-width: auto;
-}
-
-.elementor-homepage .elementor-element.elementor-element-96bddeb .elementor-heading-title {
-    color: var( --e-global-color-0482cab );
-    font-family: "Poppins";
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 1.5em;
-}
-
-.elementor-homepage .elementor-element.elementor-element-96bddeb > .elementor-widget-container {
-    margin: 0px 08px 0px 0px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-ef65519 {
-    text-align: center;
-    width: auto;
-    max-width: auto;
-}
-
-.elementor-homepage .elementor-element.elementor-element-ef65519 .elementor-heading-title {
     color: var( --e-global-color-0482cab );
     font-family: "Poppins";
     font-size: 35px;
@@ -52875,14 +52811,6 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
         font-size: 30px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-96bddeb .elementor-heading-title {
-        font-size: 19px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-ef65519 .elementor-heading-title {
-        font-size: 30px;
-    }
-
     .elementor-homepage .elementor-element.elementor-element-70c990b5 {
         margin-top: 15%;
         margin-bottom: 0%;
@@ -53066,18 +52994,6 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
     }
 
     .elementor-homepage .elementor-element.elementor-element-business-btn-text-2 .elementor-heading-title {
-        font-size: 25px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-26a5ee9 > .elementor-element-populated, .elementor-homepage .elementor-element.elementor-element-26a5ee9 > .elementor-element-populated > .elementor-background-overlay, .elementor-homepage .elementor-element.elementor-element-26a5ee9 > .elementor-background-slideshow {
-        border-radius: 0px 0px 10px 10px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-96bddeb .elementor-heading-title {
-        font-size: 17px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-ef65519 .elementor-heading-title {
         font-size: 25px;
     }
 
@@ -61221,7 +61137,7 @@ table.cookielawinfo-winter tfoot td, table.cookielawinfo-winter tfoot th, table.
     margin: 0px 0px 20px 0px;
 }
 
-.elementor-bc-flex-widget .elementor-3735 .elementor-element.elementor-element-24ce5c0.elementor-column .elementor-widget-wrap {
+/* .elementor-bc-flex-widget .elementor-3735 .elementor-element.elementor-element-24ce5c0.elementor-column .elementor-widget-wrap {
     align-items: center;
 }
 
@@ -61252,7 +61168,7 @@ table.cookielawinfo-winter tfoot td, table.cookielawinfo-winter tfoot th, table.
 
 .elementor-3735 .elementor-element.elementor-element-24ce5c0 > .elementor-element-populated > .elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-}
+} */
 
 .elementor-3735 .elementor-element.elementor-element-c0f3db3 {
     text-align: center;
@@ -61411,9 +61327,9 @@ table.cookielawinfo-winter tfoot td, table.cookielawinfo-winter tfoot th, table.
 }
 
 @media(max-width: 767px) {
-    .elementor-3735 .elementor-element.elementor-element-24ce5c0 > .elementor-element-populated, .elementor-3735 .elementor-element.elementor-element-24ce5c0 > .elementor-element-populated > .elementor-background-overlay, .elementor-3735 .elementor-element.elementor-element-24ce5c0 > .elementor-background-slideshow {
+    /* .elementor-3735 .elementor-element.elementor-element-24ce5c0 > .elementor-element-populated, .elementor-3735 .elementor-element.elementor-element-24ce5c0 > .elementor-element-populated > .elementor-background-overlay, .elementor-3735 .elementor-element.elementor-element-24ce5c0 > .elementor-background-slideshow {
         border-radius:10px 10px 0px 0px;
-    }
+    } */
 
     .elementor-3735 .elementor-element.elementor-element-c0f3db3 .elementor-heading-title {
         font-size: 17px;
@@ -63107,15 +63023,13 @@ table.cookielawinfo-winter tfoot td, table.cookielawinfo-winter tfoot th, table.
 }
 
 @media (max-width: 1144px){
-    .elementor-homepage .elementor-element.elementor-element-business-btn-text-1,
-    .elementor-homepage .elementor-element.elementor-element-96bddeb {
+    .elementor-homepage .elementor-element.elementor-element-business-btn-text-1 {
         width: 100% !important;
     }
 }
 
 @media (max-width: 767px){
-    .elementor-homepage .elementor-element.elementor-element-business-btn-text-1,
-    .elementor-homepage .elementor-element.elementor-element-96bddeb {
+    .elementor-homepage .elementor-element.elementor-element-business-btn-text-1 {
         width: auto !important;
     }
 }
@@ -63169,4 +63083,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 span.color-primary {
     color: var(--e-global-color-primary);
+}
+
+.elementor-element-business-button-base .rounded-corner-left {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.elementor-element-business-button-base .rounded-corner-right {
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--e-global-color-secondary) !important;
+}
+
+.elementor-element-business-button-base:hover .elementor-element-populated.rounded-corner-right {
+    background-color: var(--e-global-color-secondary-hover) !important;
+}
+
+@media (max-width: 767px){
+    .elementor-element-business-button-base .rounded-corner-right {
+        border-radius: 0px 0px 10px 10px !important;
+    }
 }
