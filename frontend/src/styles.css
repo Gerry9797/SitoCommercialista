@@ -52359,28 +52359,28 @@ body.rtl .elementor-homepage .elementor-element.elementor-element-presentation-l
     font-weight: 600;
 }
 
-.elementor-homepage .elementor-element.elementor-element-70c990b5 {
+.elementor-homepage .elementor-element.elementor-element-services-presentation-container {
     margin-top: 0%;
     margin-bottom: 0%;
     padding: 8% 3% 8% 3%;
 }
 
-.elementor-homepage .elementor-element.elementor-element-42d622b8 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+.elementor-homepage .elementor-element.elementor-element-services-presentation-block > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
     margin-bottom: 20px;
 }
 
-.elementor-homepage .elementor-element.elementor-element-e501729 {
+.elementor-homepage .elementor-element.elementor-element-services-presentation-title {
     text-align: center;
 }
 
-.elementor-homepage .elementor-element.elementor-element-e501729 .elementor-heading-title {
+.elementor-homepage .elementor-element.elementor-element-services-presentation-title .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins";
     font-size: 50px;
     font-weight: 600;
 }
 
-.elementor-homepage .elementor-element.elementor-element-56400498 {
+.elementor-homepage .elementor-element.elementor-element-services-presentation-description {
     text-align: center;
     color: var( --e-global-color-text );
     font-family: "Raleway";
@@ -52811,21 +52811,21 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
         font-size: 30px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-70c990b5 {
+    .elementor-homepage .elementor-element.elementor-element-services-presentation-container {
         margin-top: 15%;
         margin-bottom: 0%;
         padding: 0% 5% 0% 5%;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-42d622b8 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    .elementor-homepage .elementor-element.elementor-element-services-presentation-block > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
         margin-bottom: 15px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-e501729 .elementor-heading-title {
+    .elementor-homepage .elementor-element.elementor-element-services-presentation-title .elementor-heading-title {
         font-size: 45px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-56400498 {
+    .elementor-homepage .elementor-element.elementor-element-services-presentation-description {
         font-size: 16px;
     }
 
@@ -52997,20 +52997,20 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
         font-size: 25px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-70c990b5 {
+    .elementor-homepage .elementor-element.elementor-element-services-presentation-container {
         margin-top: 20%;
         margin-bottom: 0%;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-e501729 {
+    .elementor-homepage .elementor-element.elementor-element-services-presentation-title {
         text-align: center;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-e501729 .elementor-heading-title {
+    .elementor-homepage .elementor-element.elementor-element-services-presentation-title .elementor-heading-title {
         font-size: 35px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-56400498 {
+    .elementor-homepage .elementor-element.elementor-element-services-presentation-description {
         text-align: center;
         font-size: 16px;
     }
