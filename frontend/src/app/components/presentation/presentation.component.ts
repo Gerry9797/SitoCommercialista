@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SITE_CONFIG } from 'src/app/app.config';
 
 @Component({
   selector: 'app-presentation',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './presentation.component.css'
 })
 export class PresentationComponent {
+
+  revisoreLegaleFlag: boolean = SITE_CONFIG.revisoreLegale
 
 }
