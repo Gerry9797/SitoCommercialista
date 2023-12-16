@@ -54,6 +54,7 @@ import { ConsulenzaAziendaComponent } from './components/consulenza-azienda/cons
 import { ConsulenzaPrivatiComponent } from './components/consulenza-privati/consulenza-privati.component';
 import { PrenotaConsulenzaComponent } from './prenota-consulenza/prenota-consulenza.component';
 import { LoadingPlaceholderComponent } from './bricks/loading-placeholder/loading-placeholder.component';
+import { PresentationComponent } from './components/presentation/presentation.component';
 
 export function playerFactory() {
   return player;
@@ -99,7 +100,8 @@ export function playerFactory() {
     ConsulenzaAziendaComponent,
     ConsulenzaPrivatiComponent,
     PrenotaConsulenzaComponent,
-    LoadingPlaceholderComponent
+    LoadingPlaceholderComponent,
+    PresentationComponent
   ],
   imports: [
     BrowserModule,
