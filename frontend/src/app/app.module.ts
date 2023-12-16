@@ -56,6 +56,8 @@ import { PrenotaConsulenzaComponent } from './prenota-consulenza/prenota-consule
 import { LoadingPlaceholderComponent } from './bricks/loading-placeholder/loading-placeholder.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
 import { BusinessButtonsComponent } from './components/bricks/business-buttons/business-buttons.component';
+import { ServiceCardComponent } from './bricks/cards/service-card/service-card.component';
+import { ServicesPresentationComponent } from './components/services-presentation/services-presentation.component';
 
 export function playerFactory() {
   return player;
@@ -103,7 +105,9 @@ export function playerFactory() {
     PrenotaConsulenzaComponent,
     LoadingPlaceholderComponent,
     PresentationComponent,
-    BusinessButtonsComponent
+    BusinessButtonsComponent,
+    ServiceCardComponent,
+    ServicesPresentationComponent
   ],
   imports: [
     BrowserModule,

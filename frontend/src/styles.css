@@ -52394,46 +52394,46 @@ body.rtl .elementor-homepage .elementor-element.elementor-element-presentation-l
     word-spacing: 0em;
 }
 
-.elementor-homepage .elementor-element.elementor-element-3c29f48a {
+.elementor-homepage .elementor-element.elementor-element-services-cards {
     margin-top: 3%;
     margin-bottom: 0%;
 }
 
-.elementor-homepage .elementor-element.elementor-element-5a00c47f > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+.elementor-homepage .elementor-element.elementor-element-services-card-box > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
     margin-bottom: 0px;
 }
 
-.elementor-homepage .elementor-element.elementor-element-5a00c47f > .elementor-element-populated {
+.elementor-homepage .elementor-element.elementor-element-services-card-box > .elementor-element-populated {
     margin: 0px 030px 0px 0px;
     --e-column-margin-right: 030px;
     --e-column-margin-left: 0px;
 }
 
-.elementor-homepage .elementor-element.elementor-element-67f29ef7 .elementor-image-box-wrapper {
+.elementor-homepage .elementor-element.elementor-element-services-card-imagebox .elementor-image-box-wrapper {
     text-align: left;
 }
 
-.elementor-homepage .elementor-element.elementor-element-67f29ef7.elementor-position-right .elementor-image-box-img {
+.elementor-homepage .elementor-element.elementor-element-services-card-imagebox.elementor-position-right .elementor-image-box-img {
     margin-left: 20px;
 }
 
-.elementor-homepage .elementor-element.elementor-element-67f29ef7.elementor-position-left .elementor-image-box-img {
+.elementor-homepage .elementor-element.elementor-element-services-card-imagebox.elementor-position-left .elementor-image-box-img {
     margin-right: 20px;
 }
 
-.elementor-homepage .elementor-element.elementor-element-67f29ef7.elementor-position-top .elementor-image-box-img {
+.elementor-homepage .elementor-element.elementor-element-services-card-imagebox.elementor-position-top .elementor-image-box-img {
     margin-bottom: 20px;
 }
 
-.elementor-homepage .elementor-element.elementor-element-67f29ef7 .elementor-image-box-wrapper .elementor-image-box-img {
+.elementor-homepage .elementor-element.elementor-element-services-card-imagebox .elementor-image-box-wrapper .elementor-image-box-img {
     width: 70%;
 }
 
-.elementor-homepage .elementor-element.elementor-element-67f29ef7 .elementor-image-box-img img {
+.elementor-homepage .elementor-element.elementor-element-services-card-imagebox .elementor-image-box-img img {
     transition-duration: 0.3s;
 }
 
-.elementor-homepage .elementor-element.elementor-element-67f29ef7 .elementor-image-box-title {
+.elementor-homepage .elementor-element.elementor-element-services-card-imagebox .elementor-image-box-title {
     margin-bottom: 14px;
     color: var( --e-global-color-text );
     font-family: "Poppins";
@@ -52447,7 +52447,7 @@ body.rtl .elementor-homepage .elementor-element.elementor-element-presentation-l
     word-spacing: 0em;
 }
 
-.elementor-homepage .elementor-element.elementor-element-67f29ef7 .elementor-image-box-description {
+.elementor-homepage .elementor-element.elementor-element-services-card-imagebox .elementor-image-box-description {
     color: var( --e-global-color-text );
     font-family: "Poppins";
     font-size: 16px;
@@ -52460,246 +52460,43 @@ body.rtl .elementor-homepage .elementor-element.elementor-element-presentation-l
     word-spacing: 0px;
 }
 
-.elementor-homepage .elementor-element.elementor-element-67f29ef7 > .elementor-widget-container {
+.elementor-homepage .elementor-element.elementor-element-services-card-imagebox > .elementor-widget-container {
     padding: 20px 20px 20px 20px;
     background-color: var( --e-global-color-0482cab );
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0px 10px 21px 0px rgba(79, 80, 81, 0.24);
 }
 
-.elementor-homepage .elementor-element.elementor-element-3a1210b5 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
-    margin-bottom: 0px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-3a1210b5 > .elementor-element-populated {
-    margin: 0px 030px 0px 0px;
-    --e-column-margin-right: 030px;
-    --e-column-margin-left: 0px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1885798 .elementor-image-box-wrapper {
-    text-align: left;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1885798.elementor-position-right .elementor-image-box-img {
-    margin-left: 20px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1885798.elementor-position-left .elementor-image-box-img {
-    margin-right: 20px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1885798.elementor-position-top .elementor-image-box-img {
-    margin-bottom: 20px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1885798 .elementor-image-box-wrapper .elementor-image-box-img {
-    width: 70%;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1885798 .elementor-image-box-img img {
-    transition-duration: 0.3s;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1885798 .elementor-image-box-title {
-    margin-bottom: 14px;
-    color: var( --e-global-color-text );
-    font-family: "Poppins";
-    font-size: 19px;
-    font-weight: 600;
-    text-transform: capitalize;
-    font-style: normal;
-    text-decoration: none;
-    letter-spacing: -1px;
-    word-spacing: 0px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1885798 .elementor-image-box-description {
-    color: var( --e-global-color-text );
-    font-family: "Poppins";
-    font-size: 16px;
-    font-weight: 300;
-    text-transform: none;
-    font-style: normal;
-    text-decoration: none;
-    line-height: 1.5em;
-    letter-spacing: 0px;
-    word-spacing: 0px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1885798 > .elementor-widget-container {
-    padding: 20px 20px 20px 20px;
-    background-color: var( --e-global-color-0482cab );
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 10px 21px 0px rgba(79, 80, 81, 0.24);
-}
-
-.elementor-homepage .elementor-element.elementor-element-427364d7 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
-    margin-bottom: 0px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-427364d7 > .elementor-element-populated {
-    margin: 0px 030px 0px 0px;
-    --e-column-margin-right: 030px;
-    --e-column-margin-left: 0px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1bd67bea .elementor-image-box-wrapper {
-    text-align: left;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1bd67bea.elementor-position-right .elementor-image-box-img {
-    margin-left: 20px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1bd67bea.elementor-position-left .elementor-image-box-img {
-    margin-right: 20px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1bd67bea.elementor-position-top .elementor-image-box-img {
-    margin-bottom: 20px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1bd67bea .elementor-image-box-wrapper .elementor-image-box-img {
-    width: 70%;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1bd67bea .elementor-image-box-img img {
-    transition-duration: 0.3s;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1bd67bea .elementor-image-box-title {
-    margin-bottom: 14px;
-    color: var( --e-global-color-text );
-    font-family: "Poppins";
-    font-size: 19px;
-    font-weight: 600;
-    text-transform: capitalize;
-    font-style: normal;
-    text-decoration: none;
-    line-height: 1.2em;
-    letter-spacing: 0px;
-    word-spacing: 0em;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1bd67bea .elementor-image-box-description {
-    color: var( --e-global-color-text );
-    font-family: "Poppins";
-    font-size: 16px;
-    font-weight: 300;
-    text-transform: none;
-    font-style: normal;
-    text-decoration: none;
-    line-height: 1.5em;
-    letter-spacing: 0px;
-    word-spacing: 0px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-1bd67bea > .elementor-widget-container {
-    padding: 20px 20px 20px 20px;
-    background-color: var( --e-global-color-0482cab );
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 10px 21px 0px rgba(79, 80, 81, 0.24);
-}
-
-.elementor-homepage .elementor-element.elementor-element-6ffd5d88 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
-    margin-bottom: 0px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-6ffd5d88 > .elementor-element-populated {
-    margin: 0px 030px 0px 0px;
-    --e-column-margin-right: 030px;
-    --e-column-margin-left: 0px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-33f5b66 .elementor-image-box-wrapper {
-    text-align: left;
-}
-
-.elementor-homepage .elementor-element.elementor-element-33f5b66.elementor-position-right .elementor-image-box-img {
-    margin-left: 20px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-33f5b66.elementor-position-left .elementor-image-box-img {
-    margin-right: 20px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-33f5b66.elementor-position-top .elementor-image-box-img {
-    margin-bottom: 20px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-33f5b66 .elementor-image-box-wrapper .elementor-image-box-img {
-    width: 70%;
-}
-
-.elementor-homepage .elementor-element.elementor-element-33f5b66 .elementor-image-box-img img {
-    transition-duration: 0.3s;
-}
-
-.elementor-homepage .elementor-element.elementor-element-33f5b66 .elementor-image-box-title {
-    margin-bottom: 14px;
-    color: var( --e-global-color-text );
-    font-family: "Poppins";
-    font-size: 19px;
-    font-weight: 600;
-    text-transform: capitalize;
-    font-style: normal;
-    text-decoration: none;
-    line-height: 1.2em;
-    letter-spacing: 0px;
-    word-spacing: 0em;
-}
-
-.elementor-homepage .elementor-element.elementor-element-33f5b66 .elementor-image-box-description {
-    color: var( --e-global-color-text );
-    font-family: "Poppins";
-    font-size: 16px;
-    font-weight: 300;
-    text-transform: none;
-    font-style: normal;
-    text-decoration: none;
-    line-height: 1.5em;
-    letter-spacing: 0px;
-    word-spacing: 0px;
-}
-
-.elementor-homepage .elementor-element.elementor-element-33f5b66 > .elementor-widget-container {
-    padding: 20px 20px 20px 20px;
-    background-color: var( --e-global-color-0482cab );
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 10px 21px 0px rgba(79, 80, 81, 0.24);
-}
-
-.elementor-homepage .elementor-element.elementor-element-c39c947 {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation-section {
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 0% 3% 8% 3%;
 }
 
-.elementor-bc-flex-widget .elementor-homepage .elementor-element.elementor-element-7a93ae9.elementor-column .elementor-widget-wrap {
+.elementor-bc-flex-widget .elementor-homepage .elementor-element.elementor-element-macrocard-presentation.elementor-column .elementor-widget-wrap {
     align-items: center;
 }
 
-.elementor-homepage .elementor-element.elementor-element-7a93ae9.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
     align-content: center;
     align-items: center;
 }
 
-.elementor-homepage .elementor-element.elementor-element-7a93ae9:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-homepage .elementor-element.elementor-element-7a93ae9 > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-homepage .elementor-element.elementor-element-macrocard-presentation > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: transparent;
     background-image: linear-gradient(190deg, #F7F0ED 0%, var( --e-global-color-accent ) 66%);
 }
 
-.elementor-homepage .elementor-element.elementor-element-7a93ae9 > .elementor-element-populated, .elementor-homepage .elementor-element.elementor-element-7a93ae9 > .elementor-element-populated > .elementor-background-overlay, .elementor-homepage .elementor-element.elementor-element-7a93ae9 > .elementor-background-slideshow {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation > .elementor-element-populated, .elementor-homepage .elementor-element.elementor-element-macrocard-presentation > .elementor-element-populated > .elementor-background-overlay, .elementor-homepage .elementor-element.elementor-element-macrocard-presentation > .elementor-background-slideshow {
     border-radius: 20px 20px 20px 20px;
 }
 
-.elementor-homepage .elementor-element.elementor-element-7a93ae9 > .elementor-element-populated {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation > .elementor-element-populated {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     padding: 60px 20px 100px 20px;
 }
 
-.elementor-homepage .elementor-element.elementor-element-7a93ae9 > .elementor-element-populated > .elementor-background-overlay {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation > .elementor-element-populated > .elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
@@ -52829,53 +52626,23 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
         font-size: 16px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-5a00c47f > .elementor-element-populated {
+    .elementor-homepage .elementor-element.elementor-element-services-card-box > .elementor-element-populated {
         margin: 0% 0% 9% 05%;
         --e-column-margin-right: 0%;
         --e-column-margin-left: 05%;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-67f29ef7 .elementor-image-box-description {
+    .elementor-homepage .elementor-element.elementor-element-services-card-imagebox .elementor-image-box-description {
         font-size: 16px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-3a1210b5 > .elementor-element-populated {
-        margin: 0% 0% 9% 05%;
-        --e-column-margin-right: 0%;
-        --e-column-margin-left: 05%;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-1885798 .elementor-image-box-description {
-        font-size: 16px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-427364d7 > .elementor-element-populated {
-        margin: 0% 0% 9% 05%;
-        --e-column-margin-right: 0%;
-        --e-column-margin-left: 05%;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-1bd67bea .elementor-image-box-description {
-        font-size: 16px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-6ffd5d88 > .elementor-element-populated {
-        margin: 0% 05% 9% 0%;
-        --e-column-margin-right: 05%;
-        --e-column-margin-left: 0%;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-33f5b66 .elementor-image-box-description {
-        font-size: 16px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-c39c947 {
+    .elementor-homepage .elementor-element.elementor-element-macrocard-presentation-section {
         margin-top: 15%;
         margin-bottom: 0%;
         padding: 0% 5% 0% 5%;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-7a93ae9 > .elementor-element-populated {
+    .elementor-homepage .elementor-element.elementor-element-macrocard-presentation > .elementor-element-populated {
         padding: 50px 20px 50px 20px;
     }
 
@@ -53015,84 +52782,30 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
         font-size: 16px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-3c29f48a {
+    .elementor-homepage .elementor-element.elementor-element-services-cards {
         margin-top: 10%;
         margin-bottom: 0%;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-5a00c47f > .elementor-element-populated {
+    .elementor-homepage .elementor-element.elementor-element-services-card-box > .elementor-element-populated {
         margin: 0px 0px 20px 0px;
         --e-column-margin-right: 0px;
         --e-column-margin-left: 0px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-67f29ef7 .elementor-image-box-img {
+    .elementor-homepage .elementor-element.elementor-element-services-card-imagebox .elementor-image-box-img {
         margin-bottom: 20px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-67f29ef7 .elementor-image-box-title {
+    .elementor-homepage .elementor-element.elementor-element-services-card-imagebox .elementor-image-box-title {
         font-size: 20px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-67f29ef7 .elementor-image-box-description {
+    .elementor-homepage .elementor-element.elementor-element-services-card-imagebox .elementor-image-box-description {
         font-size: 16px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-3a1210b5 > .elementor-element-populated {
-        margin: 0px 0px 20px 0px;
-        --e-column-margin-right: 0px;
-        --e-column-margin-left: 0px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-1885798 .elementor-image-box-img {
-        margin-bottom: 20px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-1885798 .elementor-image-box-title {
-        font-size: 20px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-1885798 .elementor-image-box-description {
-        font-size: 16px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-427364d7 > .elementor-element-populated {
-        margin: 0px 0px 20px 0px;
-        --e-column-margin-right: 0px;
-        --e-column-margin-left: 0px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-1bd67bea .elementor-image-box-img {
-        margin-bottom: 20px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-1bd67bea .elementor-image-box-title {
-        font-size: 20px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-1bd67bea .elementor-image-box-description {
-        font-size: 16px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-6ffd5d88 > .elementor-element-populated {
-        margin: 0px 0px 0px 0px;
-        --e-column-margin-right: 0px;
-        --e-column-margin-left: 0px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-33f5b66 .elementor-image-box-img {
-        margin-bottom: 20px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-33f5b66 .elementor-image-box-title {
-        font-size: 20px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-33f5b66 .elementor-image-box-description {
-        font-size: 16px;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-c39c947 {
+    .elementor-homepage .elementor-element.elementor-element-macrocard-presentation-section {
         margin-top: 020%;
         margin-bottom: 0%;
     }
@@ -53135,19 +52848,7 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
         width: 20%;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-5a00c47f {
-        width: 50%;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-3a1210b5 {
-        width: 50%;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-427364d7 {
-        width: 50%;
-    }
-
-    .elementor-homepage .elementor-element.elementor-element-6ffd5d88 {
+    .elementor-homepage .elementor-element.elementor-element-services-card-box {
         width: 50%;
     }
 }

@@ -8,7 +8,6 @@ import {
   ViewChild,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { SITE_CONFIG } from 'src/app/app.config';
 import { UtilityService } from 'src/app/services/utility/utility.service';
 
 @Component({

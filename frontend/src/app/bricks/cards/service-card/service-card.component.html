@@ -1,0 +1,23 @@
+<div class="elementor-element elementor-element-services-card-imagebox elementor-position-top elementor-widget elementor-widget-image-box">
+    <div class="elementor-widget-container">
+        <div class="elementor-image-box-wrapper">
+            <figure class="elementor-image-box-img">
+                <a [routerLink]="redirectUrl" tabindex="-1">
+                <img
+                    decoding="async"
+                    src="{{image}}"
+                    class="elementor-animation-grow attachment-full size-full lazyloaded"
+                    alt="" />
+                </a>
+            </figure>
+            <div class="elementor-image-box-content">
+                <h4 class="elementor-image-box-title">
+                    <a [routerLink]="redirectUrl">{{title}}</a>
+                </h4>
+                <p class="elementor-image-box-description">
+                    <a [routerLink]="redirectUrl" class="btn-vf">{{actionDescription}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
