@@ -58,6 +58,7 @@ import { PresentationComponent } from './components/presentation/presentation.co
 import { BusinessButtonsComponent } from './components/bricks/business-buttons/business-buttons.component';
 import { ServiceCardComponent } from './bricks/cards/service-card/service-card.component';
 import { ServicesPresentationComponent } from './components/services-presentation/services-presentation.component';
+import { MacrocardImpressionComponent } from './bricks/macrocard-impression/macrocard-impression.component';
 
 export function playerFactory() {
   return player;
@@ -107,7 +108,8 @@ export function playerFactory() {
     PresentationComponent,
     BusinessButtonsComponent,
     ServiceCardComponent,
-    ServicesPresentationComponent
+    ServicesPresentationComponent,
+    MacrocardImpressionComponent
   ],
   imports: [
     BrowserModule,

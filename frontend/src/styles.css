@@ -52500,24 +52500,24 @@ body.rtl .elementor-homepage .elementor-element.elementor-element-presentation-l
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.elementor-homepage .elementor-element.elementor-element-ace7c9e > .elementor-container {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation-top-section > .elementor-container {
     max-width: 1015px;
 }
 
-.elementor-bc-flex-widget .elementor-homepage .elementor-element.elementor-element-5331491.elementor-column .elementor-widget-wrap {
+.elementor-bc-flex-widget .elementor-homepage .elementor-element.elementor-element-macrocard-presentation-top-left.elementor-column .elementor-widget-wrap {
     align-items: center;
 }
 
-.elementor-homepage .elementor-element.elementor-element-5331491.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation-top-left.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
     align-content: center;
     align-items: center;
 }
 
-.elementor-homepage .elementor-element.elementor-element-c06b3a5 {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation-citation {
     text-align: left;
 }
 
-.elementor-homepage .elementor-element.elementor-element-c06b3a5 .elementor-heading-title {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation-citation .elementor-heading-title {
     color: #FFFFFF;
     font-family: "Raleway";
     font-size: 45px;
@@ -52526,11 +52526,11 @@ body.rtl .elementor-homepage .elementor-element.elementor-element-presentation-l
     letter-spacing: 0.4px;
 }
 
-.elementor-homepage .elementor-element.elementor-element-ea6f2f4 {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation-who-cited {
     text-align: center;
 }
 
-.elementor-homepage .elementor-element.elementor-element-ea6f2f4 .elementor-heading-title {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation-who-cited .elementor-heading-title {
     color: #FFFFFF;
     font-family: "Raleway";
     font-size: 20px;
@@ -52539,25 +52539,25 @@ body.rtl .elementor-homepage .elementor-element.elementor-element-presentation-l
     letter-spacing: 0.4px;
 }
 
-.elementor-homepage .elementor-element.elementor-element-2e53a6c img {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation-img img {
     width: 66%;
     border-radius: 20px 20px 20px 20px;
 }
 
-.elementor-homepage .elementor-element.elementor-element-5a6f92b > .elementor-container {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation-bottom-section > .elementor-container {
     max-width: 1015px;
 }
 
-.elementor-bc-flex-widget .elementor-homepage .elementor-element.elementor-element-9955eda.elementor-column .elementor-widget-wrap {
+.elementor-bc-flex-widget .elementor-homepage .elementor-element.elementor-element-macrocard-presentation-description.elementor-column .elementor-widget-wrap {
     align-items: center;
 }
 
-.elementor-homepage .elementor-element.elementor-element-9955eda.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation-description.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
     align-content: center;
     align-items: center;
 }
 
-.elementor-homepage .elementor-element.elementor-element-3d601ce {
+.elementor-homepage .elementor-element.elementor-element-macrocard-presentation-description-txt {
     color: #FFFFFF;
     font-family: "Raleway";
     font-size: 17px;
@@ -52646,11 +52646,11 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
         padding: 50px 20px 50px 20px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-c06b3a5 .elementor-heading-title {
+    .elementor-homepage .elementor-element.elementor-element-macrocard-presentation-citation .elementor-heading-title {
         font-size: 40px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-ea6f2f4 .elementor-heading-title {
+    .elementor-homepage .elementor-element.elementor-element-macrocard-presentation-who-cited .elementor-heading-title {
         font-size: 22px;
     }
 
@@ -52810,11 +52810,11 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
         margin-bottom: 0%;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-c06b3a5 .elementor-heading-title {
+    .elementor-homepage .elementor-element.elementor-element-macrocard-presentation-citation .elementor-heading-title {
         font-size: 33px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-ea6f2f4 .elementor-heading-title {
+    .elementor-homepage .elementor-element.elementor-element-macrocard-presentation-who-cited .elementor-heading-title {
         font-size: 33px;
     }
 
