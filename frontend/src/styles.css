@@ -62811,4 +62811,9 @@ span.color-primary {
     .elementor-element-business-button-base .rounded-corner-right {
         border-radius: 0px 0px 10px 10px !important;
     }
+
+    .elementor-homepage .elementor-element.elementor-element-business-btn-text-1{
+        display: flex;
+        align-items: center;
+    }
 }
