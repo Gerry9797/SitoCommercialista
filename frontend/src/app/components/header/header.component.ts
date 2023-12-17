@@ -1,5 +1,19 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
+interface IMenuItem {
+  redirectUrl?: string,  //campo li semplice
+  label: string, //campo generale
+  type: string, //campo generale
+  children?: IMenuItemsChildren[], //campo li dropdown
+  idToggleDropdown?: string, //campo dropdown
+  idAriaControls?: string, //campo dropdown
+}
+
+interface IMenuItemsChildren {
+  redirectUrl: string,
+  label: string
+}
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,9 +23,13 @@ export class HeaderComponent implements OnInit {
 
   isScrolled: boolean = false;
 
+  menuItems: IMenuItem[] = []
+
   constructor() { }
 
   ngOnInit(): void {
+
+    this.loadMenuItemsConiguration();
 
     this.handleListItemWithDropdownKeepSelectionOnItsUlChildren();
   }
@@ -25,6 +43,52 @@ export class HeaderComponent implements OnInit {
     else {
       this.isScrolled = false;
     }
+  }
+
+  loadMenuItemsConiguration(){
+    this.menuItems = [
+      {
+        redirectUrl: "/chi-sono",
+        label: "Chi sono",
+        type: "simple"
+      },
+      {
+        label: "Servizi",
+        type: "dropdown",
+        idToggleDropdown: "sm-16959237626095222-1",
+        idAriaControls: "sm-16959237626095222-2",
+        children: [
+          {
+            redirectUrl: "/aziende",
+            label: "Aziende",
+          },
+          {
+            redirectUrl: "/privati",
+            label: "Privati",
+          }
+        ]
+      },
+      {
+        redirectUrl: "/ebook-e-guide",
+        label: "eBook",
+        type: "simple"
+      },
+      {
+        redirectUrl: "/webinar",
+        label: "Webinar",
+        type: "simple"
+      },
+      {
+        redirectUrl: "/articoli",
+        label: "Articoli",
+        type: "simple"
+      },
+      {
+        redirectUrl: "/contatti",
+        label: "Contatti",
+        type: "simple"
+      }
+    ]
   }
 
   handleListItemWithDropdownKeepSelectionOnItsUlChildren(){
@@ -51,16 +115,6 @@ export class HeaderComponent implements OnInit {
         });
       }
     )
-
-    // ul.addEventListener('mouseenter', () => {
-    //   // Applica lo stile quando l'utente fa l'hover sul <ul>
-    //   a.style.backgroundColor = 'black';
-    // });
-
-    // ul.addEventListener('mouseleave', () => {
-    //   // Rimuovi lo stile quando l'utente esce dall'hover sul <ul>
-    //   a.style.backgroundColor = ''; // Torna al valore predefinito
-    // });
   }
 
   openSearchForm(){

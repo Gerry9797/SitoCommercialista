@@ -39,105 +39,61 @@
                   <div class="elementor-element elementor-header-nav-div-external elementor-nav-menu__align-right elementor-hidden-tablet elementor-hidden-mobile elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu">
                     <div class="elementor-widget-container">
                       <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
-                        <ul
-                          id="menu-1-f724227"
-                          class="elementor-nav-menu"
-                          data-smartmenus-id="16959237626095222"
-                        >
-                          <li
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"
-                          >
-                            <a
-                              routerLink="chi-sono"
-                              class="elementor-item"
-                              >Chi sono</a
-                            >
-                          </li>
-                          <li
-                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-49 open-dropdown-delayed"
-                          >
-                            <a
-                              class="elementor-item elementor-item-anchor has-submenu"
-                              id="sm-16959237626095222-1"
-                              aria-haspopup="true"
-                              aria-controls="sm-16959237626095222-2"
-                              aria-expanded="false"
-                              >Servizi<span class="sub-arrow"
-                                ><i class="fas fa-caret-down"></i></span
-                            ></a>
-                            <ul
-                              class="sub-menu elementor-nav-menu--dropdown sm-nowrap"
-                              id="sm-16959237626095222-2"
-                              role="group"
-                              aria-hidden="true"
-                              aria-labelledby="sm-16959237626095222-1"
-                              aria-expanded="false"
-                              style="
-                                width: auto;
-                                min-width: 10em;
-                                max-width: 1000px;
-                                top: auto;
-                                left: 0px;
-                                margin-left: 0px;
-                                margin-top: 0px;
-                              "
-                            >
-                              <li
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-336"
-                              >
-                                <a
-                                  routerLink="aziende"
-                                  class="elementor-sub-item"
-                                  >Aziende</a
-                                >
+                        <ul class="elementor-nav-menu">
+                          @for (menuItem of menuItems; track menuItem) {
+                            
+                            <!-- SIMPLE ITEM  -->
+                            @if (menuItem.type === 'simple'){
+                              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                <a [routerLink]="menuItem.redirectUrl" class="elementor-item">
+                                  {{menuItem.label}}
+                                </a>
                               </li>
-                              <li
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"
-                              >
+                            }
+
+                            <!-- DROPDOWN ITEM  -->
+                            @if (menuItem.type === 'dropdown'){
+                              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children open-dropdown-delayed">
                                 <a
-                                  routerLink="privati"
-                                  class="elementor-sub-item"
-                                  >Privati</a
+                                  class="elementor-item elementor-item-anchor has-submenu"
+                                  id="{{menuItem.idToggleDropdown}}"
+                                  aria-haspopup="true"
+                                  [attr.aria-controls]="menuItem.idToggleDropdown"
+                                  aria-expanded="false"
                                 >
+                                  {{menuItem.label}}
+                                  <span class="sub-arrow">
+                                    <i class="fas fa-caret-down"></i>
+                                  </span>
+                                </a>
+                                <ul
+                                  class="sub-menu elementor-nav-menu--dropdown sm-nowrap"
+                                  id="{{menuItem.idAriaControls}}"
+                                  role="group"
+                                  aria-hidden="true"
+                                  [attr.aria-labelledby]="menuItem.idToggleDropdown"
+                                  aria-expanded="false"
+                                  style="
+                                    width: auto;
+                                    min-width: 10em;
+                                    max-width: 1000px;
+                                    top: auto;
+                                    left: 0px;
+                                    margin-left: 0px;
+                                    margin-top: 0px;
+                                  "
+                                >
+                                  @for (childMenuItem of menuItem.children; track childMenuItem) {
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                      <a [routerLink]="childMenuItem.redirectUrl" class="elementor-sub-item">
+                                        {{childMenuItem.label}}
+                                      </a>
+                                    </li>
+                                  }
+                                </ul>
                               </li>
-                            </ul>
-                          </li>
-                          <li
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4499"
-                          >
-                            <a
-                              routerLink="ebook-e-guide"
-                              class="elementor-item"
-                              >eBook</a
-                            >
-                          </li>
-                          <li
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6330"
-                          >
-                            <a
-                              routerLink="webinar"
-                              class="elementor-item"
-                              >Webinar</a
-                            >
-                          </li>
-                          <li
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1565"
-                          >
-                            <a
-                              routerLink="articoli"
-                              class="elementor-item"
-                              >Articoli</a
-                            >
-                          </li>
-                          <li
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"
-                          >
-                            <a
-                              routerLink="contatti"
-                              class="elementor-item"
-                              >Contatti</a
-                            >
-                          </li>
+                            }
+                          }
                         </ul>
                       </nav>
                       <div
@@ -244,7 +200,7 @@
                             >
                           </li>
                           <li
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1565"
+                            class="menu-item menu-item-type-post_type menu-item-object-page "
                           >
                             <a
                               routerLink="articoli"
@@ -254,7 +210,7 @@
                             >
                           </li>
                           <li
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"
+                            class="menu-item menu-item-type-post_type menu-item-object-page "
                           >
                             <a
                               routerLink="contatti"
@@ -819,7 +775,7 @@
                             >
                           </li>
                           <li
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1565"
+                            class="menu-item menu-item-type-post_type menu-item-object-page "
                           >
                             <a
                               routerLink="articoli"
@@ -828,7 +784,7 @@
                             >
                           </li>
                           <li
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"
+                            class="menu-item menu-item-type-post_type menu-item-object-page "
                           >
                             <a
                               routerLink="contatti"
@@ -942,7 +898,7 @@
                             >
                           </li>
                           <li
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1565"
+                            class="menu-item menu-item-type-post_type menu-item-object-page "
                           >
                             <a
                               routerLink="articoli"
@@ -952,7 +908,7 @@
                             >
                           </li>
                           <li
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"
+                            class="menu-item menu-item-type-post_type menu-item-object-page "
                           >
                             <a
                               routerLink="contatti"
