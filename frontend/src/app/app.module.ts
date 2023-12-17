@@ -59,6 +59,9 @@ import { BusinessButtonsComponent } from './components/bricks/business-buttons/b
 import { ServiceCardComponent } from './bricks/cards/service-card/service-card.component';
 import { ServicesPresentationComponent } from './components/services-presentation/services-presentation.component';
 import { MacrocardImpressionComponent } from './bricks/macrocard-impression/macrocard-impression.component';
+import { AppearDirective } from './directives/appear.directive';
+import { ArticleCardComponent } from './bricks/cards/article-card/article-card.component';
+import { RecentArticlesComponent } from './components/recent-articles/recent-articles.component';
 
 export function playerFactory() {
   return player;
@@ -109,7 +112,10 @@ export function playerFactory() {
     BusinessButtonsComponent,
     ServiceCardComponent,
     ServicesPresentationComponent,
-    MacrocardImpressionComponent
+    MacrocardImpressionComponent,
+    AppearDirective,
+    ArticleCardComponent,
+    RecentArticlesComponent
   ],
   imports: [
     BrowserModule,

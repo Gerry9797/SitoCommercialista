@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { TokenStorageService } from './_services/token-storage.service';
+import { WindowService } from './directives/window.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +15,18 @@ export class AppComponent {
   showModeratorBoard = false;
   username?: string;
 
-  constructor(private tokenStorageService: TokenStorageService) { }
+  constructor(
+    private tokenStorageService: TokenStorageService,
+    private windowService: WindowService,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private renderer: Renderer2,
+    ) { }
 
   ngOnInit(): void {
+
+    if (isPlatformBrowser(this.platformId)) {
+      this.renderer.listen(window, 'scroll', (event) => this.windowService.scroll = event);
+    }
 
     this.detectIfDeviceIsIphone();
 

@@ -1,0 +1,53 @@
+<section
+    appear
+    class="elementor-section elementor-top-section elementor-element elementor-element-articles-section-boxed elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible"
+    data-settings='{"animation":"fadeIn"}'
+>
+    <div class="elementor-container elementor-column-gap-default">
+    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-articles-container">
+        <div class="elementor-widget-wrap elementor-element-populated">
+        <div class="elementor-element elementor-widget elementor-widget-template">
+            <div class="elementor-widget-container">
+            <div class="elementor-template">
+                <div class="elementor elementor-element-articles-wrapper">
+                <section
+                    appear
+                    class="elementor-section elementor-top-section elementor-element elementor-element-articles-inner-section elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible"
+                    data-settings='{"animation":"fadeIn"}'
+                >
+                    <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                        <div class="elementor-element elementor-element-articles-section-title elementor-widget elementor-widget-heading">
+                            <div class="elementor-widget-container">
+                            <h2 class="elementor-heading-title elementor-size-default">
+                                Ultimi articoli
+                            </h2>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-articles-section-description elementor-widget elementor-widget-text-editor">
+                            <div class="elementor-widget-container">
+                            <p>Dal blog</p>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-articles-grid-container elementor-posts--align-left elementor-grid-tablet-3 elementor-grid-3 elementor-grid-mobile-1 elementor-posts--thumbnail-top elementor-widget elementor-widget-posts">
+                            <div class="elementor-widget-container">
+                            <div class="elementor-posts-container elementor-posts elementor-posts--skin-classic elementor-grid elementor-has-item-ratio">
+                                @for (article of articles; track article) {
+                                    <app-article-card [article]="article"></app-article-card>
+                                }
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>

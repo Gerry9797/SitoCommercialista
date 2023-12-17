@@ -17,18 +17,12 @@ import { UtilityService } from 'src/app/services/utility/utility.service';
 })
 export class HomepageComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('lastArticlesSectionParent', { static: false })
-  lastArticlesSectionParent!: ElementRef;
-  @ViewChild('lastArticlesSection', { static: false })
-  lastArticlesSection!: ElementRef;
-
   constructor(
     private utilityService: UtilityService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
-    this.handleAnimations();
 
     this.utilityService.scrollToTop();
   }
@@ -37,45 +31,6 @@ export class HomepageComponent implements OnInit, AfterViewInit {
     if (isPlatformBrowser(this.platformId)) {
       this.smoothScrollingToAnchor();
     }
-  }
-
-  handleAnimations() {
-    this.mostraLastArticlesSectionParent();
-    this.mostraLastArticlesSection();
-  }
-
-  mostraLastArticlesSection() {
-    setTimeout(() => {
-      if (
-        this.lastArticlesSection &&
-        this.lastArticlesSection.nativeElement.classList.contains(
-          'elementor-invisible'
-        )
-      ) {
-        this.lastArticlesSection.nativeElement.classList.remove(
-          'elementor-invisible'
-        );
-        this.lastArticlesSection.nativeElement.classList.add('animated');
-        this.lastArticlesSection.nativeElement.classList.add('fadeIn');
-      }
-    }, 1000);
-  }
-
-  mostraLastArticlesSectionParent() {
-    setTimeout(() => {
-      if (
-        this.lastArticlesSectionParent &&
-        this.lastArticlesSectionParent.nativeElement.classList.contains(
-          'elementor-invisible'
-        )
-      ) {
-        this.lastArticlesSectionParent.nativeElement.classList.remove(
-          'elementor-invisible'
-        );
-        this.lastArticlesSectionParent.nativeElement.classList.add('animated');
-        this.lastArticlesSectionParent.nativeElement.classList.add('fadeIn');
-      }
-    }, 1000);
   }
 
   // SMOOTH SCROLLING TO ANCHOR

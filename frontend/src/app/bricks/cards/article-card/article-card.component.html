@@ -1,0 +1,44 @@
+<article class="elementor-post elementor-grid-item post type-post status-publish format-standard has-post-thumbnail hentry category-news">
+    <a
+      class="elementor-post__thumbnail__link"
+      [routerLink]="article.urlRedirect"
+      tabindex="-1"
+      ><div class="elementor-post__thumbnail">
+        <img
+          decoding="async"
+          width="686"
+          height="397"
+          src="{{article.image}}"
+          class="lazyload"
+          alt=""
+        />
+      </div>
+    </a>
+    <div class="elementor-post__text">
+      <h3 class="elementor-post__title">
+        <a
+          [routerLink]="article.urlRedirect"
+        >
+          {{article.title}}
+        </a>
+      </h3>
+      <div class="elementor-post__meta-data">
+        <span class="elementor-post-date">
+          29 Marzo 2023
+        </span>
+      </div>
+      <div class="elementor-post__excerpt">
+        <p>
+          {{article.description}}
+        </p>
+      </div>
+      <a
+        class="elementor-post__read-more"
+        [routerLink]="article.urlRedirect"
+        aria-label="Read more about Divieto di licenziamento, dimissioni e NASPI per il papà"
+        tabindex="-1"
+      >
+        {{article.readAllLabel}}
+      </a>
+    </div>
+  </article>

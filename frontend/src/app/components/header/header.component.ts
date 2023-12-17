@@ -113,7 +113,13 @@ export class HeaderComponent implements OnInit {
   openSideMenu(){
     let sideMenuContainer = document.getElementById('side-menu-container');
     if(sideMenuContainer){
-      sideMenuContainer.style.display = 'block'
+      sideMenuContainer.style.display = 'block';
+
+      //fai comparire anche il pulsante così da gestirne l'animazione a partire da quando compare sullo shermo (sempre presente) e quando si apre come condizione che va ad aggiungere questa riga
+      let sideMenuPrenotaBtn = document.getElementById('side-menu-prenota-btn');
+      if(sideMenuPrenotaBtn){
+        sideMenuPrenotaBtn.style.display = 'block';
+      }
     }
   }
 

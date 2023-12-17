@@ -11,7 +11,10 @@ const PRECISION: number = 10;
 export class AppearDirective implements OnInit, OnDestroy {
 
   private onWindowScrollSubscription!: Subscription;
-  disappearOnlyOneTime: boolean = true;
+  disappearOnlyOneTime: boolean = true; //default  (se è true, una volta apparso non scomparirà anche se non più contenuto nello schermo, se messo a false invece ogni volta che comparirà nello schermo apparirà e quando non lo sarà scomaprirà)
+
+  animationType: string = "zoomIn"; //default value  (il tipo di animazione, combaciante con la classe css dell'amimazione)
+  animationDelay: number = 0; //default value (delay da quando compare nello schermo a quando effettivamente viene attivata l'animazione di comparsa)
 
   constructor(
     private el: ElementRef, private renderer: Renderer2,
@@ -32,18 +35,45 @@ export class AppearDirective implements OnInit, OnDestroy {
   }
 
   private init() {
+
+    this.loadAnimationSettings();
+
     // Subscribe to window scroll event through the windowService
     this.onWindowScrollSubscription = this.windowService.onWindowScroll().subscribe(() => this.checkAppearance());
     // Initial state
-    this.renderer.addClass(this.el.nativeElement, 'not-visible');
+    if(! this.el.nativeElement.classList.contains('elementor-invisible')){
+      this.renderer.addClass(this.el.nativeElement, 'elementor-invisible');
+    }
+    
     // Initial appearance check
     this.checkAppearance();
+  }
+
+  private loadAnimationSettings(){
+        // Ottieni il valore dell'attributo custom "data-settings"
+        let dataSettingsValue = this.el.nativeElement.getAttribute('data-settings');
+        // Se l'attributo è presente
+        if (dataSettingsValue) {
+          let jsonDataSetting = JSON.parse(dataSettingsValue)
+          // Il valore di "animation"
+          if(jsonDataSetting.animation){
+            this.animationType = JSON.parse(dataSettingsValue).animation;
+          }
+          if(jsonDataSetting.delay){
+            this.animationDelay = JSON.parse(dataSettingsValue).delay;
+          }
+
+          if(jsonDataSetting.disappearAgain){
+            this.disappearOnlyOneTime = !jsonDataSetting.disappearAgain;
+          }
+        }
   }
 
   /**
    * Check the item visibility
    */
   private checkAppearance() {
+
     if (this.el && this.el.nativeElement) {
       let rect = this.el.nativeElement.getBoundingClientRect();
 
@@ -60,11 +90,17 @@ export class AppearDirective implements OnInit, OnDestroy {
    * Is visible
    */
   private isVisible() {
-    this.renderer.addClass(this.el.nativeElement, 'visible');
+    
+    setTimeout(() => {
+      
+      this.renderer.addClass(this.el.nativeElement, 'animated');
+      this.renderer.addClass(this.el.nativeElement, this.animationType);
+      
+      if (this.el.nativeElement.classList.contains('elementor-invisible')) {
+        this.renderer.removeClass(this.el.nativeElement, 'elementor-invisible');
+      }
+    }, this.animationDelay);
 
-    if (this.el.nativeElement.classList.contains('not-visible')) {
-      this.renderer.removeClass(this.el.nativeElement, 'not-visible');
-    }
   }
 
   /**
@@ -75,10 +111,11 @@ export class AppearDirective implements OnInit, OnDestroy {
       return
     }
     else {
-      this.renderer.addClass(this.el.nativeElement, 'not-visible');
+      this.renderer.addClass(this.el.nativeElement, 'elementor-invisible');
 
-      if (this.el.nativeElement.classList.contains('visible')) {
-        this.renderer.removeClass(this.el.nativeElement, 'visible');
+      if (this.el.nativeElement.classList.contains(this.animationType)) {
+        this.renderer.removeClass(this.el.nativeElement, 'animated');
+        this.renderer.removeClass(this.el.nativeElement, this.animationType);
       }
     }
 
