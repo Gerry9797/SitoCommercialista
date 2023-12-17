@@ -61,5 +61,13 @@ export class UtilityService {
   //   return httpOptionsWithLang;
   // }
 
+  checkIfMobile() {
+    // Ottieni la larghezza della finestra
+    const windowWidth = window.innerWidth;
+
+    // Imposta la variabile isMobile in base alla larghezza della finestra
+    let isMobile = windowWidth <= 768; // Modifica il valore 768 con la larghezza desiderata per il tuo breakpoint mobile
+    return isMobile;
+  }
 
 }

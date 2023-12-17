@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Renderer2 } from '@angular/core';
+import { SideMenuManagerService } from 'src/app/services/side-menu-manager.service';
 
 interface IMenuItem {
   redirectUrl?: string,  //campo li semplice
@@ -25,7 +26,10 @@ export class HeaderComponent implements OnInit {
 
   menuItems: IMenuItem[] = []
 
-  constructor() { }
+  constructor(
+    private renderer: Renderer2,
+    private sideMenuManager: SideMenuManagerService
+  ) { }
 
   ngOnInit(): void {
 
@@ -165,17 +169,6 @@ export class HeaderComponent implements OnInit {
   }
 
   openSideMenu(){
-    let sideMenuContainer = document.getElementById('side-menu-container');
-    if(sideMenuContainer){
-      sideMenuContainer.style.display = 'block';
-
-      //fai comparire anche il pulsante così da gestirne l'animazione a partire da quando compare sullo shermo (sempre presente) e quando si apre come condizione che va ad aggiungere questa riga
-      let sideMenuPrenotaBtn = document.getElementById('side-menu-prenota-btn');
-      if(sideMenuPrenotaBtn){
-        sideMenuPrenotaBtn.style.display = 'block';
-      }
-    }
+    this.sideMenuManager.openSideMenu();
   }
-
-
 }

@@ -62816,4 +62816,11 @@ span.color-primary {
         display: flex;
         align-items: center;
     }
+
+    body.sideMenuOpened {
+        position: fixed;
+        width: 100%;
+        overflow: hidden;
+    }
 }
+
