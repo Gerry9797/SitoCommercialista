@@ -1,280 +1,119 @@
-<div
-  data-elementor-type="footer"
-  data-elementor-id="150"
-  class="elementor elementor-150 elementor-location-footer"
-  data-elementor-post-type="elementor_library"
->
-  <section
-    class="elementor-section elementor-top-section elementor-element elementor-element-747eab1 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-    data-id="747eab1"
-    data-element_type="section"
-    data-settings='{"background_background":"classic"}'
-  >
+<div class="elementor elementor-footer-base elementor-location-footer">
+  <section class="elementor-section elementor-top-section elementor-element elementor-footer-main-section elementor-section-full_width elementor-section-height-default elementor-section-height-default">
     <div class="elementor-container elementor-column-gap-wide">
-      <div
-        class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-228c472"
-        data-id="228c472"
-        data-element_type="column"
-      >
+      <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-footer-col-div">
         <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-f754ae0 elementor-widget elementor-widget-heading"
-            data-id="f754ae0"
-            data-element_type="widget"
-            data-widget_type="heading.default"
-          >
+          <div class="elementor-element elementor-footer-col-block elementor-widget elementor-widget-heading">
             <div class="elementor-widget-container">
               <h2 class="elementor-heading-title elementor-size-default">
                 ultime news
               </h2>
             </div>
           </div>
-          <div
-            class="elementor-element elementor-element-8a741c0 elementor-grid-1 elementor-posts--thumbnail-none elementor-grid-tablet-1 elementor-grid-mobile-1 elementor-widget elementor-widget-posts"
-            data-id="8a741c0"
-            data-element_type="widget"
-            data-settings='{"classic_columns":"1","classic_row_gap":{"unit":"px","size":0,"sizes":[]},"classic_columns_tablet":"1","classic_columns_mobile":"1","classic_row_gap_tablet":{"unit":"px","size":"","sizes":[]},"classic_row_gap_mobile":{"unit":"px","size":"","sizes":[]}}'
-            data-widget_type="posts.classic"
-          >
+          <div class="elementor-element elementor-footer-grid-block elementor-grid-1 elementor-posts--thumbnail-none elementor-grid-tablet-1 elementor-grid-mobile-1 elementor-widget elementor-widget-posts">
             <div class="elementor-widget-container">
-              <div
-                class="elementor-posts-container elementor-posts elementor-posts--skin-classic elementor-grid"
-              >
-                <article
-                  class="elementor-post elementor-grid-item post-5736 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-dimissioni tag-lavoratori tag-licenziamento"
-                >
-                  <div class="elementor-post__text">
-                    <h3 class="elementor-post__title">
-                      <a
-                        href="https://valentinafilippini.it/divieto-licenziamento-dimissioni-naspi-papa/"
-                      >
-                        Divieto di licenziamento, dimissioni e NASPI per il papà
-                      </a>
-                    </h3>
-                  </div>
-                </article>
-                <article
-                  class="elementor-post elementor-grid-item post-5158 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-agevolazioni tag-assunzioni-2 tag-donne tag-giovani"
-                >
-                  <div class="elementor-post__text">
-                    <h3 class="elementor-post__title">
-                      <a
-                        href="https://valentinafilippini.it/esonero-contributivo-assunzione-donne-giovani-under-36/"
-                      >
-                        Esonero contributivo per assunzione di donne e giovani
-                        under 36
-                      </a>
-                    </h3>
-                  </div>
-                </article>
-                <article
-                  class="elementor-post elementor-grid-item post-5145 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-casalinga tag-inail tag-infortunio"
-                >
-                  <div class="elementor-post__text">
-                    <h3 class="elementor-post__title">
-                      <a
-                        href="https://valentinafilippini.it/assicurazione-casalinghe-2023/"
-                      >
-                        Assicurazione casalinghe 2023
-                      </a>
-                    </h3>
-                  </div>
-                </article>
-                <article
-                  class="elementor-post elementor-grid-item post-5128 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-aziende tag-buonicarburante tag-lavoratori"
-                >
-                  <div class="elementor-post__text">
-                    <h3 class="elementor-post__title">
-                      <a
-                        href="https://valentinafilippini.it/buoni-benzina-anno-2023/"
-                      >
-                        Buoni benzina anno 2023
-                      </a>
-                    </h3>
-                  </div>
-                </article>
-                <article
-                  class="elementor-post elementor-grid-item post-5109 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-bustapaga tag-inps tag-lavoratori"
-                >
-                  <div class="elementor-post__text">
-                    <h3 class="elementor-post__title">
-                      <a
-                        href="https://valentinafilippini.it/busta-paga-piu-alta-2023/"
-                      >
-                        Busta paga più alta per il 2023
-                      </a>
-                    </h3>
-                  </div>
-                </article>
+              <div class="elementor-posts-container elementor-posts elementor-posts--skin-classic elementor-grid">
+                @for (news of recentNews; track news) {
+                  <article class="elementor-post elementor-grid-item post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <div class="elementor-post__text">
+                      <h3 class="elementor-post__title">
+                        <a [routerLink]="news.redirectUrl">
+                          {{news.title}}
+                        </a>
+                      </h3>
+                    </div>
+                  </article>
+                }
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-be8c76c"
-        data-id="be8c76c"
-        data-element_type="column"
-      >
+      <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-footer-service-col">
         <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-d98748c elementor-widget elementor-widget-heading"
-            data-id="d98748c"
-            data-element_type="widget"
-            data-widget_type="heading.default"
-          >
+          <div class="elementor-element elementor-footer-service-col-content elementor-widget elementor-widget-heading">
             <div class="elementor-widget-container">
               <h2 class="elementor-heading-title elementor-size-default">
                 servizi aziende
               </h2>
             </div>
           </div>
-          <div
-            class="elementor-element elementor-element-f22e3f2 elementor-widget elementor-widget-text-editor"
-            data-id="f22e3f2"
-            data-element_type="widget"
-            data-widget_type="text-editor.default"
-          >
+          <div class="elementor-element elementor-footer-service-content-list elementor-widget elementor-widget-text-editor">
             <div class="elementor-widget-container">
-              <p>
-                <a routerLink="aziende"
-                  >Consulenza del lavoro<br />e amministrazione del personale</a
-                >
-              </p>
-              <p>
-                <a routerLink="aziende"
-                  >Elaborazione paghe e contributi</a
-                >
-              </p>
-              <p>
-                <a routerLink="aziende"
-                  >Assunzione di un dipendente</a
-                >
-              </p>
+              @for (servizioAziende of serviziAziende; track servizioAziende) {
+                <p>
+                  <a [routerLink]="servizioAziende.redirectUrl">
+                    {{servizioAziende.title}}
+                  </a>
+                </p>
+              }
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-833bef9"
-        data-id="833bef9"
-        data-element_type="column"
-      >
+      <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-footer-service-col">
         <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-d610c13 elementor-widget elementor-widget-heading"
-            data-id="d610c13"
-            data-element_type="widget"
-            data-widget_type="heading.default"
-          >
+          <div class="elementor-element elementor-footer-service-col-content elementor-widget elementor-widget-heading">
             <div class="elementor-widget-container">
               <h2 class="elementor-heading-title elementor-size-default">
                 servizi privati
               </h2>
             </div>
           </div>
-          <div
-            class="elementor-element elementor-element-51e4e1e elementor-widget elementor-widget-text-editor"
-            data-id="51e4e1e"
-            data-element_type="widget"
-            data-widget_type="text-editor.default"
-          >
+          <div class="elementor-element elementor-footer-service-content-list elementor-widget elementor-widget-text-editor">
             <div class="elementor-widget-container">
-              <p>
-                <a routerLink="privati"
-                  >Consulenza Lavoratori</a
-                >
-              </p>
-              <p>
-                <a routerLink="privati">
-                  Consulenza Genitori</a
-                >
-              </p>
-              <p>
-                <a routerLink="privati"
-                  >Dimissioni e periodo di preavviso (senza invio telematico)</a
-                >
-              </p>
-              <p>
-                <a routerLink="privati"
-                  >Impariamo a leggere la tua busta paga</a
-                >
-              </p>
-              <p>
-                <a routerLink="privati"
-                  >Assunzione collaboratore domestico</a
-                >
-              </p>
+              @for (servizioPrivati of serviziPrivati; track servizioPrivati) {
+                <p>
+                  <a [routerLink]="servizioPrivati.redirectUrl">
+                    {{servizioPrivati.title}}
+                  </a>
+                </p>
+              }
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-bfc8723"
-        data-id="bfc8723"
-        data-element_type="column"
-      >
+      <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-footer-service-col-contatti">
         <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-2c2d9cb elementor-widget elementor-widget-heading"
-            data-id="2c2d9cb"
-            data-element_type="widget"
-            data-widget_type="heading.default"
-          >
+          <div class="elementor-element elementor-footer-service-col-content elementor-widget elementor-widget-heading">
             <div class="elementor-widget-container">
               <h2 class="elementor-heading-title elementor-size-default">
                 Contatti
               </h2>
             </div>
           </div>
-          <div
-            class="elementor-element elementor-element-e9366c1 elementor-widget elementor-widget-text-editor"
-            data-id="e9366c1"
-            data-element_type="widget"
-            data-widget_type="text-editor.default"
-          >
+          <div class="elementor-element elementor-footer-service-content-list elementor-widget elementor-widget-text-editor">
             <div class="elementor-widget-container">
               <p>
-                Via Roma 98<br />37023 Grezzana (VR)<br />Tel. 3405272617<br /><a
-                  class="moz-txt-link-abbreviated"
-                  href="mailto:info&#64;valentinafilippini.it"
-                  >info&#64;valentinafilippini.it</a
-                >
+                {{datiPersonali.sede.indirizzo}}
+                <br />
+                {{datiPersonali.sede.cap}} {{datiPersonali.sede.localita}} ({{datiPersonali.sede.provincia}})
+                <br />Tel. {{datiPersonali.contatti.telefono}}
+                <br />
+                <a class="moz-txt-link-abbreviated" href="mailto:{{datiPersonali.contatti.email}}">
+                  {{datiPersonali.contatti.email}}
+                </a>
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-26e42a3"
-        data-id="26e42a3"
-        data-element_type="column"
-      >
+      <div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-footer-service-col-social">
         <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-2a5f662 elementor-widget elementor-widget-heading"
-            data-id="2a5f662"
-            data-element_type="widget"
-            data-widget_type="heading.default"
-          >
+          <div class="elementor-element elementor-footer-service-col-content elementor-widget elementor-widget-heading">
             <div class="elementor-widget-container">
               <h2 class="elementor-heading-title elementor-size-default">
                 SOCIAL NETWORK
               </h2>
             </div>
           </div>
-          <div
-            class="elementor-element elementor-element-dbd27bf elementor-shape-square e-grid-align-left elementor-grid-3 elementor-widget elementor-widget-social-icons"
-            data-id="dbd27bf"
-            data-element_type="widget"
-            data-widget_type="social-icons.default"
-          >
+          <div class="elementor-element elementor-footer-social-grid elementor-shape-square e-grid-align-left elementor-grid-3 elementor-widget elementor-widget-social-icons">
             <div class="elementor-widget-container">
               <div class="elementor-social-icons-wrapper elementor-grid">
                 <span class="elementor-grid-item">
                   <a
-                    class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-e6bc2bc"
-                    href="https://www.linkedin.com/company/valentina-filippini-consulente-del-lavoro/"
+                    class="elementor-icon elementor-social-icon elementor-social-icon-linkedin"
+                    href="{{datiPersonali.contatti.linkedin}}"
                     target="_blank"
                   >
                     <span class="elementor-screen-only">Linkedin</span>
@@ -283,8 +122,8 @@
                 </span>
                 <span class="elementor-grid-item">
                   <a
-                    class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-6101081"
-                    href="https://www.instagram.com/cdl_valentina_filippini/"
+                    class="elementor-icon elementor-social-icon elementor-social-icon-instagram"
+                    href="{{datiPersonali.contatti.instagram}}"
                     target="_blank"
                   >
                     <span class="elementor-screen-only">Instagram</span>
@@ -298,41 +137,27 @@
       </div>
     </div>
   </section>
-  <section
-    class="elementor-section elementor-top-section elementor-element elementor-element-1c1e981 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-    data-id="1c1e981"
-    data-element_type="section"
-    data-settings='{"background_background":"classic"}'
-  >
+  <section class="elementor-section elementor-top-section elementor-element elementor-footer-copyright-section elementor-section-full_width elementor-section-height-default elementor-section-height-default">
     <div class="elementor-container elementor-column-gap-default">
-      <div
-        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-14c73f8"
-        data-id="14c73f8"
-        data-element_type="column"
-      >
+      <div class="elementor-column elementor-col-100 elementor-top-column elementor-element">
         <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-3b1a00a elementor-widget elementor-widget-text-editor"
-            data-id="3b1a00a"
-            data-element_type="widget"
-            data-widget_type="text-editor.default"
-          >
+          <div class="elementor-element elementor-footer-copyright-div elementor-widget elementor-widget-text-editor">
             <div class="elementor-widget-container">
-              © Copyright Aisia Autiero | P. IVA IT 04408890236 |
-              <span style="color: #ed7a57"
+              © Copyright {{datiPersonali.nome}} {{datiPersonali.cognome}} | P. IVA {{datiPersonali.pIva.prefisso}} {{datiPersonali.pIva.codice}} |
+              <span style="color: var(--palette1-color-accent);"
                 ><a
-                  style="color: #ed7a57"
+                  style="color: var(--palette1-color-accent);"
                   routerLink="/privacy-policy"
                   >Privacy Policy</a
                 ></span
               >
               |
               <a routerLink="/cookie-policy"
-                ><span style="color: #ed7a57">Cookie Policy</span></a
+                ><span style="color: var(--palette1-color-accent);">Cookie Policy</span></a
               >
               |
               <a routerLink="/termini-e-condizioni"
-                ><span style="color: #ed7a57">Termini e Condizioni</span></a
+                ><span style="color: var(--palette1-color-accent);">Termini e Condizioni</span></a
               >
             </div>
           </div>

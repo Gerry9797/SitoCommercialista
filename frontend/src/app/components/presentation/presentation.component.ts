@@ -10,4 +10,6 @@ export class PresentationComponent {
 
   revisoreLegaleFlag: boolean = SITE_CONFIG.revisoreLegale
 
+  datiPersonali: any = SITE_CONFIG.datiPersonali
+
 }
