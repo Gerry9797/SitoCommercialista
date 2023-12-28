@@ -245,48 +245,26 @@
   </section>
 
   <!-- STICKY HEADER ON SCROLL  -->
-  <section
-    class="elementor-section elementor-top-section elementor-element elementor-header-main-wrapper elementor-section-content-top elementor-section-full_width elementor-section-height-min-height sticky-header elementor-section-height-default elementor-section-items-middle elementor-sticky elementor-sticky__spacer"
-    style="
-      visibility: hidden;
-      transition: none 0s ease 0s;
-      animation: auto ease 0s 1 normal none running none;
-    "
-  >
+  <section class="elementor-section elementor-top-section elementor-element elementor-header-main-wrapper elementor-section-content-top elementor-section-full_width elementor-section-height-min-height sticky-header elementor-section-height-default elementor-section-items-middle elementor-sticky elementor-sticky__spacer fixed-style-sticky-header">
     <div class="elementor-container elementor-column-gap-no">
-      <div
-        class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-header-main-div"
-        data-id="758c27c"
-        data-element_type="column"
-      >
+      <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-header-main-div">
         <div class="elementor-widget-wrap elementor-element-populated">
-          <section
-            class="elementor-section elementor-inner-section elementor-element elementor-header-main-section elementor-section-height-min-height elementor-section-boxed elementor-section-height-default"
-            data-id="0f3655a"
-            data-element_type="section"
-          >
+          <section class="elementor-section elementor-inner-section elementor-element elementor-header-main-section elementor-section-height-min-height elementor-section-boxed elementor-section-height-default">
             <div class="elementor-container elementor-column-gap-no">
-              <div
-                class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-header-logobox"
-                data-id="44452a7"
-                data-element_type="column"
-              >
+              <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-header-logobox">
                 <div class="elementor-widget-wrap elementor-element-populated">
                   <div
                     appear
                     class="elementor-element elementor-header-logoblock d-logo elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
-                    data-id="e621df6"
-                    data-element_type="widget"
-                    data-widget_type="theme-site-logo.default"
                   >
                     <div class="elementor-widget-container">
-                      <a href="https://valentinafilippini.it">
+                      <a routerLink="/">
                         <img
                           width="561"
                           height="156"
-                          src="https://valentinafilippini.it/wp-content/uploads/2021/02/logo_vf_cdl.svg"
-                          class="attachment-large size-large wp-image-3905"
-                          alt="logo Aisia Autiero"
+                          src="assets/logo/logo_vf_cdl.svg"
+                          class="size-large"
+                          alt="logo {{datiPersonali.nome}} {{datiPersonali.cognome}}"
                         />
                       </a>
                     </div>

@@ -16,6 +16,12 @@ li.open-dropdown-delayed:hover ul {
   top: 0px;
 }
 
+.fixed-style-sticky-header {
+  visibility: hidden;
+  transition: none 0s ease 0s;
+  animation: auto ease 0s 1 normal none running none;
+}
+
 .dropdown-item-style {
   width: auto;
   min-width: 10em;
