@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.loadMenuItemsConiguration();
+    this.loadMenuItemsConfiguration();
 
     this.handleListItemWithDropdownKeepSelectionOnItsUlChildren();
   }
@@ -54,7 +54,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  loadMenuItemsConiguration(){
+  loadMenuItemsConfiguration(){
     this.menuItems = [
       {
         redirectUrl: "/chi-sono",
