@@ -62,6 +62,7 @@ import { MacrocardImpressionComponent } from './bricks/macrocard-impression/macr
 import { AppearDirective } from './directives/appear.directive';
 import { ArticleCardComponent } from './bricks/cards/article-card/article-card.component';
 import { RecentArticlesComponent } from './components/recent-articles/recent-articles.component';
+import { SideCartComponent } from './components/side-cart/side-cart.component';
 
 export function playerFactory() {
   return player;
@@ -115,7 +116,8 @@ export function playerFactory() {
     MacrocardImpressionComponent,
     AppearDirective,
     ArticleCardComponent,
-    RecentArticlesComponent
+    RecentArticlesComponent,
+    SideCartComponent
   ],
   imports: [
     BrowserModule,

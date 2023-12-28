@@ -148,8 +148,9 @@ export class HeaderComponent implements OnInit {
   }
 
   openCartDetail(){
-    let cartToggleList = document.querySelectorAll(".elementor-widget-woocommerce-menu-cart");
-    cartToggleList.forEach((cartToggle) => {
+
+    let cartList = document.querySelectorAll(".elementor-menu-cart__container");
+    cartList.forEach((cartToggle) => {
       cartToggle?.classList.add("elementor-menu-cart--shown")
     });
   }

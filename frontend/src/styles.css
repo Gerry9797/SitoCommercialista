@@ -30522,17 +30522,17 @@ body.rtl.woocommerce #content div.product .elementor-widget-woocommerce-product-
     text-align: var(--empty-message-alignment,left)
 }
 
-.elementor-widget-woocommerce-menu-cart:not(.elementor-menu-cart--shown) .elementor-menu-cart__container {
+.elementor-menu-cart__container:not(.elementor-menu-cart--shown) {
     background-color: transparent;
     transform: scale(0);
     transition: background-color .4s,transform 0s .4s
 }
 
-.elementor-widget-woocommerce-menu-cart:not(.elementor-menu-cart--shown) .elementor-menu-cart__container .dialog-lightbox-close-button {
+.elementor-menu-cart__container:not(.elementor-menu-cart--shown) .dialog-lightbox-close-button {
     display: none
 }
 
-.elementor-widget-woocommerce-menu-cart:not(.elementor-menu-cart--shown) .elementor-menu-cart__main {
+.elementor-menu-cart__container:not(.elementor-menu-cart--shown) .elementor-menu-cart__main {
     overflow: hidden;
     opacity: 0;
     transform: var(--side-cart-alignment-transform,translateX(100%))
@@ -30885,7 +30885,7 @@ body.rtl.woocommerce #content div.product .elementor-widget-woocommerce-product-
     }
 }
 
-.elementor-widget-woocommerce-menu-cart.elementor-menu-cart--cart-type-mini-cart:not(.elementor-menu-cart--shown) .elementor-menu-cart__container {
+.elementor-menu-cart__container.elementor-menu-cart__container:not(.elementor-menu-cart--shown) {
     transform: scale(0);
     transition: background-color .4s,transform 0s .4s
 }
@@ -50690,7 +50690,7 @@ ol.elementor-toc__list-wrapper .elementor-toc__list-item-text-wrapper:before {
     font-weight: var( --e-global-typography-primary-font-weight );
 }
 
-.elementor-widget-woocommerce-menu-cart .woocommerce-mini-cart__empty-message {
+.woocommerce-mini-cart__empty-message {
     font-family: var( --e-global-typography-primary-font-family );
     font-size: var( --e-global-typography-primary-font-size );
     font-weight: var( --e-global-typography-primary-font-weight );
@@ -51465,7 +51465,7 @@ ol.elementor-toc__list-wrapper .elementor-toc__list-item-text-wrapper:before {
         font-size: var( --e-global-typography-primary-font-size );
     }
 
-    .elementor-widget-woocommerce-menu-cart .woocommerce-mini-cart__empty-message {
+    .woocommerce-mini-cart__empty-message {
         font-size: var( --e-global-typography-primary-font-size );
     }
 
@@ -52051,7 +52051,7 @@ ol.elementor-toc__list-wrapper .elementor-toc__list-item-text-wrapper:before {
         font-size: var( --e-global-typography-primary-font-size );
     }
 
-    .elementor-widget-woocommerce-menu-cart .woocommerce-mini-cart__empty-message {
+    .woocommerce-mini-cart__empty-message {
         font-size: var( --e-global-typography-primary-font-size );
     }
 
