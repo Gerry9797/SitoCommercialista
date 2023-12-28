@@ -26,6 +26,8 @@ export class HeaderComponent implements OnInit {
 
   menuItems: IMenuItem[] = []
 
+  cartItemsNum: number = 0;
+
   constructor(
     private renderer: Renderer2,
     private sideMenuManager: SideMenuManagerService
