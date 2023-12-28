@@ -63,6 +63,7 @@ import { AppearDirective } from './directives/appear.directive';
 import { ArticleCardComponent } from './bricks/cards/article-card/article-card.component';
 import { RecentArticlesComponent } from './components/recent-articles/recent-articles.component';
 import { SideCartComponent } from './components/side-cart/side-cart.component';
+import { SearchFormFullScreenComponent } from './components/search-form-full-screen/search-form-full-screen.component';
 
 export function playerFactory() {
   return player;
@@ -117,7 +118,8 @@ export function playerFactory() {
     AppearDirective,
     ArticleCardComponent,
     RecentArticlesComponent,
-    SideCartComponent
+    SideCartComponent,
+    SearchFormFullScreenComponent
   ],
   imports: [
     BrowserModule,

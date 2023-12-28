@@ -283,32 +283,6 @@
                           <i aria-hidden="true" class="fas fa-search"></i>
                           <span class="elementor-screen-only">Cerca</span>
                         </div>
-                        <div class="elementor-search-form__container" (click)="checkIfCloseSearchForm($event)">
-                          <label
-                            class="elementor-screen-only"
-                            for="elementor-search-form-d0b0bb1"
-                            >Cerca</label
-                          >
-                          <input
-                            id="elementor-search-form-d0b0bb1"
-                            placeholder="Cerca...."
-                            class="elementor-search-form__input"
-                            type="search"
-                            name="s"
-                            value=""
-                          />
-                          <div
-                            class="dialog-lightbox-close-button dialog-close-button"
-                            role="button"
-                            tabindex="0"
-                            (click)="checkIfCloseSearchForm($event)"
-                          >
-                            <i aria-hidden="true" class="fas fa-xmark" style="font-size: 28px;"></i>
-                            <span class="elementor-screen-only"
-                              >Close this search box.</span
-                            >
-                          </div>
-                        </div>
                       </form>
                     </div>
                   </div>
@@ -330,9 +304,15 @@
                               aria-expanded="false"
                             >
                               <span class="elementor-button-icon">
-                                <span class="elementor-button-icon-qty">{{cartItemsNum}}</span>
+                                <span
+                                  class="elementor-button-icon-qty"
+                                  
+                                  >0</span
+                                >
                                 <img src="../../../assets/icons/cart-icon.png" alt="Carrello">
-                                <span class="elementor-screen-only">Carrello</span>
+                                <span class="elementor-screen-only"
+                                  >Carrello</span
+                                >
                               </span>
                             </a>
                           </div>
@@ -362,32 +342,6 @@
                         >
                           <i aria-hidden="true" class="fas fa-search"></i>
                           <span class="elementor-screen-only">Cerca</span>
-                        </div>
-                        <div class="elementor-search-form__container" (click)="checkIfCloseSearchForm($event)">
-                          <label
-                            class="elementor-screen-only"
-                            for="elementor-search-form-164d7f5"
-                            >Cerca</label
-                          >
-                          <input
-                            id="elementor-search-form-164d7f5"
-                            placeholder="Cerca...."
-                            class="elementor-search-form__input"
-                            type="search"
-                            name="s"
-                            value=""
-                          />
-                          <div
-                            class="dialog-lightbox-close-button dialog-close-button"
-                            role="button"
-                            tabindex="0"
-                            (click)="checkIfCloseSearchForm($event)"
-                          >
-                            <i aria-hidden="true" class="fas fa-xmark" style="font-size: 28px;"></i>
-                            <span class="elementor-screen-only"
-                              >Close this search box.</span
-                            >
-                          </div>
                         </div>
                       </form>
                     </div>
@@ -903,32 +857,6 @@
                           <i aria-hidden="true" class="fas fa-search"></i>
                           <span class="elementor-screen-only">Cerca</span>
                         </div>
-                        <div class="elementor-search-form__container" (click)="checkIfCloseSearchForm($event)">
-                          <label
-                            class="elementor-screen-only"
-                            for="elementor-search-form-d0b0bb1"
-                            >Cerca</label
-                          >
-                          <input
-                            id="elementor-search-form-d0b0bb1"
-                            placeholder="Cerca...."
-                            class="elementor-search-form__input"
-                            type="search"
-                            name="s"
-                            value=""
-                          />
-                          <div
-                            class="dialog-lightbox-close-button dialog-close-button"
-                            role="button"
-                            tabindex="0"
-                            (click)="checkIfCloseSearchForm($event)"
-                          >
-                            <i aria-hidden="true" class="fas fa-xmark" style="font-size: 28px;"></i>
-                            <span class="elementor-screen-only"
-                              >Close this search box.</span
-                            >
-                          </div>
-                        </div>
                       </form>
                     </div>
                   </div>
@@ -998,32 +926,6 @@
                         >
                           <i aria-hidden="true" class="fas fa-search"></i>
                           <span class="elementor-screen-only">Cerca</span>
-                        </div>
-                        <div class="elementor-search-form__container" (click)="checkIfCloseSearchForm($event)">
-                          <label
-                            class="elementor-screen-only"
-                            for="elementor-search-form-164d7f5"
-                            >Cerca</label
-                          >
-                          <input
-                            id="elementor-search-form-164d7f5"
-                            placeholder="Cerca...."
-                            class="elementor-search-form__input"
-                            type="search"
-                            name="s"
-                            value=""
-                          />
-                          <div
-                            class="dialog-lightbox-close-button dialog-close-button"
-                            role="button"
-                            tabindex="0"
-                            (click)="checkIfCloseSearchForm($event)"
-                          >
-                            <i aria-hidden="true" class="fas fa-xmark" style="font-size: 28px;"></i>
-                            <span class="elementor-screen-only"
-                              >Close this search box.</span
-                            >
-                          </div>
                         </div>
                       </form>
                     </div>
@@ -1100,3 +1002,4 @@
 </div>
 
 <app-side-cart></app-side-cart>
+<app-search-form-full-screen></app-search-form-full-screen>

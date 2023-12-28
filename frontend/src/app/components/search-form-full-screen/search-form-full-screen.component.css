@@ -1,0 +1,27 @@
+input[type=search] {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    line-height: 1;
+    min-width: 0;
+    font-size: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=search].elementor-search-form__input {
+    font-size: 50px;
+    text-align: center;
+    border: solid #fff;
+    border-width: 0 0 1px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+input:focus-visible {
+    outline: none;
+}

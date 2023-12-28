@@ -124,13 +124,11 @@ export class HeaderComponent implements OnInit {
   }
 
   openSearchForm(){
-    let searchFormList = document.querySelectorAll(".elementor-search-form__container");
-    if(searchFormList){
-      searchFormList.forEach((searchForm) => {
+    let searchForm = document.querySelector(".elementor-search-form__container");
+    if(searchForm){
         searchForm.classList.add("elementor-search-form--full-screen");
         searchForm.classList.add("elementor-lightbox");
-        document.getElementById("elementor-search-form-d0b0bb1")?.focus();
-      })
+        document.getElementById("elementor-search-form-input-field")?.focus();
     }
     
   }

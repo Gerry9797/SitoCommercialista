@@ -30449,7 +30449,7 @@ body.rtl.woocommerce #content div.product .elementor-widget-woocommerce-product-
     color: var(--toggle-button-icon-hover-color,#69727d)
 }
 
-.elementor-menu-cart--items-indicator-bubble .elementor-menu-cart__toggle .elementor-button-icon .elementor-button-icon-qty[data-counter] {
+.elementor-menu-cart--items-indicator-bubble .elementor-menu-cart__toggle .elementor-button-icon .elementor-button-icon-qty {
     display: block;
     position: absolute;
     min-width: 1.6em;
@@ -30464,12 +30464,12 @@ body.rtl.woocommerce #content div.product .elementor-widget-woocommerce-product-
     font-size: 10px
 }
 
-.elementor-menu-cart--items-indicator-plain .elementor-menu-cart__toggle .elementor-button-icon .elementor-button-icon-qty[data-counter] {
+.elementor-menu-cart--items-indicator-plain .elementor-menu-cart__toggle .elementor-button-icon .elementor-button-icon-qty {
     display: inline-block;
     font-weight: 400
 }
 
-.elementor-menu-cart--items-indicator-none .elementor-menu-cart__toggle .elementor-button-icon .elementor-button-icon-qty[data-counter] {
+.elementor-menu-cart--items-indicator-none .elementor-menu-cart__toggle .elementor-button-icon .elementor-button-icon-qty {
     display: none
 }
 
@@ -33350,7 +33350,7 @@ body.rtl.woocommerce #content div.product .elementor-widget-woocommerce-product-
     outline-style: solid
 }
 
-.elementor-search-form--skin-full_screen .elementor-search-form input[type=search].elementor-search-form__input {
+.elementor-search-form input[type=search].elementor-search-form__input {
     font-size: 50px;
     text-align: center;
     border: solid #fff;
@@ -33395,7 +33395,7 @@ body.rtl.woocommerce #content div.product .elementor-widget-woocommerce-product-
     height: var(--e-search-form-toggle-icon-size,.55em)
 }
 
-.elementor-search-form--skin-full_screen .elementor-search-form__container {
+.elementor-search-form__container {
     transition: .3s;
     align-items: center;
     position: fixed;
@@ -33409,13 +33409,13 @@ body.rtl.woocommerce #content div.product .elementor-widget-woocommerce-product-
     background-color: rgba(0,0,0,.8)
 }
 
-.elementor-search-form--skin-full_screen .elementor-search-form__container:not(.elementor-search-form--full-screen) {
+.elementor-search-form__container:not(.elementor-search-form--full-screen) {
     overflow: hidden;
     opacity: 0;
     transform: scale(0)
 }
 
-.elementor-search-form--skin-full_screen .elementor-search-form__container:not(.elementor-search-form--full-screen) .dialog-lightbox-close-button {
+.elementor-search-form__container:not(.elementor-search-form--full-screen) .dialog-lightbox-close-button {
     display: none
 }
 
@@ -50266,13 +50266,13 @@ ol.elementor-toc__list-wrapper .elementor-toc__list-item-text-wrapper:before {
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-widget-search-form input[type="search"].elementor-search-form__input {
+input[type="search"].elementor-search-form__input {
     font-family: var( --e-global-typography-text-font-family );
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-widget-search-form .elementor-search-form__input, .elementor-widget-search-form .elementor-search-form__icon, .elementor-widget-search-form .elementor-lightbox .dialog-lightbox-close-button, .elementor-widget-search-form .elementor-lightbox .dialog-lightbox-close-button:hover, .elementor-widget-search-form.elementor-search-form--skin-full_screen input[type="search"].elementor-search-form__input {
+.elementor-search-form__input, .elementor-widget-search-form .elementor-search-form__icon, .elementor-widget-search-form .elementor-lightbox .dialog-lightbox-close-button, .elementor-widget-search-form .elementor-lightbox .dialog-lightbox-close-button:hover, input[type="search"].elementor-search-form__input {
     color: var( --e-global-color-text );
     fill: var( --e-global-color-text );
 }
@@ -51329,7 +51329,7 @@ ol.elementor-toc__list-wrapper .elementor-toc__list-item-text-wrapper:before {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-widget-search-form input[type="search"].elementor-search-form__input {
+    input[type="search"].elementor-search-form__input {
         font-size: var( --e-global-typography-text-font-size );
     }
 
@@ -51915,7 +51915,7 @@ ol.elementor-toc__list-wrapper .elementor-toc__list-item-text-wrapper:before {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-widget-search-form input[type="search"].elementor-search-form__input {
+    input[type="search"].elementor-search-form__input {
         font-size: var( --e-global-typography-text-font-size );
     }
 
@@ -53177,20 +53177,20 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
     --e-search-form-toggle-border-radius: 18px;
 }
 
-.elementor-header-main .elementor-element.elementor-element-header-search-form-div.elementor-search-form--skin-full_screen .elementor-search-form__container {
+.elementor-search-form__container {
     background-color: #2D3E50F2;
 }
 
-.elementor-header-main .elementor-element.elementor-element-header-search-form-div .elementor-search-form__input, .elementor-header-main .elementor-element.elementor-element-header-search-form-div .elementor-search-form__icon, .elementor-header-main .elementor-element.elementor-element-header-search-form-div .elementor-lightbox .dialog-lightbox-close-button, .elementor-header-main .elementor-element.elementor-element-header-search-form-div .elementor-lightbox .dialog-lightbox-close-button:hover, .elementor-header-main .elementor-element.elementor-element-header-search-form-div.elementor-search-form--skin-full_screen input[type="search"].elementor-search-form__input {
+.elementor-search-form__input, .elementor-header-main .elementor-element.elementor-element-header-search-form-div .elementor-search-form__icon, .elementor-header-main .elementor-element.elementor-element-header-search-form-div .elementor-lightbox .dialog-lightbox-close-button, .elementor-header-main .elementor-element.elementor-element-header-search-form-div .elementor-lightbox .dialog-lightbox-close-button:hover, input[type="search"].elementor-search-form__input {
     color: var( --e-global-color-0482cab );
     fill: var( --e-global-color-0482cab );
 }
 
-.elementor-header-main .elementor-element.elementor-element-header-search-form-div:not(.elementor-search-form--skin-full_screen) .elementor-search-form__container {
+.elementor-search-form__container {
     border-radius: 0px;
 }
 
-.elementor-header-main .elementor-element.elementor-element-header-search-form-div.elementor-search-form--skin-full_screen input[type="search"].elementor-search-form__input {
+input[type="search"].elementor-search-form__input {
     border-radius: 0px;
 }
 
@@ -53297,20 +53297,20 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
     --e-search-form-toggle-border-radius: 18px;
 }
 
-.elementor-header-main .elementor-element.elementor-element-164d7f5.elementor-search-form--skin-full_screen .elementor-search-form__container {
+.elementor-search-form__container {
     background-color: #2D3E50F2;
 }
 
-.elementor-header-main .elementor-element.elementor-element-164d7f5 .elementor-search-form__input, .elementor-header-main .elementor-element.elementor-element-164d7f5 .elementor-search-form__icon, .elementor-header-main .elementor-element.elementor-element-164d7f5 .elementor-lightbox .dialog-lightbox-close-button, .elementor-header-main .elementor-element.elementor-element-164d7f5 .elementor-lightbox .dialog-lightbox-close-button:hover, .elementor-header-main .elementor-element.elementor-element-164d7f5.elementor-search-form--skin-full_screen input[type="search"].elementor-search-form__input {
+.elementor-search-form__input, .elementor-header-main .elementor-element.elementor-element-164d7f5 .elementor-search-form__icon, .elementor-header-main .elementor-element.elementor-element-164d7f5 .elementor-lightbox .dialog-lightbox-close-button, .elementor-header-main .elementor-element.elementor-element-164d7f5 .elementor-lightbox .dialog-lightbox-close-button:hover, input[type="search"].elementor-search-form__input {
     color: var( --e-global-color-0482cab );
     fill: var( --e-global-color-0482cab );
 }
 
-.elementor-header-main .elementor-element.elementor-element-164d7f5:not(.elementor-search-form--skin-full_screen) .elementor-search-form__container {
+.elementor-search-form__container {
     border-radius: 0px;
 }
 
-.elementor-header-main .elementor-element.elementor-element-164d7f5.elementor-search-form--skin-full_screen input[type="search"].elementor-search-form__input {
+input[type="search"].elementor-search-form__input {
     border-radius: 0px;
 }
 
