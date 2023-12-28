@@ -1,9 +1,27 @@
 li.open-dropdown-delayed ul {
-    display: none;
-    transition: display 1s;
+  display: none;
+  transition: display 1s;
 }
 
-li.open-dropdown-delayed:hover ul{
-    display: block;
-    transition: display 1s;
+li.open-dropdown-delayed:hover ul {
+  display: block;
+  transition: display 1s;
+}
+
+.fixed-style {
+  position: fixed;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  top: 0px;
+}
+
+.dropdown-item-style {
+  width: auto;
+  min-width: 10em;
+  max-width: 1000px;
+  top: auto;
+  left: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
 }

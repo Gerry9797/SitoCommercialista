@@ -1,15 +1,8 @@
 <div class="elementor elementor-header-main elementor-location-header">
   <!-- INITIAL FIXED HEADER  -->
   <section
-    class="elementor-section elementor-top-section elementor-element elementor-header-main-wrapper elementor-section-content-top elementor-section-full_width elementor-section-height-min-height sticky-header elementor-section-height-default elementor-section-items-middle elementor-sticky elementor-sticky--active elementor-section--handles-inside"
+    class="elementor-section elementor-top-section elementor-element elementor-header-main-wrapper elementor-section-content-top elementor-section-full_width elementor-section-height-min-height sticky-header elementor-section-height-default elementor-section-items-middle elementor-sticky elementor-sticky--active elementor-section--handles-inside fixed-style"
     [class.elementor-sticky--effects]="isScrolled"
-    style="
-      position: fixed;
-      width: 100%;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      top: 0px;
-    "
   >
     <div class="elementor-container elementor-column-gap-no">
       <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-header-main-div">
@@ -25,16 +18,14 @@
                           width="561"
                           height="156"
                           src="assets/logo/logo_vf_cdl.svg"
-                          alt="logo Aisia Autiero"
+                          alt="logo {{datiPersonali.nome}} {{datiPersonali.cognome}}"
                         />
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-header-nav-wrapper elementor-hidden-tablet elementor-hidden-mobile"
-              >
+              <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-header-nav-wrapper elementor-hidden-tablet elementor-hidden-mobile">
                 <div class="elementor-widget-wrap elementor-element-populated">
                   <div class="elementor-element elementor-header-nav-div-external elementor-nav-menu__align-right elementor-hidden-tablet elementor-hidden-mobile elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu">
                     <div class="elementor-widget-container">
@@ -67,21 +58,12 @@
                                   </span>
                                 </a>
                                 <ul
-                                  class="sub-menu elementor-nav-menu--dropdown sm-nowrap"
+                                  class="sub-menu elementor-nav-menu--dropdown sm-nowrap dropdown-item-style"
                                   id="{{menuItem.idAriaControls}}"
                                   role="group"
                                   aria-hidden="true"
                                   [attr.aria-labelledby]="menuItem.idToggleDropdown"
                                   aria-expanded="false"
-                                  style="
-                                    width: auto;
-                                    min-width: 10em;
-                                    max-width: 1000px;
-                                    top: auto;
-                                    left: 0px;
-                                    margin-left: 0px;
-                                    margin-top: 0px;
-                                  "
                                 >
                                   @for (childMenuItem of menuItem.children; track childMenuItem) {
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page">
@@ -167,9 +149,7 @@
                     <div class="elementor-widget-container">
                       <div class="elementor-menu-cart__wrapper">
                         <div class="elementor-menu-cart__toggle_wrapper">
-                          <div
-                            class="elementor-menu-cart__toggle elementor-button-wrapper"
-                          >
+                          <div class="elementor-menu-cart__toggle elementor-button-wrapper">
                             <a
                               id="elementor-menu-cart__toggle_button"
                               (click)="openCartDetail()"
@@ -177,15 +157,9 @@
                               aria-expanded="false"
                             >
                               <span class="elementor-button-icon">
-                                <span
-                                  class="elementor-button-icon-qty"
-                                  
-                                  >0</span
-                                >
+                                <span class="elementor-button-icon-qty">{{cartItemsNum}}</span>
                                 <img src="../../../assets/icons/cart-icon.png" alt="Carrello">
-                                <span class="elementor-screen-only"
-                                  >Carrello</span
-                                >
+                                <span class="elementor-screen-only">Carrello</span>
                               </span>
                             </a>
                           </div>
@@ -195,10 +169,6 @@
                   </div>
                   <div
                     class="elementor-element elementor-element-164d7f5 elementor-search-form--skin-full_screen elementor-widget__width-auto elementor-hidden-desktop elementor-widget elementor-widget-search-form"
-                    data-id="164d7f5"
-                    data-element_type="widget"
-                    data-settings='{"skin":"full_screen"}'
-                    data-widget_type="search-form.default"
                   >
                     <div class="elementor-widget-container">
                       <form
@@ -691,15 +661,9 @@
                               aria-expanded="false"
                             >
                               <span class="elementor-button-icon">
-                                <span
-                                  class="elementor-button-icon-qty"
-                                  data-counter="0"
-                                  >0</span
-                                >
-                                <i class="eicon-cart-medium"></i>
-                                <span class="elementor-screen-only"
-                                  >Carrello</span
-                                >
+                                <span class="elementor-button-icon-qty">{{cartItemsNum}}</span>
+                                <img src="../../../assets/icons/cart-icon.png" alt="Carrello">
+                                <span class="elementor-screen-only">Carrello</span>
                               </span>
                             </a>
                           </div>
@@ -761,15 +725,9 @@
                               aria-expanded="false"
                             >
                               <span class="elementor-button-icon">
-                                <span
-                                  class="elementor-button-icon-qty"
-                                  data-counter="0"
-                                  >0</span
-                                >
-                                <i class="eicon-cart-medium"></i>
-                                <span class="elementor-screen-only"
-                                  >Carrello</span
-                                >
+                                <span class="elementor-button-icon-qty">{{cartItemsNum}}</span>
+                                <img src="../../../assets/icons/cart-icon.png" alt="Carrello">
+                                <span class="elementor-screen-only">Carrello</span>
                               </span>
                             </a>
                           </div>

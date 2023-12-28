@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, Renderer2 } from '@angular/core';
+import { SITE_CONFIG } from 'src/app/app.config';
 import { SideMenuManagerService } from 'src/app/services/side-menu-manager.service';
 
 interface IMenuItem {
@@ -27,6 +28,8 @@ export class HeaderComponent implements OnInit {
   menuItems: IMenuItem[] = []
 
   cartItemsNum: number = 0;
+
+  datiPersonali: any = SITE_CONFIG.datiPersonali
 
   constructor(
     private renderer: Renderer2,
