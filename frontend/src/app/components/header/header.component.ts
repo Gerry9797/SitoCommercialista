@@ -148,25 +148,8 @@ export class HeaderComponent implements OnInit {
   }
 
   openCartDetail(){
-
-    let cartList = document.querySelectorAll(".elementor-menu-cart__container");
-    cartList.forEach((cartToggle) => {
-      cartToggle?.classList.add("elementor-menu-cart--shown")
-    });
-  }
-
-  checkIfCloseCartDetail(event: any){
-    let targetClicked = event.target;
-    if(targetClicked.classList.contains("no-close-cart-details")){
-      return
-    }
-    else{
-      let cartToggleList = document.querySelectorAll(".elementor-widget-woocommerce-menu-cart");
-      cartToggleList.forEach((cartToggle) => {
-        cartToggle?.classList.remove("elementor-menu-cart--shown")
-      });
-    }
-
+    let cart = document.querySelector(".elementor-menu-cart__container");
+    cart?.classList.add("elementor-menu-cart--shown");
   }
 
   openSideMenu(){
