@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, Renderer2 } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { SITE_CONFIG } from 'src/app/app.config';
 import { SideMenuManagerService } from 'src/app/services/side-menu-manager.service';
 
@@ -25,6 +26,8 @@ export class HeaderComponent implements OnInit {
 
   isScrolled: boolean = false;
 
+  isHome: boolean = true;
+
   menuItems: IMenuItem[] = []
 
   cartItemsNum: number = 0;
@@ -33,14 +36,18 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private renderer: Renderer2,
-    private sideMenuManager: SideMenuManagerService
-  ) { }
+    private sideMenuManager: SideMenuManagerService,
+    private router: Router
+  ) {
+   }
 
   ngOnInit(): void {
 
     this.loadMenuItemsConfiguration();
 
     this.handleListItemWithDropdownKeepSelectionOnItsUlChildren();
+
+    this.checkIfIsHome();
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -52,6 +59,16 @@ export class HeaderComponent implements OnInit {
     else {
       this.isScrolled = false;
     }
+  }
+
+  checkIfIsHome(){
+    // Sottoscrizione agli eventi di navigazione per controllare la rotta corrente
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // Verifica se la rotta corrente è la home
+        this.isHome = this.router.url === '/';
+      }
+    });
   }
 
   loadMenuItemsConfiguration(){

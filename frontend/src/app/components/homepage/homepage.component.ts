@@ -23,7 +23,6 @@ export class HomepageComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-
     this.utilityService.scrollToTop();
   }
 
