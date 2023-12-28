@@ -158,4 +158,8 @@ export class HeaderComponent implements OnInit {
   openSideMenu(){
     this.sideMenuManager.openSideMenu();
   }
+
+  openModalPrenotazioneConsulenza(){
+    
+  }
 }

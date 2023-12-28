@@ -25,3 +25,11 @@ li.open-dropdown-delayed:hover ul {
   margin-left: 0px;
   margin-top: 0px;
 }
+
+/* .no-border-btn {
+  border: none;
+}
+
+.no-border-btn:focus {
+  outline: none !important;
+} */
