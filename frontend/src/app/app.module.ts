@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -47,7 +47,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, registerLocaleData } from '@angular/common';
 import { InputWithValidationComponent } from './bricks/input-with-validation/input-with-validation.component';
 import { DettagliAccountComponent } from './components/dettagli-account/dettagli-account.component';
 import { ConsulenzaAziendaComponent } from './components/consulenza-azienda/consulenza-azienda.component';
@@ -64,10 +64,14 @@ import { ArticleCardComponent } from './bricks/cards/article-card/article-card.c
 import { RecentArticlesComponent } from './components/recent-articles/recent-articles.component';
 import { SideCartComponent } from './components/side-cart/side-cart.component';
 import { SearchFormFullScreenComponent } from './components/search-form-full-screen/search-form-full-screen.component';
+import localeIt from '@angular/common/locales/it';
 
 export function playerFactory() {
   return player;
 }
+
+// Registra i dati della lingua italiana
+registerLocaleData(localeIt);
 
 @NgModule({
   declarations: [
@@ -136,7 +140,11 @@ export function playerFactory() {
     OverlayModule,
     AsyncPipe
   ],
-  providers: [authInterceptorProviders],
+  providers: [
+    authInterceptorProviders,
+    // Imposta la lingua italiana come lingua predefinita
+    { provide: LOCALE_ID, useValue: 'it-IT' },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

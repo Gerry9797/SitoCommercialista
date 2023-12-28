@@ -5,7 +5,7 @@ export interface IArticleCard {
   image: string,
   title: string,
   description: string,
-  publicationhDate: Date,
+  publicationDate: Date,
   readAllLabel: string
 }
 

@@ -48,6 +48,10 @@ export class UtilityService {
     window.scrollTo({top: 0, behavior: 'smooth'});
   }
 
+  scrollToTopInstant() {
+    window.scrollTo({top: 0 });
+  }
+
   raiseScrollEvent(){
     window.scrollTo({top: 1, behavior: 'smooth'});
   }
