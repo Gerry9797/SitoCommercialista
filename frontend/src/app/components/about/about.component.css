@@ -23,106 +23,106 @@
     text-transform: uppercase;
 }
 
-.elementor-about-page .elementor-element.elementor-element-5cd389a {
+.elementor-about-page .elementor-element.elementor-about-life-description-subtitle {
     text-align: left;
 }
 
-.elementor-about-page .elementor-element.elementor-element-5cd389a .elementor-heading-title {
+.elementor-about-page .elementor-element.elementor-about-life-description-subtitle .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 44px;
     font-weight: 600;
 }
 
-.elementor-about-page .elementor-element.elementor-element-5cd389a > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-about-life-description-subtitle > .elementor-widget-container {
     margin: 0px 0px 20px 0px;
 }
 
-.elementor-about-page .elementor-element.elementor-element-8e74dcb {
+.elementor-about-page .elementor-element.elementor-about-life-description-block-1 {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 17px;
     font-weight: 400;
 }
 
-.elementor-about-page .elementor-element.elementor-element-f9bee4b {
+.elementor-about-page .elementor-element.elementor-about-life-description-subtitle-2 {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 20px;
     font-weight: 400;
 }
 
-.elementor-about-page .elementor-element.elementor-element-f9bee4b > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-about-life-description-subtitle-2 > .elementor-widget-container {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
 
-.elementor-about-page .elementor-element.elementor-element-bce1994 {
+.elementor-about-page .elementor-element.elementor-about-life-description-block-2 {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 17px;
     font-weight: 400;
 }
 
-.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+.elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
     padding-bottom: calc(2px/2);
 }
 
-.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
+.elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
     margin-top: calc(2px/2);
 }
 
-.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
+.elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
     margin-right: calc(2px/2);
     margin-left: calc(2px/2);
 }
 
-.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items.elementor-inline-items {
+.elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-items.elementor-inline-items {
     margin-right: calc(-2px/2);
     margin-left: calc(-2px/2);
 }
 
-.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+.elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
     left: calc(-2px/2);
 }
 
-.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+.elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
     right: calc(-2px/2);
 }
 
-.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-icon i {
+.elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-icon i {
     color: var( --e-global-color-accent );
     transition: color 0.3s;
 }
 
-.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-icon svg {
+.elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-icon svg {
     fill: var( --e-global-color-accent );
     transition: fill 0.3s;
 }
 
-.elementor-about-page .elementor-element.elementor-element-8b4fd76 {
+.elementor-about-page .elementor-element.elementor-about-life-list-container {
     --e-icon-list-icon-size: 13px;
 }
 
-.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > a {
+.elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-item > .elementor-icon-list-text, .elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-item > a {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-text {
+.elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-text {
     color: var( --e-global-color-text );
     transition: color 0.3s;
 }
 
-.elementor-about-page .elementor-element.elementor-element-8b4fd76 > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-about-life-list-container > .elementor-widget-container {
     margin: -15px 150px 0px 0px;
 }
 
-.elementor-about-page .elementor-element.elementor-element-b516a7a {
+.elementor-about-page .elementor-element.elementor-about-life-description-block-3 {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 17px;
     font-weight: 400;
 }
 
-.elementor-about-page .elementor-element.elementor-element-b516a7a > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-about-life-description-block-3 > .elementor-widget-container {
     margin: 20px 0px 0px 0px;
 }
 
@@ -454,11 +454,11 @@
         padding: 0px 20px 0px 20px;
     }
 
-    .elementor-about-page .elementor-element.elementor-element-5cd389a .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-about-life-description-subtitle .elementor-heading-title {
         font-size: 30px;
     }
 
-    .elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > a {
+    .elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-item > .elementor-icon-list-text, .elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-item > a {
         font-size: var( --e-global-typography-text-font-size );
     }
 
@@ -520,15 +520,15 @@
         padding: 030px 00px 020px 00px;
     }
 
-    .elementor-about-page .elementor-element.elementor-element-5cd389a .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-about-life-description-subtitle .elementor-heading-title {
         font-size: 25px;
     }
 
-    .elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > a {
+    .elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-item > .elementor-icon-list-text, .elementor-about-page .elementor-element.elementor-about-life-list-container .elementor-icon-list-item > a {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-about-page .elementor-element.elementor-element-8b4fd76 > .elementor-widget-container {
+    .elementor-about-page .elementor-element.elementor-about-life-list-container > .elementor-widget-container {
         margin: -20px 0px 0px 0px;
     }
 
