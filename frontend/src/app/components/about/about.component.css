@@ -519,14 +519,14 @@
   font-weight: 600;
 }
 
-.elementor-about-page .elementor-element.elementor-element-b72dfec {
+.elementor-about-page .elementor-element.elementor-about-something-of-me {
   margin-top: 0%;
   margin-bottom: 0%;
   padding: 5% 3% 3% 3%;
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-0a641ad
+  .elementor-element.elementor-about-something-of-me-desc
   > .elementor-widget-wrap
   > .elementor-widget:not(.elementor-widget__width-auto):not(
     .elementor-widget__width-initial
@@ -534,12 +534,12 @@
   margin-bottom: 10px;
 }
 
-.elementor-about-page .elementor-element.elementor-element-99506f7 {
+.elementor-about-page .elementor-element.elementor-about-something-of-me-desc-title {
   text-align: left;
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-99506f7
+  .elementor-element.elementor-about-something-of-me-desc-title
   .elementor-heading-title {
   color: var(--e-global-color-text);
   font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima,
@@ -549,27 +549,27 @@
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-99506f7
+  .elementor-element.elementor-about-something-of-me-desc-title
   > .elementor-widget-container {
   margin: 0px 0px 20px 0px;
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   .elementor-icon-list-items:not(.elementor-inline-items)
   .elementor-icon-list-item:not(:last-child) {
   padding-bottom: calc(15px / 2);
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   .elementor-icon-list-items:not(.elementor-inline-items)
   .elementor-icon-list-item:not(:first-child) {
   margin-top: calc(15px / 2);
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   .elementor-icon-list-items.elementor-inline-items
   .elementor-icon-list-item {
   margin-right: calc(15px / 2);
@@ -577,28 +577,28 @@
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   .elementor-icon-list-items.elementor-inline-items {
   margin-right: calc(-15px / 2);
   margin-left: calc(-15px / 2);
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   .elementor-icon-list-items.elementor-inline-items
   .elementor-icon-list-item:after {
   left: calc(-15px / 2);
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   .elementor-icon-list-items.elementor-inline-items
   .elementor-icon-list-item:after {
   right: calc(-15px / 2);
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   .elementor-icon-list-icon
   i {
   color: var(--e-global-color-accent);
@@ -606,31 +606,31 @@
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   .elementor-icon-list-icon
   svg {
   fill: var(--e-global-color-accent);
   transition: fill 0.3s;
 }
 
-.elementor-about-page .elementor-element.elementor-element-3245e42 {
+.elementor-about-page .elementor-element.elementor-about-something-of-me-desc-block {
   --e-icon-list-icon-size: 15px;
   --icon-vertical-align: flex-start;
   --icon-vertical-offset: 6px;
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   .elementor-icon-list-icon {
   padding-right: 4px;
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   .elementor-icon-list-item
   > .elementor-icon-list-text,
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   .elementor-icon-list-item
   > a {
   font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima,
@@ -640,20 +640,20 @@
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   .elementor-icon-list-text {
   color: var(--e-global-color-text);
   transition: color 0.3s;
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-3245e42
+  .elementor-element.elementor-about-something-of-me-desc-block
   > .elementor-widget-container {
   margin: 10px 10px 0px 0px;
 }
 
 .elementor-about-page
-  .elementor-element.elementor-element-1bf49d2
+  .elementor-element.elementor-about-something-of-me-picture-block
   > .elementor-widget-wrap
   > .elementor-widget:not(.elementor-widget__width-auto):not(
     .elementor-widget__width-initial
@@ -776,26 +776,26 @@
     font-size: 30px;
   }
 
-  .elementor-about-page .elementor-element.elementor-element-b72dfec {
+  .elementor-about-page .elementor-element.elementor-about-something-of-me {
     margin-top: 3%;
     margin-bottom: 0%;
     padding: 05% 3% 5% 3%;
   }
 
   .elementor-about-page
-    .elementor-element.elementor-element-0a641ad
+    .elementor-element.elementor-about-something-of-me-desc
     > .elementor-element-populated {
     padding: 10px 10px 0px 0px;
   }
 
   .elementor-about-page
-    .elementor-element.elementor-element-99506f7
+    .elementor-element.elementor-about-something-of-me-desc-title
     .elementor-heading-title {
     font-size: 30px;
   }
 
   .elementor-about-page
-    .elementor-element.elementor-element-1bf49d2
+    .elementor-element.elementor-about-something-of-me-picture-block
     > .elementor-element-populated {
     padding: 60px 0px 0px 0px;
   }
@@ -906,26 +906,26 @@
     font-size: 25px;
   }
 
-  .elementor-about-page .elementor-element.elementor-element-b72dfec {
+  .elementor-about-page .elementor-element.elementor-about-something-of-me {
     margin-top: 10%;
     margin-bottom: 0%;
     padding: 20px 20px 20px 20px;
   }
 
   .elementor-about-page
-    .elementor-element.elementor-element-0a641ad
+    .elementor-element.elementor-about-something-of-me-desc
     > .elementor-element-populated {
     padding: 30px 0px 0px 0px;
   }
 
   .elementor-about-page
-    .elementor-element.elementor-element-99506f7
+    .elementor-element.elementor-about-something-of-me-desc-title
     .elementor-heading-title {
     font-size: 25px;
   }
 
   .elementor-about-page
-    .elementor-element.elementor-element-3245e42
+    .elementor-element.elementor-about-something-of-me-desc-block
     > .elementor-widget-container {
     margin: 0px 0px 0px 0px;
   }
@@ -944,21 +944,21 @@
     width: 59%;
   }
 
-  .elementor-about-page .elementor-element.elementor-element-0a641ad {
+  .elementor-about-page .elementor-element.elementor-about-something-of-me-desc {
     width: 59%;
   }
 
-  .elementor-about-page .elementor-element.elementor-element-1bf49d2 {
+  .elementor-about-page .elementor-element.elementor-about-something-of-me-picture-block {
     width: 41%;
   }
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-  .elementor-about-page .elementor-element.elementor-element-0a641ad {
+  .elementor-about-page .elementor-element.elementor-about-something-of-me-desc {
     width: 55%;
   }
 
-  .elementor-about-page .elementor-element.elementor-element-1bf49d2 {
+  .elementor-about-page .elementor-element.elementor-about-something-of-me-picture-block {
     width: 45%;
   }
 }
