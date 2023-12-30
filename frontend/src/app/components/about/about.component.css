@@ -126,33 +126,33 @@
     margin: 20px 0px 0px 0px;
 }
 
-.elementor-about-page .elementor-element.elementor-element-6595a79:not(.elementor-motion-effects-element-type-background), .elementor-about-page .elementor-element.elementor-element-6595a79 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+.elementor-about-page .elementor-element.elementor-about-services-presentation:not(.elementor-motion-effects-element-type-background), .elementor-about-page .elementor-element.elementor-about-services-presentation > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: #FDF9F6;
 }
 
-.elementor-about-page .elementor-element.elementor-element-6595a79 {
+.elementor-about-page .elementor-element.elementor-about-services-presentation {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 40px 0px 0px 0px;
 }
 
-.elementor-about-page .elementor-element.elementor-element-6595a79 > .elementor-background-overlay {
+.elementor-about-page .elementor-element.elementor-about-services-presentation > .elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.elementor-about-page .elementor-element.elementor-element-2ea5990 {
+.elementor-about-page .elementor-element.elementor-about-services-presentation-title {
     text-align: center;
 }
 
-.elementor-about-page .elementor-element.elementor-element-2ea5990 .elementor-heading-title {
+.elementor-about-page .elementor-element.elementor-about-services-presentation-title .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 45px;
     font-weight: 600;
 }
 
-.elementor-about-page .elementor-element.elementor-element-2ea5990 > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-about-services-presentation-title > .elementor-widget-container {
     margin: 0px 0px 20px 0px;
 }
 
@@ -462,11 +462,11 @@
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-about-page .elementor-element.elementor-element-6595a79 {
+    .elementor-about-page .elementor-element.elementor-about-services-presentation {
         padding: 5% 0% 0% 0%;
     }
 
-    .elementor-about-page .elementor-element.elementor-element-2ea5990 .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-about-services-presentation-title .elementor-heading-title {
         font-size: 30px;
     }
 
@@ -532,13 +532,13 @@
         margin: -20px 0px 0px 0px;
     }
 
-    .elementor-about-page .elementor-element.elementor-element-6595a79 {
+    .elementor-about-page .elementor-element.elementor-about-services-presentation {
         margin-top: 0px;
         margin-bottom: 0px;
         padding: 8% 0% 0% 0%;
     }
 
-    .elementor-about-page .elementor-element.elementor-element-2ea5990 .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-about-services-presentation-title .elementor-heading-title {
         font-size: 25px;
     }
 
