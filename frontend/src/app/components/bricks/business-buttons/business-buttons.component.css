@@ -1,0 +1,167 @@
+.elementor-element.elementor-element-business-buttons-container > .elementor-container {
+    max-width: 1165px;
+}
+
+.elementor-element.elementor-element-business-buttons-container {
+    margin-top: -40px;
+    margin-bottom: 0px;
+    padding: 0px 50px 0px 50px;
+}
+
+@media(max-width: 1024px) {
+    .elementor-element.elementor-element-business-buttons-container {
+        padding: 0% 5% 0% 5%;
+    }
+}
+
+@media(max-width: 767px) {
+    .elementor-element.elementor-element-business-buttons-container {
+        margin-top: -109px;
+        margin-bottom: 0px;
+    }
+}
+
+.elementor-element.elementor-element-business-buttons:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-element.elementor-element-business-buttons > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-color: #EED6D3;
+}
+
+.elementor-element.elementor-element-business-buttons > .elementor-element-populated {
+    border-style: solid;
+    border-color: #FFFFFF;
+    box-shadow: 0px 0px 20px 0px rgba(222, 222, 222, 0.5);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 30px 20px 30px 20px;
+}
+
+.elementor-element.elementor-element-business-buttons > .elementor-element-populated, .elementor-element.elementor-element-business-buttons > .elementor-element-populated > .elementor-background-overlay, .elementor-element.elementor-element-business-buttons > .elementor-background-slideshow {
+    border-radius: 20px 20px 20px 20px;
+}
+
+.elementor-element.elementor-element-business-buttons > .elementor-element-populated > .elementor-background-overlay {
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-element.elementor-element-business-button-base.elementor-column .elementor-widget-wrap {
+    align-items: center;
+}
+
+.elementor-element.elementor-element-business-button-base.elementor-column.elementor-element > .elementor-widget-wrap.elementor-element-populated {
+    align-content: center;
+    align-items: center;
+}
+
+.elementor-element.elementor-element-business-button-base.elementor-column > .elementor-widget-wrap {
+    justify-content: center;
+}
+
+.elementor-element.elementor-element-business-button-base:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-element.elementor-element-business-button-base > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-color: var( --e-global-color-primary );
+}
+
+.elementor-element.elementor-element-business-button-base:hover > .elementor-element-populated {
+    background-color: var( --e-global-color-accent );
+}
+
+/* .elementor-element.elementor-element-business-button-base:first-of-type > .elementor-element-populated, .elementor-element.elementor-element-business-button-base > .elementor-element-populated > .elementor-background-overlay, .elementor-element.elementor-element-business-button-base > .elementor-background-slideshow {
+    border-radius: 10px 0px 0px 10px;
+} */
+
+.elementor-element.elementor-element-business-button-base > .elementor-element-populated {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+
+.elementor-element.elementor-element-business-button-base > .elementor-element-populated > .elementor-background-overlay {
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+@media(max-width: 767px) {
+    .elementor-element.elementor-element-business-button-base > .elementor-element-populated, .elementor-element.elementor-element-business-button-base > .elementor-element-populated > .elementor-background-overlay, .elementor-element.elementor-element-business-button-base > .elementor-background-slideshow {
+        border-radius: 10px 10px 0px 0px;
+    }
+}
+
+.elementor-element-business-button-base .rounded-corner-left {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.elementor-element-business-button-base .rounded-corner-right {
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--e-global-color-secondary) !important;
+}
+
+.elementor-element-business-button-base:hover .elementor-element-populated.rounded-corner-right {
+    background-color: var(--e-global-color-secondary-hover) !important;
+}
+
+@media (max-width: 767px){
+    .elementor-element-business-button-base .rounded-corner-right {
+        border-radius: 0px 0px 10px 10px !important;
+    }
+}
+
+.elementor-element.elementor-element-business-btn-text-1 {
+    text-align: center;
+    width: auto;
+    max-width: auto;
+}
+
+.elementor-element.elementor-element-business-btn-text-1 .elementor-heading-title {
+    color: var( --e-global-color-0482cab );
+    font-family: "Poppins";
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+.elementor-element.elementor-element-business-btn-text-1 > .elementor-widget-container {
+    margin: 0px 08px 0px 0px;
+}
+
+@media(max-width: 1024px) {
+    .elementor-element.elementor-element-business-btn-text-1 .elementor-heading-title {
+        font-size: 19px;
+    }
+
+    .elementor-element.elementor-element-business-btn-text-2 .elementor-heading-title {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 767px) {
+    .elementor-element.elementor-element-business-btn-text-1 .elementor-heading-title {
+        font-size: 17px;
+    }
+    .elementor-element.elementor-element-business-btn-text-2 .elementor-heading-title {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1144px){
+    .elementor-element.elementor-element-business-btn-text-1 {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 767px){
+    .elementor-element.elementor-element-business-btn-text-1 {
+        width: auto !important;
+    }
+    .elementor-element.elementor-element-business-btn-text-1{
+        display: flex;
+        align-items: center;
+    }
+    
+}
+
+.elementor-element.elementor-element-business-btn-text-2 {
+    text-align: center;
+    width: auto;
+    max-width: auto;
+}
+
+.elementor-element.elementor-element-business-btn-text-2 .elementor-heading-title {
+    color: var( --e-global-color-0482cab );
+    font-family: "Poppins";
+    font-size: 35px;
+    font-weight: 600;
+}
