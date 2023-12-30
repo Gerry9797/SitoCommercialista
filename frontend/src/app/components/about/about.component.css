@@ -1,185 +1,185 @@
-.elementor-30 .elementor-element.elementor-element-a8adf10 {
+.elementor-about-page .elementor-element.elementor-about-life-section {
     margin-top: 0%;
     margin-bottom: 0%;
     padding: 5% 3% 3% 3%;
 }
 
-.elementor-30 .elementor-element.elementor-element-972e34d > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+.elementor-about-page .elementor-element.elementor-about-life-picture > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
     margin-bottom: 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-f2e1390 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+.elementor-about-page .elementor-element.elementor-about-life-description > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
     margin-bottom: 10px;
 }
 
-.elementor-30 .elementor-element.elementor-element-16672fd {
+.elementor-about-page .elementor-element.elementor-about-life-description-title {
     text-align: left;
 }
 
-.elementor-30 .elementor-element.elementor-element-16672fd .elementor-heading-title {
+.elementor-about-page .elementor-element.elementor-about-life-description-title .elementor-heading-title {
     color: var( --e-global-color-primary );
     font-family: "DM Serif Display", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.elementor-30 .elementor-element.elementor-element-5cd389a {
+.elementor-about-page .elementor-element.elementor-element-5cd389a {
     text-align: left;
 }
 
-.elementor-30 .elementor-element.elementor-element-5cd389a .elementor-heading-title {
+.elementor-about-page .elementor-element.elementor-element-5cd389a .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 44px;
     font-weight: 600;
 }
 
-.elementor-30 .elementor-element.elementor-element-5cd389a > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-element-5cd389a > .elementor-widget-container {
     margin: 0px 0px 20px 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-8e74dcb {
+.elementor-about-page .elementor-element.elementor-element-8e74dcb {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 17px;
     font-weight: 400;
 }
 
-.elementor-30 .elementor-element.elementor-element-f9bee4b {
+.elementor-about-page .elementor-element.elementor-element-f9bee4b {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 20px;
     font-weight: 400;
 }
 
-.elementor-30 .elementor-element.elementor-element-f9bee4b > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-element-f9bee4b > .elementor-widget-container {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-bce1994 {
+.elementor-about-page .elementor-element.elementor-element-bce1994 {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 17px;
     font-weight: 400;
 }
 
-.elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
     padding-bottom: calc(2px/2);
 }
 
-.elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
+.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
     margin-top: calc(2px/2);
 }
 
-.elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
+.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
     margin-right: calc(2px/2);
     margin-left: calc(2px/2);
 }
 
-.elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items.elementor-inline-items {
+.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items.elementor-inline-items {
     margin-right: calc(-2px/2);
     margin-left: calc(-2px/2);
 }
 
-.elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
     left: calc(-2px/2);
 }
 
-.elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
     right: calc(-2px/2);
 }
 
-.elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-icon i {
+.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-icon i {
     color: var( --e-global-color-accent );
     transition: color 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-icon svg {
+.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-icon svg {
     fill: var( --e-global-color-accent );
     transition: fill 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-8b4fd76 {
+.elementor-about-page .elementor-element.elementor-element-8b4fd76 {
     --e-icon-list-icon-size: 13px;
 }
 
-.elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > a {
+.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > a {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-text {
+.elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-text {
     color: var( --e-global-color-text );
     transition: color 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-8b4fd76 > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-element-8b4fd76 > .elementor-widget-container {
     margin: -15px 150px 0px 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-b516a7a {
+.elementor-about-page .elementor-element.elementor-element-b516a7a {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 17px;
     font-weight: 400;
 }
 
-.elementor-30 .elementor-element.elementor-element-b516a7a > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-element-b516a7a > .elementor-widget-container {
     margin: 20px 0px 0px 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-6595a79:not(.elementor-motion-effects-element-type-background), .elementor-30 .elementor-element.elementor-element-6595a79 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+.elementor-about-page .elementor-element.elementor-element-6595a79:not(.elementor-motion-effects-element-type-background), .elementor-about-page .elementor-element.elementor-element-6595a79 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: #FDF9F6;
 }
 
-.elementor-30 .elementor-element.elementor-element-6595a79 {
+.elementor-about-page .elementor-element.elementor-element-6595a79 {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 40px 0px 0px 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-6595a79 > .elementor-background-overlay {
+.elementor-about-page .elementor-element.elementor-element-6595a79 > .elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-2ea5990 {
+.elementor-about-page .elementor-element.elementor-element-2ea5990 {
     text-align: center;
 }
 
-.elementor-30 .elementor-element.elementor-element-2ea5990 .elementor-heading-title {
+.elementor-about-page .elementor-element.elementor-element-2ea5990 .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 45px;
     font-weight: 600;
 }
 
-.elementor-30 .elementor-element.elementor-element-2ea5990 > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-element-2ea5990 > .elementor-widget-container {
     margin: 0px 0px 20px 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-7f55fb2 > .elementor-container {
+.elementor-about-page .elementor-element.elementor-element-7f55fb2 > .elementor-container {
     max-width: 1165px;
 }
 
-.elementor-30 .elementor-element.elementor-element-7f55fb2:not(.elementor-motion-effects-element-type-background), .elementor-30 .elementor-element.elementor-element-7f55fb2 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+.elementor-about-page .elementor-element.elementor-element-7f55fb2:not(.elementor-motion-effects-element-type-background), .elementor-about-page .elementor-element.elementor-element-7f55fb2 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: #FDF9F6;
 }
 
-.elementor-30 .elementor-element.elementor-element-7f55fb2 {
+.elementor-about-page .elementor-element.elementor-element-7f55fb2 {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin-top: 0%;
     margin-bottom: 0%;
     padding: 0px 50px 60px 50px;
 }
 
-.elementor-30 .elementor-element.elementor-element-7f55fb2 > .elementor-background-overlay {
+.elementor-about-page .elementor-element.elementor-element-7f55fb2 > .elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-5d473f2:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-30 .elementor-element.elementor-element-5d473f2 > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+.elementor-about-page .elementor-element.elementor-element-5d473f2:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-about-page .elementor-element.elementor-element-5d473f2 > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: #F6D1B8E6;
 }
 
-.elementor-30 .elementor-element.elementor-element-5d473f2 > .elementor-element-populated {
+.elementor-about-page .elementor-element.elementor-element-5d473f2 > .elementor-element-populated {
     border-style: solid;
     border-color: #FFFFFF;
     box-shadow: 0px 0px 20px 0px rgba(222, 222, 222, 0.5);
@@ -187,54 +187,54 @@
     padding: 30px 20px 30px 20px;
 }
 
-.elementor-30 .elementor-element.elementor-element-5d473f2 > .elementor-element-populated, .elementor-30 .elementor-element.elementor-element-5d473f2 > .elementor-element-populated > .elementor-background-overlay, .elementor-30 .elementor-element.elementor-element-5d473f2 > .elementor-background-slideshow {
+.elementor-about-page .elementor-element.elementor-element-5d473f2 > .elementor-element-populated, .elementor-about-page .elementor-element.elementor-element-5d473f2 > .elementor-element-populated > .elementor-background-overlay, .elementor-about-page .elementor-element.elementor-element-5d473f2 > .elementor-background-slideshow {
     border-radius: 20px 20px 20px 20px;
 }
 
-.elementor-30 .elementor-element.elementor-element-5d473f2 > .elementor-element-populated > .elementor-background-overlay {
+.elementor-about-page .elementor-element.elementor-element-5d473f2 > .elementor-element-populated > .elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.elementor-bc-flex-widget .elementor-30 .elementor-element.elementor-element-06c4095.elementor-column .elementor-widget-wrap {
+.elementor-bc-flex-widget .elementor-about-page .elementor-element.elementor-element-06c4095.elementor-column .elementor-widget-wrap {
     align-items: center;
 }
 
-.elementor-30 .elementor-element.elementor-element-06c4095.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+.elementor-about-page .elementor-element.elementor-element-06c4095.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
     align-content: center;
     align-items: center;
 }
 
-.elementor-30 .elementor-element.elementor-element-06c4095.elementor-column > .elementor-widget-wrap {
+.elementor-about-page .elementor-element.elementor-element-06c4095.elementor-column > .elementor-widget-wrap {
     justify-content: center;
 }
 
-.elementor-30 .elementor-element.elementor-element-06c4095:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-30 .elementor-element.elementor-element-06c4095 > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+.elementor-about-page .elementor-element.elementor-element-06c4095:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-about-page .elementor-element.elementor-element-06c4095 > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: var( --e-global-color-primary );
 }
 
-.elementor-30 .elementor-element.elementor-element-06c4095:hover > .elementor-element-populated {
+.elementor-about-page .elementor-element.elementor-element-06c4095:hover > .elementor-element-populated {
     background-color: var( --e-global-color-accent );
 }
 
-.elementor-30 .elementor-element.elementor-element-06c4095 > .elementor-element-populated, .elementor-30 .elementor-element.elementor-element-06c4095 > .elementor-element-populated > .elementor-background-overlay, .elementor-30 .elementor-element.elementor-element-06c4095 > .elementor-background-slideshow {
+.elementor-about-page .elementor-element.elementor-element-06c4095 > .elementor-element-populated, .elementor-about-page .elementor-element.elementor-element-06c4095 > .elementor-element-populated > .elementor-background-overlay, .elementor-about-page .elementor-element.elementor-element-06c4095 > .elementor-background-slideshow {
     border-radius: 10px 0px 0px 10px;
 }
 
-.elementor-30 .elementor-element.elementor-element-06c4095 > .elementor-element-populated {
+.elementor-about-page .elementor-element.elementor-element-06c4095 > .elementor-element-populated {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-06c4095 > .elementor-element-populated > .elementor-background-overlay {
+.elementor-about-page .elementor-element.elementor-element-06c4095 > .elementor-element-populated > .elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-8d6d12f {
+.elementor-about-page .elementor-element.elementor-element-8d6d12f {
     text-align: center;
     width: auto;
     max-width: auto;
 }
 
-.elementor-30 .elementor-element.elementor-element-8d6d12f .elementor-heading-title {
+.elementor-about-page .elementor-element.elementor-element-8d6d12f .elementor-heading-title {
     color: var( --e-global-color-0482cab );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 23px;
@@ -242,63 +242,63 @@
     line-height: 1.5em;
 }
 
-.elementor-30 .elementor-element.elementor-element-8d6d12f > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-element-8d6d12f > .elementor-widget-container {
     margin: 0px 08px 0px 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-6a0129c {
+.elementor-about-page .elementor-element.elementor-element-6a0129c {
     text-align: center;
     width: auto;
     max-width: auto;
 }
 
-.elementor-30 .elementor-element.elementor-element-6a0129c .elementor-heading-title {
+.elementor-about-page .elementor-element.elementor-element-6a0129c .elementor-heading-title {
     color: var( --e-global-color-0482cab );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 35px;
     font-weight: 600;
 }
 
-.elementor-bc-flex-widget .elementor-30 .elementor-element.elementor-element-5a4b477.elementor-column .elementor-widget-wrap {
+.elementor-bc-flex-widget .elementor-about-page .elementor-element.elementor-element-5a4b477.elementor-column .elementor-widget-wrap {
     align-items: center;
 }
 
-.elementor-30 .elementor-element.elementor-element-5a4b477.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+.elementor-about-page .elementor-element.elementor-element-5a4b477.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
     align-content: center;
     align-items: center;
 }
 
-.elementor-30 .elementor-element.elementor-element-5a4b477.elementor-column > .elementor-widget-wrap {
+.elementor-about-page .elementor-element.elementor-element-5a4b477.elementor-column > .elementor-widget-wrap {
     justify-content: center;
 }
 
-.elementor-30 .elementor-element.elementor-element-5a4b477:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-30 .elementor-element.elementor-element-5a4b477 > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+.elementor-about-page .elementor-element.elementor-element-5a4b477:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-about-page .elementor-element.elementor-element-5a4b477 > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: var( --e-global-color-secondary );
 }
 
-.elementor-30 .elementor-element.elementor-element-5a4b477:hover > .elementor-element-populated {
+.elementor-about-page .elementor-element.elementor-element-5a4b477:hover > .elementor-element-populated {
     background-color: #AB4221;
 }
 
-.elementor-30 .elementor-element.elementor-element-5a4b477 > .elementor-element-populated, .elementor-30 .elementor-element.elementor-element-5a4b477 > .elementor-element-populated > .elementor-background-overlay, .elementor-30 .elementor-element.elementor-element-5a4b477 > .elementor-background-slideshow {
+.elementor-about-page .elementor-element.elementor-element-5a4b477 > .elementor-element-populated, .elementor-about-page .elementor-element.elementor-element-5a4b477 > .elementor-element-populated > .elementor-background-overlay, .elementor-about-page .elementor-element.elementor-element-5a4b477 > .elementor-background-slideshow {
     border-radius: 0px 10px 10px 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-5a4b477 > .elementor-element-populated {
+.elementor-about-page .elementor-element.elementor-element-5a4b477 > .elementor-element-populated {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-5a4b477 > .elementor-element-populated > .elementor-background-overlay {
+.elementor-about-page .elementor-element.elementor-element-5a4b477 > .elementor-element-populated > .elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-6a0904b {
+.elementor-about-page .elementor-element.elementor-element-6a0904b {
     text-align: center;
     width: auto;
     max-width: auto;
 }
 
-.elementor-30 .elementor-element.elementor-element-6a0904b .elementor-heading-title {
+.elementor-about-page .elementor-element.elementor-element-6a0904b .elementor-heading-title {
     color: var( --e-global-color-0482cab );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 23px;
@@ -306,319 +306,319 @@
     line-height: 1.5em;
 }
 
-.elementor-30 .elementor-element.elementor-element-6a0904b > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-element-6a0904b > .elementor-widget-container {
     margin: 0px 08px 0px 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-c661bbe {
+.elementor-about-page .elementor-element.elementor-element-c661bbe {
     text-align: center;
     width: auto;
     max-width: auto;
 }
 
-.elementor-30 .elementor-element.elementor-element-c661bbe .elementor-heading-title {
+.elementor-about-page .elementor-element.elementor-element-c661bbe .elementor-heading-title {
     color: var( --e-global-color-0482cab );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 35px;
     font-weight: 600;
 }
 
-.elementor-30 .elementor-element.elementor-element-b72dfec {
+.elementor-about-page .elementor-element.elementor-element-b72dfec {
     margin-top: 0%;
     margin-bottom: 0%;
     padding: 5% 3% 3% 3%;
 }
 
-.elementor-30 .elementor-element.elementor-element-0a641ad > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+.elementor-about-page .elementor-element.elementor-element-0a641ad > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
     margin-bottom: 10px;
 }
 
-.elementor-30 .elementor-element.elementor-element-99506f7 {
+.elementor-about-page .elementor-element.elementor-element-99506f7 {
     text-align: left;
 }
 
-.elementor-30 .elementor-element.elementor-element-99506f7 .elementor-heading-title {
+.elementor-about-page .elementor-element.elementor-element-99506f7 .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 30px;
     font-weight: 600;
 }
 
-.elementor-30 .elementor-element.elementor-element-99506f7 > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-element-99506f7 > .elementor-widget-container {
     margin: 0px 0px 20px 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+.elementor-about-page .elementor-element.elementor-element-3245e42 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
     padding-bottom: calc(15px/2);
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
+.elementor-about-page .elementor-element.elementor-element-3245e42 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
     margin-top: calc(15px/2);
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
+.elementor-about-page .elementor-element.elementor-element-3245e42 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
     margin-right: calc(15px/2);
     margin-left: calc(15px/2);
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 .elementor-icon-list-items.elementor-inline-items {
+.elementor-about-page .elementor-element.elementor-element-3245e42 .elementor-icon-list-items.elementor-inline-items {
     margin-right: calc(-15px/2);
     margin-left: calc(-15px/2);
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+.elementor-about-page .elementor-element.elementor-element-3245e42 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
     left: calc(-15px/2);
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+.elementor-about-page .elementor-element.elementor-element-3245e42 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
     right: calc(-15px/2);
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 .elementor-icon-list-icon i {
+.elementor-about-page .elementor-element.elementor-element-3245e42 .elementor-icon-list-icon i {
     color: var( --e-global-color-accent );
     transition: color 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 .elementor-icon-list-icon svg {
+.elementor-about-page .elementor-element.elementor-element-3245e42 .elementor-icon-list-icon svg {
     fill: var( --e-global-color-accent );
     transition: fill 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 {
+.elementor-about-page .elementor-element.elementor-element-3245e42 {
     --e-icon-list-icon-size: 15px;
     --icon-vertical-align: flex-start;
     --icon-vertical-offset: 6px;
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 .elementor-icon-list-icon {
+.elementor-about-page .elementor-element.elementor-element-3245e42 .elementor-icon-list-icon {
     padding-right: 4px;
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-30 .elementor-element.elementor-element-3245e42 .elementor-icon-list-item > a {
+.elementor-about-page .elementor-element.elementor-element-3245e42 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-about-page .elementor-element.elementor-element-3245e42 .elementor-icon-list-item > a {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 17px;
     font-weight: 400;
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 .elementor-icon-list-text {
+.elementor-about-page .elementor-element.elementor-element-3245e42 .elementor-icon-list-text {
     color: var( --e-global-color-text );
     transition: color 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-3245e42 > .elementor-widget-container {
+.elementor-about-page .elementor-element.elementor-element-3245e42 > .elementor-widget-container {
     margin: 10px 10px 0px 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-1bf49d2 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+.elementor-about-page .elementor-element.elementor-element-1bf49d2 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
     margin-bottom: 0px;
 }
 
-.elementor-30 .elementor-element.elementor-element-98fa5f7:not(.elementor-motion-effects-element-type-background), .elementor-30 .elementor-element.elementor-element-98fa5f7 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+.elementor-about-page .elementor-element.elementor-element-98fa5f7:not(.elementor-motion-effects-element-type-background), .elementor-about-page .elementor-element.elementor-element-98fa5f7 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: #ED7A5714;
 }
 
-.elementor-30 .elementor-element.elementor-element-98fa5f7 {
+.elementor-about-page .elementor-element.elementor-element-98fa5f7 {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-98fa5f7 > .elementor-background-overlay {
+.elementor-about-page .elementor-element.elementor-element-98fa5f7 > .elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.elementor-30 .elementor-element.elementor-element-ced66d2 img {
+.elementor-about-page .elementor-element.elementor-element-ced66d2 img {
     max-width: 1000px;
 }
 
-.elementor-30 .elementor-element.elementor-element-d92d20a {
+.elementor-about-page .elementor-element.elementor-element-d92d20a {
     margin-top: 06%;
     margin-bottom: 0%;
     padding: 0px 0px 0px 0px;
 }
 
 @media(max-width: 1024px) {
-    .elementor-30 .elementor-element.elementor-element-a8adf10 {
+    .elementor-about-page .elementor-element.elementor-about-life-section {
         margin-top:3%;
         margin-bottom: 0%;
         padding: 05% 3% 5% 3%;
     }
 
-    .elementor-30 .elementor-element.elementor-element-972e34d > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    .elementor-about-page .elementor-element.elementor-about-life-picture > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
         margin-bottom: 0px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-972e34d > .elementor-element-populated {
+    .elementor-about-page .elementor-element.elementor-about-life-picture > .elementor-element-populated {
         padding: 32px 0px 0px 0px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-f2e1390 > .elementor-element-populated {
+    .elementor-about-page .elementor-element.elementor-about-life-description > .elementor-element-populated {
         padding: 0px 20px 0px 20px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-5cd389a .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-5cd389a .elementor-heading-title {
         font-size: 30px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > a {
+    .elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > a {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-30 .elementor-element.elementor-element-6595a79 {
+    .elementor-about-page .elementor-element.elementor-element-6595a79 {
         padding: 5% 0% 0% 0%;
     }
 
-    .elementor-30 .elementor-element.elementor-element-2ea5990 .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-2ea5990 .elementor-heading-title {
         font-size: 30px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-7f55fb2 {
+    .elementor-about-page .elementor-element.elementor-element-7f55fb2 {
         padding: 0% 5% 5% 5%;
     }
 
-    .elementor-30 .elementor-element.elementor-element-8d6d12f .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-8d6d12f .elementor-heading-title {
         font-size: 19px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-6a0129c .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-6a0129c .elementor-heading-title {
         font-size: 30px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-6a0904b .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-6a0904b .elementor-heading-title {
         font-size: 19px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-c661bbe .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-c661bbe .elementor-heading-title {
         font-size: 30px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-b72dfec {
+    .elementor-about-page .elementor-element.elementor-element-b72dfec {
         margin-top: 3%;
         margin-bottom: 0%;
         padding: 05% 3% 5% 3%;
     }
 
-    .elementor-30 .elementor-element.elementor-element-0a641ad > .elementor-element-populated {
+    .elementor-about-page .elementor-element.elementor-element-0a641ad > .elementor-element-populated {
         padding: 10px 10px 0px 0px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-99506f7 .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-99506f7 .elementor-heading-title {
         font-size: 30px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-1bf49d2 > .elementor-element-populated {
+    .elementor-about-page .elementor-element.elementor-element-1bf49d2 > .elementor-element-populated {
         padding: 60px 0px 0px 0px;
     }
 }
 
 @media(max-width: 767px) {
-    .elementor-30 .elementor-element.elementor-element-a8adf10 {
+    .elementor-about-page .elementor-element.elementor-about-life-section {
         margin-top:10%;
         margin-bottom: 0%;
         padding: 20px 20px 20px 20px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-f2e1390 > .elementor-element-populated {
+    .elementor-about-page .elementor-element.elementor-about-life-description > .elementor-element-populated {
         padding: 030px 00px 020px 00px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-5cd389a .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-5cd389a .elementor-heading-title {
         font-size: 25px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-30 .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > a {
+    .elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-about-page .elementor-element.elementor-element-8b4fd76 .elementor-icon-list-item > a {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-30 .elementor-element.elementor-element-8b4fd76 > .elementor-widget-container {
+    .elementor-about-page .elementor-element.elementor-element-8b4fd76 > .elementor-widget-container {
         margin: -20px 0px 0px 0px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-6595a79 {
+    .elementor-about-page .elementor-element.elementor-element-6595a79 {
         margin-top: 0px;
         margin-bottom: 0px;
         padding: 8% 0% 0% 0%;
     }
 
-    .elementor-30 .elementor-element.elementor-element-2ea5990 .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-2ea5990 .elementor-heading-title {
         font-size: 25px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-7f55fb2 {
+    .elementor-about-page .elementor-element.elementor-element-7f55fb2 {
         margin-top: 0px;
         margin-bottom: 0px;
         padding: 0% 6% 10% 6%;
     }
 
-    .elementor-30 .elementor-element.elementor-element-06c4095 > .elementor-element-populated, .elementor-30 .elementor-element.elementor-element-06c4095 > .elementor-element-populated > .elementor-background-overlay, .elementor-30 .elementor-element.elementor-element-06c4095 > .elementor-background-slideshow {
+    .elementor-about-page .elementor-element.elementor-element-06c4095 > .elementor-element-populated, .elementor-about-page .elementor-element.elementor-element-06c4095 > .elementor-element-populated > .elementor-background-overlay, .elementor-about-page .elementor-element.elementor-element-06c4095 > .elementor-background-slideshow {
         border-radius: 10px 10px 0px 0px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-8d6d12f .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-8d6d12f .elementor-heading-title {
         font-size: 17px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-6a0129c .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-6a0129c .elementor-heading-title {
         font-size: 25px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-5a4b477 > .elementor-element-populated, .elementor-30 .elementor-element.elementor-element-5a4b477 > .elementor-element-populated > .elementor-background-overlay, .elementor-30 .elementor-element.elementor-element-5a4b477 > .elementor-background-slideshow {
+    .elementor-about-page .elementor-element.elementor-element-5a4b477 > .elementor-element-populated, .elementor-about-page .elementor-element.elementor-element-5a4b477 > .elementor-element-populated > .elementor-background-overlay, .elementor-about-page .elementor-element.elementor-element-5a4b477 > .elementor-background-slideshow {
         border-radius: 0px 0px 10px 10px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-6a0904b .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-6a0904b .elementor-heading-title {
         font-size: 17px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-c661bbe .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-c661bbe .elementor-heading-title {
         font-size: 25px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-b72dfec {
+    .elementor-about-page .elementor-element.elementor-element-b72dfec {
         margin-top: 10%;
         margin-bottom: 0%;
         padding: 20px 20px 20px 20px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-0a641ad > .elementor-element-populated {
+    .elementor-about-page .elementor-element.elementor-element-0a641ad > .elementor-element-populated {
         padding: 30px 0px 0px 0px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-99506f7 .elementor-heading-title {
+    .elementor-about-page .elementor-element.elementor-element-99506f7 .elementor-heading-title {
         font-size: 25px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-3245e42 > .elementor-widget-container {
+    .elementor-about-page .elementor-element.elementor-element-3245e42 > .elementor-widget-container {
         margin: 0px 0px 0px 0px;
     }
 
-    .elementor-30 .elementor-element.elementor-element-ced66d2 img {
+    .elementor-about-page .elementor-element.elementor-element-ced66d2 img {
         max-width: 100%;
     }
 }
 
 @media(min-width: 768px) {
-    .elementor-30 .elementor-element.elementor-element-972e34d {
+    .elementor-about-page .elementor-element.elementor-about-life-picture {
         width:41%;
     }
 
-    .elementor-30 .elementor-element.elementor-element-f2e1390 {
+    .elementor-about-page .elementor-element.elementor-about-life-description {
         width: 59%;
     }
 
-    .elementor-30 .elementor-element.elementor-element-0a641ad {
+    .elementor-about-page .elementor-element.elementor-element-0a641ad {
         width: 59%;
     }
 
-    .elementor-30 .elementor-element.elementor-element-1bf49d2 {
+    .elementor-about-page .elementor-element.elementor-element-1bf49d2 {
         width: 41%;
     }
 }
 
 @media(max-width: 1024px) and (min-width:768px) {
-    .elementor-30 .elementor-element.elementor-element-0a641ad {
+    .elementor-about-page .elementor-element.elementor-element-0a641ad {
         width:55%;
     }
 
-    .elementor-30 .elementor-element.elementor-element-1bf49d2 {
+    .elementor-about-page .elementor-element.elementor-element-1bf49d2 {
         width: 45%;
     }
 }
