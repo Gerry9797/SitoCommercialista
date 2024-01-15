@@ -114,8 +114,3 @@
         --grid-row-gap: 25px;
     }
 }
-
-::ng-deep .mat-typography h3 {
-    line-height: 1.2 !important;
-    font-weight: 400;
-}
