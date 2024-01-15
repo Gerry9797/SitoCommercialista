@@ -1,0 +1,19 @@
+.elementor-element.elementor-element-articles-section-boxed {
+    padding: 0% 3% 8% 3%;
+}
+
+@media(max-width: 1024px) {
+    .elementor-element.elementor-element-articles-section-boxed {
+        margin-top: 11%;
+        margin-bottom: 8%;
+        padding: 0px 20px 0px 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .elementor-element.elementor-element-articles-section-boxed {
+        margin-top: 20%;
+        margin-bottom: 0%;
+        padding: 0px 0px 0px 0px;
+    }
+}

@@ -52478,10 +52478,6 @@ body.rtl .elementor-homepage .elementor-element.elementor-element-presentation-l
     font-weight: 400;
 }
 
-.elementor-element.elementor-element-articles-section-boxed {
-    padding: 0% 3% 8% 3%;
-}
-
 body.elementor-page-7:not(.elementor-motion-effects-element-type-background), body.elementor-page-7 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     /* background-color: #F8FAFC; */
     background-color: #fff; /* COLORE BACKGROUND BLOCCHI */
@@ -52556,11 +52552,6 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
         font-size: 22px;
     }
 
-    .elementor-element.elementor-element-articles-section-boxed {
-        margin-top: 11%;
-        margin-bottom: 8%;
-        padding: 0px 20px 0px 20px;
-    }
 }
 
 @media(max-width: 767px) {
@@ -52701,12 +52692,6 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
 
     .elementor-homepage .elementor-element.elementor-element-macrocard-presentation-who-cited .elementor-heading-title {
         font-size: 33px;
-    }
-
-    .elementor-element.elementor-element-articles-section-boxed {
-        margin-top: 20%;
-        margin-bottom: 0%;
-        padding: 0px 0px 0px 0px;
     }
 
     .elementor-homepage .elementor-element.elementor-element-articles-container > .elementor-element-populated {
