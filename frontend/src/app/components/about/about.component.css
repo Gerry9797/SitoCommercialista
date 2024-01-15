@@ -975,3 +975,9 @@
     margin-top: 104px;
   }
 }
+
+.elementor-about-page ::ng-deep .elementor-element-articles-section-boxed {
+  margin-top: 06%;
+  margin-bottom: 0%;
+  padding: 0px 0px 0px 0px;
+}

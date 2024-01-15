@@ -52478,7 +52478,7 @@ body.rtl .elementor-homepage .elementor-element.elementor-element-presentation-l
     font-weight: 400;
 }
 
-.elementor-homepage .elementor-element.elementor-element-articles-section-boxed {
+.elementor-element.elementor-element-articles-section-boxed {
     padding: 0% 3% 8% 3%;
 }
 
@@ -52556,7 +52556,7 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
         font-size: 22px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-articles-section-boxed {
+    .elementor-element.elementor-element-articles-section-boxed {
         margin-top: 11%;
         margin-bottom: 8%;
         padding: 0px 20px 0px 20px;
@@ -52703,7 +52703,7 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
         font-size: 33px;
     }
 
-    .elementor-homepage .elementor-element.elementor-element-articles-section-boxed {
+    .elementor-element.elementor-element-articles-section-boxed {
         margin-top: 20%;
         margin-bottom: 0%;
         padding: 0px 0px 0px 0px;
