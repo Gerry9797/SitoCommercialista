@@ -1,0 +1,42 @@
+.elementor-post__thumbnail {
+    padding-bottom: calc( 0.66 * 100% );
+}
+
+.elementor-post__thumbnail__link {
+    width: 75%;
+}
+
+.elementor-post__meta-data span + span:before {
+    content: "///";
+}
+
+.elementor-post {
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0px 10px 25px 0px rgba(79, 80, 81, 0.2);
+    background-color: var( --e-global-color-0482cab );
+}
+
+.elementor-post__title, .elementor-post__title a {
+    font-family: "Raleway";
+    font-size: 17px;
+    font-weight: 400;
+}
+
+a.elementor-post__read-more {
+    font-family: "Raleway";
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media(max-width: 767px) {
+    .elementor-post__thumbnail {
+        padding-bottom: calc( 0.5 * 100% );
+    }
+
+    .elementor-post__thumbnail__link {
+        width: 100%;
+    }
+}
