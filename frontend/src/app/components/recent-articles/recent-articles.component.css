@@ -16,4 +16,8 @@
         margin-bottom: 0%;
         padding: 0px 0px 0px 0px;
     }
+
+    .elementor-element.elementor-element-articles-container > .elementor-element-populated {
+        padding: 0px 0px 0px 0px;
+    }
 }

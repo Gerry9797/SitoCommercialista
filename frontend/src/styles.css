@@ -52693,10 +52693,6 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
     .elementor-homepage .elementor-element.elementor-element-macrocard-presentation-who-cited .elementor-heading-title {
         font-size: 33px;
     }
-
-    .elementor-homepage .elementor-element.elementor-element-articles-container > .elementor-element-populated {
-        padding: 0px 0px 0px 0px;
-    }
 }
 
 @media(min-width: 768px) {
