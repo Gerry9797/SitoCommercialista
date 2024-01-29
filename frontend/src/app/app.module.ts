@@ -55,7 +55,7 @@ import { ConsulenzaPrivatiComponent } from './components/consulenza-privati/cons
 import { PrenotaConsulenzaComponent } from './prenota-consulenza/prenota-consulenza.component';
 import { LoadingPlaceholderComponent } from './bricks/loading-placeholder/loading-placeholder.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
-import { BusinessButtonsComponent } from './components/bricks/business-buttons/business-buttons.component';
+import { BusinessButtonsComponent } from './bricks/business-buttons/business-buttons.component';
 import { ServiceCardComponent } from './bricks/cards/service-card/service-card.component';
 import { ServicesPresentationComponent } from './components/services-presentation/services-presentation.component';
 import { MacrocardImpressionComponent } from './bricks/macrocard-impression/macrocard-impression.component';
