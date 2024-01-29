@@ -1,0 +1,23 @@
+.woocommerce-MyAccount-navigation ul li a {
+    font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: var( --e-global-typography-text-font-size );
+    font-weight: var( --e-global-typography-text-font-weight );
+}
+.woocommerce-MyAccount-navigation ul li:not(.is-active) a {
+    background-color: #FDF7F6;
+}
+.woocommerce-MyAccount-navigation ul li.is-active a {
+    background-color: #F4F2F1;
+}
+@media(max-width: 1024px) {
+
+    .woocommerce-MyAccount-navigation ul li a {
+        font-size: var( --e-global-typography-text-font-size );
+    }
+}
+@media(max-width: 767px) {
+    
+    .woocommerce-MyAccount-navigation ul li a {
+        font-size: var( --e-global-typography-text-font-size );
+    }
+}

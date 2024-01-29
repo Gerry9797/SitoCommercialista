@@ -3,16 +3,6 @@
     margin-bottom: 8%;
 }
 
-.elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .e-my-account-tab .woocommerce .woocommerce-MyAccount-navigation ul li a {
-    font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: var( --e-global-typography-text-font-size );
-    font-weight: var( --e-global-typography-text-font-weight );
-}
-
-.elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .e-my-account-tab .woocommerce .woocommerce-MyAccount-navigation ul li:not(.is-active) a {
-    background-color: #FDF7F6;
-}
-
 .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div {
     --tabs-normal-color: var( --e-global-color-text );
     --tabs-hover-color: var( --e-global-color-primary );
@@ -41,10 +31,6 @@
     --tables-links-hover-color: var( --e-global-color-accent );
     --tables-button-normal-text-color: var( --e-global-color-0482cab );
     --tables-button-border-radius: 30px 30px 30px 30px;
-}
-
-.elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .e-my-account-tab .woocommerce .woocommerce-MyAccount-navigation ul li.is-active a {
-    background-color: #F4F2F1;
 }
 
 .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .e-my-account-tab:not(.e-my-account-tab__dashboard--custom) h2, .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .e-my-account-tab:not(.e-my-account-tab__dashboard--custom) h3 {
@@ -139,10 +125,6 @@
 
 @media(max-width: 1024px) {
 
-    .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .e-my-account-tab .woocommerce .woocommerce-MyAccount-navigation ul li a {
-        font-size: var( --e-global-typography-text-font-size );
-    }
-
     .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .woocommerce-MyAccount-content > div > p, .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div address, .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .woocommerce-EditAccountForm fieldset legend, .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .woocommerce-ResetPassword p:nth-child(1), .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .woocommerce-OrderUpdate {
         font-size: var( --e-global-typography-text-font-size );
     }
@@ -185,10 +167,6 @@
 }
 
 @media(max-width: 767px) {
-
-    .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .e-my-account-tab .woocommerce .woocommerce-MyAccount-navigation ul li a {
-        font-size: var( --e-global-typography-text-font-size );
-    }
 
     .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .woocommerce-MyAccount-content > div > p, .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div address, .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .woocommerce-EditAccountForm fieldset legend, .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .woocommerce-ResetPassword p:nth-child(1), .elementor-3895 .elementor-element.elementor-element-area-riservata-content-div .woocommerce-OrderUpdate {
         font-size: var( --e-global-typography-text-font-size );

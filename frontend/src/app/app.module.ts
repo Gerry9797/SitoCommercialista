@@ -66,6 +66,7 @@ import { SideCartComponent } from './components/side-cart/side-cart.component';
 import { SearchFormFullScreenComponent } from './components/search-form-full-screen/search-form-full-screen.component';
 import localeIt from '@angular/common/locales/it';
 import { IntestazioneAreaRiservataComponent } from './bricks/intestazione-area-riservata/intestazione-area-riservata.component';
+import { InnerMenuAreaRiservataComponent } from './bricks/inner-menu-area-riservata/inner-menu-area-riservata.component';
 
 export function playerFactory() {
   return player;
@@ -125,7 +126,8 @@ registerLocaleData(localeIt);
     RecentArticlesComponent,
     SideCartComponent,
     SearchFormFullScreenComponent,
-    IntestazioneAreaRiservataComponent
+    IntestazioneAreaRiservataComponent,
+    InnerMenuAreaRiservataComponent
   ],
   imports: [
     BrowserModule,
