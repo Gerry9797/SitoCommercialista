@@ -2,9 +2,9 @@
     padding-bottom: calc( 0.66 * 100% );
 }
 
-.elementor-post__thumbnail__link {
+/* .elementor-post__thumbnail__link {
     width: 75%;
-}
+} */
 
 .elementor-post__meta-data span + span:before {
     content: "///";
@@ -14,7 +14,7 @@
     border-style: solid;
     border-width: 0px 0px 0px 0px;
     border-radius: 10px;
-    padding: 20px 20px 20px 20px;
+    /* padding: 20px 20px 20px 20px; */
     box-shadow: 0px 10px 25px 0px rgba(79, 80, 81, 0.2);
     background-color: var( --e-global-color-0482cab );
 }
@@ -44,4 +44,20 @@ a.elementor-post__read-more {
 ::ng-deep .mat-typography h3 {
     line-height: 1.2 !important;
     font-weight: 400;
+}
+
+.elementor-post__card {
+    background-color: #ffffff;
+    border-width: 0px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.elementor-post__text {
+    padding: 0px 20px 20px 20px;
+}
+
+.elementor-post__thumbnail img {
+    padding: 20px;
 }
