@@ -14,25 +14,25 @@
     font-weight: 600;
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-1831a3e {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-section {
     margin-top: 0%;
     margin-bottom: 6%;
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-posts-container .elementor-post__thumbnail {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-posts-container .elementor-post__thumbnail {
     padding-bottom: calc( 0.57 * 100% );
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f:after {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid:after {
     content: "0.57";
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid {
     --grid-column-gap: 28px;
     --grid-row-gap: 35px;
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-post__card {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-post__card {
     background-color: #ffffff;
     border-width: 0px;
     border-radius: 10px;
@@ -40,80 +40,80 @@
     padding-bottom: 20px;
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-post__text {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-post__text {
     padding: 0 20px;
     margin-top: 20px;
     margin-bottom: 1px;
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-post__meta-data {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-post__meta-data {
     padding: 10px 20px;
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-post__avatar {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-post__avatar {
     padding-right: 20px;
     padding-left: 20px;
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-post__title, .elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-post__title a {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-post__title, .elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-post__title a {
     color: var( --e-global-color-secondary );
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-post__read-more {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-post__read-more {
     color: var( --e-global-color-accent );
     margin-bottom: 1px;
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f a.elementor-post__read-more {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid a.elementor-post__read-more {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
     text-transform: none;
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-pagination {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-pagination {
     text-align: center;
     margin-top: 70px;
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-pagination .page-numbers:not(.dots) {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-pagination .page-numbers:not(.dots) {
     color: var( --e-global-color-text );
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-pagination a.page-numbers:hover {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-pagination a.page-numbers:hover {
     color: var( --e-global-color-primary );
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-pagination .page-numbers.current {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-pagination .page-numbers.current {
     color: var( --e-global-color-accent );
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-pagination .page-numbers:not(:first-child) {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-pagination .page-numbers:not(:first-child) {
     margin-left: calc( 11px/2 );
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-pagination .page-numbers:not(:last-child) {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-pagination .page-numbers:not(:last-child) {
     margin-right: calc( 11px/2 );
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-pagination .page-numbers:not(:first-child) {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-pagination .page-numbers:not(:first-child) {
     margin-right: calc( 11px/2 );
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-pagination .page-numbers:not(:last-child) {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-pagination .page-numbers:not(:last-child) {
     margin-left: calc( 11px/2 );
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-posts-nothing-found {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-posts-nothing-found {
     color: var( --e-global-color-text );
 }
 
-.elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f > .elementor-widget-container {
+.elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid > .elementor-widget-container {
     margin: 35px 0px 0px 0px;
 }
 
 @media(max-width: 1024px) {
-    .elementor-articles-main-wrapper .elementor-element.elementor-element-1831a3e {
+    .elementor-articles-main-wrapper .elementor-element.elementor-articles-body-section {
         padding:10px 10px 10px 10px;
     }
 }
@@ -128,15 +128,15 @@
         font-size: 35px;
     }
 
-    .elementor-articles-main-wrapper .elementor-element.elementor-element-1831a3e {
+    .elementor-articles-main-wrapper .elementor-element.elementor-articles-body-section {
         padding: 0px 10px 10px 10px;
     }
 
-    .elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f .elementor-posts-container .elementor-post__thumbnail {
+    .elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid .elementor-posts-container .elementor-post__thumbnail {
         padding-bottom: calc( 0.5 * 100% );
     }
 
-    .elementor-articles-main-wrapper .elementor-element.elementor-element-825ad7f:after {
+    .elementor-articles-main-wrapper .elementor-element.elementor-articles-body-grid:after {
         content: "0.5";
     }
 }
