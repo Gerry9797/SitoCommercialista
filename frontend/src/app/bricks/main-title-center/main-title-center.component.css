@@ -1,0 +1,26 @@
+.elementor-element.elementor-main-page-title {
+    margin-top: 2%;
+    margin-bottom: 0%;
+}
+
+.elementor-element.elementor-main-page-title-div {
+    text-align: center;
+}
+
+.elementor-element.elementor-main-page-title-div .elementor-heading-title {
+    color: var( --e-global-color-secondary );
+    font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+@media(max-width: 767px) {
+    .elementor-element.elementor-main-page-title {
+        margin-top:2%;
+        margin-bottom: 8%;
+    }
+
+    .elementor-element.elementor-main-page-title-div .elementor-heading-title {
+        font-size: 35px;
+    }
+}
