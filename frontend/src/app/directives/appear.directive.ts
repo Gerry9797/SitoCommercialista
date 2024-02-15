@@ -46,7 +46,10 @@ export class AppearDirective implements OnInit, OnDestroy {
     }
     
     // Initial appearance check
-    this.checkAppearance();
+    setTimeout(() => {
+      this.checkAppearance();
+    }, 500);
+    
   }
 
   private loadAnimationSettings(){
