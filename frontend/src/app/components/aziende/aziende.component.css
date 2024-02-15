@@ -4,58 +4,58 @@
     padding: 3% 3% 5% 3%;
 }
 
-.elementor-318 .elementor-element.elementor-element-d62b144 {
+.elementor-318 .elementor-element.elementor-secondary-title-div {
     text-align: left;
 }
 
-.elementor-318 .elementor-element.elementor-element-d62b144 .elementor-heading-title {
+.elementor-318 .elementor-element.elementor-secondary-title-div .elementor-heading-title {
     color: var( --e-global-color-primary );
     font-family: "DM Serif Display", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.elementor-318 .elementor-element.elementor-element-11bb523 {
+.elementor-318 .elementor-element.elementor-third-title-div {
     text-align: left;
 }
 
-.elementor-318 .elementor-element.elementor-element-11bb523 .elementor-heading-title {
+.elementor-318 .elementor-element.elementor-third-title-div .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 35px;
     font-weight: 600;
 }
 
-.elementor-318 .elementor-element.elementor-element-11bb523 > .elementor-widget-container {
+.elementor-318 .elementor-element.elementor-third-title-div > .elementor-widget-container {
     margin: 0px 0px 20px 0px;
 }
 
-.elementor-318 .elementor-element.elementor-element-77c8c0b > .elementor-element-populated {
+.elementor-318 .elementor-element.elementor-element-paragraph-content-div > .elementor-element-populated {
     margin: 0px 0px 0px 0px;
     --e-column-margin-right: 0px;
     --e-column-margin-left: 0px;
     padding: 0px 20px 0px 1px;
 }
 
-.elementor-318 .elementor-element.elementor-element-a1daac1 {
+.elementor-318 .elementor-element.elementor-element-paragraph-content {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
     /* z-index: 2; */
 }
 
-.elementor-318 .elementor-element.elementor-element-0c7458a {
+.elementor-318 .elementor-element.elementor-element-footer-title {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-318 .elementor-element.elementor-element-0c7458a > .elementor-widget-container {
+.elementor-318 .elementor-element.elementor-element-footer-title > .elementor-widget-container {
     margin: 20px 0px -25px 0px;
     padding: 0px 0px 0px 0px;
 }
 
-.elementor-318 .elementor-element.elementor-element-b0b8d2b .elementor-button {
+.elementor-318 .elementor-element.elementor-element-footer-title-action .elementor-button {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 18px;
     font-weight: 500;
@@ -63,56 +63,56 @@
     border-radius: 50px 50px 50px 50px;
 }
 
-.elementor-318 .elementor-element.elementor-element-b0b8d2b .elementor-button:hover, .elementor-318 .elementor-element.elementor-element-b0b8d2b .elementor-button:focus {
+.elementor-318 .elementor-element.elementor-element-footer-title-action .elementor-button:hover, .elementor-318 .elementor-element.elementor-element-footer-title-action .elementor-button:focus {
     color: var( --e-global-color-0482cab );
     background-color: var( --e-global-color-accent );
 }
 
-.elementor-318 .elementor-element.elementor-element-b0b8d2b .elementor-button:hover svg, .elementor-318 .elementor-element.elementor-element-b0b8d2b .elementor-button:focus svg {
+.elementor-318 .elementor-element.elementor-element-footer-title-action .elementor-button:hover svg, .elementor-318 .elementor-element.elementor-element-footer-title-action .elementor-button:focus svg {
     fill: var( --e-global-color-0482cab );
 }
 
-.elementor-318 .elementor-element.elementor-element-b0b8d2b > .elementor-widget-container {
+.elementor-318 .elementor-element.elementor-element-footer-title-action > .elementor-widget-container {
     margin: 0px 20px 0px 0px;
 }
 
-.elementor-318 .elementor-element.elementor-element-b0b8d2b {
+.elementor-318 .elementor-element.elementor-element-footer-title-action {
     width: auto;
     max-width: auto;
 }
 
-.elementor-bc-flex-widget .elementor-318 .elementor-element.elementor-element-f787276.elementor-column .elementor-widget-wrap {
+.elementor-bc-flex-widget .elementor-318 .elementor-element.elementor-element-bg-imge-wrapper.elementor-column .elementor-widget-wrap {
     align-items: flex-end;
 }
 
-.elementor-318 .elementor-element.elementor-element-f787276.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+.elementor-318 .elementor-element.elementor-element-bg-imge-wrapper.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
     align-content: flex-end;
     align-items: flex-end;
 }
 
-.elementor-318 .elementor-element.elementor-element-f787276 > .elementor-element-populated {
+.elementor-318 .elementor-element.elementor-element-bg-imge-wrapper > .elementor-element-populated {
     padding: 0px 0px 0px 20px;
 }
 
-.elementor-318 .elementor-element.elementor-element-c5f061b img {
+.elementor-318 .elementor-element.elementor-element-bg-imge-div img {
     max-width: 530px;
     border-radius: 20px 20px 20px 20px;
 }
 
-.elementor-318 .elementor-element.elementor-element-c5f061b {
+.elementor-318 .elementor-element.elementor-element-bg-imge-div {
     right: 158.2px;
 }
 
-.elementor-318 .elementor-element.elementor-element-c5f061b {
+.elementor-318 .elementor-element.elementor-element-bg-imge-div {
     bottom: -6vw;
     z-index: -2;
 }
 
-.elementor-318 .elementor-element.elementor-element-3b37f9a:not(.elementor-motion-effects-element-type-background), .elementor-318 .elementor-element.elementor-element-3b37f9a > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+.elementor-318 .elementor-element.elementor-element-secondary-section:not(.elementor-motion-effects-element-type-background), .elementor-318 .elementor-element.elementor-element-secondary-section > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: #FDF9F6;
 }
 
-.elementor-318 .elementor-element.elementor-element-3b37f9a {
+.elementor-318 .elementor-element.elementor-element-secondary-section {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin-top: 0%;
     margin-bottom: 8%;
@@ -120,188 +120,188 @@
     /* z-index: 3; */
 }
 
-.elementor-318 .elementor-element.elementor-element-3b37f9a > .elementor-background-overlay {
+.elementor-318 .elementor-element.elementor-element-secondary-section > .elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.elementor-318 .elementor-element.elementor-element-d6b1c1e {
+.elementor-318 .elementor-element.elementor-element-secondary-section-title {
     text-align: left;
 }
 
-.elementor-318 .elementor-element.elementor-element-d6b1c1e .elementor-heading-title {
+.elementor-318 .elementor-element.elementor-element-secondary-section-title .elementor-heading-title {
     color: var( --e-global-color-primary );
     font-family: "DM Serif Display", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.elementor-318 .elementor-element.elementor-element-b58739b {
+.elementor-318 .elementor-element.elementor-element-secondary-section-subtitle {
     text-align: left;
 }
 
-.elementor-318 .elementor-element.elementor-element-b58739b .elementor-heading-title {
+.elementor-318 .elementor-element.elementor-element-secondary-section-subtitle .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 35px;
     font-weight: 600;
 }
 
-.elementor-318 .elementor-element.elementor-element-b58739b > .elementor-widget-container {
+.elementor-318 .elementor-element.elementor-element-secondary-section-subtitle > .elementor-widget-container {
     margin: 0px 0px 20px 0px;
 }
 
-.elementor-318 .elementor-element.elementor-element-7d92f58 > .elementor-element-populated {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content > .elementor-element-populated {
     padding: 9px 15px 0px 0px;
 }
 
-.elementor-318 .elementor-element.elementor-element-37184c8 {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-div {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
     padding-bottom: calc(12px/2);
 }
 
-.elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
     margin-top: calc(12px/2);
 }
 
-.elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
     margin-right: calc(12px/2);
     margin-left: calc(12px/2);
 }
 
-.elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-items.elementor-inline-items {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-items.elementor-inline-items {
     margin-right: calc(-12px/2);
     margin-left: calc(-12px/2);
 }
 
-.elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
     left: calc(-12px/2);
 }
 
-.elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
     right: calc(-12px/2);
 }
 
-.elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-icon i {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-icon i {
     color: var( --e-global-color-accent );
     transition: color 0.3s;
 }
 
-.elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-icon svg {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-icon svg {
     fill: var( --e-global-color-accent );
     transition: fill 0.3s;
 }
 
-.elementor-318 .elementor-element.elementor-element-4e03f43 {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-list {
     --e-icon-list-icon-size: 17px;
     --icon-vertical-offset: 0px;
 }
 
-.elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-item > a {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-item > .elementor-icon-list-text, .elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-item > a {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-text {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-text {
     color: var( --e-global-color-text );
     transition: color 0.3s;
 }
 
-.elementor-318 .elementor-element.elementor-element-4e03f43 > .elementor-widget-container {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-list > .elementor-widget-container {
     margin: -15px 0px 0px 0px;
 }
 
-.elementor-318 .elementor-element.elementor-element-86e9179 > .elementor-element-populated {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-col > .elementor-element-populated {
     padding: 9px 0px 0px 20px;
 }
 
-.elementor-318 .elementor-element.elementor-element-645abd7 {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-desc {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-318 .elementor-element.elementor-element-645abd7 > .elementor-widget-container {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-desc > .elementor-widget-container {
     margin: 0px 0px 0px 0px;
 }
 
-.elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
     padding-bottom: calc(12px/2);
 }
 
-.elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child) {
     margin-top: calc(12px/2);
 }
 
-.elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
     margin-right: calc(12px/2);
     margin-left: calc(12px/2);
 }
 
-.elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-items.elementor-inline-items {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-items.elementor-inline-items {
     margin-right: calc(-12px/2);
     margin-left: calc(-12px/2);
 }
 
-.elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
     left: calc(-12px/2);
 }
 
-.elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
     right: calc(-12px/2);
 }
 
-.elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-icon i {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-icon i {
     color: var( --e-global-color-accent );
     transition: color 0.3s;
 }
 
-.elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-icon svg {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-icon svg {
     fill: var( --e-global-color-accent );
     transition: fill 0.3s;
 }
 
-.elementor-318 .elementor-element.elementor-element-095f1d7 {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list {
     --e-icon-list-icon-size: 17px;
     --icon-vertical-offset: 0px;
 }
 
-.elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-item > a {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-item > .elementor-icon-list-text, .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-item > a {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-text {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-text {
     color: var( --e-global-color-text );
     transition: color 0.3s;
 }
 
-.elementor-318 .elementor-element.elementor-element-095f1d7 > .elementor-widget-container {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list > .elementor-widget-container {
     margin: -15px 0px 0px 0px;
 }
 
-.elementor-318 .elementor-element.elementor-element-b8056c5 {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-div {
     --spacer-size: 80px;
 }
 
-.elementor-318 .elementor-element.elementor-element-067cc10 {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-content {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-318 .elementor-element.elementor-element-067cc10 > .elementor-widget-container {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-content > .elementor-widget-container {
     margin: 0px 0px -25px 0px;
     padding: 0px 0px 0px 0px;
 }
 
-.elementor-318 .elementor-element.elementor-element-2c7b02f .elementor-button {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-btn .elementor-button {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 18px;
     font-weight: 500;
@@ -309,20 +309,20 @@
     border-radius: 50px 50px 50px 50px;
 }
 
-.elementor-318 .elementor-element.elementor-element-2c7b02f .elementor-button:hover, .elementor-318 .elementor-element.elementor-element-2c7b02f .elementor-button:focus {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-btn .elementor-button:hover, .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-btn .elementor-button:focus {
     color: var( --e-global-color-0482cab );
     background-color: var( --e-global-color-accent );
 }
 
-.elementor-318 .elementor-element.elementor-element-2c7b02f .elementor-button:hover svg, .elementor-318 .elementor-element.elementor-element-2c7b02f .elementor-button:focus svg {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-btn .elementor-button:hover svg, .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-btn .elementor-button:focus svg {
     fill: var( --e-global-color-0482cab );
 }
 
-.elementor-318 .elementor-element.elementor-element-2c7b02f > .elementor-widget-container {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-btn > .elementor-widget-container {
     margin: 0px 20px 0px 0px;
 }
 
-.elementor-318 .elementor-element.elementor-element-2c7b02f {
+.elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-btn {
     width: auto;
     max-width: auto;
 }
@@ -334,11 +334,11 @@
 }
 
 @media(min-width: 768px) {
-    .elementor-318 .elementor-element.elementor-element-77c8c0b {
+    .elementor-318 .elementor-element.elementor-element-paragraph-content-div {
         width:75%;
     }
 
-    .elementor-318 .elementor-element.elementor-element-f787276 {
+    .elementor-318 .elementor-element.elementor-element-bg-imge-wrapper {
         width: 25%;
     }
 }
@@ -354,47 +354,47 @@
         padding: 0px 0px 0px 0px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-11bb523 .elementor-heading-title {
+    .elementor-318 .elementor-element.elementor-third-title-div .elementor-heading-title {
         font-size: 30px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-77c8c0b > .elementor-element-populated {
+    .elementor-318 .elementor-element.elementor-element-paragraph-content-div > .elementor-element-populated {
         padding: 0% 33% 0% 0%;
     }
 
-    .elementor-318 .elementor-element.elementor-element-a1daac1 {
+    .elementor-318 .elementor-element.elementor-element-paragraph-content {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-0c7458a {
+    .elementor-318 .elementor-element.elementor-element-footer-title {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-0c7458a > .elementor-widget-container {
+    .elementor-318 .elementor-element.elementor-element-footer-title > .elementor-widget-container {
         margin: 0px 0px -20px 0px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-f787276 > .elementor-element-populated {
+    .elementor-318 .elementor-element.elementor-element-bg-imge-wrapper > .elementor-element-populated {
         padding: 0% 31% 0% 0%;
     }
 
-    .elementor-318 .elementor-element.elementor-element-c5f061b img {
+    .elementor-318 .elementor-element.elementor-element-bg-imge-div img {
         max-width: 715px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-c5f061b {
+    .elementor-318 .elementor-element.elementor-element-bg-imge-div {
         right: -30vw;
     }
 
-    /* .elementor-318 .elementor-element.elementor-element-c5f061b {
+    /* .elementor-318 .elementor-element.elementor-element-bg-imge-div {
         left: -30vw;
     } */
 
-    .elementor-318 .elementor-element.elementor-element-c5f061b {
+    .elementor-318 .elementor-element.elementor-element-bg-imge-div {
         bottom: -83px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-3b37f9a {
+    .elementor-318 .elementor-element.elementor-element-secondary-section {
         margin-top: 0px;
         margin-bottom: 0px;
         padding: 5% 3% 5% 3%;
@@ -404,43 +404,43 @@
         padding: 0px 0px 0px 0px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-b58739b .elementor-heading-title {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-subtitle .elementor-heading-title {
         font-size: 30px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-7d92f58 > .elementor-element-populated {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content > .elementor-element-populated {
         padding: 0px 10px 0px 0px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-37184c8 {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-div {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-item > a {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-item > .elementor-icon-list-text, .elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-item > a {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-86e9179 > .elementor-element-populated {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-col > .elementor-element-populated {
         padding: 0px 10px 0px 0px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-645abd7 {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-desc {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-item > a {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-item > .elementor-icon-list-text, .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-item > a {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-b8056c5 {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-div {
         --spacer-size: 12vh;
     }
 
-    .elementor-318 .elementor-element.elementor-element-067cc10 {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-content {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-067cc10 > .elementor-widget-container {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-content > .elementor-widget-container {
         margin: 0px 0px -20px 0px;
     }
 }
@@ -451,67 +451,67 @@
         padding: 40px 20px 40px 20px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-11bb523 .elementor-heading-title {
+    .elementor-318 .elementor-element.elementor-third-title-div .elementor-heading-title {
         font-size: 25px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-77c8c0b > .elementor-element-populated {
+    .elementor-318 .elementor-element.elementor-element-paragraph-content-div > .elementor-element-populated {
         padding: 0% 0% 0% 0%;
     }
 
-    .elementor-318 .elementor-element.elementor-element-a1daac1 {
+    .elementor-318 .elementor-element.elementor-element-paragraph-content {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-0c7458a {
+    .elementor-318 .elementor-element.elementor-element-footer-title {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-b0b8d2b .elementor-button {
+    .elementor-318 .elementor-element.elementor-element-footer-title-action .elementor-button {
         font-size: 16px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-f787276 > .elementor-element-populated {
+    .elementor-318 .elementor-element.elementor-element-bg-imge-wrapper > .elementor-element-populated {
         padding: 0% 0% 0% 0%;
     }
 
-    .elementor-318 .elementor-element.elementor-element-3b37f9a {
+    .elementor-318 .elementor-element.elementor-element-secondary-section {
         padding: 40px 20px 40px 20px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-b58739b .elementor-heading-title {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-subtitle .elementor-heading-title {
         font-size: 25px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-37184c8 {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-div {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-318 .elementor-element.elementor-element-4e03f43 .elementor-icon-list-item > a {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-item > .elementor-icon-list-text, .elementor-318 .elementor-element.elementor-element-secondary-section-content-list .elementor-icon-list-item > a {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-645abd7 {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-desc {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-645abd7 > .elementor-widget-container {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-desc > .elementor-widget-container {
         margin: 25px 0px 0px 0px;
     }
 
-    .elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-item > .elementor-icon-list-text, .elementor-318 .elementor-element.elementor-element-095f1d7 .elementor-icon-list-item > a {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-item > .elementor-icon-list-text, .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-list .elementor-icon-list-item > a {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-b8056c5 {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-div {
         --spacer-size: 0vh;
     }
 
-    .elementor-318 .elementor-element.elementor-element-067cc10 {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-content {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-318 .elementor-element.elementor-element-2c7b02f .elementor-button {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-action-btn .elementor-button {
         font-size: 16px;
     }
 }
@@ -521,11 +521,11 @@
         width:100%;
     }
 
-    .elementor-318 .elementor-element.elementor-element-77c8c0b {
+    .elementor-318 .elementor-element.elementor-element-paragraph-content-div {
         width: 100%;
     }
 
-    .elementor-318 .elementor-element.elementor-element-f787276 {
+    .elementor-318 .elementor-element.elementor-element-bg-imge-wrapper {
         width: 100%;
     }
 
@@ -533,11 +533,11 @@
         width: 100%;
     }
 
-    .elementor-318 .elementor-element.elementor-element-7d92f58 {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content {
         width: 50%;
     }
 
-    .elementor-318 .elementor-element.elementor-element-86e9179 {
+    .elementor-318 .elementor-element.elementor-element-secondary-section-content-right-col {
         width: 50%;
     }
 }

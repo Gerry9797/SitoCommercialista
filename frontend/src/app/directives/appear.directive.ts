@@ -114,7 +114,7 @@ export class AppearDirective implements OnInit, OnDestroy {
       return
     }
     else {
-      this.renderer.addClass(this.el.nativeElement, 'elementor-invisible');
+      // this.renderer.addClass(this.el.nativeElement, 'elementor-invisible');
 
       if (this.el.nativeElement.classList.contains(this.animationType)) {
         this.renderer.removeClass(this.el.nativeElement, 'animated');
