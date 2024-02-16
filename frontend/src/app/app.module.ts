@@ -68,6 +68,7 @@ import localeIt from '@angular/common/locales/it';
 import { IntestazioneAreaRiservataComponent } from './bricks/intestazione-area-riservata/intestazione-area-riservata.component';
 import { InnerMenuAreaRiservataComponent } from './bricks/inner-menu-area-riservata/inner-menu-area-riservata.component';
 import { MainTitleCenterComponent } from './bricks/main-title-center/main-title-center.component';
+import { MainTitleDecorationComponent } from './bricks/main-title-decoration/main-title-decoration.component';
 
 export function playerFactory() {
   return player;
@@ -129,7 +130,8 @@ registerLocaleData(localeIt);
     SearchFormFullScreenComponent,
     IntestazioneAreaRiservataComponent,
     InnerMenuAreaRiservataComponent,
-    MainTitleCenterComponent
+    MainTitleCenterComponent,
+    MainTitleDecorationComponent
   ],
   imports: [
     BrowserModule,

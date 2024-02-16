@@ -1,0 +1,53 @@
+.elementor-element.elementor-element-section-title-decoration > .elementor-container {
+    min-height: 140px;
+}
+
+.elementor-element.elementor-element-section-title-decoration:not(.elementor-motion-effects-element-type-background), .elementor-4988 .elementor-element.elementor-element-section-title-decoration > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+    background-color: #FDF7F6;
+}
+
+.elementor-element.elementor-element-section-title-decoration > .elementor-background-overlay {
+    background-image: url("../../../assets/svg/book_pattern_org.svg");
+    background-repeat: repeat;
+    background-size: 20% auto;
+    opacity: 0.15;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
+.elementor-element.elementor-element-section-title-decoration {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: -14px;
+    margin-bottom: 50px;
+}
+
+.elementor-element.elementor-element-section-title-decoration-div .elementor-heading-title {
+    color: var( --e-global-color-primary );
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.elementor-element.elementor-element-section-title-decoration-div > .elementor-widget-container {
+    margin: 10px 35px -10px 0px;
+}
+
+@media(max-width: 1024px) {
+    .elementor-element.elementor-element-section-title-decoration {
+        padding:0px 30px 0px 30px;
+    }
+}
+
+@media(max-width: 767px) {
+    .elementor-element.elementor-element-section-title-decoration-div {
+        text-align:left;
+    }
+
+    .elementor-element.elementor-element-section-title-decoration-div .elementor-heading-title {
+        font-size: 30px;
+    }
+
+    .elementor-element.elementor-element-section-title-decoration-div > .elementor-widget-container {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 5px 0px 5px;
+    }
+}
