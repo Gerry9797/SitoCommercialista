@@ -1,58 +1,58 @@
-.elementor-4988 .elementor-element.elementor-element-2381ebf {
+.elementor-4988 .elementor-element.elementor-element-consulenza-section-content {
     margin-top: 0px;
     margin-bottom: 100px;
 }
 
-.elementor-4988 .elementor-element.elementor-element-3ab90e5 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+.elementor-4988 .elementor-element.elementor-element-consulenza-col-content > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
     margin-bottom: 0px;
 }
 
-.elementor-4988 .elementor-element.elementor-element-3ab90e5 > .elementor-element-populated {
+.elementor-4988 .elementor-element.elementor-element-consulenza-col-content > .elementor-element-populated {
     margin: 0px 0px 0px 0px;
     --e-column-margin-right: 0px;
     --e-column-margin-left: 0px;
     padding: 0px 0px 0px 0px;
 }
 
-.elementor-4988 .elementor-element.elementor-element-ec0520b .elementor-icon-box-wrapper {
+.elementor-4988 .elementor-element.elementor-element-consulenza-col-inner .elementor-icon-box-wrapper {
     text-align: left;
 }
 
-.elementor-4988 .elementor-element.elementor-element-ec0520b.elementor-view-stacked .elementor-icon:hover {
+.elementor-4988 .elementor-element.elementor-element-consulenza-col-inner.elementor-view-stacked .elementor-icon:hover {
     background-color: var( --e-global-color-accent );
 }
 
-.elementor-4988 .elementor-element.elementor-element-ec0520b.elementor-view-framed .elementor-icon:hover, .elementor-4988 .elementor-element.elementor-element-ec0520b.elementor-view-default .elementor-icon:hover {
+.elementor-4988 .elementor-element.elementor-element-consulenza-col-inner.elementor-view-framed .elementor-icon:hover, .elementor-4988 .elementor-element.elementor-element-consulenza-col-inner.elementor-view-default .elementor-icon:hover {
     fill: var( --e-global-color-accent );
     color: var( --e-global-color-accent );
     border-color: var( --e-global-color-accent );
 }
 
-.elementor-4988 .elementor-element.elementor-element-ec0520b {
+.elementor-4988 .elementor-element.elementor-element-consulenza-col-inner {
     --icon-box-icon-margin: 0px;
 }
 
-.elementor-4988 .elementor-element.elementor-element-ec0520b .elementor-icon {
+.elementor-4988 .elementor-element.elementor-element-consulenza-col-inner .elementor-icon {
     font-size: 123px;
 }
 
-.elementor-4988 .elementor-element.elementor-element-ec0520b .elementor-icon-box-title {
+.elementor-4988 .elementor-element.elementor-element-consulenza-col-inner .elementor-icon-box-title {
     margin-bottom: 4px;
 }
 
-.elementor-4988 .elementor-element.elementor-element-ec0520b .elementor-icon-box-title, .elementor-4988 .elementor-element.elementor-element-ec0520b .elementor-icon-box-title a {
+.elementor-4988 .elementor-element.elementor-element-consulenza-col-inner .elementor-icon-box-title, .elementor-4988 .elementor-element.elementor-element-consulenza-col-inner .elementor-icon-box-title a {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
 }
 
-.elementor-4988 .elementor-element.elementor-element-ec0520b .elementor-icon-box-description {
+.elementor-4988 .elementor-element.elementor-element-consulenza-col-inner .elementor-icon-box-description {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 15px;
     font-weight: 500;
 }
 
-.elementor-4988 .elementor-element.elementor-element-ec0520b > .elementor-widget-container {
+.elementor-4988 .elementor-element.elementor-element-consulenza-col-inner > .elementor-widget-container {
     margin: 20px 20px 20px 20px;
     padding: 20px 20px 20px 20px;
     background-color: var( --e-global-color-0482cab );
@@ -118,7 +118,7 @@
 }
 
 @media(max-width: 1024px) and (min-width:768px) {
-    .elementor-4988 .elementor-element.elementor-element-3ab90e5 {
+    .elementor-4988 .elementor-element.elementor-element-consulenza-col-content {
         width:50%;
     }
 
@@ -145,3 +145,11 @@
 }
 
 /* End custom CSS */
+
+.elementor-icon i, .elementor-icon img,
+.elementor-icon i, .elementor-icon img svg {
+    width: 1em;
+    height: 1em;
+    position: relative;
+    display: block;
+}
