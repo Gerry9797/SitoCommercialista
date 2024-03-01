@@ -69,6 +69,7 @@ import { IntestazioneAreaRiservataComponent } from './bricks/intestazione-area-r
 import { InnerMenuAreaRiservataComponent } from './bricks/inner-menu-area-riservata/inner-menu-area-riservata.component';
 import { MainTitleCenterComponent } from './bricks/main-title-center/main-title-center.component';
 import { MainTitleDecorationComponent } from './bricks/main-title-decoration/main-title-decoration.component';
+import { ConsulenzaCardComponent } from './bricks/cards/consulenza-card/consulenza-card.component';
 
 export function playerFactory() {
   return player;
@@ -131,7 +132,8 @@ registerLocaleData(localeIt);
     IntestazioneAreaRiservataComponent,
     InnerMenuAreaRiservataComponent,
     MainTitleCenterComponent,
-    MainTitleDecorationComponent
+    MainTitleDecorationComponent,
+    ConsulenzaCardComponent
   ],
   imports: [
     BrowserModule,

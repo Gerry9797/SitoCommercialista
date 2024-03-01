@@ -27,10 +27,10 @@ export class ConsulenzaAziendaComponent implements OnInit{
       {
         title: "Consulenza Azienda",
         description: "Sei una azienda e hai necessità di una consulenza online? Fissiamo questo primo incontro online dove potremmo affrontare una prima consulenza online personalizzata.",
-        imgUrl: "assets/svg/consulenza_aziendale_1.svg",
-        price: "130,00 €",
-        time: "55 min",
-        redirectUrl: "/aziende/consulenza/assunzione-di-un-dipendente/"
+        imgUrl: "assets/svg/consulenza_aziendale_2.svg",
+        price: "100,00 €",
+        time: "60 min",
+        redirectUrl: "/aziende/consulenza/consulenza-azienda/"
       }
     ]
   }

@@ -1,0 +1,164 @@
+.elementor-element-consulenza-col-content > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    margin-bottom: 0px;
+}
+
+.elementor-element-consulenza-col-content > .elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-element-consulenza-col-inner .elementor-icon-box-wrapper {
+    text-align: left;
+}
+
+.elementor-element-consulenza-col-inner.elementor-view-stacked .elementor-icon:hover {
+    background-color: var( --e-global-color-accent );
+}
+
+.elementor-element-consulenza-col-inner.elementor-view-framed .elementor-icon:hover, .elementor-element-consulenza-col-inner.elementor-view-default .elementor-icon:hover {
+    fill: var( --e-global-color-accent );
+    color: var( --e-global-color-accent );
+    border-color: var( --e-global-color-accent );
+}
+
+.elementor-element-consulenza-col-inner {
+    --icon-box-icon-margin: 0px;
+}
+
+.elementor-element-consulenza-col-inner .elementor-icon {
+    font-size: 123px;
+}
+
+.elementor-element-consulenza-col-inner .elementor-icon-box-title {
+    margin-bottom: 4px;
+}
+
+.elementor-element-consulenza-col-inner .elementor-icon-box-title, .elementor-element-consulenza-col-inner .elementor-icon-box-title a {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.elementor-element-consulenza-col-inner .elementor-icon-box-description {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.elementor-element-consulenza-col-inner > .elementor-widget-container {
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: var( --e-global-color-0482cab );
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 10px 27px -5px rgba(161, 111, 87.99999999999999, 0.61);
+}
+
+.elementor-element-92fc765 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    margin-bottom: 0px;
+}
+
+.elementor-element-92fc765 > .elementor-element-populated {
+    margin: 0px 0px 0px 0px;
+    --e-column-margin-right: 0px;
+    --e-column-margin-left: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.elementor-element-06b803c .elementor-icon-box-wrapper {
+    text-align: left;
+}
+
+.elementor-element-06b803c.elementor-view-stacked .elementor-icon:hover {
+    background-color: var( --e-global-color-accent );
+}
+
+.elementor-element-06b803c.elementor-view-framed .elementor-icon:hover, .elementor-element-06b803c.elementor-view-default .elementor-icon:hover {
+    fill: var( --e-global-color-accent );
+    color: var( --e-global-color-accent );
+    border-color: var( --e-global-color-accent );
+}
+
+.elementor-element-06b803c {
+    --icon-box-icon-margin: 0px;
+}
+
+.elementor-element-06b803c .elementor-icon {
+    font-size: 123px;
+}
+
+.elementor-element-06b803c .elementor-icon-box-title {
+    margin-bottom: 4px;
+}
+
+.elementor-element-06b803c .elementor-icon-box-title, .elementor-element-06b803c .elementor-icon-box-title a {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.elementor-element-06b803c .elementor-icon-box-description {
+    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.elementor-element-06b803c > .elementor-widget-container {
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: var( --e-global-color-0482cab );
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 10px 27px -5px rgba(161, 111, 87.99999999999999, 0.61);
+}
+
+@media(max-width: 1024px) and (min-width:768px) {
+    .elementor-element-consulenza-col-content {
+        width:50%;
+    }
+
+    .elementor-element-92fc765 {
+        width: 50%;
+    }
+}
+
+/* Start custom CSS */
+.more {
+    display: none;
+}
+
+.myBtn {
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.myBtn:hover {
+    color: var(--e-global-color-secondary-hover);
+}
+
+.price {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #DE805E;
+}
+
+/* End custom CSS */
+
+.elementor-icon i, .elementor-icon img,
+.elementor-icon i, .elementor-icon img svg {
+    width: 1em;
+    height: 1em;
+    position: relative;
+    display: block;
+}
+
+.truncate {
+    overflow: hidden;
+    /* max-height: 80px; Altezza massima di 4 righe */
+    text-overflow: ellipsis; /* Aggiunge puntini sospensivi */
+    -webkit-line-clamp: 6; /* Imposta il numero massimo di righe */
+    display: -webkit-box; /* Imposta la visualizzazione come box */
+    -webkit-box-orient: vertical; /* Imposta l'orientamento del box */
+}
