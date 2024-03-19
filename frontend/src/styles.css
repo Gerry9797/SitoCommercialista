@@ -62463,3 +62463,8 @@ span.color-primary {
     line-height: 1.5 !important;
 }
 
+/* CUSTOM STYLE  */
+
+.elementor-container.elementor-column-gap-default {
+    flex-wrap: wrap;
+}
