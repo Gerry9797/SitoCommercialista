@@ -7,7 +7,9 @@ export const SITE_CONFIG = {
             email: "info@latuacommercialista.it",
             telefono: "3405272618",
             linkedin: "https://www.linkedin.com/company/valentina-filippini-consulente-del-lavoro/",
-            instagram: "https://www.instagram.com/cdl_valentina_filippini/"
+            instagram: "https://www.instagram.com/cdl_valentina_filippini/",
+            sitoWeb: "www.latuacommercialista.it",
+            sitoWebHttps: "https://latuacommercialista.it"
         },
         sede: {
             cap: "84098",

@@ -4,52 +4,35 @@
       
       <app-main-title-center-decorated [title]="'Cookie Policy'"></app-main-title-center-decorated>
       
-      <section class="elementor-section elementor-top-section elementor-element elementor-element-2105ba2 elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+      <section class="elementor-section elementor-top-section elementor-element elementor-element-cookie-policy-section-body elementor-section-boxed elementor-section-height-default elementor-section-height-default">
         <div class="elementor-container elementor-column-gap-default">
-          <div
-            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7e2eea28"
-            data-id="7e2eea28"
-            data-element_type="column"
-          >
+          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element">
             <div class="elementor-widget-wrap elementor-element-populated">
-              <div
-                class="elementor-element elementor-element-251268d elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-shortcode"
-                data-id="251268d"
-                data-element_type="widget"
-                data-widget_type="shortcode.default"
-              >
+              <div class="elementor-element elementor-element-251268d elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-shortcode">
                 <div class="elementor-widget-container">
                   <div class="elementor-shortcode">
                     <a class="wt-cli-manage-consent-link">Consenso Cookie</a>
                   </div>
                 </div>
               </div>
-              <div
-                class="elementor-element elementor-element-58910361 elementor-widget elementor-widget-text-editor"
-                data-id="58910361"
-                data-element_type="widget"
-                data-widget_type="text-editor.default"
-              >
+              <div class="elementor-element elementor-widget elementor-widget-text-editor">
                 <div class="elementor-widget-container">
                   <p><!-- wp:heading {"textAlign":"center"} --></p>
                   <p class="p1">
                     La presente Cookie Policy, riguarda l’utilizzo di Cookie da
                     parte del Sito web
-                    <span class="s1"
-                      ><b>https://valentinafilippini.it/.</b> </span
-                    >Per la Privacy Policy del Sito web si può
-                    <a href="/privacy-policy"
-                      ><span class="s2"><b>cliccare</b></span
-                      ><b> </b><span class="s2"><b>qui.</b></span></a
-                    >
+                    <span class="s1"><b>{{sitoWebHttps}}/. </b> </span>
+                    Per la Privacy Policy del Sito web si può
+                    <a href="/privacy-policy"><span class="s2"><b>cliccare qui.</b></span></a>
                   </p>
                   <p>&nbsp;</p>
                   <h5 class="p1"><b>Cookie Tecnici </b></h5>
                   <p class="p2">
-                    <span class="s1"
-                      >I Cookie tecnici sono quelli il cui utilizzo non richiede
-                      il consenso dell’Utente. </span
-                    >I Cookie tecnici sono utilizzati al solo fine di rendere
+                    <span class="s1">
+                      I Cookie tecnici sono quelli il cui utilizzo non richiede
+                      il consenso dell’Utente. 
+                    </span>
+                    I Cookie tecnici sono utilizzati al solo fine di rendere
                     possibile la navigazione dell’Utente sul Sito web e
                     consentirgli di utilizzarne le funzionalità. Si tratta
                     sempre di Cookie di prima parte, in quanto sono veicolati
@@ -77,21 +60,7 @@
                     di terze parti esterni al Sito web.
                   </p>
                   <p>&nbsp;</p>
-                  <h6 class="p1"><b>STRUMENTI DI CONTATTO </b></h6>
-                  <ul>
-                    <li class="p1">
-                      <b>Elementor (Elementor</b> <b>Ltd)<br /></b>Per maggiori
-                      informazioni è sufficiente seguire questo link:<span
-                        class="s1"
-                      >
-                        <a href="https://elementor.com/about/privacy/"
-                          ><span class="s2"
-                            ><b>https://elementor.com/about/privacy/</b></span
-                          ></a
-                        ></span
-                      >
-                    </li>
-                  </ul>
+                  
                   <h6 class="p1"><b>PULSANTI SOCIAL NETWORK</b></h6>
                   <ol>
                     <li class="p3">
@@ -114,6 +83,7 @@
                       ></span>
                     </li>
                   </ol>
+                  <p>&nbsp;</p>
                   <h6 class="p1"><b>METODI DI PAGAMENTO </b></h6>
                   <ul>
                     <li class="p3">
@@ -164,6 +134,7 @@
                           ></span
                         ></a
                       >
+                      <br /><span class="s2"><br /></span>
                     </li>
                     <li class="p3">
                       Eliminare/disattivare i cookie di Mozilla Firefox al
@@ -233,7 +204,7 @@
                     Per disabilitare i Cookie di terze parti è inoltre possibile
                     utilizzare
                     <span class="s1"
-                      ><b>Your Online Choices,</b>
+                      ><b>Your Online Choices, </b>
                       <a
                         href="http://www.youronlinechoices.com/it/le-tue-scelte"
                         ><span class="s2"
@@ -242,7 +213,7 @@
                           ></span
                         ></a
                       ></span
-                    ><b> </b>un servizio web gestito dall’associazione
+                    ><b> </b> un servizio web gestito dall’associazione
                     non-profit European Interactive Digital Advertising Alliance
                     (EDAA) che fornisce informazioni sulla pubblicità
                     comportamentale basata sui Cookie di profilazione e consente
@@ -317,7 +288,7 @@
                   <h4 class="p1"><b>Titolare del Trattamento </b></h4>
                   <p class="p2">
                     Il Titolare del Trattamento dei Dati raccolti da questo Sito
-                    web è Dott.ssa Valentina Filippini con sede in Grezzana (VR)
+                    web è Dott.ssa {{datiPersonali.nome}} {{datiPersonali.cognome}} con sede in {{datiPersonali.sede.localita}} ({{datiPersonali.sede.provincia}})
                     alla via Roma n. 98 P.Iva 04408890236 mail:
                     info&#64;valentinafilippini.it
                   </p>
