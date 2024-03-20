@@ -71,6 +71,7 @@ import { MainTitleCenterComponent } from './bricks/main-title-center/main-title-
 import { MainTitleDecorationComponent } from './bricks/main-title-decoration/main-title-decoration.component';
 import { ConsulenzaCardComponent } from './bricks/cards/consulenza-card/consulenza-card.component';
 import { PhoneNumberFormatterPipe } from './pipes/phone-number-formatter.pipe';
+import { MainTitleCenterDecoratedComponent } from './bricks/main-title-center-decorated/main-title-center-decorated.component';
 
 export function playerFactory() {
   return player;
@@ -135,7 +136,8 @@ registerLocaleData(localeIt);
     MainTitleCenterComponent,
     MainTitleDecorationComponent,
     ConsulenzaCardComponent,
-    PhoneNumberFormatterPipe
+    PhoneNumberFormatterPipe,
+    MainTitleCenterDecoratedComponent
   ],
   imports: [
     BrowserModule,
