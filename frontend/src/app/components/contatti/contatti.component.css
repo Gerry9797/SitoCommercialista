@@ -3,11 +3,11 @@
     margin-bottom: 0%;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-1bb10e9 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+.elementor-contacts-main .elementor-element.elementor-contacts-map-contaier > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
     margin-bottom: 0px;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-42f7820 iframe {
+.elementor-contacts-main .elementor-element.elementor-contacts-map-div iframe {
     height: 400px;
     filter: brightness( 100% ) contrast( 100% ) saturate( 0% ) blur( 0px ) hue-rotate( 0deg );
     opacity: 0.9;
@@ -15,7 +15,7 @@
 }
 
 /* AGGIUNTO CUSTOM  */
-/* .elementor-contacts-main .elementor-element.elementor-element-42f7820 iframe:before {
+/* .elementor-contacts-main .elementor-element.elementor-contacts-map-div iframe:before {
     content: "";
     position: absolute;
     top: 0;
@@ -38,86 +38,86 @@
     height: 100%;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-05f0600 {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-section {
     margin-top: 0%;
     margin-bottom: 0%;
     padding: 5% 3% 8% 3%;
 }
 
-.elementor-bc-flex-widget .elementor-contacts-main .elementor-element.elementor-element-cfec1b2.elementor-column .elementor-widget-wrap {
+.elementor-bc-flex-widget .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-div.elementor-column .elementor-widget-wrap {
     align-items: center;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-cfec1b2.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-div.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
     align-content: center;
     align-items: center;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-2d6fefc {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-title {
     text-align: left;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-2d6fefc .elementor-heading-title {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-title .elementor-heading-title {
     color: var( --e-global-color-primary );
     font-family: "DM Serif Display", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-006a03c {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-subtitle {
     text-align: left;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-006a03c .elementor-heading-title {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-subtitle .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 35px;
     font-weight: 600;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-006a03c > .elementor-widget-container {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-subtitle > .elementor-widget-container {
     margin: 0px 0px 20px 0px;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group {
     padding-right: calc( 20px/2 );
     padding-left: calc( 20px/2 );
     margin-bottom: 20px;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-form-fields-wrapper {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-form-fields-wrapper {
     margin-left: calc( -20px/2 );
     margin-right: calc( -20px/2 );
     margin-bottom: -20px;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group.recaptcha_v3-bottomleft, .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group.recaptcha_v3-bottomright {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group.recaptcha_v3-bottomleft, .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group.recaptcha_v3-bottomright {
     margin-bottom: 0;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-labels-inline .elementor-field-group > label {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-labels-inline .elementor-field-group > label {
     padding-left: 8px;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-labels-inline .elementor-field-group > label {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-labels-inline .elementor-field-group > label {
     padding-right: 8px;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-labels-above .elementor-field-group > label {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-labels-above .elementor-field-group > label {
     padding-bottom: 8px;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group > label, .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-subgroup label {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group > label, .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-subgroup label {
     color: var( --e-global-color-text );
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group > label {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group > label {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-type-html {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-type-html {
     padding-bottom: 0px;
     color: #FFFFFF;
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -125,33 +125,33 @@
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group .elementor-field {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group .elementor-field {
     color: var( --e-global-color-text );
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group .elementor-field, .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-subgroup label {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group .elementor-field, .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-subgroup label {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group:not(.elementor-field-type-upload) .elementor-field:not(.elementor-select-wrapper) {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group:not(.elementor-field-type-upload) .elementor-field:not(.elementor-select-wrapper) {
     border-color: var( --e-global-color-e1cf9be );
     border-width: 0px 0px 1px 0px;
     border-radius: 0px 0px 0px 0px;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group .elementor-select-wrapper select {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group .elementor-select-wrapper select {
     border-color: var( --e-global-color-e1cf9be );
     border-width: 0px 0px 1px 0px;
     border-radius: 0px 0px 0px 0px;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group .elementor-select-wrapper::before {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group .elementor-select-wrapper::before {
     color: var( --e-global-color-e1cf9be );
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-button {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-button {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
@@ -159,43 +159,43 @@
     padding: 4px 30px 4px 30px;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .e-form__buttons__wrapper__button-next {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .e-form__buttons__wrapper__button-next {
     background-color: var( --e-global-color-primary );
     color: var( --e-global-color-0482cab );
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-button[type="submit"] {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-button[type="submit"] {
     background-color: var( --e-global-color-primary );
     color: var( --e-global-color-0482cab );
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-button[type="submit"] svg * {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-button[type="submit"] svg * {
     fill: var( --e-global-color-0482cab );
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .e-form__buttons__wrapper__button-previous {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .e-form__buttons__wrapper__button-previous {
     color: #ffffff;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .e-form__buttons__wrapper__button-next:hover {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .e-form__buttons__wrapper__button-next:hover {
     background-color: var( --e-global-color-accent );
     color: #FFFFFF;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-button[type="submit"]:hover {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-button[type="submit"]:hover {
     background-color: var( --e-global-color-accent );
     color: #FFFFFF;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-button[type="submit"]:hover svg * {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-button[type="submit"]:hover svg * {
     fill: #FFFFFF;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .e-form__buttons__wrapper__button-previous:hover {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .e-form__buttons__wrapper__button-previous:hover {
     color: #ffffff;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body {
     --e-form-steps-indicators-spacing: 20px;
     --e-form-steps-indicator-padding: 30px;
     --e-form-steps-indicator-inactive-secondary-color: #ffffff;
@@ -208,82 +208,82 @@
     align-self: flex-start;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-a8a12f1 > .elementor-widget-container {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body > .elementor-widget-container {
     margin: 30px 0px 30px 0px;
 }
 
-.elementor-bc-flex-widget .elementor-contacts-main .elementor-element.elementor-element-4684d12.elementor-column .elementor-widget-wrap {
+.elementor-bc-flex-widget .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-right-side.elementor-column .elementor-widget-wrap {
     align-items: center;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-4684d12.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-right-side.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
     align-content: center;
     align-items: center;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-4684d12.elementor-column > .elementor-widget-wrap {
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-right-side.elementor-column > .elementor-widget-wrap {
     justify-content: center;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-d4b862d {
+.elementor-contacts-main .elementor-element.elementor-lottie-enveloper-mail {
     --lottie-container-width: 70%;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-3c8cd9d {
+.elementor-contacts-main .elementor-element.elementor-element-contact-right-cell {
     text-align: center;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-3c8cd9d .elementor-heading-title {
+.elementor-contacts-main .elementor-element.elementor-element-contact-right-cell .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 25px;
     font-weight: 600;
 }
 
-.elementor-contacts-main .elementor-element.elementor-element-3c8cd9d > .elementor-widget-container {
+.elementor-contacts-main .elementor-element.elementor-element-contact-right-cell > .elementor-widget-container {
     margin: 0px 0px 20px 0px;
 }
 
 @media(max-width: 1024px) {
-    .elementor-contacts-main .elementor-element.elementor-element-42f7820 iframe {
+    .elementor-contacts-main .elementor-element.elementor-contacts-map-div iframe {
         height:300px;
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-05f0600 {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-section {
         margin-top: 4%;
         margin-bottom: 0%;
         padding: 05% 3% 5% 3%;
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-cfec1b2 > .elementor-element-populated {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-div > .elementor-element-populated {
         padding: 0% 0% 0% 0%;
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-006a03c .elementor-heading-title {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-subtitle .elementor-heading-title {
         font-size: 30px;
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group > label {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group > label {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-type-html {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-type-html {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group .elementor-field, .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-subgroup label {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group .elementor-field, .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-subgroup label {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-button {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-button {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-d4b862d {
+    .elementor-contacts-main .elementor-element.elementor-lottie-enveloper-mail {
         --lottie-container-width: 100%;
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-3c8cd9d .elementor-heading-title {
+    .elementor-contacts-main .elementor-element.elementor-element-contact-right-cell .elementor-heading-title {
         font-size: 20px;
     }
 }
@@ -294,57 +294,62 @@
         margin-bottom: 0%;
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-05f0600 {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-section {
         margin-top: 5%;
         margin-bottom: 0%;
         padding: 20px 20px 20px 20px;
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-cfec1b2 > .elementor-element-populated {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-div > .elementor-element-populated {
         padding: 0px 0px 0px 0px;
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-006a03c .elementor-heading-title {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-subtitle .elementor-heading-title {
         font-size: 25px;
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group > label {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group > label {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-type-html {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-type-html {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-group .elementor-field, .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-field-subgroup label {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-group .elementor-field, .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-field-subgroup label {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-a8a12f1 .elementor-button {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-body .elementor-button {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-3c8cd9d .elementor-heading-title {
+    .elementor-contacts-main .elementor-element.elementor-element-contact-right-cell .elementor-heading-title {
         font-size: 25px;
     }
 }
 
 @media(min-width: 768px) {
-    .elementor-contacts-main .elementor-element.elementor-element-cfec1b2 {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-div {
         width:60%;
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-4684d12 {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-right-side {
         width: 39.956%;
     }
 }
 
 @media(max-width: 1024px) and (min-width:768px) {
-    .elementor-contacts-main .elementor-element.elementor-element-cfec1b2 {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-div {
         width:65%;
     }
 
-    .elementor-contacts-main .elementor-element.elementor-element-4684d12 {
+    .elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-right-side {
         width: 34%;
     }
+}
+
+.elementor-contacts-main .elementor-element.elementor-contacts-modulo-contact-right-side > .elementor-widget-wrap.elementor-element-populated {
+    align-content: center;
+    align-items: center;
 }

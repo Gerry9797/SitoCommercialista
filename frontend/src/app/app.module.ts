@@ -70,6 +70,7 @@ import { InnerMenuAreaRiservataComponent } from './bricks/inner-menu-area-riserv
 import { MainTitleCenterComponent } from './bricks/main-title-center/main-title-center.component';
 import { MainTitleDecorationComponent } from './bricks/main-title-decoration/main-title-decoration.component';
 import { ConsulenzaCardComponent } from './bricks/cards/consulenza-card/consulenza-card.component';
+import { PhoneNumberFormatterPipe } from './pipes/phone-number-formatter.pipe';
 
 export function playerFactory() {
   return player;
@@ -133,7 +134,8 @@ registerLocaleData(localeIt);
     InnerMenuAreaRiservataComponent,
     MainTitleCenterComponent,
     MainTitleDecorationComponent,
-    ConsulenzaCardComponent
+    ConsulenzaCardComponent,
+    PhoneNumberFormatterPipe
   ],
   imports: [
     BrowserModule,

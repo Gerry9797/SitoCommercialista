@@ -1,22 +1,16 @@
 <div class="elementor elementor-contacts-main">
   <section class="elementor-section elementor-top-section elementor-element elementor-contacts-map-section elementor-section-full_width elementor-section-height-default elementor-section-height-default">
     <div class="elementor-container elementor-column-gap-no">
-      <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1bb10e9">
+      <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-contacts-map-contaier">
         <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-42f7820 elementor-widget elementor-widget-google_maps"
-            data-id="42f7820"
-            data-element_type="widget"
-            data-widget_type="google_maps.default"
-          >
+          <div class="elementor-element elementor-contacts-map-div elementor-widget elementor-widget-google_maps">
             <div class="elementor-widget-container">
               <div class="elementor-custom-embed" [class.pink-overlay]="pinkMap">
                 <iframe
                   class="lazyloaded"
                   loading="lazy"
                   src="https://maps.google.com/maps?q=Via%Francesco%20Petrarca%204%2084098%20Pontecagnano%20%28SA%29&amp;t=m&amp;z=17&amp;output=embed&amp;iwloc=near"
-                  title="Via Roma 98 37023 Grezzana (VR)"
-                  aria-label="Via Roma 98 37023 Grezzana (VR)"
+                  title="{{indirizzo}}"
                 ></iframe>
               </div>
             </div>
@@ -25,67 +19,34 @@
       </div>
     </div>
   </section>
-  <section
-    class="elementor-section elementor-top-section elementor-element elementor-element-05f0600 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-    data-id="05f0600"
-    data-element_type="section"
-  >
+  <section class="elementor-section elementor-top-section elementor-element elementor-contacts-modulo-contact-section elementor-section-boxed elementor-section-height-default elementor-section-height-default">
     <div class="elementor-container elementor-column-gap-no">
       <div
         appear
-        class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-cfec1b2 elementor-invisible"
-        data-id="cfec1b2"
-        data-element_type="column"
+        class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-contacts-modulo-contact-div elementor-invisible"
         data-settings='{"animation":"slideInLeft"}'
       >
         <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-2d6fefc elementor-widget elementor-widget-heading"
-            data-id="2d6fefc"
-            data-element_type="widget"
-            data-widget_type="heading.default"
-          >
+          <div class="elementor-element elementor-contacts-modulo-contact-title elementor-widget elementor-widget-heading">
             <div class="elementor-widget-container">
               <h2 class="elementor-heading-title elementor-size-default">
                 scrivimi
               </h2>
             </div>
           </div>
-          <div
-            class="elementor-element elementor-element-006a03c elementor-widget elementor-widget-heading"
-            data-id="006a03c"
-            data-element_type="widget"
-            data-widget_type="heading.default"
-          >
+          <div class="elementor-element elementor-contacts-modulo-contact-subtitle elementor-widget elementor-widget-heading">
             <div class="elementor-widget-container">
               <h2 class="elementor-heading-title elementor-size-default">
                 Modulo di contatto
               </h2>
             </div>
           </div>
-          <div
-            class="elementor-element elementor-element-a8a12f1 elementor-button-align-end elementor-widget__width-initial elementor-tablet-button-align-center elementor-widget elementor-widget-form"
-            data-id="a8a12f1"
-            data-element_type="widget"
-            data-settings='{"step_next_label":"Successivo","step_previous_label":"Precedente","button_width":"20","button_width_tablet":"100","step_type":"number_text","step_icon_shape":"circle"}'
-            data-widget_type="form.default"
-          >
+          <div class="elementor-element elementor-contacts-modulo-contact-body elementor-button-align-end elementor-widget__width-initial elementor-tablet-button-align-center elementor-widget elementor-widget-form">
             <div class="elementor-widget-container">
               <form class="elementor-form" method="post" name="ConsOnline">
-                <input type="hidden" name="post_id" value="35" />
-                <input type="hidden" name="form_id" value="a8a12f1" />
-                <input
-                  type="hidden"
-                  name="referer_title"
-                  value="Contatta la consulente del lavoro Aisia Autiero"
-                />
-                <input type="hidden" name="queried_id" value="35" />
-                <div
-                  class="elementor-form-fields-wrapper elementor-labels-above"
-                >
-                  <div
-                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-50 elementor-field-required"
-                  >
+        
+                <div class="elementor-form-fields-wrapper elementor-labels-above">
+                  <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-50 elementor-field-required">
                     <label for="form-field-name" class="elementor-field-label">
                       Nome:
                     </label>
@@ -99,13 +60,8 @@
                       aria-required="true"
                     />
                   </div>
-                  <div
-                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-surname elementor-col-50 elementor-field-required"
-                  >
-                    <label
-                      for="form-field-surname"
-                      class="elementor-field-label"
-                    >
+                  <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-surname elementor-col-50 elementor-field-required">
+                    <label for="form-field-surname" class="elementor-field-label">
                       Cognome:
                     </label>
                     <input
@@ -118,13 +74,8 @@
                       aria-required="true"
                     />
                   </div>
-                  <div
-                    class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-telefono elementor-col-50 elementor-field-required"
-                  >
-                    <label
-                      for="form-field-telefono"
-                      class="elementor-field-label"
-                    >
+                  <div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-telefono elementor-col-50 elementor-field-required">
+                    <label for="form-field-telefono" class="elementor-field-label">
                       Telefono:
                     </label>
                     <input
@@ -137,9 +88,7 @@
                       aria-required="true"
                     />
                   </div>
-                  <div
-                    class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-50 elementor-field-required"
-                  >
+                  <div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-50 elementor-field-required">
                     <label for="form-field-email" class="elementor-field-label">
                       Email:
                     </label>
@@ -153,15 +102,11 @@
                       aria-required="true"
                     />
                   </div>
-                  <div
-                    class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100 elementor-field-required"
-                  >
-                    <label
-                      for="form-field-message"
-                      class="elementor-field-label"
-                    >
-                      In cosa ti posso aiutare? </label
-                    ><textarea
+                  <div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100 elementor-field-required">
+                    <label for="form-field-message" class="elementor-field-label">
+                      In cosa ti posso aiutare? 
+                    </label>
+                    <textarea
                       class="elementor-field-textual elementor-field elementor-size-sm"
                       name="form_fields[message]"
                       id="form-field-message"
@@ -170,9 +115,7 @@
                       aria-required="true"
                     ></textarea>
                   </div>
-                  <div
-                    class="elementor-field-type-acceptance elementor-field-group elementor-column elementor-field-group-privacy elementor-col-80 elementor-md-100 elementor-field-required"
-                  >
+                  <div class="elementor-field-type-acceptance elementor-field-group elementor-column elementor-field-group-privacy elementor-col-80 elementor-md-100 elementor-field-required">
                     <div class="elementor-field-subgroup">
                       <span class="elementor-field-option">
                         <input
@@ -183,26 +126,22 @@
                           required="required"
                           aria-required="true"
                         />
-                        <label for="form-field-privacy"
-                          >Acconsento al trattamento dei miei dati e dichiaro di
+                        <label for="form-field-privacy">
+                          Acconsento al trattamento dei miei dati e dichiaro di
                           aver preso visione della
                           <a
                             rel="nofollow"
                             routerLink="/privacy-policy"
                             target="_blank"
-                            ><span
-                              style="color: #000; text-decoration: underline"
-                            >
+                            ><span style="color: #000; text-decoration: underline">
                               Privacy Policy
-                            </span></a
-                          >*</label
-                        >
+                            </span>
+                          </a>*
+                        </label>
                       </span>
                     </div>
                   </div>
-                  <div
-                    class="elementor-field-type-acceptance elementor-field-group elementor-column elementor-field-group-field_ebeb7cb elementor-col-80 elementor-md-100"
-                  >
+                  <div class="elementor-field-type-acceptance elementor-field-group elementor-column elementor-field-group-field_ebeb7cb elementor-col-80 elementor-md-100">
                     <div class="elementor-field-subgroup">
                       <span class="elementor-field-option">
                         <input
@@ -211,8 +150,8 @@
                           id="form-field-field_ebeb7cb"
                           class="elementor-field elementor-size-sm elementor-acceptance-field mr-2"
                         />
-                        <label for="form-field-field_ebeb7cb"
-                          >Acconsento al trattamento dei miei dati personali per
+                        <label for="form-field-field_ebeb7cb">
+                          Acconsento al trattamento dei miei dati personali per
                           ricevere la newsletter e per ricevere periodicamente
                           informazioni relative alle vostre iniziative
                           formative, promozionali e commerciali</label
@@ -230,9 +169,7 @@
                       style="display: none !important"
                     />
                   </div>
-                  <div
-                    class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-20 e-form__buttons elementor-md-100"
-                  >
+                  <div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-20 e-form__buttons elementor-md-100">
                     <button
                       type="submit"
                       class="elementor-button elementor-size-xs"
@@ -251,19 +188,11 @@
       </div>
       <div
         appear
-        class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4684d12 elementor-hidden-mobile elementor-invisible"
-        data-id="4684d12"
-        data-element_type="column"
+        class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-contacts-modulo-contact-right-side elementor-hidden-mobile elementor-invisible"
         data-settings='{"animation":"bounceInRight"}'
       >
         <div class="elementor-widget-wrap elementor-element-populated">
-          <div
-            class="elementor-element elementor-element-d4b862d elementor-align-center elementor-widget elementor-widget-lottie"
-            data-id="d4b862d"
-            data-element_type="widget"
-            data-settings='{"source_json":{"url":"https:\/\/valentinafilippini.it\/wp-content\/uploads\/2022\/07\/lf30_editor_iwh84lb9.json","id":3571,"size":"","alt":"","source":"library"},"loop":"yes","source":"media_file","caption_source":"none","link_to":"none","trigger":"arriving_to_viewport","viewport":{"unit":"%","size":"","sizes":{"start":0,"end":100}},"play_speed":{"unit":"px","size":1,"sizes":[]},"start_point":{"unit":"%","size":"0","sizes":[]},"end_point":{"unit":"%","size":"100","sizes":[]},"renderer":"svg"}'
-            data-widget_type="lottie.default"
-          >
+          <div class="elementor-element elementor-lottie-enveloper-mail elementor-align-center elementor-widget elementor-widget-lottie">
             <div class="elementor-widget-container">
               <div class="e-lottie__container">
                 <div class="e-lottie__animation">
@@ -272,15 +201,10 @@
               </div>
             </div>
           </div>
-          <div
-            class="elementor-element elementor-element-3c8cd9d elementor-widget elementor-widget-heading"
-            data-id="3c8cd9d"
-            data-element_type="widget"
-            data-widget_type="heading.default"
-          >
+          <div class="elementor-element elementor-element-contact-right-cell elementor-widget elementor-widget-heading">
             <div class="elementor-widget-container">
               <h2 class="elementor-heading-title elementor-size-default">
-                Tel. 340 5272617
+                Tel. {{telefono | phoneNumberFormatter }}
               </h2>
             </div>
           </div>

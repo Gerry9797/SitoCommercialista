@@ -2,6 +2,7 @@ import { HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
+import { SITE_CONFIG } from 'src/app/app.config';
 
 @Injectable({
   providedIn: 'root'
@@ -72,6 +73,13 @@ export class UtilityService {
     // Imposta la variabile isMobile in base alla larghezza della finestra
     let isMobile = windowWidth <= 768; // Modifica il valore 768 con la larghezza desiderata per il tuo breakpoint mobile
     return isMobile;
+  }
+
+  getIndirizzoCompleto() : string {
+    return SITE_CONFIG.datiPersonali.sede.indirizzo
+      + " " + SITE_CONFIG.datiPersonali.sede.cap
+      + " " + SITE_CONFIG.datiPersonali.sede.localita
+      + " (" + SITE_CONFIG.datiPersonali.sede.provincia + ")"
   }
 
 }
