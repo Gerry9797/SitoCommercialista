@@ -16,19 +16,10 @@
                       <div class="woocommerce-MyAccount-content">
                         <div class="woocommerce-MyAccount-content-wrapper">
                           <div class="woocommerce-notices-wrapper"></div>
-                          <form
-                            class="woocommerce-EditAccountForm edit-account"
-                            action=""
-                            method="post"
-                          >
-                            <p
-                              class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first"
-                            >
-                              <label for="account_first_name"
-                                >Nome&nbsp;<span class="required"
-                                  >*</span
-                                ></label
-                              >
+                          <form class="woocommerce-EditAccountForm edit-account">
+                            <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+                              <label for="account_first_name">
+                                Nome&nbsp;<span class="required">*</span></label>
                               <input
                                 type="text"
                                 class="woocommerce-Input woocommerce-Input--text input-text"
@@ -38,14 +29,9 @@
                                 value=""
                               />
                             </p>
-                            <p
-                              class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last"
-                            >
-                              <label for="account_last_name"
-                                >Cognome&nbsp;<span class="required"
-                                  >*</span
-                                ></label
-                              >
+                            <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+                              <label for="account_last_name">
+                                Cognome&nbsp;<span class="required">*</span></label>
                               <input
                                 type="text"
                                 class="woocommerce-Input woocommerce-Input--text input-text"
@@ -57,14 +43,9 @@
                             </p>
                             <div class="clear"></div>
 
-                            <p
-                              class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
-                            >
-                              <label for="account_display_name"
-                                >Nome visualizzato&nbsp;<span class="required"
-                                  >*</span
-                                ></label
-                              >
+                            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                              <label for="account_display_name">
+                                Nome visualizzato&nbsp;<span class="required">*</span></label>
                               <input
                                 type="text"
                                 class="woocommerce-Input woocommerce-Input--text input-text"
@@ -72,24 +53,19 @@
                                 id="account_display_name"
                                 value="gerrycorbisiero"
                               />
-                              <span
-                                ><em
-                                  >Questo è il modo in cui il tuo nome verrà
+                              <span>
+                                <em>
+                                  Questo è il modo in cui il tuo nome verrà
                                   visualizzato nella sezione dell'account e
-                                  nelle recensioni</em
-                                ></span
-                              >
+                                  nelle recensioni
+                                </em>
+                              </span>
                             </p>
                             <div class="clear"></div>
 
-                            <p
-                              class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
-                            >
-                              <label for="account_email"
-                                >Indirizzo email&nbsp;<span class="required"
-                                  >*</span
-                                ></label
-                              >
+                            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                              <label for="account_email">
+                                Indirizzo email&nbsp;<span class="required">*</span></label>
                               <input
                                 type="email"
                                 class="woocommerce-Input woocommerce-Input--email input-text"
@@ -103,67 +79,49 @@
                             <fieldset>
                               <legend>Modifica password</legend>
 
-                              <p
-                                class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
-                              >
-                                <label for="password_current"
-                                  >Password attuale (lascia in bianco per non
-                                  modificare)</label
-                                >
-                                <span class="password-input"
-                                  >
+                              <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                <label for="password_current">
+                                  Password attuale (lascia in bianco per non
+                                  modificare)
+                                </label>
+                                <span class="password-input">
                                   <app-input-with-validation id="signup_password_desktop" type="password" placeholder="Password" [formRef]="formSignup" controlName="signup_password" [maxChars]="MAX_PASSWORD_LEN"></app-input-with-validation>
                                 </span>
                               </p>
-                              <p
-                                class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
-                              >
-                                <label for="password_1"
-                                  >Nuova password (lascia in bianco per non
-                                  modificare)</label
-                                >
-                                <span class="password-input"
-                                  ><input
+                              <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                <label for="password_1">
+                                  Nuova password (lascia in bianco per non modificare)
+                                </label>
+                                <span class="password-input">
+                                  <input
                                     type="password"
                                     class="woocommerce-Input woocommerce-Input--password input-text"
                                     name="password_1"
                                     id="password_1"
                                     autocomplete="off" /><span
                                     class="show-password-input"
-                                  ></span
-                                ></span>
+                                  >
+                                </span>
+                              </span>
                               </p>
-                              <p
-                                class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
-                              >
-                                <label for="password_2"
-                                  >Conferma nuova password</label
-                                >
-                                <span class="password-input"
-                                  ><input
+                              <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                                <label for="password_2">
+                                  Conferma nuova password
+                                </label>
+                                <span class="password-input">
+                                  <input
                                     type="password"
                                     class="woocommerce-Input woocommerce-Input--password input-text"
                                     name="password_2"
                                     id="password_2"
-                                    autocomplete="off" /><span
-                                    class="show-password-input"
-                                  ></span
-                                ></span>
+                                    autocomplete="off" />
+                                  <span class="show-password-input"></span>
+                                </span>
                               </p>
                             </fieldset>
                             <div class="clear"></div>
 
                             <p>
-                              <input
-                                type="hidden"
-                                id="save-account-details-nonce"
-                                name="save-account-details-nonce"
-                                value="24c92f6f72"
-                              /><input
-                                type="hidden"
-                                name="_wp_http_referer"
-                                value="/mio-account/edit-account/"
-                              />
                               <button
                                 type="submit"
                                 class="woocommerce-Button button"
@@ -172,11 +130,6 @@
                               >
                                 Salva le modifiche
                               </button>
-                              <input
-                                type="hidden"
-                                name="action"
-                                value="save_account_details"
-                              />
                             </p>
                           </form>
                         </div>
@@ -190,6 +143,5 @@
         </div>
       </section>
     </div>
-    <div class="post-tags"></div>
   </div>
 </main>
