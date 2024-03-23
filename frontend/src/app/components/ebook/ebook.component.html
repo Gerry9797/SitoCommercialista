@@ -6,140 +6,16 @@
         [subtitle]="'Scopri la raccolta di guide, testi, eBook per non perderti niente sul mondo della Consulenza del Lavoro!'">
       </app-intestazione-area-decorated>
       
-      <section class="elementor-section elementor-top-section elementor-element elementor-element-7c83fc3 elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+      <section class="elementor-section elementor-top-section elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default">
         <div class="elementor-container elementor-column-gap-default">
-          <div
-            class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-d6d164a"
-            data-id="d6d164a"
-            data-element_type="column"
-          >
-            <div class="elementor-widget-wrap elementor-element-populated">
-              <div
-                class="elementor-element elementor-element-536e32b elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
-                data-id="536e32b"
-                data-element_type="widget"
-                data-widget_type="icon-box.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-icon-box-wrapper">
-                    <div class="elementor-icon-box-icon">
-                      <span class="elementor-icon elementor-animation-">
-                        <app-pdf-svg></app-pdf-svg>
-                      </span>
-                    </div>
-                    <div class="elementor-icon-box-content">
-                      <h3 class="elementor-icon-box-title">
-                        <span>
-                          Congedi e permessi dal lavoro per genitori lavoratori
-                          dipendenti
-                        </span>
-                      </h3>
-                      <p class="elementor-icon-box-description">
-                        Settore privato e pubblico
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-17aaf2c elementor-widget__width-inherit elementor-widget elementor-widget-html"
-                data-id="17aaf2c"
-                data-element_type="widget"
-                data-widget_type="html.default"
-              >
-                <div class="elementor-widget-container">
-                  <form action="/scarica-file" method="post">
-                    <input
-                      type="text"
-                      name="ebtitle"
-                      value="Congedi e permessi dal lavoro per genitori lavoratori dipendenti"
-                      hidden=""
-                    />
-                    <input
-                      type="text"
-                      name="ebdescription"
-                      value="Settore privato e pubblico"
-                      hidden=""
-                    />
-                    <input
-                      type="text"
-                      name="ebdownloadlink"
-                      value="https://valentinafilippini.it/wp-content/uploads/2023/01/Congedi-e-permessi-dal-lavoro-per-genitori.pdf"
-                      hidden=""
-                    />
-                    <input
-                      type="submit"
-                      value="Scarica il PDF"
-                      style="width: 100%; border: none"
-                    />
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-bd308c9"
-            data-id="bd308c9"
-            data-element_type="column"
-          >
-            <div class="elementor-widget-wrap elementor-element-populated">
-              <div
-                class="elementor-element elementor-element-3d4be97 elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
-                data-id="3d4be97"
-                data-element_type="widget"
-                data-widget_type="icon-box.default"
-              >
-                <div class="elementor-widget-container">
-                  <div class="elementor-icon-box-wrapper">
-                    <div class="elementor-icon-box-icon">
-                      <span class="elementor-icon elementor-animation-">
-                        <app-pdf-svg></app-pdf-svg>
-                      </span>
-                    </div>
-                    <div class="elementor-icon-box-content">
-                      <h3 class="elementor-icon-box-title">
-                        <span> Bonus Nido </span>
-                      </h3>
-                      <p class="elementor-icon-box-description">
-                        Hai appena iscritto il tuo/a bambino/a all’asilo nido?
-                        Scopri la mini guida veloce e completa
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="elementor-element elementor-element-06abc90 elementor-widget__width-inherit elementor-widget elementor-widget-html"
-                data-id="06abc90"
-                data-element_type="widget"
-                data-widget_type="html.default"
-              >
-                <div class="elementor-widget-container">
-                  <a
-                    href="https://valentinafilippini.it/bonus-nido/"
-                    target="_blank"
-                    class="elementor-button elementor-button-link elementor-size-sm"
-                    style="width: 100%; font-size: 1rem"
-                    >Scarica il PDF</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-4c2e1d7"
-            data-id="4c2e1d7"
-            data-element_type="column"
-          >
-            <div class="elementor-widget-wrap"></div>
-          </div>
-          <div
-            class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-f2c4374"
-            data-id="f2c4374"
-            data-element_type="column"
-          >
-            <div class="elementor-widget-wrap"></div>
-          </div>
+
+          @for (ebook of ebooksCards; track ebook) {
+            <app-file-download-card
+              class="d-contents"
+              [cardDownloadDetail]="ebook">
+            </app-file-download-card>
+          }
+          
         </div>
       </section>
       <section

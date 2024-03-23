@@ -1,0 +1,33 @@
+<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-file-card-spacing">
+    <div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-file-card elementor-view-default elementor-position-top elementor-mobile-position-top elementor-widget elementor-widget-icon-box">
+        <div class="elementor-widget-container">
+          <div class="elementor-icon-box-wrapper">
+            <div class="elementor-icon-box-icon">
+              <span class="elementor-icon elementor-animation-">
+                <app-pdf-svg></app-pdf-svg>
+              </span>
+            </div>
+            <div class="elementor-icon-box-content">
+              <h3 class="elementor-icon-box-title">
+                <span>
+                  {{cardDownloadDetail.title}}
+                </span>
+              </h3>
+              <p class="elementor-icon-box-description">
+                {{cardDownloadDetail.description}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elementor-element elementor-element-file-card-btn-div elementor-widget__width-inherit elementor-widget elementor-widget-html">
+        <div class="elementor-widget-container">
+            <input
+              value="{{cardDownloadDetail.actionLabel}}"
+              style="width: 100%; border: none"
+            />
+        </div>
+      </div>
+    </div>
+  </div>

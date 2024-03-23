@@ -1,0 +1,80 @@
+.elementor-element-file-card-spacing.elementor-column .elementor-widget-wrap {
+    align-items: center;
+}
+
+.elementor-element-file-card-spacing.elementor-column.elementor-element > .elementor-widget-wrap.elementor-element-populated {
+    align-content: center;
+    align-items: center;
+}
+
+.elementor-element-file-card-spacing.elementor-column > .elementor-widget-wrap {
+    justify-content: center;
+}
+
+.elementor-element-file-card-spacing > .elementor-element-populated, .elementor-element-file-card-spacing > .elementor-element-populated > .elementor-background-overlay, .elementor-element-file-card-spacing > .elementor-background-slideshow {
+    border-radius: 15px 15px 15px 15px;
+}
+
+.elementor-element-file-card-spacing > .elementor-element-populated {
+    box-shadow: 0px 10px 27px -5px rgba(160.5, 111.08848498050558, 87.70801630434784, 0.61);
+    margin: 20px 20px 20px 20px;
+    --e-column-margin-right: 20px;
+    --e-column-margin-left: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+@media(max-width: 1024px) and (min-width:768px) {
+    .elementor-element-file-card-spacing {
+        width:34%;
+    }
+}
+
+.elementor-element.elementor-element-file-card .elementor-icon-box-wrapper {
+    text-align: left;
+}
+
+.elementor-element.elementor-element-file-card.elementor-view-stacked .elementor-icon:hover {
+    background-color: var( --e-global-color-accent );
+}
+
+.elementor-element.elementor-element-file-card.elementor-view-framed .elementor-icon:hover, .elementor-element.elementor-element-file-card.elementor-view-default .elementor-icon:hover {
+    fill: var( --e-global-color-accent );
+    color: var( --e-global-color-accent );
+    border-color: var( --e-global-color-accent );
+}
+
+.elementor-element.elementor-element-file-card {
+    --icon-box-icon-margin: 15px;
+}
+
+.elementor-element.elementor-element-file-card .elementor-icon {
+    font-size: 65px;
+}
+
+.elementor-element.elementor-element-file-card-btn-div {
+    width: 100%;
+    max-width: 100%;
+}
+
+.elementor-element.elementor-element-file-card-btn-div input {
+    display: inline-block;
+    font-weight: 400;
+    color: #c36;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+    background-color: initial;
+    border: 1px solid #c36;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 3px;
+    transition: all .3s;
+    color: #fff;
+    background-color: var(--e-global-color-primary);
+    border-radius: 25px 25px 25px 25px;
+    cursor: pointer;
+}
+
+.elementor-element.elementor-element-file-card-btn-div input:hover {
+    background-color: var(--e-global-color-accent);
+}

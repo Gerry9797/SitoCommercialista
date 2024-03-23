@@ -62468,3 +62468,7 @@ span.color-primary {
 .elementor-container.elementor-column-gap-default {
     flex-wrap: wrap;
 }
+
+.d-contents {
+    display: contents;
+}

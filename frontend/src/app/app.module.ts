@@ -73,6 +73,7 @@ import { ConsulenzaCardComponent } from './bricks/cards/consulenza-card/consulen
 import { PhoneNumberFormatterPipe } from './pipes/phone-number-formatter.pipe';
 import { MainTitleCenterDecoratedComponent } from './bricks/main-title-center-decorated/main-title-center-decorated.component';
 import { PdfSvgComponent } from './bricks/svg/pdf-svg/pdf-svg.component';
+import { FileDownloadCardComponent } from './bricks/cards/file-download-card/file-download-card.component';
 
 export function playerFactory() {
   return player;
@@ -139,7 +140,8 @@ registerLocaleData(localeIt);
     ConsulenzaCardComponent,
     PhoneNumberFormatterPipe,
     MainTitleCenterDecoratedComponent,
-    PdfSvgComponent
+    PdfSvgComponent,
+    FileDownloadCardComponent
   ],
   imports: [
     BrowserModule,
