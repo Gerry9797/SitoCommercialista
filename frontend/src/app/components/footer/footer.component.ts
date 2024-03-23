@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SITE_CONFIG } from 'src/app/app.config';
+import { UtilityService } from 'src/app/services/utility/utility.service';
 
 interface IFooterItem {
   title: string;
@@ -19,7 +20,9 @@ export class FooterComponent implements OnInit {
 
   datiPersonali: any = SITE_CONFIG.datiPersonali;
 
-  constructor() { }
+  constructor(
+    private utilityService: UtilityService
+  ) { }
 
   ngOnInit(): void {
     this.loadRecentNewsMock();

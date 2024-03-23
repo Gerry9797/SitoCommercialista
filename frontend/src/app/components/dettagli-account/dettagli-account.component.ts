@@ -21,6 +21,9 @@ export class DettagliAccountComponent implements OnInit{
   }
 
   ngOnInit(): void {
+
+    this.utilityService.scrollToTop();
+
     this.formSignup = this.formBuilder.group({
       // signup_email: new FormControl(null, [Validators.required, Validators.email, Validators.maxLength(this.MAX_EMAIL_LEN)]),
       signup_password: new FormControl(null, [Validators.required, Validators.maxLength(this.MAX_PASSWORD_LEN), Validators.pattern(
