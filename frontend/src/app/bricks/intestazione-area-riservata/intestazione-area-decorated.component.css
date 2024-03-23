@@ -23,12 +23,12 @@
 .elementor-element.elementor-element-intestazione-area-riservata-row-in .elementor-heading-title {
     color: var( --e-global-color-primary );
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: 36px;
+    font-size: 33px;
     font-weight: 700;
 }
 
 .elementor-element.elementor-element-intestazione-area-riservata-row-in > .elementor-widget-container {
-    margin: 10px 35px 0px 0px;
+    margin: 20px 35px 0px 0px;
 }
 
 @media(max-width: 1024px) {

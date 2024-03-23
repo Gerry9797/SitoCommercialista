@@ -6,8 +6,16 @@
           <div class="elementor-element elementor-element-intestazione-area-riservata-row-in elementor-widget elementor-widget-heading">
             <div class="elementor-widget-container">
               <h2 class="elementor-heading-title elementor-size-default">
-                Area Riservata
+                {{title}}
               </h2>
+            </div>
+          </div>
+          
+          <div *ngIf="subtitle" class="elementor-element elementor-widget elementor-widget-text-editor">
+            <div class="elementor-widget-container">
+              <p>
+                {{subtitle}}
+              </p>
             </div>
           </div>
         </div>

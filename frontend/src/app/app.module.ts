@@ -65,13 +65,14 @@ import { RecentArticlesComponent } from './components/recent-articles/recent-art
 import { SideCartComponent } from './components/side-cart/side-cart.component';
 import { SearchFormFullScreenComponent } from './components/search-form-full-screen/search-form-full-screen.component';
 import localeIt from '@angular/common/locales/it';
-import { IntestazioneAreaRiservataComponent } from './bricks/intestazione-area-riservata/intestazione-area-riservata.component';
+import { IntestazioneAreaDecoratedComponent } from './bricks/intestazione-area-riservata/intestazione-area-decorated.component';
 import { InnerMenuAreaRiservataComponent } from './bricks/inner-menu-area-riservata/inner-menu-area-riservata.component';
 import { MainTitleCenterComponent } from './bricks/main-title-center/main-title-center.component';
 import { MainTitleDecorationComponent } from './bricks/main-title-decoration/main-title-decoration.component';
 import { ConsulenzaCardComponent } from './bricks/cards/consulenza-card/consulenza-card.component';
 import { PhoneNumberFormatterPipe } from './pipes/phone-number-formatter.pipe';
 import { MainTitleCenterDecoratedComponent } from './bricks/main-title-center-decorated/main-title-center-decorated.component';
+import { PdfSvgComponent } from './bricks/svg/pdf-svg/pdf-svg.component';
 
 export function playerFactory() {
   return player;
@@ -131,13 +132,14 @@ registerLocaleData(localeIt);
     RecentArticlesComponent,
     SideCartComponent,
     SearchFormFullScreenComponent,
-    IntestazioneAreaRiservataComponent,
+    IntestazioneAreaDecoratedComponent,
     InnerMenuAreaRiservataComponent,
     MainTitleCenterComponent,
     MainTitleDecorationComponent,
     ConsulenzaCardComponent,
     PhoneNumberFormatterPipe,
-    MainTitleCenterDecoratedComponent
+    MainTitleCenterDecoratedComponent,
+    PdfSvgComponent
   ],
   imports: [
     BrowserModule,
