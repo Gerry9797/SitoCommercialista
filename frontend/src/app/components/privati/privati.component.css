@@ -14,46 +14,46 @@
     font-weight: 600;
 }
 
-.elementor-39 .elementor-element.elementor-element-752a2de {
+.elementor-39 .elementor-element.elementor-main-content-padding {
     margin-top: 0%;
     margin-bottom: 5%;
     padding: 3% 3% 0% 3%;
 }
 
-.elementor-39 .elementor-element.elementor-element-9ae04d1 {
+.elementor-39 .elementor-element.elementor-secondary-title-div {
     text-align: left;
 }
 
-.elementor-39 .elementor-element.elementor-element-9ae04d1 .elementor-heading-title {
+.elementor-39 .elementor-element.elementor-secondary-title-div .elementor-heading-title {
     color: var( --e-global-color-primary );
     font-family: "DM Serif Display", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.elementor-39 .elementor-element.elementor-element-56347f5 {
+.elementor-39 .elementor-element.elementor-third-title-div {
     text-align: left;
 }
 
-.elementor-39 .elementor-element.elementor-element-56347f5 .elementor-heading-title {
+.elementor-39 .elementor-element.elementor-third-title-div .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 35px;
     font-weight: 600;
 }
 
-.elementor-39 .elementor-element.elementor-element-56347f5 > .elementor-widget-container {
+.elementor-39 .elementor-element.elementor-third-title-div > .elementor-widget-container {
     margin: 0px 0px 20px 0px;
 }
 
-.elementor-39 .elementor-element.elementor-element-0b47f1f > .elementor-element-populated {
+.elementor-39 .elementor-element.elementor-element-paragraph-content-divf > .elementor-element-populated {
     margin: 0px 0px 0px 0px;
     --e-column-margin-right: 0px;
     --e-column-margin-left: 0px;
     padding: 0px 20px 0px 1px;
 }
 
-.elementor-39 .elementor-element.elementor-element-bd493c2 {
+.elementor-39 .elementor-element.elementor-element-paragraph-content {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
@@ -321,11 +321,11 @@ body:not(.rtl) .elementor-39 .elementor-element.elementor-element-e4b4499 .eleme
 }
 
 @media(max-width: 1024px) and (min-width:768px) {
-    .elementor-39 .elementor-element.elementor-element-62477be {
+    .elementor-39 .elementor-element.elementor-main-content-inner {
         width:100%;
     }
 
-    .elementor-39 .elementor-element.elementor-element-0b47f1f {
+    .elementor-39 .elementor-element.elementor-element-paragraph-content-divf {
         width: 60%;
     }
 
@@ -343,21 +343,21 @@ body:not(.rtl) .elementor-39 .elementor-element.elementor-element-e4b4499 .eleme
 }
 
 @media(max-width: 1024px) {
-    .elementor-39 .elementor-element.elementor-element-752a2de {
+    .elementor-39 .elementor-element.elementor-main-content-padding {
         margin-top:0px;
         margin-bottom: 0px;
         padding: 5% 3% 5% 3%;
     }
 
-    .elementor-39 .elementor-element.elementor-element-62477be > .elementor-element-populated {
+    .elementor-39 .elementor-element.elementor-main-content-inner > .elementor-element-populated {
         padding: 0px 0px 0px 0px;
     }
 
-    .elementor-39 .elementor-element.elementor-element-56347f5 .elementor-heading-title {
+    .elementor-39 .elementor-element.elementor-third-title-div .elementor-heading-title {
         font-size: 30px;
     }
 
-    .elementor-39 .elementor-element.elementor-element-bd493c2 {
+    .elementor-39 .elementor-element.elementor-element-paragraph-content {
         font-size: var( --e-global-typography-text-font-size );
     }
 
@@ -395,15 +395,15 @@ body:not(.rtl) .elementor-39 .elementor-element.elementor-element-e4b4499 .eleme
 }
 
 @media(max-width: 767px) {
-    .elementor-39 .elementor-element.elementor-element-752a2de {
+    .elementor-39 .elementor-element.elementor-main-content-padding {
         padding:40px 20px 40px 20px;
     }
 
-    .elementor-39 .elementor-element.elementor-element-56347f5 .elementor-heading-title {
+    .elementor-39 .elementor-element.elementor-third-title-div .elementor-heading-title {
         font-size: 25px;
     }
 
-    .elementor-39 .elementor-element.elementor-element-bd493c2 {
+    .elementor-39 .elementor-element.elementor-element-paragraph-content {
         font-size: var( --e-global-typography-text-font-size );
     }
 
