@@ -1,62 +1,14 @@
-<main
-  id="content"
-  class="site-main post-2263 page hentry"
->
+<main id="content" class="site-main page hentry">
   <div class="page-content">
-    <div
-      data-elementor-type="wp-page"
-      data-elementor-id="2263"
-      class="elementor elementor-2263"
-      data-elementor-post-type="page"
-    >
-      <section
-        class="elementor-section elementor-top-section elementor-element elementor-element-57d9a5c elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle"
-        data-id="57d9a5c"
-        data-element_type="section"
-        data-settings='{"background_background":"classic"}'
-      >
-        <div class="elementor-background-overlay"></div>
+    <div class="elementor elementor-element-privacy-policy-main-div">
+      
+      <app-main-title-center-decorated [title]="'Privacy Policy'"></app-main-title-center-decorated>
+      
+      <section class="elementor-section elementor-top-section elementor-element elementor-element-privacy-policy-section-body elementor-section-boxed elementor-section-height-default elementor-section-height-default">
         <div class="elementor-container elementor-column-gap-default">
-          <div
-            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e6c86a6"
-            data-id="e6c86a6"
-            data-element_type="column"
-          >
+          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element">
             <div class="elementor-widget-wrap elementor-element-populated">
-              <div
-                class="elementor-element elementor-element-f358708 elementor-widget elementor-widget-heading"
-                data-id="f358708"
-                data-element_type="widget"
-                data-widget_type="heading.default"
-              >
-                <div class="elementor-widget-container">
-                  <h2 class="elementor-heading-title elementor-size-default">
-                    Privacy Policy
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        class="elementor-section elementor-top-section elementor-element elementor-element-7817148e elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-        data-id="7817148e"
-        data-element_type="section"
-      >
-        <div class="elementor-container elementor-column-gap-default">
-          <div
-            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-20295dc2"
-            data-id="20295dc2"
-            data-element_type="column"
-          >
-            <div class="elementor-widget-wrap elementor-element-populated">
-              <div
-                class="elementor-element elementor-element-e67c141 elementor-widget elementor-widget-text-editor"
-                data-id="e67c141"
-                data-element_type="widget"
-                data-widget_type="text-editor.default"
-              >
+              <div class="elementor-element elementor-widget elementor-widget-text-editor">
                 <div class="elementor-widget-container">
                   <!-- wp:heading {"textAlign":"center"} -->
                   <p>&nbsp;</p>
@@ -64,7 +16,7 @@
                     Questa Privacy Policy è resa ai sensi dell’art. 13 del
                     Regolamento Europeo n. 679/2016 e si applica esclusivamente
                     a tutti i Dati raccolti attraverso il Sito web
-                    <b>https://valentinafilippini.it/. </b>La presente Privacy
+                    <b>{{datiPersonali.contatti.sitoWebHttps}}/. </b>La presente Privacy
                     Policy è soggetta ad aggiornamenti che verranno pubblicati
                     puntualmente sul Sito web. La presente Privacy Policy,
                     unitamente ai
@@ -83,9 +35,9 @@
                   <!-- /wp:paragraph --><!-- wp:paragraph -->
                   <p class="p1">
                     Il Titolare del Trattamento dei Dati raccolti da questo Sito
-                    web è Dott.ssa Valentina Filippini con sede in Grezzana (VR)
-                    alla via Roma n. 98 P.Iva 04408890236 mail:
-                    info&#64;valentinafilippini.it
+                    web è Dott.ssa {{datiPersonali.nome}} {{datiPersonali.cognome}} con sede in {{datiPersonali.sede.localita}} ({{datiPersonali.sede.provincia}})
+                    alla {{datiPersonali.sede.indirizzo}} P.Iva {{datiPersonali.pIva.codice}} mail:
+                    {{datiPersonali.contatti.email}}
                   </p>
                   <!-- /wp:paragraph --><!-- wp:paragraph {"textColor":"white"} --><!-- /wp:paragraph --><!-- wp:paragraph -->
                   <p>&nbsp;</p>
@@ -436,7 +388,7 @@
                     controllo in materia di protezione dei dati personali o di
                     adire le opportune sedi giudiziarie. L’interessato potrà
                     esercitare i suoi diritti contattando il Titolare a mezzo
-                    e-mail all’indirizzo: info&#64;valentinafilippini.it
+                    e-mail all’indirizzo: {{datiPersonali.contatti.email}}
                   </p>
                   <!-- /wp:list --><!-- wp:paragraph {"textColor":"white"} -->
                   <p class="has-white-color has-text-color">.</p>
@@ -447,30 +399,7 @@
                       Personali&nbsp;</b
                     >
                   </h3>
-                  <p class="p1"><b>FORM DI CONTATTO </b></p>
-                  <p class="p1">
-                    L’Interessato, compilando con i propri Dati il Form di
-                    contatto, acconsente al loro utilizzo per rispondere alle
-                    richieste di informazioni, o di qualunque altra finalità
-                    indicata dall’intestazione del modulo. Dati Personali
-                    raccolti mediante Form di contatto: Email, Nome e Cognome
-                  </p>
-                  <!-- /wp:paragraph --><!-- wp:paragraph -->
-                  <ul>
-                    <li class="p1">
-                      <b>Elementor (Elementor Ltd)<br /></b>Elementor fornisce
-                      un servizio di creazione e gestione di Form che permette a
-                      questo sito web di integrare tali contenuti all’interno
-                      delle proprie pagine.<span class="Apple-converted-space"
-                        >&nbsp; </span
-                      >Dati Personali raccolti: Email e Nome. Varie tipologie di
-                      Dati secondo quanto specificato dalla Privacy del
-                      servizio. Luogo del Trattamento: ISRAELE –
-                      <a href="https://elementor.com/about/privacy/"
-                        ><span class="s2"><b>Privacy Policy</b></span></a
-                      >
-                    </li>
-                  </ul>
+
                   <p class="p1">
                     <b><br />GESTIONE INDIRIZZI EMAIL </b>
                   </p>
@@ -639,7 +568,7 @@
                   <p>
                     <em
                       ><strong
-                        >Privacy Policy aggiornata a marzo 2023
+                        >Privacy Policy aggiornata a {{privacyPolicyInfo.dataAggiornamento}}
                       </strong></em
                     >
                   </p>
@@ -659,6 +588,5 @@
         </div>
       </section>
     </div>
-    <div class="post-tags"></div>
   </div>
 </main>

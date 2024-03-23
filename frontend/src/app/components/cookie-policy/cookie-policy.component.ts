@@ -9,8 +9,6 @@ import { UtilityService } from 'src/app/services/utility/utility.service';
 })
 export class CookiePolicyComponent implements OnInit {
 
-  sitoWebHttps: string = SITE_CONFIG.datiPersonali.contatti.sitoWebHttps;
-
   datiPersonali = SITE_CONFIG.datiPersonali;
 
   cookiePolicyInfo = SITE_CONFIG.cookiePolicy

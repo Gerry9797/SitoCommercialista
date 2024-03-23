@@ -24,5 +24,8 @@ export const SITE_CONFIG = {
     },
     cookiePolicy: {
         dataAggiornamento: "marzo 2023"
+    },
+    privacyPolicy: {
+        dataAggiornamento: "marzo 2023"
     }
 }
