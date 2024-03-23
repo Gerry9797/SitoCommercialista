@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { UtilityService } from 'src/app/services/utility/utility.service';
 
 @Component({
   selector: 'app-about',
@@ -8,10 +9,12 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 export class AboutComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(
+    private utilityService: UtilityService
+  ) { }
 
   ngOnInit(): void {
-
+    this.utilityService.scrollToTop();
   }
 
 

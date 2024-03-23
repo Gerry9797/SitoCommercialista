@@ -24,6 +24,8 @@ export class ContattiComponent implements OnInit {
     private sanitizer: DomSanitizer
   ) { 
 
+    this.utilityService.scrollToTop();
+
     this.indirizzo = this.utilityService.getIndirizzoCompleto();
     // this.indirizzoGoogleMapsQueryParam = this.getQueryParamIndirizzoForGoogleMaps(this.indirizzo);
     // console.log(this.indirizzo);

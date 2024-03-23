@@ -21,5 +21,8 @@ export const SITE_CONFIG = {
             prefisso: "IT",
             codice: "04408890236"
         }
+    },
+    cookiePolicy: {
+        dataAggiornamento: "marzo 2023"
     }
 }

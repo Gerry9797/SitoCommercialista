@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConsulenzaCardModel } from 'src/app/models/consulenza-card.model';
+import { UtilityService } from 'src/app/services/utility/utility.service';
 
 @Component({
   selector: 'app-consulenza-azienda',
@@ -9,8 +10,13 @@ import { ConsulenzaCardModel } from 'src/app/models/consulenza-card.model';
 export class ConsulenzaAziendaComponent implements OnInit{
 
   consulenzaAziendaCards: ConsulenzaCardModel[] = [];
+
+  constructor(
+    private utilityService: UtilityService
+  ) { }
   
   ngOnInit(): void {
+    this.utilityService.scrollToTop();
     this.loadMockCardsConsulenzaAzienda();
   }
 

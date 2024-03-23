@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IArticleCard } from 'src/app/bricks/cards/article-card/article-card.component';
+import { UtilityService } from 'src/app/services/utility/utility.service';
 
 @Component({
   selector: 'app-articoli',
@@ -10,7 +11,12 @@ export class ArticoliComponent implements OnInit {
 
   articles: IArticleCard[] = []
 
+  constructor(
+    private utilityService: UtilityService
+  ) { }
+
   ngOnInit(): void {
+    this.utilityService.scrollToTop();
     this.loadArticlesMock();
   }
 

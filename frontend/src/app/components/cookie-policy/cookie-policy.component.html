@@ -289,8 +289,8 @@
                   <p class="p2">
                     Il Titolare del Trattamento dei Dati raccolti da questo Sito
                     web è Dott.ssa {{datiPersonali.nome}} {{datiPersonali.cognome}} con sede in {{datiPersonali.sede.localita}} ({{datiPersonali.sede.provincia}})
-                    alla via Roma n. 98 P.Iva 04408890236 mail:
-                    info&#64;valentinafilippini.it
+                    alla {{datiPersonali.sede.indirizzo}} P.Iva {{datiPersonali.pIva.codice}} mail:
+                    {{datiPersonali.contatti.email}}
                   </p>
                   <p class="p2">
                     Il Titolare non è responsabile per l’aggiornamento di tutti
@@ -304,7 +304,7 @@
                   <p>
                     <em
                       ><strong
-                        ><br />Cookie Policy aggiornata a marzo 2023
+                        ><br />Cookie Policy aggiornata a {{cookiePolicyInfo.dataAggiornamento}}
                       </strong></em
                     >
                   </p>
@@ -319,6 +319,5 @@
         </div>
       </section>
     </div>
-    <div class="post-tags"></div>
   </div>
 </main>
