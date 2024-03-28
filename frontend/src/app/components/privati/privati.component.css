@@ -57,7 +57,7 @@
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
-    z-index: 2;
+    z-index: 1;
 }
 
 .elementor-39 .elementor-element.elementor-element-paragraph-list-wrapper .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
