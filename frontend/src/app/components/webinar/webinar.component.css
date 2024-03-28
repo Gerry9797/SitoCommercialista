@@ -1,58 +1,25 @@
-.elementor-6225 .elementor-element.elementor-element-24c87554 > .elementor-container {
-    min-height: 140px;
-}
-
-.elementor-6225 .elementor-element.elementor-element-24c87554:not(.elementor-motion-effects-element-type-background), .elementor-6225 .elementor-element.elementor-element-24c87554 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-    background-color: #FDF7F6;
-}
-
-.elementor-6225 .elementor-element.elementor-element-24c87554 > .elementor-background-overlay {
-    background-image: url("https://valentinafilippini.it/wp-content/uploads/2021/02/book_pattern_org.svg");
-    background-repeat: repeat;
-    background-size: 20% auto;
-    opacity: 0.15;
-    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-}
-
-.elementor-6225 .elementor-element.elementor-element-24c87554 {
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    margin-top: -14px;
-    margin-bottom: 50px;
-}
-
-.elementor-6225 .elementor-element.elementor-element-53ca34a5 .elementor-heading-title {
-    color: var( --e-global-color-primary );
-    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: 33px;
-    font-weight: 700;
-}
-
-.elementor-6225 .elementor-element.elementor-element-53ca34a5 > .elementor-widget-container {
-    margin: 10px 35px -10px 0px;
-}
-
-.elementor-6225 .elementor-element.elementor-element-76aefcdf > .elementor-container {
+.elementor-element-webinar-main .elementor-element.elementor-element-76aefcdf > .elementor-container {
     max-width: 1200px;
 }
 
-.elementor-bc-flex-widget .elementor-6225 .elementor-element.elementor-element-6741ed2.elementor-column .elementor-widget-wrap {
+.elementor-bc-flex-widget .elementor-element-webinar-main .elementor-element.elementor-element-6741ed2.elementor-column .elementor-widget-wrap {
     align-items: center;
 }
 
-.elementor-6225 .elementor-element.elementor-element-6741ed2.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+.elementor-element-webinar-main .elementor-element.elementor-element-6741ed2.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
     align-content: center;
     align-items: center;
 }
 
-.elementor-6225 .elementor-element.elementor-element-6741ed2.elementor-column > .elementor-widget-wrap {
+.elementor-element-webinar-main .elementor-element.elementor-element-6741ed2.elementor-column > .elementor-widget-wrap {
     justify-content: center;
 }
 
-.elementor-6225 .elementor-element.elementor-element-6741ed2 > .elementor-element-populated, .elementor-6225 .elementor-element.elementor-element-6741ed2 > .elementor-element-populated > .elementor-background-overlay, .elementor-6225 .elementor-element.elementor-element-6741ed2 > .elementor-background-slideshow {
+.elementor-element-webinar-main .elementor-element.elementor-element-6741ed2 > .elementor-element-populated, .elementor-element-webinar-main .elementor-element.elementor-element-6741ed2 > .elementor-element-populated > .elementor-background-overlay, .elementor-element-webinar-main .elementor-element.elementor-element-6741ed2 > .elementor-background-slideshow {
     border-radius: 15px 15px 15px 15px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-6741ed2 > .elementor-element-populated {
+.elementor-element-webinar-main .elementor-element.elementor-element-6741ed2 > .elementor-element-populated {
     box-shadow: 0px 10px 27px -5px rgba(160.5, 111.08848498050558, 87.70801630434784, 0.61);
     margin: 20px 20px 20px 20px;
     --e-column-margin-right: 20px;
@@ -60,82 +27,82 @@
     padding: 20px 20px 20px 20px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-61466fe {
+.elementor-element-webinar-main .elementor-element.elementor-element-61466fe {
     --iteration-count: infinite;
     --animation-duration: 1200ms;
 }
 
-.elementor-6225 .elementor-element.elementor-element-61466fe .elementor-headline {
+.elementor-element-webinar-main .elementor-element.elementor-element-61466fe .elementor-headline {
     text-align: center;
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 22px;
     font-weight: 400;
 }
 
-.elementor-6225 .elementor-element.elementor-element-61466fe .elementor-headline-dynamic-text {
+.elementor-element-webinar-main .elementor-element.elementor-element-61466fe .elementor-headline-dynamic-text {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: 700;
 }
 
-.elementor-6225 .elementor-element.elementor-element-590df6a .elementor-image-box-wrapper {
+.elementor-element-webinar-main .elementor-element.elementor-element-590df6a .elementor-image-box-wrapper {
     text-align: left;
 }
 
-.elementor-6225 .elementor-element.elementor-element-590df6a.elementor-position-right .elementor-image-box-img {
+.elementor-element-webinar-main .elementor-element.elementor-element-590df6a.elementor-position-right .elementor-image-box-img {
     margin-left: 0px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-590df6a.elementor-position-left .elementor-image-box-img {
+.elementor-element-webinar-main .elementor-element.elementor-element-590df6a.elementor-position-left .elementor-image-box-img {
     margin-right: 0px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-590df6a.elementor-position-top .elementor-image-box-img {
+.elementor-element-webinar-main .elementor-element.elementor-element-590df6a.elementor-position-top .elementor-image-box-img {
     margin-bottom: 0px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-590df6a .elementor-image-box-wrapper .elementor-image-box-img {
+.elementor-element-webinar-main .elementor-element.elementor-element-590df6a .elementor-image-box-wrapper .elementor-image-box-img {
     width: 100%;
 }
 
-.elementor-6225 .elementor-element.elementor-element-590df6a .elementor-image-box-img img {
+.elementor-element-webinar-main .elementor-element.elementor-element-590df6a .elementor-image-box-img img {
     transition-duration: 0.3s;
 }
 
-.elementor-6225 .elementor-element.elementor-element-590df6a .elementor-image-box-title {
+.elementor-element-webinar-main .elementor-element.elementor-element-590df6a .elementor-image-box-title {
     margin-bottom: 6px;
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 18px;
     font-weight: 600;
 }
 
-.elementor-6225 .elementor-element.elementor-element-590df6a > .elementor-widget-container {
+.elementor-element-webinar-main .elementor-element.elementor-element-590df6a > .elementor-widget-container {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-6438266 .elementor-button {
+.elementor-element-webinar-main .elementor-element.elementor-element-6438266 .elementor-button {
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: 400;
 }
 
-.elementor-bc-flex-widget .elementor-6225 .elementor-element.elementor-element-35919ff.elementor-column .elementor-widget-wrap {
+.elementor-bc-flex-widget .elementor-element-webinar-main .elementor-element.elementor-element-35919ff.elementor-column .elementor-widget-wrap {
     align-items: center;
 }
 
-.elementor-6225 .elementor-element.elementor-element-35919ff.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+.elementor-element-webinar-main .elementor-element.elementor-element-35919ff.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
     align-content: center;
     align-items: center;
 }
 
-.elementor-6225 .elementor-element.elementor-element-35919ff.elementor-column > .elementor-widget-wrap {
+.elementor-element-webinar-main .elementor-element.elementor-element-35919ff.elementor-column > .elementor-widget-wrap {
     justify-content: center;
 }
 
-.elementor-6225 .elementor-element.elementor-element-35919ff > .elementor-element-populated, .elementor-6225 .elementor-element.elementor-element-35919ff > .elementor-element-populated > .elementor-background-overlay, .elementor-6225 .elementor-element.elementor-element-35919ff > .elementor-background-slideshow {
+.elementor-element-webinar-main .elementor-element.elementor-element-35919ff > .elementor-element-populated, .elementor-element-webinar-main .elementor-element.elementor-element-35919ff > .elementor-element-populated > .elementor-background-overlay, .elementor-element-webinar-main .elementor-element.elementor-element-35919ff > .elementor-background-slideshow {
     border-radius: 15px 15px 15px 15px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-35919ff > .elementor-element-populated {
+.elementor-element-webinar-main .elementor-element.elementor-element-35919ff > .elementor-element-populated {
     box-shadow: 0px 10px 27px -5px rgba(160.5, 111.08848498050558, 87.70801630434784, 0.61);
     margin: 20px 20px 20px 20px;
     --e-column-margin-right: 20px;
@@ -143,65 +110,65 @@
     padding: 20px 20px 20px 20px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-fc7c2ba .elementor-image-box-wrapper {
+.elementor-element-webinar-main .elementor-element.elementor-element-fc7c2ba .elementor-image-box-wrapper {
     text-align: left;
 }
 
-.elementor-6225 .elementor-element.elementor-element-fc7c2ba.elementor-position-right .elementor-image-box-img {
+.elementor-element-webinar-main .elementor-element.elementor-element-fc7c2ba.elementor-position-right .elementor-image-box-img {
     margin-left: 0px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-fc7c2ba.elementor-position-left .elementor-image-box-img {
+.elementor-element-webinar-main .elementor-element.elementor-element-fc7c2ba.elementor-position-left .elementor-image-box-img {
     margin-right: 0px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-fc7c2ba.elementor-position-top .elementor-image-box-img {
+.elementor-element-webinar-main .elementor-element.elementor-element-fc7c2ba.elementor-position-top .elementor-image-box-img {
     margin-bottom: 0px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-fc7c2ba .elementor-image-box-wrapper .elementor-image-box-img {
+.elementor-element-webinar-main .elementor-element.elementor-element-fc7c2ba .elementor-image-box-wrapper .elementor-image-box-img {
     width: 100%;
 }
 
-.elementor-6225 .elementor-element.elementor-element-fc7c2ba .elementor-image-box-img img {
+.elementor-element-webinar-main .elementor-element.elementor-element-fc7c2ba .elementor-image-box-img img {
     transition-duration: 0.3s;
 }
 
-.elementor-6225 .elementor-element.elementor-element-fc7c2ba .elementor-image-box-title {
+.elementor-element-webinar-main .elementor-element.elementor-element-fc7c2ba .elementor-image-box-title {
     margin-bottom: 6px;
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 18px;
     font-weight: 600;
 }
 
-.elementor-6225 .elementor-element.elementor-element-fc7c2ba > .elementor-widget-container {
+.elementor-element-webinar-main .elementor-element.elementor-element-fc7c2ba > .elementor-widget-container {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-aaa04ac .elementor-button {
+.elementor-element-webinar-main .elementor-element.elementor-element-aaa04ac .elementor-button {
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: 400;
 }
 
-.elementor-bc-flex-widget .elementor-6225 .elementor-element.elementor-element-ae47922.elementor-column .elementor-widget-wrap {
+.elementor-bc-flex-widget .elementor-element-webinar-main .elementor-element.elementor-element-ae47922.elementor-column .elementor-widget-wrap {
     align-items: center;
 }
 
-.elementor-6225 .elementor-element.elementor-element-ae47922.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+.elementor-element-webinar-main .elementor-element.elementor-element-ae47922.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
     align-content: center;
     align-items: center;
 }
 
-.elementor-6225 .elementor-element.elementor-element-ae47922.elementor-column > .elementor-widget-wrap {
+.elementor-element-webinar-main .elementor-element.elementor-element-ae47922.elementor-column > .elementor-widget-wrap {
     justify-content: center;
 }
 
-.elementor-6225 .elementor-element.elementor-element-ae47922 > .elementor-element-populated, .elementor-6225 .elementor-element.elementor-element-ae47922 > .elementor-element-populated > .elementor-background-overlay, .elementor-6225 .elementor-element.elementor-element-ae47922 > .elementor-background-slideshow {
+.elementor-element-webinar-main .elementor-element.elementor-element-ae47922 > .elementor-element-populated, .elementor-element-webinar-main .elementor-element.elementor-element-ae47922 > .elementor-element-populated > .elementor-background-overlay, .elementor-element-webinar-main .elementor-element.elementor-element-ae47922 > .elementor-background-slideshow {
     border-radius: 15px 15px 15px 15px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-ae47922 > .elementor-element-populated {
+.elementor-element-webinar-main .elementor-element.elementor-element-ae47922 > .elementor-element-populated {
     box-shadow: 0px 10px 27px -5px rgba(160.5, 111.08848498050558, 87.70801630434784, 0.61);
     margin: 20px 20px 20px 20px;
     --e-column-margin-right: 20px;
@@ -209,103 +176,77 @@
     padding: 20px 20px 20px 20px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-12486f5 .elementor-image-box-wrapper {
+.elementor-element-webinar-main .elementor-element.elementor-element-12486f5 .elementor-image-box-wrapper {
     text-align: left;
 }
 
-.elementor-6225 .elementor-element.elementor-element-12486f5.elementor-position-right .elementor-image-box-img {
+.elementor-element-webinar-main .elementor-element.elementor-element-12486f5.elementor-position-right .elementor-image-box-img {
     margin-left: 0px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-12486f5.elementor-position-left .elementor-image-box-img {
+.elementor-element-webinar-main .elementor-element.elementor-element-12486f5.elementor-position-left .elementor-image-box-img {
     margin-right: 0px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-12486f5.elementor-position-top .elementor-image-box-img {
+.elementor-element-webinar-main .elementor-element.elementor-element-12486f5.elementor-position-top .elementor-image-box-img {
     margin-bottom: 0px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-12486f5 .elementor-image-box-wrapper .elementor-image-box-img {
+.elementor-element-webinar-main .elementor-element.elementor-element-12486f5 .elementor-image-box-wrapper .elementor-image-box-img {
     width: 100%;
 }
 
-.elementor-6225 .elementor-element.elementor-element-12486f5 .elementor-image-box-img img {
+.elementor-element-webinar-main .elementor-element.elementor-element-12486f5 .elementor-image-box-img img {
     transition-duration: 0.3s;
 }
 
-.elementor-6225 .elementor-element.elementor-element-12486f5 .elementor-image-box-title {
+.elementor-element-webinar-main .elementor-element.elementor-element-12486f5 .elementor-image-box-title {
     margin-bottom: 6px;
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 18px;
     font-weight: 600;
 }
 
-.elementor-6225 .elementor-element.elementor-element-12486f5 > .elementor-widget-container {
+.elementor-element-webinar-main .elementor-element.elementor-element-12486f5 > .elementor-widget-container {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
 
-.elementor-6225 .elementor-element.elementor-element-450ed5f .elementor-button {
+.elementor-element-webinar-main .elementor-element.elementor-element-450ed5f .elementor-button {
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: 400;
 }
 
-.elementor-6225 .elementor-element.elementor-element-3dc92505 {
+.elementor-element-webinar-main .elementor-element.elementor-element-3dc92505 {
     margin-top: 0px;
     margin-bottom: 240px;
 }
 
 @media(max-width: 1024px) and (min-width:768px) {
-    .elementor-6225 .elementor-element.elementor-element-6741ed2 {
+    .elementor-element-webinar-main .elementor-element.elementor-element-6741ed2 {
         width:34%;
     }
 
-    .elementor-6225 .elementor-element.elementor-element-35919ff {
+    .elementor-element-webinar-main .elementor-element.elementor-element-35919ff {
         width: 34%;
     }
 
-    .elementor-6225 .elementor-element.elementor-element-ae47922 {
+    .elementor-element-webinar-main .elementor-element.elementor-element-ae47922 {
         width: 34%;
-    }
-}
-
-@media(max-width: 1024px) {
-    .elementor-6225 .elementor-element.elementor-element-24c87554 {
-        padding:0px 30px 0px 30px;
     }
 }
 
 @media(max-width: 767px) {
-    .elementor-6225 .elementor-element.elementor-element-24c87554 {
-        padding:0px 20px 0px 20px;
-    }
 
-    .elementor-6225 .elementor-element.elementor-element-2470d3e6 > .elementor-element-populated {
-        padding: 30px 0px 20px 0px;
-    }
-
-    .elementor-6225 .elementor-element.elementor-element-53ca34a5 {
-        text-align: left;
-    }
-
-    .elementor-6225 .elementor-element.elementor-element-53ca34a5 .elementor-heading-title {
-        font-size: 30px;
-    }
-
-    .elementor-6225 .elementor-element.elementor-element-53ca34a5 > .elementor-widget-container {
-        margin: 0px 0px 0px 0px;
-        padding: 0px 5px 0px 5px;
-    }
-
-    .elementor-6225 .elementor-element.elementor-element-590df6a .elementor-image-box-img {
+    .elementor-element-webinar-main .elementor-element.elementor-element-590df6a .elementor-image-box-img {
         margin-bottom: 0px;
     }
 
-    .elementor-6225 .elementor-element.elementor-element-fc7c2ba .elementor-image-box-img {
+    .elementor-element-webinar-main .elementor-element.elementor-element-fc7c2ba .elementor-image-box-img {
         margin-bottom: 0px;
     }
 
-    .elementor-6225 .elementor-element.elementor-element-12486f5 .elementor-image-box-img {
+    .elementor-element-webinar-main .elementor-element.elementor-element-12486f5 .elementor-image-box-img {
         margin-bottom: 0px;
     }
 }
