@@ -1,0 +1,43 @@
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-webinar-content-col">
+    <div class="elementor-widget-wrap elementor-element-populated">
+      <div class="elementor-element elementor-element-590df6a elementor-position-top elementor-widget elementor-widget-image-box">
+        <div class="elementor-widget-container">
+          <div class="elementor-image-box-wrapper">
+            <figure class="elementor-image-box-img">
+              <img
+                  decoding="async"
+                  width="800"
+                  height="623"
+                  src="{{card.imgUrl}}"
+                  class="elementor-animation-pop attachment-full size-full wp-image-6233 lazyload"
+                  alt=""
+                  sizes="(max-width: 800px) 100vw, 800px"
+              />
+            </figure>
+            <div class="elementor-image-box-content">
+              <h3 class="elementor-image-box-title">
+                {{card.title}}
+              </h3>
+              <p class="elementor-image-box-description">
+                {{card.description}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elementor-element elementor-element-6438266 elementor-widget elementor-widget-button">
+        <div class="elementor-widget-container">
+          <div class="elementor-button-wrapper">
+            <a
+              class="elementor-button elementor-button-link elementor-size-sm"
+              [routerLink]="card.redirectUrl"
+            >
+              <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">{{card.actionLabel}}</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

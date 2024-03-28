@@ -74,6 +74,7 @@ import { PhoneNumberFormatterPipe } from './pipes/phone-number-formatter.pipe';
 import { MainTitleCenterDecoratedComponent } from './bricks/main-title-center-decorated/main-title-center-decorated.component';
 import { PdfSvgComponent } from './bricks/svg/pdf-svg/pdf-svg.component';
 import { FileDownloadCardComponent } from './bricks/cards/file-download-card/file-download-card.component';
+import { WebinarCardComponent } from './bricks/cards/webinar-card/webinar-card.component';
 
 export function playerFactory() {
   return player;
@@ -141,7 +142,8 @@ registerLocaleData(localeIt);
     PhoneNumberFormatterPipe,
     MainTitleCenterDecoratedComponent,
     PdfSvgComponent,
-    FileDownloadCardComponent
+    FileDownloadCardComponent,
+    WebinarCardComponent
   ],
   imports: [
     BrowserModule,

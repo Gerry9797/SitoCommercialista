@@ -1,88 +1,5 @@
-.elementor-element-webinar-main .elementor-element.elementor-element-76aefcdf > .elementor-container {
+.elementor-element-webinar-main .elementor-element.elementor-element-webinar-section-content > .elementor-container {
     max-width: 1200px;
-}
-
-.elementor-bc-flex-widget .elementor-element-webinar-main .elementor-element.elementor-element-6741ed2.elementor-column .elementor-widget-wrap {
-    align-items: center;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-6741ed2.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
-    align-content: center;
-    align-items: center;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-6741ed2.elementor-column > .elementor-widget-wrap {
-    justify-content: center;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-6741ed2 > .elementor-element-populated, .elementor-element-webinar-main .elementor-element.elementor-element-6741ed2 > .elementor-element-populated > .elementor-background-overlay, .elementor-element-webinar-main .elementor-element.elementor-element-6741ed2 > .elementor-background-slideshow {
-    border-radius: 15px 15px 15px 15px;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-6741ed2 > .elementor-element-populated {
-    box-shadow: 0px 10px 27px -5px rgba(160.5, 111.08848498050558, 87.70801630434784, 0.61);
-    margin: 20px 20px 20px 20px;
-    --e-column-margin-right: 20px;
-    --e-column-margin-left: 20px;
-    padding: 20px 20px 20px 20px;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-61466fe {
-    --iteration-count: infinite;
-    --animation-duration: 1200ms;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-61466fe .elementor-headline {
-    text-align: center;
-    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-61466fe .elementor-headline-dynamic-text {
-    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-weight: 700;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-590df6a .elementor-image-box-wrapper {
-    text-align: left;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-590df6a.elementor-position-right .elementor-image-box-img {
-    margin-left: 0px;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-590df6a.elementor-position-left .elementor-image-box-img {
-    margin-right: 0px;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-590df6a.elementor-position-top .elementor-image-box-img {
-    margin-bottom: 0px;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-590df6a .elementor-image-box-wrapper .elementor-image-box-img {
-    width: 100%;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-590df6a .elementor-image-box-img img {
-    transition-duration: 0.3s;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-590df6a .elementor-image-box-title {
-    margin-bottom: 6px;
-    font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-590df6a > .elementor-widget-container {
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-}
-
-.elementor-element-webinar-main .elementor-element.elementor-element-6438266 .elementor-button {
-    font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-weight: 400;
 }
 
 .elementor-bc-flex-widget .elementor-element-webinar-main .elementor-element.elementor-element-35919ff.elementor-column .elementor-widget-wrap {
@@ -223,9 +140,6 @@
 }
 
 @media(max-width: 1024px) and (min-width:768px) {
-    .elementor-element-webinar-main .elementor-element.elementor-element-6741ed2 {
-        width:34%;
-    }
 
     .elementor-element-webinar-main .elementor-element.elementor-element-35919ff {
         width: 34%;
@@ -237,10 +151,6 @@
 }
 
 @media(max-width: 767px) {
-
-    .elementor-element-webinar-main .elementor-element.elementor-element-590df6a .elementor-image-box-img {
-        margin-bottom: 0px;
-    }
 
     .elementor-element-webinar-main .elementor-element.elementor-element-fc7c2ba .elementor-image-box-img {
         margin-bottom: 0px;
