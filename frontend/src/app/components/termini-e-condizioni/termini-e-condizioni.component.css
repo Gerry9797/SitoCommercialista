@@ -1,37 +1,5 @@
-.elementor-4279 .elementor-element.elementor-element-0e434a3 > .elementor-container {
-    min-height: 140px;
-}
 
-.elementor-4279 .elementor-element.elementor-element-0e434a3:not(.elementor-motion-effects-element-type-background), .elementor-4279 .elementor-element.elementor-element-0e434a3 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-    background-color: #FDF7F6;
-}
-
-.elementor-4279 .elementor-element.elementor-element-0e434a3 > .elementor-background-overlay {
-    background-image: url("https://valentinafilippini.it/wp-content/uploads/2021/02/book_pattern_org.svg");
-    background-repeat: repeat;
-    background-size: 20% auto;
-    opacity: 0.15;
-    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-}
-
-.elementor-4279 .elementor-element.elementor-element-0e434a3 {
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    margin-top: -15px;
-    margin-bottom: 0px;
-}
-
-.elementor-4279 .elementor-element.elementor-element-223a8eb {
-    text-align: center;
-}
-
-.elementor-4279 .elementor-element.elementor-element-223a8eb .elementor-heading-title {
-    color: var( --e-global-color-text );
-    font-family: "DM Serif Display", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: 39px;
-    font-weight: 500;
-}
-
-.elementor-4279 .elementor-element.elementor-element-ec806a5 {
+.elementor-termini-condizioni-page .elementor-element.elementor-element-ec806a5 {
     margin-top: 40px;
     margin-bottom: 40px;
 }
