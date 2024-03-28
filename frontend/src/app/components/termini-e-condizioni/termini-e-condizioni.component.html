@@ -4,28 +4,15 @@
 
       <app-main-title-center-decorated [title]="'Termini e Condizioni'"></app-main-title-center-decorated>
 
-      <section
-        class="elementor-section elementor-top-section elementor-element elementor-element-ec806a5 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-        data-id="ec806a5"
-        data-element_type="section"
-      >
+      <section class="elementor-section elementor-top-section elementor-element elementor-element-section-body elementor-section-boxed elementor-section-height-default elementor-section-height-default">
         <div class="elementor-container elementor-column-gap-default">
-          <div
-            class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2a1346f"
-            data-id="2a1346f"
-            data-element_type="column"
-          >
+          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element">
             <div class="elementor-widget-wrap elementor-element-populated">
-              <div
-                class="elementor-element elementor-element-2e2eb29 elementor-widget elementor-widget-text-editor"
-                data-id="2e2eb29"
-                data-element_type="widget"
-                data-widget_type="text-editor.default"
-              >
+              <div class="elementor-element elementor-widget elementor-widget-text-editor">
                 <div class="elementor-widget-container">
                   <p class="p1">
                     I presenti Termini e Condizioni disciplinano la vendita dei
-                    Servizi sul sito valentinafilippini.it. Il Consulente si
+                    Servizi sul sito {{datiPersonali.contatti.dominio}}. Il Consulente si
                     riserva il diritto di modificare i presenti Termini e
                     Condizioni di vendita e la Privacy Policy e le predette
                     modifiche saranno rese note agli Utenti tramite il Sito con
@@ -41,13 +28,13 @@
                     Ai fini del presente contratto, si intende per:
                   </p>
                   <p class="p1">
-                    <b>Consulente del servizio</b>: Dott.ssa Valentina Filippini
-                    con sede in Grezzana (VR) alla via Roma n. 98 P.Iva
-                    04408890236 mail: info&#64;valentinafilippini.it<br /><b
+                    <b>Consulente del servizio</b>: Dott.ssa {{datiPersonali.nome}} {{datiPersonali.cognome}}
+                    con sede in {{datiPersonali.sede.localita}} ({{datiPersonali.sede.provincia}}) alla {{datiPersonali.sede.indirizzo}} P.Iva
+                    {{datiPersonali.pIva.codice}} mail: {{datiPersonali.contatti.email}}<br /><b
                       >Termini e Condizioni generali: </b
                     >l’insieme delle presenti clausole contrattuali che
                     determinano e definiscono i rapporti tra il Consulente e
-                    Cliente<br /><b>Sito web</b>: valentinafilippini.it<br /><b
+                    Cliente<br /><b>Sito web</b>: {{datiPersonali.contatti.dominio}}<br /><b
                       >Servizi:</b
                     >
                     vendita di Servizio di Consulenza<br /><br /><b>Acquisto</b
@@ -535,7 +522,7 @@
                   <p class="p1">
                     Per ulteriori informazioni di qualsiasi tipo è possibile
                     contattare il Consulente tramite e-mail al seguente
-                    indirizzo: info&#64;valentinafilippini.it
+                    indirizzo: {{datiPersonali.contatti.email}}
                   </p>
                   <p class="p2">
                     Ai sensi degli art. 1341 e 1342 c.c., l’Utente dichiara di
@@ -550,6 +537,6 @@
         </div>
       </section>
     </div>
-    <div class="post-tags"></div>
+
   </div>
 </main>

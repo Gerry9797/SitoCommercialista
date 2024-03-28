@@ -9,6 +9,7 @@ export const SITE_CONFIG = {
             linkedin: "https://www.linkedin.com/company/valentina-filippini-consulente-del-lavoro/",
             instagram: "https://www.instagram.com/cdl_valentina_filippini/",
             sitoWeb: "www.latuacommercialista.it",
+            dominio: "latuacommercialista.it",
             sitoWebHttps: "https://latuacommercialista.it"
         },
         sede: {
