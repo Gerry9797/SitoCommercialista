@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    
+    <springProperty scope="context" name="logging.file-appender.enabled" source="logging.file-appender.enabled" />
+
+	<appender name="STDOUT"
+		class="com.commercialista.backend.log.CustomConsoleAppender">
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+			by default -->
+		<encoder>
+			<pattern>%date %-4relative [%thread] [tx-id=%X{id_transazione}] %-5level %logger{35} - %msg %n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<!-- profilo di default -->
+	<root level="info">
+		<appender-ref ref="STDOUT" />
+	</root>
+	
+    <if condition='${logging.file-appender.enabled} == true'>
+		<then>
+			<appender name="FILE" class="com.commercialista.backend.log.CustomFileAppender">
+			    <file>${LOG_FILE}.log</file>
+				<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			      <!-- daily rollover -->
+			      <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.log</fileNamePattern>
+			
+			      <!-- keep 30 days' worth of history capped at 1GB total size -->
+			      <maxHistory>30</maxHistory>
+			      <totalSizeCap>500MB</totalSizeCap>
+			
+			    </rollingPolicy>
+				<append>true</append>
+				<!-- set immediateFlush to false for much higher logging throughput -->
+				<immediateFlush>true</immediateFlush>
+				<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+					by default -->
+				<encoder>
+					<pattern>%date %-4relative [%thread] [tx-id=%X{id_transazione}] %-5level %logger{35} - %msg%n
+					</pattern>
+				</encoder>
+			</appender>
+			<root level="INFO">
+				<appender-ref ref="FILE" />
+			</root>
+		</then>
+    </if>
+</configuration>

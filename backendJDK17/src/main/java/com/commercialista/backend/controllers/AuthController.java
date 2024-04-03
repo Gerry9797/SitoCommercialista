@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.commercialista.backend.enums.StatiAccountEnum;
+import com.commercialista.backend.models.Account;
 import com.commercialista.backend.models.ERole;
 import com.commercialista.backend.models.Role;
 import com.commercialista.backend.models.User;
@@ -27,6 +29,7 @@ import com.commercialista.backend.payload.request.LoginRequest;
 import com.commercialista.backend.payload.request.SignupRequest;
 import com.commercialista.backend.payload.response.JwtResponse;
 import com.commercialista.backend.payload.response.MessageResponse;
+import com.commercialista.backend.repository.AccountRepository;
 import com.commercialista.backend.repository.RoleRepository;
 import com.commercialista.backend.repository.UserRepository;
 import com.commercialista.backend.security.jwt.JwtUtils;
@@ -44,6 +47,9 @@ public class AuthController {
 
   @Autowired
   RoleRepository roleRepository;
+  
+  @Autowired
+  AccountRepository accountRepository;
 
   @Autowired
   PasswordEncoder encoder;
@@ -52,10 +58,34 @@ public class AuthController {
   JwtUtils jwtUtils;
 
   @PostMapping("/signin")
-  public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+  public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) throws Exception {
 
-    Authentication authentication = authenticationManager
-        .authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
+	// preleva l'utente con l'email passata in login request 
+	User user;
+	if (loginRequest.getEmail() != null && !loginRequest.getEmail().isBlank()) {
+		user = userRepository.findByEmail(loginRequest.getEmail())
+				.orElseThrow(() -> new Exception("Credenziali errate"));
+	} 
+//	else if (loginRequest.getUsername() != null && !loginRequest.getUsername().isBlank()) {
+//		user = userRepository.findByEmail(loginRequest.getEmail())
+//				.orElseThrow(() -> new Exception("Credenziali errate"));
+//	}
+	else {
+		throw new Exception("Inserire nome utente o email validi");
+	}
+	
+	//Controlla se l'account associato allo User è stato verificato (mail confermata)
+	Account accountUser = accountRepository.findById(user.getId())
+		.orElseThrow(() -> new Exception("Nessun account associato a questo utente!"));
+	if(accountUser.getStatus().equals(StatiAccountEnum.NON_ATTIVO)) {
+		throw new Exception("Email non ancora confermata, controlla la tua posta");
+	}
+	else if(accountUser.getStatus().equals(StatiAccountEnum.SOSPESO)) {
+		throw new Exception("Account sospeso, contattaci se lo ritieni un errore");
+	}
+	
+	Authentication authentication = authenticationManager
+        .authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), loginRequest.getPassword()));
 
     SecurityContextHolder.getContext().setAuthentication(authentication);
     String jwt = jwtUtils.generateJwtToken(authentication);
