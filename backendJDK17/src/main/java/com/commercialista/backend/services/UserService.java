@@ -1,11 +1,11 @@
 package com.commercialista.backend.services;
 
-import java.io.IOException;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,9 +21,9 @@ import com.commercialista.backend.payload.request.SignupRequest;
 import com.commercialista.backend.repository.AccountRepository;
 import com.commercialista.backend.repository.RoleRepository;
 import com.commercialista.backend.repository.UserRepository;
+import com.commercialista.backend.security.jwt.JwtUtils;
 
-import freemarker.template.TemplateException;
-import jakarta.mail.MessagingException;
+import jakarta.validation.Valid;
 
 @Service
 public class UserService {
@@ -40,18 +40,21 @@ public class UserService {
 	@Autowired
 	AccountRepository accountRepository;
 	
+	@Autowired
+	JwtUtils jwtUtils;
+	
     @Autowired
     private EmailSenderService emailSenderService;
 
 	@Transactional(rollbackFor = Exception.class, readOnly = false)
-	public void registerUserAndAccount(SignupRequest signUpRequest) throws MessagingException, IOException, TemplateException {
-		User newUser = registerUser(signUpRequest);
+	public void registerUserAndAccount(SignupRequest signUpRequest, String authorizationHeader) throws Exception {
+		User newUser = registerUser(signUpRequest, authorizationHeader);
 		Account registredAccount = registerAccount(newUser);
 		emailSenderService.sendEmailConfermaRegistrazione(registredAccount, newUser);
 	}
 	
 	
-	private User registerUser(SignupRequest signUpRequest) {
+	private User registerUser(SignupRequest signUpRequest, String authorizationHeader) throws Exception {
 
 
 		// Create new user's account
@@ -67,6 +70,9 @@ public class UserService {
 					.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 			roles.add(userRole);
 		} else {
+			// la chiamata senza autenticazione consente di censire solo un utente normale,
+			// quindi se si sta tentando di censire un ADMIN o MODERATOR, allora verificare ci sia un token valido di un admin
+			checkPermissionIfNotStandardRole(authorizationHeader, strRoles);
 			strRoles.forEach(role -> {
 				switch (role) {
 				case "admin":
@@ -93,6 +99,29 @@ public class UserService {
 		User newUser = userRepository.save(user);
 		return newUser;
 
+	}
+	
+	private void checkPermissionIfNotStandardRole(String authorizationHeader, Set<String> strRoles) throws Exception {
+		if (List.of(ERole.ROLE_ADMIN.name(), ERole.ROLE_MODERATOR.name()).stream().anyMatch(strRoles::contains)) {
+			if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
+				// Estrai il token JWT dal valore dell'header Authorization
+				String jwtToken = authorizationHeader.substring(7);
+				// Effettua il parsing del token JWT e gestisci il comportamento di conseguenza
+				if (jwtToken != null && jwtUtils.validateJwtToken(jwtToken)) {
+					String username = jwtUtils.getUserNameFromJwtToken(jwtToken);
+					User operationUser = userRepository.findByUsername(username)
+							.orElseThrow(() -> new Exception("Nessuno username trovato appartenente a questo token"));
+					if (!operationUser.getRoles().stream().map(role -> role.getName()).collect(Collectors.toSet())
+							.contains(ERole.ROLE_ADMIN)) {
+						throw new Exception("Solo un admin può censire un utente con permessi non standard");
+					}
+
+				}
+			} else {
+				// Token JWT non presente, comportati di conseguenza
+				throw new Exception("Solo un admin può censire un utente con permessi non standard");
+			}
+		}
 	}
 
 	
@@ -125,6 +154,11 @@ public class UserService {
 			accountRepository.deleteById(currId);
 		}
 		return idsAccountsToRemove.size();
+	}
+
+
+	public void generaUsername(@Valid SignupRequest signUpRequest) {
+		signUpRequest.setUsername(UUID.randomUUID().toString());
 	}
 
 }

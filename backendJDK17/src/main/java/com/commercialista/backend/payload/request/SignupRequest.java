@@ -2,11 +2,14 @@ package com.commercialista.backend.payload.request;
 
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.validation.constraints.*;
 
 public class SignupRequest {
-  @NotBlank
-  @Size(min = 3, max = 20)
+  
+  @JsonIgnore
+//  @Size(min = 3, max = 20)
   private String username;
 
   @NotBlank
