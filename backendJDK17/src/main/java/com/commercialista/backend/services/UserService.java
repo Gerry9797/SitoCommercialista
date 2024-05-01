@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -21,7 +22,9 @@ import com.commercialista.backend.models.Account;
 import com.commercialista.backend.models.ERole;
 import com.commercialista.backend.models.Role;
 import com.commercialista.backend.models.User;
+import com.commercialista.backend.payload.request.LoginRequest;
 import com.commercialista.backend.payload.request.SignupRequest;
+import com.commercialista.backend.payload.response.MessageResponse;
 import com.commercialista.backend.repository.AccountRepository;
 import com.commercialista.backend.repository.RoleRepository;
 import com.commercialista.backend.repository.UserRepository;
@@ -171,6 +174,40 @@ public class UserService {
 
 	public void generaUsername(@Valid SignupRequest signUpRequest) {
 		signUpRequest.setUsername(UUID.randomUUID().toString());
+	}
+	
+	public ResponseEntity<?> checkViolations(SignupRequest signUpRequest) {
+		if (userRepository.existsByUsername(signUpRequest.getUsername())) {
+			return ResponseEntity.badRequest().body(new MessageResponse("Errore: Username già esistente!"));
+		}
+
+		if (userRepository.existsByEmail(signUpRequest.getEmail())) {
+			return ResponseEntity.badRequest().body(new MessageResponse("Errore: Email già in uso!"));
+		}
+		return null;
+	}
+	
+	public User checkLoginAndGetUtente(LoginRequest loginRequest) throws Exception {
+		// preleva l'utente con l'email passata in login request
+		User user;
+		if (loginRequest.getEmail() != null && !loginRequest.getEmail().isBlank()) {
+			user = userRepository.findByEmail(loginRequest.getEmail())
+					.orElseThrow(() -> new Exception("Credenziali errate"));
+		}
+		else {
+			throw new Exception("Inserire email valida");
+		}
+
+		// Controlla se l'account associato allo User è stato verificato (mail
+		// confermata)
+		Account accountUser = accountRepository.findById(user.getId())
+				.orElseThrow(() -> new Exception("Nessun account associato a questo utente!"));
+		if (accountUser.getStatus().equals(StatiAccountEnum.NON_ATTIVO)) {
+			throw new Exception("Email non ancora confermata, controlla la tua posta");
+		} else if (accountUser.getStatus().equals(StatiAccountEnum.SOSPESO)) {
+			throw new Exception("Account sospeso, contattaci se lo ritieni un errore");
+		}
+		return user;
 	}
 
 }

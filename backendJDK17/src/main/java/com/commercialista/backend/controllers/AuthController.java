@@ -74,30 +74,10 @@ public class AuthController {
 	@PostMapping("/signin")
 	public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) throws Exception {
 
-		// preleva l'utente con l'email passata in login request
-		User user;
-		if (loginRequest.getEmail() != null && !loginRequest.getEmail().isBlank()) {
-			user = userRepository.findByEmail(loginRequest.getEmail())
-					.orElseThrow(() -> new Exception("Credenziali errate"));
-		}
-//	else if (loginRequest.getUsername() != null && !loginRequest.getUsername().isBlank()) {
-//		user = userRepository.findByEmail(loginRequest.getEmail())
-//				.orElseThrow(() -> new Exception("Credenziali errate"));
-//	}
-		else {
-			throw new Exception("Inserire nome utente o email validi");
-		}
+		// controlla se esiste un utente con email e password indicate e se ha un account attivo sul sistema
+		User user = userService.checkLoginAndGetUtente(loginRequest);
 
-		// Controlla se l'account associato allo User è stato verificato (mail
-		// confermata)
-		Account accountUser = accountRepository.findById(user.getId())
-				.orElseThrow(() -> new Exception("Nessun account associato a questo utente!"));
-		if (accountUser.getStatus().equals(StatiAccountEnum.NON_ATTIVO)) {
-			throw new Exception("Email non ancora confermata, controlla la tua posta");
-		} else if (accountUser.getStatus().equals(StatiAccountEnum.SOSPESO)) {
-			throw new Exception("Account sospeso, contattaci se lo ritieni un errore");
-		}
-
+		// se è tutto ok, continua con l'autenticazione e genera un token per l'accesso
 		Authentication authentication = authenticationManager
 				.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), loginRequest.getPassword()));
 
@@ -116,15 +96,15 @@ public class AuthController {
 	public ResponseEntity<?> registerUser( @RequestBody SignupRequest signUpRequest,
 			@RequestHeader(name = "Authorization", required = false) String authorizationHeader) throws Exception {
 		
+		// gestione dello username nascosta all'utente, viene impostato uno UUID
 		userService.generaUsername(signUpRequest);
-		if (userRepository.existsByUsername(signUpRequest.getUsername())) {
-			return ResponseEntity.badRequest().body(new MessageResponse("Errore: Username già esistente!"));
-		}
-
-		if (userRepository.existsByEmail(signUpRequest.getEmail())) {
-			return ResponseEntity.badRequest().body(new MessageResponse("Errore: Email già in uso!"));
-		}
 		
+		// controlli su eventuali violazioni che non permettono la registrazione
+		ResponseEntity<?> violationResponseEntity = userService.checkViolations(signUpRequest);
+		if (violationResponseEntity != null) { // se c'è qualche violazione che non permette la registrazione, ritornare il problema come response entity
+			return violationResponseEntity;
+		}
+		// procedi con la registrazione e l'invio della mail di attivazione account con verifica
 		try {
 			userService.registerUserAndAccount(signUpRequest, authorizationHeader);
 		} catch (MessagingException | IOException | TemplateException e) {
