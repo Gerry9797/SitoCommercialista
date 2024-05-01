@@ -33,10 +33,6 @@ public class ExceptionHandlerController extends ResponseEntityExceptionHandler {
 	@Autowired
 	private ObjectMapper objectMapper;
 
-//	@ExceptionHandler(OrdinamentoNonValidoException.class)
-//	public ResponseEntity<Object> eccezioneGestita(OrdinamentoNonValidoException e) {
-//		return eccezione(new OrdinamentoNonAmmessoException(e.getFields()));
-//	}
 
 	@ExceptionHandler({ ProblemaException.class, BeException.class, HttpClientErrorException.class })
 	public ResponseEntity<Object> eccezioneGestita(RuntimeException e) {
