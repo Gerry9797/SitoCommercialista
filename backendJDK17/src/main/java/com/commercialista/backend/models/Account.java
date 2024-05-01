@@ -6,6 +6,8 @@ import com.commercialista.backend.enums.StatiAccountEnum;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -19,11 +21,13 @@ public class Account {
 	@Column(name = "id_user", nullable = false)
 	private Long idUser;
 	
-	@Column(name = "verification_code", nullable = true)
+	@Column(name = "verification_code", nullable = true, length = 255)
 	private String verificationCode;
 
 	@NotBlank
 	@Size(max = 50)
+	@Column(length = 50)
+	@Enumerated(EnumType.STRING)
 	private StatiAccountEnum status;
 	
 	@Column(name = "data_pubb", nullable = false)

@@ -2,7 +2,6 @@ package com.commercialista.backend.controllers;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -35,7 +34,6 @@ import com.commercialista.backend.repository.UserRepository;
 import com.commercialista.backend.security.jwt.JwtUtils;
 import com.commercialista.backend.security.services.UserDetailsImpl;
 import com.commercialista.backend.services.UserService;
-import com.commercialista.backend.swagger.SwaggerUrlPrinter;
 
 import freemarker.template.TemplateException;
 import jakarta.mail.MessagingException;
@@ -115,7 +113,7 @@ public class AuthController {
 	}
 
 	@PostMapping("/signup")
-	public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest,
+	public ResponseEntity<?> registerUser( @RequestBody SignupRequest signUpRequest,
 			@RequestHeader(name = "Authorization", required = false) String authorizationHeader) throws Exception {
 		
 		userService.generaUsername(signUpRequest);

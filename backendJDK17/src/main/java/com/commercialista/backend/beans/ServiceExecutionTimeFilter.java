@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +17,7 @@ import org.springframework.web.util.ContentCachingRequestWrapper;
 import org.springframework.web.util.ContentCachingResponseWrapper;
 
 import com.commercialista.backend.log.LogUtil;
+import com.commercialista.backend.utils.CachedBodyHttpServletRequest;
 
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
@@ -38,7 +39,7 @@ public class ServiceExecutionTimeFilter implements Filter {
 			throws IOException, ServletException {
 		long start = new Date().getTime();
 
-		ContentCachingRequestWrapper req = new ContentCachingRequestWrapper((HttpServletRequest) request);
+		CachedBodyHttpServletRequest  req = new CachedBodyHttpServletRequest ((HttpServletRequest) request);
 		ContentCachingResponseWrapper resp = new ContentCachingResponseWrapper((HttpServletResponse) response);
 
 		boolean flStartTransazione = setInfoLog(req);
@@ -77,18 +78,18 @@ public class ServiceExecutionTimeFilter implements Filter {
 
 	}
 
-	private void logRequest(ContentCachingRequestWrapper req) {
-		byte[] requestBody = req.getContentAsByteArray();
+	private void logRequest(CachedBodyHttpServletRequest  req) throws IOException {
+		byte[] requestBody = req.getInputStream().readAllBytes();
 		String requestBodyString = new String(requestBody, StandardCharsets.UTF_8);
 		
 	    // Se il corpo della richiesta è vuoto, leggi il corpo dalla nuova istanza della richiesta HttpServletRequest
-	    if (requestBody.length == 0) {
-	        try {
-	            requestBodyString = req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
-	        } catch (IOException e) {
-	            LOGGER.error("Errore durante la lettura del corpo della richiesta", e);
-	        }
-	    }
+//	    if (requestBody.length == 0) {
+//	        try {
+//	            requestBodyString = req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+//	        } catch (IOException e) {
+//	            LOGGER.error("Errore durante la lettura del corpo della richiesta", e);
+//	        }
+//	    }
 
 		String queryString = StringUtils.isBlank(req.getQueryString()) ? "" : "?" + req.getQueryString();
 		// "\u001B[36;4m" rappresenta il colore celestino, mente "\u001B[0m" rappresenta la sottolineatura
@@ -96,7 +97,7 @@ public class ServiceExecutionTimeFilter implements Filter {
 				requestBodyString);
 	}
 
-	private boolean setInfoLog(HttpServletRequest request) {
+	private boolean setInfoLog(CachedBodyHttpServletRequest  request) {
 		boolean flStartTransazione;
 		if (request.getHeader(LogUtil.id_transazione) == null) {
 			flStartTransazione = true;

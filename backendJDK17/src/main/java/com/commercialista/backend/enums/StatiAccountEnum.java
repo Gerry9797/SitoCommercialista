@@ -8,14 +8,14 @@ public enum StatiAccountEnum {
 	
 	SOSPESO("SOSPESO");
 	
-	private final String codice;
+	private final String id;
 	
-	StatiAccountEnum(String codice) {
-		this.codice = codice;
+	StatiAccountEnum(String id) {
+		this.id = id;
 	}
 
 	public String getCodice() {
-		return codice;
+		return id;
 	}
 	
 	
