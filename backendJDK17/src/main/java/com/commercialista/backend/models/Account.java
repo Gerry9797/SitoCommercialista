@@ -10,8 +10,6 @@ import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(	name = "accounts")
@@ -24,8 +22,6 @@ public class Account {
 	@Column(name = "verification_code", nullable = true, length = 255)
 	private String verificationCode;
 
-	@NotBlank
-	@Size(max = 50)
 	@Column(length = 50)
 	@Enumerated(EnumType.STRING)
 	private StatiAccountEnum status;

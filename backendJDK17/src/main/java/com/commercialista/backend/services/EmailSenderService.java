@@ -34,34 +34,34 @@ public class EmailSenderService {
 	
     private Configuration freemarkerConfig;
     
-    @Value("custom.server.frontend.base-url")
+    @Value("${custom.server.frontend.base-url}")
     private String FEBaseUrl;
     
-    @Value("custom.server.backend.base-url")
+    @Value("${custom.server.backend.base-url}")
     private String BEBaseUrl;
     
-    @Value("custom.email.no-response-email")
+    @Value("${custom.email.no-response-email}")
     private String noResponseEmail;
     
-    @Value("custom.email.support-email")
+    @Value("${custom.email.support-email}")
     private String supportEmail;
     
-    @Value("custom.email.content.logo-in-email")
+    @Value("${custom.email.content.logo-in-email}")
     private String logoInEmailRelativePath;
     
-    @Value("custom.email.content.bg-banner")
+    @Value("${custom.email.content.bg-banner}")
     private String bgBannerRelativePath;
     
-    @Value("custom.email.content.bollino-sito")
+    @Value("${custom.email.content.bollino-sito}")
     private String bollinoSitoRelativePath;
     
-    @Value("custom.email.content.info-icon")
+    @Value("${custom.email.content.info-icon}")
     private String infoIconRelativePath;
     
-    @Value("custom.site.name")
+    @Value("${custom.site.name}")
     private String siteName;
     
-    @Value("custom.site.domain")
+    @Value("${custom.site.domain}")
     private String siteDomain;
     
 

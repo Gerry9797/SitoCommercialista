@@ -7,11 +7,15 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.commercialista.backend.controllers.AuthController;
 import com.commercialista.backend.enums.StatiAccountEnum;
 import com.commercialista.backend.models.Account;
 import com.commercialista.backend.models.ERole;
@@ -27,6 +31,8 @@ import jakarta.validation.Valid;
 
 @Service
 public class UserService {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(AuthController.class);
 	
 	@Autowired
 	UserRepository userRepository;
@@ -46,11 +52,17 @@ public class UserService {
     @Autowired
     private EmailSenderService emailSenderService;
 
-	@Transactional(rollbackFor = Exception.class, readOnly = false)
+	@Transactional(propagation = Propagation.REQUIRES_NEW, rollbackFor = Exception.class, readOnly = false)
 	public void registerUserAndAccount(SignupRequest signUpRequest, String authorizationHeader) throws Exception {
-		User newUser = registerUser(signUpRequest, authorizationHeader);
-		Account registredAccount = registerAccount(newUser);
-		emailSenderService.sendEmailConfermaRegistrazione(registredAccount, newUser);
+	    try {
+	        User newUser = registerUser(signUpRequest, authorizationHeader);
+	        Account registeredAccount = registerAccount(newUser);
+	        emailSenderService.sendEmailConfermaRegistrazione(registeredAccount, newUser);
+	    } catch (Exception e) {
+	        // Logga l'eccezione per identificarne la causa
+	        LOGGER.error("Errore durante la registrazione dell'utente e dell'account", e);
+	        throw e; // Rilancia l'eccezione per consentire il rollback della transazione
+	    }
 	}
 	
 	

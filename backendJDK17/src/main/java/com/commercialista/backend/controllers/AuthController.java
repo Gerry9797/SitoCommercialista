@@ -134,8 +134,9 @@ public class AuthController {
 					.body(new MessageResponse("Error while send Email!"));
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
+			e.printStackTrace();
 			return ResponseEntity
-					.badRequest()
+					.internalServerError()
 					.body(new MessageResponse(e.getMessage()));
 		}
 

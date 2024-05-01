@@ -14,7 +14,7 @@ public enum StatiAccountEnum {
 		this.id = id;
 	}
 
-	public String getCodice() {
+	public String getId() {
 		return id;
 	}
 	
