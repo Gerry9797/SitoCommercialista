@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MAX_PASSWORD_LEN } from 'src/app/app.constants';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { SITE_CONFIG } from 'src/app/app.config';
 import { UtilityService } from 'src/app/services/utility/utility.service';
 
 @Component({
@@ -10,8 +10,9 @@ import { UtilityService } from 'src/app/services/utility/utility.service';
 })
 export class DettagliAccountComponent implements OnInit{
 
-
-  MAX_PASSWORD_LEN = MAX_PASSWORD_LEN
+  siteConfig = SITE_CONFIG
+  MAX_EMAIL_LEN = this.siteConfig.settings.loginSignup.MAX_EMAIL_LEN
+  MAX_PASSWORD_LEN = this.siteConfig.settings.loginSignup.MAX_PASSWORD_LEN
   formSignup!: FormGroup;
 
   constructor(

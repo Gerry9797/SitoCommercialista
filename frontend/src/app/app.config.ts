@@ -28,5 +28,19 @@ export const SITE_CONFIG = {
     },
     privacyPolicy: {
         dataAggiornamento: "marzo 2023"
+    },
+    settings: {
+        security: {
+            encodeSessionValues: false
+        },
+        permissionRoles: {
+            ADM: "ROLE_ADMIN",
+            MOD: "ROLE_MODERATOR",
+            USR: "ROLE_USER"
+        },
+        loginSignup: {
+            MAX_EMAIL_LEN: 50,
+            MAX_PASSWORD_LEN: 120
+        }
     }
 }
