@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -17,6 +18,8 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import com.commercialista.backend.dto.exchange.WsProblema;
+import com.commercialista.backend.errors.ErrorCodeLoader;
+import com.commercialista.backend.errors.ErrorEntry;
 import com.commercialista.backend.exception.BeException;
 import com.commercialista.backend.exception.ProblemaException;
 import com.commercialista.backend.exception.ProblemaGenericoException;
@@ -32,13 +35,26 @@ public class ExceptionHandlerController extends ResponseEntityExceptionHandler {
 	private boolean errorTrace;
 	@Autowired
 	private ObjectMapper objectMapper;
+	@Autowired
+	private ErrorCodeLoader errorCodeLoader;
 
 
 	@ExceptionHandler({ ProblemaException.class, BeException.class, HttpClientErrorException.class })
 	public ResponseEntity<Object> eccezioneGestita(RuntimeException e) {
 		log.warn("{}: {}", e.getClass().getSimpleName(), e.getMessage());
 		log.error("Eccezione gestita", e);
-		return eccezione(e);
+		return eccezione(new ProblemaGenericoException(e));
+	}
+	
+	@ExceptionHandler(BadCredentialsException.class)
+	public ResponseEntity<Object> eccezioneGestita(BadCredentialsException e) {
+		log.warn("{}: {}", e.getClass().getSimpleName(), e.getMessage());
+		log.error("Eccezione gestita", e);
+		ErrorEntry errorEntry = errorCodeLoader.getErrorEntry("BAD_CREDENTIAL");
+		if(errorEntry != null) {
+			return eccezione(errorEntry.getCode(), errorEntry.getStatusCode(), errorEntry.getTitle(), errorEntry.getDescription());
+		}
+		return eccezione(new ProblemaGenericoException(e));
 	}
 
 	@ExceptionHandler(Exception.class)
@@ -73,6 +89,13 @@ public class ExceptionHandlerController extends ResponseEntityExceptionHandler {
 					ex.getDescrizione());
 			return ResponseEntity.status(ex.getCodiceHttp()).body(wsProblema);
 		}
+	}
+	
+	public ResponseEntity<Object> eccezione(String codiceErrore,HttpStatusCode codiceStato, String titolo, String messaggio) {
+		
+			WsProblema wsProblema = new WsProblema(codiceErrore, codiceStato.toString(), titolo, messaggio);
+			return ResponseEntity.status(codiceStato).body(wsProblema);
+		
 	}
 
 	@NonNull

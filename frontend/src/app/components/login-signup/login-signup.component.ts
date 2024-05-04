@@ -83,32 +83,38 @@ export class LoginSignupComponent implements OnInit {
      debugger
      let email = this.formSignin.get('signin_email')?.value
      let password = this.formSignin.get('signin_password')?.value
- 
-    //  if(this.CheckAndValiateForm(this.formSignin)){
-    //    this.spinner.show("spinner");
-    //    this.authService.login(email, password).subscribe(
-    //      data => {
-    //        this.tokenStorage.saveToken(data.accessToken);
-    //        this.tokenStorage.saveUser(data);
-    //        this.spinner.hide("spinner");
-    //        this.generalErrorMessageSignin = null
-    //        this.redirectAfterLogin();
-    //      },
-    //      err => {
-    //        this.spinner.hide("spinner");
-    //        if(err?.error.message){
-    //          this.generalErrorMessageSignin = err.error.message
-    //        }
-    //        else {
-    //          this.notifyService.showError(this.translateService.instant('general.errors.msgTechnicalError'));
-    //        }
+
+     this.message = null; // resetta il messaggio di errore generico
+    
+     if(this.checkAndValidateForm(this.formSignin)){
+      //  this.spinner.show("spinner");
+       this.authService.login(email, password).subscribe(
+         data => {
+           this.tokenStorage.saveToken(data.accessToken);
+           this.tokenStorage.saveUser(data);
+          //  this.spinner.hide("spinner");
+           this.generalErrorMessageSignin = null
+           this.redirectAfterLogin();
+         },
+         err => {
+          //  this.spinner.hide("spinner");
+           if(err?.error.descrizione){
+             this.generalErrorMessageSignin = err.error.descrizione
+             this.message = {
+              description: err.error.descrizione,
+              status: "error"
+             } as NotificationMessage
+           }
+           else {
+            //  this.notifyService.showError(this.translateService.instant('general.errors.msgTechnicalError'));
+           }
            
-    //      }
-    //    );
-    //  }
-    //  else {
-    //   //  console.log("form invalid");
-    //  }
+         }
+       );
+     }
+     else {
+      //  console.log("form invalid");
+     }
  
      
    }
@@ -144,5 +150,13 @@ export class LoginSignupComponent implements OnInit {
     //   //  console.log("form invalid");
     //  }
    }
+
+   checkAndValidateForm(formToCheck: FormGroup){
+    Object.keys(formToCheck.controls).forEach(field => { // {1}
+      const control = formToCheck.get(field);            // {2}
+      control?.markAsTouched({ onlySelf: true });       // {3}
+    });
+    return formToCheck.valid
+  }
 
 }
