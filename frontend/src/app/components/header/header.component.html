@@ -83,7 +83,7 @@
                 </div>
               </div>
               <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-header-login-column-desktop col-1 elementor-hidden-tablet elementor-hidden-mobile">
-                <div class="elementor-widget-wrap elementor-element-populated">
+                <div *ngIf="!isLoggedIn" class="elementor-widget-wrap elementor-element-populated">
                   <div class="elementor-element elementor-element-header-login-icon-desktop stax-condition-yes stax-user_role_enabled-yes elementor-hidden-tablet elementor-hidden-mobile elementor-view-default elementor-widget elementor-widget-icon">
                     <div class="elementor-widget-container">
                       <div class="elementor-icon-wrapper">
@@ -100,6 +100,23 @@
                       </h2>
                     </div>
                   </div>
+                </div>
+                <div *ngIf="isLoggedIn" class="elementor-widget-wrap elementor-element-populated">
+                  <div class="elementor-element elementor-element-area-privata-box-icon stax-condition-yes stax-user_role_enabled-yes elementor-hidden-tablet elementor-hidden-mobile elementor-view-default elementor-widget elementor-widget-icon">
+                    <div class="elementor-widget-container">
+                      <div class="elementor-icon-wrapper">
+                        <a class="elementor-icon" routerLink="/mio-account/">
+                          <i aria-hidden="true" class="fas fa-user-circle"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-area-privata-box-label stax-condition-yes stax-user_role_enabled-yes elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-heading">
+                    <div class="elementor-widget-container">
+                      <h2 class="elementor-heading-title elementor-size-default"><a routerLink="/mio-account/">Area <br>Privata</a></h2>
+                    </div>
+                  </div>
+
                 </div>
               </div>
               <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-header-actions-block-desktop col-2 elementor-hidden-tablet elementor-hidden-mobile">

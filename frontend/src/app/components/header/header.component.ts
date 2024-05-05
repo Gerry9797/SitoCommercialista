@@ -1,6 +1,9 @@
-import { Component, OnInit, HostListener, Renderer2 } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, HostListener, Renderer2, Inject, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { TokenStorageService } from 'src/app/_services/token-storage.service';
 import { SITE_CONFIG } from 'src/app/app.config';
+import { InternalSessionManagerService } from 'src/app/services/session/internal-session-manager.service';
 import { SideMenuManagerService } from 'src/app/services/side-menu-manager.service';
 
 interface IMenuItem {
@@ -34,20 +37,50 @@ export class HeaderComponent implements OnInit {
 
   datiPersonali: any = SITE_CONFIG.datiPersonali
 
+  isLoggedIn: boolean = false;
+  roles: string[] = []; 
+
   constructor(
     private renderer: Renderer2,
     private sideMenuManager: SideMenuManagerService,
-    private router: Router
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private tokenStorage: TokenStorageService,
+    private internalSessionManager: InternalSessionManagerService
   ) {
    }
 
   ngOnInit(): void {
 
-    this.loadMenuItemsConfiguration();
+    if (isPlatformBrowser(this.platformId)) {
 
-    this.handleListItemWithDropdownKeepSelectionOnItsUlChildren();
+      this.checkLogin();
+      this.internalSessionManager.getObservableForRefreshAfterLoginLogout().subscribe(
+        () => {
+          this.checkLogin();
+        }
+      )
 
-    this.checkIfIsHome();
+      this.loadMenuItemsConfiguration();
+
+      this.handleListItemWithDropdownKeepSelectionOnItsUlChildren();
+  
+      this.checkIfIsHome();
+    }
+
+  }
+
+  checkLogin(){
+    
+    if (this.tokenStorage.getToken()) {
+      this.isLoggedIn = true;
+      this.roles = this.tokenStorage.getUser().roles;
+      console.log(this.roles)
+    }
+    else {
+      this.isLoggedIn = false;
+      this.roles = [];
+    }
   }
 
   @HostListener('window:scroll', ['$event'])

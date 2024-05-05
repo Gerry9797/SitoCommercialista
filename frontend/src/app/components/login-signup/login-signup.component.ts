@@ -66,6 +66,9 @@ export class LoginSignupComponent implements OnInit {
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
+
+      this.utilityService.scrollToTopInstant();
+
       if (this.tokenStorage.getToken()) { // se il token è presente
         this.redirectAfterLogin();
       }

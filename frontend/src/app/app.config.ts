@@ -31,7 +31,9 @@ export const SITE_CONFIG = {
     },
     settings: {
         security: {
-            encodeSessionValues: false
+            encodeSessionValues: false,
+            token1: "ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnpkV0lp",
+            token2: "T2lJeE1qTTBOVFkzT0Rrd0lpd2libUZ0WlNJNklrcHZhRzRnUkc5bElpd2lhV0YwSWpv"
         },
         permissionRoles: {
             ADM: "ROLE_ADMIN",
