@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { SITE_CONFIG } from 'src/app/app.config';
 import { SideMenuManagerService } from 'src/app/services/side-menu-manager.service';
 import { UtilityService } from 'src/app/services/utility/utility.service';
 
@@ -8,6 +9,8 @@ import { UtilityService } from 'src/app/services/utility/utility.service';
   styleUrls: ['./side-menu.component.css']
 })
 export class SideMenuComponent implements OnInit, AfterViewInit {
+
+  datiPersonali: any = SITE_CONFIG.datiPersonali
 
   @ViewChild('sideMenuContainer', { static: false }) sideMenuContainer!: ElementRef;
   @ViewChild('sideMenuPrenotaBtn', { static: false }) sideMenuPrenotaBtn!: ElementRef;

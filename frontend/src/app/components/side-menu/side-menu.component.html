@@ -11,7 +11,7 @@
     <div class="dialog-header dialog-lightbox-header"></div>
     <div class="dialog-message dialog-lightbox-message">
       <div
-        data-elementor-type="popup"
+        data-type="popup"
         class="elementor elementor-side-menu-comm-popup elementor-location-popup"
         style="display: block"
       >
@@ -23,10 +23,8 @@
                   <div class="elementor-widget-container">
                     <a routerLink="/">
                       <img
-                        src="https://valentinafilippini.it/wp-content/uploads/2021/02/logo_vf_cdl.svg"
-                        title="logo Aisia Autiero"
-                        alt="logo Aisia Autiero"
-                        loading="lazy"
+                        alt="logo {{datiPersonali.nome}} {{datiPersonali.cognome}}"
+                        src="assets/logo/logo_vf_cdl.svg"
                       />
                     </a>
                   </div>
@@ -35,128 +33,86 @@
             </div>
           </div>
         </section>
-        <section
-          class="elementor-section elementor-top-section elementor-element elementor-element-d4ba213 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-          data-id="d4ba213"
-          data-element_type="section"
-        >
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-d4ba213 elementor-section-boxed elementor-section-height-default elementor-section-height-default">
           <div class="elementor-container elementor-column-gap-default">
-            <div
-              class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-dbd71b4"
-              data-id="dbd71b4"
-              data-element_type="column"
-            >
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element">
               <div class="elementor-widget-wrap elementor-element-populated">
-                <div
-                  class="elementor-element elementor-element-a8b0c12 elementor-widget elementor-widget-nav-menu"
-                  data-id="a8b0c12"
-                  data-element_type="widget"
-                  data-settings='{"layout":"dropdown","submenu_icon":{"value":"<i class=\"fas fa-caret-down\"><\/i>","library":"fa-solid"}}'
-                  data-widget_type="nav-menu.default"
-                >
+                <div class="elementor-element elementor-element-a8b0c12 elementor-widget elementor-widget-nav-menu">
                   <div class="elementor-widget-container">
                     <nav
                       class="elementor-nav-menu--dropdown elementor-nav-menu__container"
                       aria-hidden="true"
                       style="--menu-height: 0"
                     >
-                      <ul
-                        id="menu-2-a8b0c12"
-                        class="elementor-nav-menu"
-                        data-smartmenus-id="16976526431729773"
-                      >
-                        <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3631"
-                        >
+                      <ul id="menu-2-a8b0c12" class="elementor-nav-menu">
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3631">
                           <a
                             routerLink="chi-sono"
                             class="elementor-item"
-                            tabindex="-1"
-                            >Chi sono</a
-                          >
+                            tabindex="-1">
+                            Chi sono
+                          </a>
                         </li>
-                        <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3628"
-                        >
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3628">
                           <a
                             routerLink="privati"
                             class="elementor-item"
-                            tabindex="-1"
-                            >Servizi per Privati</a
-                          >
+                            tabindex="-1">
+                            Servizi per Privati
+                          </a>
                         </li>
-                        <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3627"
-                        >
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3627">
                           <a
                             routerLink="aziende"
                             class="elementor-item"
-                            tabindex="-1"
-                            >Servizi per Aziende</a
-                          >
+                            tabindex="-1">
+                            Servizi per Aziende
+                          </a>
                         </li>
-                        <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4500"
-                        >
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4500">
                           <a
                             routerLink="ebook-e-guide"
                             class="elementor-item"
-                            tabindex="-1"
-                            >eBook</a
-                          >
+                            tabindex="-1">
+                            eBook
+                          </a>
                         </li>
-                        <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6331"
-                        >
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6331">
                           <a
                             routerLink="webinar"
                             class="elementor-item"
-                            tabindex="-1"
-                            >Webinar</a
-                          >
+                            tabindex="-1">
+                            Webinar
+                          </a>
                         </li>
-                        <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3630"
-                        >
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3630">
                           <a
                             routerLink="articoli"
                             class="elementor-item"
-                            tabindex="-1"
-                            >Articoli</a
-                          >
+                            tabindex="-1">
+                            Articoli
+                          </a>
                         </li>
-                        <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3629"
-                        >
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3629">
                           <a
                             routerLink="contatti"
                             class="elementor-item"
-                            tabindex="-1"
-                            >Contatti</a
-                          >
+                            tabindex="-1">
+                            Contatti
+                          </a>
                         </li>
                       </ul>
                     </nav>
                   </div>
                 </div>
-                <div
-                  class="elementor-element elementor-element-1345d81 stax-condition-yes stax-user_role_enabled-yes elementor-widget elementor-widget-heading"
-                  data-id="1345d81"
-                  data-element_type="widget"
-                  data-widget_type="heading.default"
-                >
+                <div class="elementor-element elementor-element-1345d81 stax-condition-yes stax-user_role_enabled-yes elementor-widget elementor-widget-heading">
                   <div class="elementor-widget-container">
                     <h2 class="elementor-heading-title elementor-size-default">
                       <a routerLink="autenticazione">Log in</a>
                     </h2>
                   </div>
                 </div>
-                <div
-                  class="elementor-element elementor-element-6477d9d stax-condition-yes stax-user_role_enabled-yes elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
-                  data-id="6477d9d"
-                  data-element_type="widget"
-                  data-widget_type="divider.default"
-                >
+                <div class="elementor-element elementor-element-6477d9d stax-condition-yes stax-user_role_enabled-yes elementor-widget-divider--view-line elementor-widget elementor-widget-divider">
                   <div class="elementor-widget-container">
                     <div class="elementor-divider">
                       <span class="elementor-divider-separator"> </span>
@@ -168,10 +124,7 @@
                   #sideMenuPrenotaBtn
                   id="side-menu-prenota-btn"
                   class="elementor-element elementor-element-cd15da4 elementor-align-right elementor-widget__width-auto elementor-hidden-desktop elementor-hidden-tablet elementor-invisible elementor-widget elementor-widget-button"
-                  data-id="cd15da4"
-                  data-element_type="widget"
                   data-settings='{"animation":"bounceIn","delay":2000, "disappearAgain": true}'
-                  data-widget_type="button.default"
                 >
                   <div class="elementor-widget-container">
                     <div class="elementor-button-wrapper">

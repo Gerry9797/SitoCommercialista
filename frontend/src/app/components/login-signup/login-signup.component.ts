@@ -77,7 +77,7 @@ export class LoginSignupComponent implements OnInit {
 
   redirectAfterLogin() {
     this.internalSessionManager.setRefreshAfterLoginLogout();
-    this.router.navigate(['/']);
+    this.router.navigate(['/area-riservata/bacheca']);
   }
 
   signin(){
