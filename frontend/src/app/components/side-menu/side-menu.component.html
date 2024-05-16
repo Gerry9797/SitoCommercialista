@@ -6,10 +6,11 @@
   role="document"
   tabindex="0"
   style="display: none;"
+  (click)="checkIfCloseSideMobileMenu($event)"
 >
-  <div class="dialog-widget-content dialog-lightbox-widget-content animated">
+  <div #sidemenu class="dialog-widget-content dialog-lightbox-widget-content animated">
     <div class="dialog-header dialog-lightbox-header"></div>
-    <div class="dialog-message dialog-lightbox-message">
+    <div class="dialog-message dialog-lightbox-message scrollable-div">
       <div
         data-type="popup"
         class="elementor elementor-side-menu-comm-popup elementor-location-popup"
@@ -49,7 +50,8 @@
                           <li class="menu-item menu-item-type-post_type menu-item-object-page">
                             <a
                               [routerLink]="listItem.href"
-                              class="elementor-item"
+                              (click)="closeSideMenu()"
+                              class="elementor-item no-bg-focus"
                               tabindex="-1">
                               {{listItem.label}}
                             </a>

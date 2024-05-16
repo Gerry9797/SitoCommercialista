@@ -16,6 +16,8 @@ export class SideMenuComponent implements OnInit, AfterViewInit {
   @ViewChild('sideMenuContainer', { static: false }) sideMenuContainer!: ElementRef;
   @ViewChild('sideMenuPrenotaBtn', { static: false }) sideMenuPrenotaBtn!: ElementRef;
 
+  @ViewChild('sidemenu', { static: false }) sidemenuBody!: ElementRef;
+
   menuItems: IListItem[] = [];
 
   constructor(
@@ -69,6 +71,12 @@ export class SideMenuComponent implements OnInit, AfterViewInit {
 
   closeSideMenu(){
     this.sideMenuManager.closeSideMenu();
+  }
+
+  checkIfCloseSideMobileMenu(event: any){
+    if (!this.sidemenuBody.nativeElement.contains(event.target)) {
+      this.closeSideMenu();
+    }
   }
 
 }
