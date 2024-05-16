@@ -45,80 +45,21 @@
                       style="--menu-height: 0"
                     >
                       <ul id="menu-2-a8b0c12" class="elementor-nav-menu">
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3631">
-                          <a
-                            routerLink="chi-sono"
-                            class="elementor-item"
-                            tabindex="-1">
-                            Chi sono
-                          </a>
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3628">
-                          <a
-                            routerLink="privati"
-                            class="elementor-item"
-                            tabindex="-1">
-                            Servizi per Privati
-                          </a>
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3627">
-                          <a
-                            routerLink="aziende"
-                            class="elementor-item"
-                            tabindex="-1">
-                            Servizi per Aziende
-                          </a>
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4500">
-                          <a
-                            routerLink="ebook-e-guide"
-                            class="elementor-item"
-                            tabindex="-1">
-                            eBook
-                          </a>
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6331">
-                          <a
-                            routerLink="webinar"
-                            class="elementor-item"
-                            tabindex="-1">
-                            Webinar
-                          </a>
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3630">
-                          <a
-                            routerLink="articoli"
-                            class="elementor-item"
-                            tabindex="-1">
-                            Articoli
-                          </a>
-                        </li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3629">
-                          <a
-                            routerLink="contatti"
-                            class="elementor-item"
-                            tabindex="-1">
-                            Contatti
-                          </a>
-                        </li>
+                        @for (listItem of menuItems; track listItem) {
+                          <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                            <a
+                              [routerLink]="listItem.href"
+                              class="elementor-item"
+                              tabindex="-1">
+                              {{listItem.label}}
+                            </a>
+                          </li>
+                        }
                       </ul>
                     </nav>
                   </div>
                 </div>
-                <div class="elementor-element elementor-element-1345d81 stax-condition-yes stax-user_role_enabled-yes elementor-widget elementor-widget-heading">
-                  <div class="elementor-widget-container">
-                    <h2 class="elementor-heading-title elementor-size-default">
-                      <a routerLink="autenticazione">Log in</a>
-                    </h2>
-                  </div>
-                </div>
-                <div class="elementor-element elementor-element-6477d9d stax-condition-yes stax-user_role_enabled-yes elementor-widget-divider--view-line elementor-widget elementor-widget-divider">
-                  <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-                      <span class="elementor-divider-separator"> </span>
-                    </div>
-                  </div>
-                </div>
+
                 <div
                   appear
                   #sideMenuPrenotaBtn
@@ -128,16 +69,11 @@
                 >
                   <div class="elementor-widget-container">
                     <div class="elementor-button-wrapper">
-                      <a
-                        class="elementor-button elementor-button-link elementor-size-sm"
-                        href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjM3MzUiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D"
-                      >
+                      <button class="elementor-button elementor-button-link elementor-size-sm btn-like-a">
                         <span class="elementor-button-content-wrapper">
-                          <span class="elementor-button-text"
-                            >Prenota una Consulenza!</span
-                          >
+                          <span class="elementor-button-text">Prenota una Consulenza!</span>
                         </span>
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
