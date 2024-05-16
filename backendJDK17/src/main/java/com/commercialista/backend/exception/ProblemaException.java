@@ -6,7 +6,11 @@ import java.util.Locale;
 
 public class ProblemaException extends RuntimeException {
 
-    private final String codice;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1262130513714139440L;
+	private final String codice;
     private final int codiceHttp;
     private final String titolo;
     private final String descrizione;
