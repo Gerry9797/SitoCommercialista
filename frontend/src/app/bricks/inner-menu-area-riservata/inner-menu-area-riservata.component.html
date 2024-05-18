@@ -1,34 +1,11 @@
 <nav class="woocommerce-MyAccount-navigation">
     <ul>
-      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard" [class.is-active]="activeItem === 'bacheca'">
-        <a routerLink="/area-riservata/bacheca">
-          Bacheca
+      @for (listItem of menuRiservatoItems; track listItem) {
+      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard" [class.is-active]="activeItem == listItem.activeItemKey">
+        <a [routerLink]="listItem.href">
+          {{listItem.label}}
         </a>
       </li>
-      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--manage-apt" [class.is-active]="activeItem === 'gestisci-appuntamento'">
-        <a routerLink="/area-riservata/gestisci-appuntamento">
-          Gestisci Appuntamenti
-        </a>
-      </li>
-      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders" [class.is-active]="activeItem === 'ordini'">
-        <a routerLink="/area-riservata/ordini/">
-          Ordini
-        </a>
-      </li>
-      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address" [class.is-active]="activeItem === 'indirizzi'">
-        <a routerLink="/area-riservata/indirizzi/">
-          Indirizzi
-        </a>
-      </li>
-      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account" [class.is-active]="activeItem === 'dettagli-account'">
-        <a routerLink="/area-riservata/dettaglio-account">
-          Dettagli Account
-        </a>
-      </li>
-      <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout" [class.is-active]="activeItem === 'logout'">
-        <a routerLink="/area-riservata/logout/">
-          Esci
-        </a>
-      </li>
+      }
     </ul>
   </nav>
