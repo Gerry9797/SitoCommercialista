@@ -44,5 +44,8 @@ export const SITE_CONFIG = {
             MAX_EMAIL_LEN: 50,
             MAX_PASSWORD_LEN: 120
         }
+    },
+    support: {
+        email: "support@latuacommercialista.it"
     }
 }

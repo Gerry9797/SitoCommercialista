@@ -75,6 +75,7 @@ import { MainTitleCenterDecoratedComponent } from './bricks/main-title-center-de
 import { PdfSvgComponent } from './bricks/svg/pdf-svg/pdf-svg.component';
 import { FileDownloadCardComponent } from './bricks/cards/file-download-card/file-download-card.component';
 import { WebinarCardComponent } from './bricks/cards/webinar-card/webinar-card.component';
+import { ErrorComponent } from './components/error/error.component';
 
 export function playerFactory() {
   return player;
@@ -143,7 +144,8 @@ registerLocaleData(localeIt);
     MainTitleCenterDecoratedComponent,
     PdfSvgComponent,
     FileDownloadCardComponent,
-    WebinarCardComponent
+    WebinarCardComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

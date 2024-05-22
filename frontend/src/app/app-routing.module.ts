@@ -31,6 +31,8 @@ import { ConsulenzaAziendaComponent } from './components/consulenza-azienda/cons
 import { ConsulenzaPrivatiComponent } from './components/consulenza-privati/consulenza-privati.component';
 import { PrenotaConsulenzaComponent } from './prenota-consulenza/prenota-consulenza.component';
 import { LoadingPlaceholderComponent } from './bricks/loading-placeholder/loading-placeholder.component';
+import { AuthGuardService } from './services/route-guards/auth-guard.service';
+import { ErrorComponent } from './components/error/error.component';
 
 const routes: Routes = [
 
@@ -52,12 +54,12 @@ const routes: Routes = [
   { path: 'prenota-consulenza', component: PrenotaConsulenzaComponent },
 
   // AREA RISERVATA 
-  { path: 'area-riservata/bacheca', component: BachecaComponent },
-  { path: 'area-riservata/gestisci-appuntamento', component: GestisciAppuntamentiComponent },
-  { path: 'area-riservata/ordini', component: OrdiniComponent },
-  { path: 'area-riservata/indirizzi', component: IndirizziComponent },
-  { path: 'area-riservata/indirizzi/aggiungi', component: AggiungiIndirizzoComponent },
-  { path: 'area-riservata/dettaglio-account', component: DettagliAccountComponent },
+  { path: 'area-riservata/bacheca', component: BachecaComponent, canActivate: [AuthGuardService]},
+  { path: 'area-riservata/gestisci-appuntamento', component: GestisciAppuntamentiComponent, canActivate: [AuthGuardService] },
+  { path: 'area-riservata/ordini', component: OrdiniComponent, canActivate: [AuthGuardService] },
+  { path: 'area-riservata/indirizzi', component: IndirizziComponent, canActivate: [AuthGuardService] },
+  { path: 'area-riservata/indirizzi/aggiungi', component: AggiungiIndirizzoComponent, canActivate: [AuthGuardService] },
+  { path: 'area-riservata/dettaglio-account', component: DettagliAccountComponent, canActivate: [AuthGuardService] },
 
 
   { path: 'home', component: HomeComponent },
@@ -69,7 +71,10 @@ const routes: Routes = [
   { path: 'admin', component: BoardAdminComponent },
   // { path: '', redirectTo: 'home', pathMatch: 'full' }
 
-  {  path: 'loading-placeholder', component: LoadingPlaceholderComponent }
+  {  path: 'loading-placeholder', component: LoadingPlaceholderComponent },
+
+  { path: 'error', component: ErrorComponent },
+  { path: '**', component: ErrorComponent }
 ];
 
 @NgModule({
