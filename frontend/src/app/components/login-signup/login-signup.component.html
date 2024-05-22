@@ -29,23 +29,15 @@
                           />
                         </p>
                         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                          <label for="password">
+                          <label for="signin_password">
                             Password&nbsp;
                             <span class="required">*</span>
                           </label>
                           <span class="password-input">
-                            <input
-                              formControlName="signin_password"
-                              class="woocommerce-Input woocommerce-Input--text input-text"
-                              type="password"
-                              name="password"
-                              id="password"
-                              autocomplete="current-password"
-                            />
-                            <span class="show-password-input"></span>
+                            <app-input-with-validation id="signin_password" name="signin_password" type="password" placeholder="" [formRef]="formSignin" controlName="signin_password" [validation]=false></app-input-with-validation>
                           </span>
                         </p>
-                        <p class="form-row">
+                        <p class="form-row" style="margin-top: 20px;">
                           <button
                             type="submit"
                             class="woocommerce-button button woocommerce-form-login__submit"
@@ -106,7 +98,7 @@
                         </p>
                         <div class="woocommerce-privacy-policy-text">
                           <p>
-                            I tuoi dati personali verranno utilizzati per
+                            I tuoi dati personali verranno utilizzati unicamente per
                             supportare la tua esperienza su questo sito web, per
                             gestire l'accesso al tuo account e per altri scopi
                             descritti nella nostra

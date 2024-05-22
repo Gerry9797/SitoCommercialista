@@ -16,6 +16,7 @@ export class InputWithValidationComponent implements OnInit {
   @Input() hideFooterOnFocus = true;
   @Input() maxChars: number | null = null
   @Input() id: string = Math.random().toString();
+  @Input() validation: boolean = true;
 
   currentTypePassword: string = "password";
   formControlInput: AbstractControl | null = new FormControl(null);

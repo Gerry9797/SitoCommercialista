@@ -12,12 +12,12 @@
         <i *ngIf="currentTypePassword === 'text'" class="fas fa-eye-slash" (click)="changeTypePasswordInPassword()"></i>
     </div>
     
-    <div *ngIf="formControlInput?.invalid && formControlInput?.errors && (formControlInput?.dirty || formControlInput?.touched)" class="alert mt-10neg">
-        <small class="text-danger" *ngIf="formControlInput?.errors?.required">{{"general.validations.requiredField" }}</small>
-        <small class="text-danger" *ngIf="formControlInput?.errors?.email">{{"general.validations.validEmailRequired" }}</small>
-        <small class="text-danger" *ngIf="formControlInput?.errors?.pattern && type == 'password'">{{"general.validations.patternPassword" }}</small>
-        <small class="text-danger" *ngIf="formControlInput?.errors?.maxlength">{{"general.validations.maxLength"}} </small>
-        <small class="text-danger" *ngIf="formControlInput?.errors?.confirmedValidator && type == 'password'">{{"general.validations.matchPassword"}} </small>
+    <div *ngIf="validation && formControlInput?.invalid && formControlInput?.errors && (formControlInput?.dirty || formControlInput?.touched)" class="alert mt-10neg">
+        <small class="text-danger" *ngIf="formControlInput?.errors?.required">Campo richiesto</small>
+        <small class="text-danger" *ngIf="formControlInput?.errors?.email">Email non valida</small>
+        <small class="text-danger" *ngIf="formControlInput?.errors?.pattern && type == 'password'">Almeno 8 caratteri, una lettera minuscola, una maiuscola e un carattere speciale</small>
+        <small class="text-danger" *ngIf="formControlInput?.errors?.maxlength">Massimo {{maxChars}} caratteri</small>
+        <small class="text-danger" *ngIf="formControlInput?.errors?.confirmedValidator && type == 'password'">Le Password non combaciano</small>
 
     </div>
 </ng-container>

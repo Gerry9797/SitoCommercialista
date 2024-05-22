@@ -34,6 +34,8 @@
     --palette1-color-slot3: #000000;
     --palette1-color-slot4: #B8C2D1;
 
+    --palette1-form-fields-bg: #f3f5f5;
+
     --woocommerce: #7F54B3;
     --wc-green: #7ad03a;
     --wc-red: #a00;
@@ -58,9 +60,10 @@ body {
     --e-global-color-text: var(--palette1-color-text-dark);
     --e-global-color-accent:var(--palette1-color-accent);
     --e-global-color-d38cf2e: var(--palette1-color-slot1);
-    --e-global-color-0482cab: var(--palette1-color-slot2);;
-    --e-global-color-ba1f3bb: var(--palette1-color-slot3);;
-    --e-global-color-e1cf9be: var(--palette1-color-slot4);;
+    --e-global-color-0482cab: var(--palette1-color-slot2);
+    --e-global-color-ba1f3bb: var(--palette1-color-slot3);
+    --e-global-color-e1cf9be: var(--palette1-color-slot4);
+    --forms-fields-normal-background-color: var(--palette1-form-fields-bg);
     --e-global-typography-primary-font-family: "Raleway";
     --e-global-typography-primary-font-size: 18px;
     --e-global-typography-primary-font-weight: 400;
@@ -32638,7 +32641,7 @@ body.rtl.woocommerce #content div.product .elementor-widget-woocommerce-product-
     color: var(--forms-fields-normal-color,#69727d);
     border-radius: var(--forms-fields-border-radius,0);
     padding: var(--forms-fields-padding,16px);
-    background: #f9fafa;
+    background: var(--forms-fields-normal-background-color, #f9fafa);
     border: none;
     font-size: 14px
 }

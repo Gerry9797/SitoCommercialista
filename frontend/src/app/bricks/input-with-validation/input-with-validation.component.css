@@ -5,30 +5,36 @@
 }
 
 input {
-    background: #eee;
+    background: var(--forms-fields-normal-background-color);
     border: none;
     padding: 12px 15px;
-    margin: 8px 0;
+    /* margin: 8px 0; */
     width: 100%;
+}
+
+input {
+  font-family: var(--e-global-typography-text-font-family), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: var(--e-global-typography-text-font-size);
+  font-weight: var(--e-global-typography-text-font-weight);
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  text-align: center;
+  /* text-align: center; */
   border-bottom: 1px solid #fff;
   font-size: 16px;
   font-weight: 200px;
   transition: border 0.5s;
   outline: none;
-  /* color: #60666c; */
-  font-weight: bold;
+  color: var( --e-global-typography-text-font-size );
+  /* font-weight: bold; */
   border-radius: 14px;
 }
 
 .fa-eye, .fa-eye-slash {
   position: absolute;
-  top: 24px;
+  top: 18px;
   right: 10px;
   cursor: pointer;
 }
