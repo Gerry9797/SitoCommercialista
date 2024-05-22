@@ -6,15 +6,13 @@ import {
   Inject,
   OnInit,
   PLATFORM_ID,
-  Renderer2,
-  ViewChild,
+  ViewChild
 } from '@angular/core';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
 import { SITE_CONFIG } from 'src/app/app.config';
 import { IListItem } from 'src/app/models/list-item.model';
 import { InternalSessionManagerService } from 'src/app/services/session/internal-session-manager.service';
 import { SideMenuManagerService } from 'src/app/services/side-menu-manager.service';
-import { UtilityService } from 'src/app/services/utility/utility.service';
 
 @Component({
   selector: 'app-side-menu',
