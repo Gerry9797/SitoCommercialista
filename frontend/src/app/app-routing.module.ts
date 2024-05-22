@@ -33,6 +33,7 @@ import { PrenotaConsulenzaComponent } from './prenota-consulenza/prenota-consule
 import { LoadingPlaceholderComponent } from './bricks/loading-placeholder/loading-placeholder.component';
 import { AuthGuardService } from './services/route-guards/auth-guard.service';
 import { ErrorComponent } from './components/error/error.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 const routes: Routes = [
 
@@ -60,6 +61,7 @@ const routes: Routes = [
   { path: 'area-riservata/indirizzi', component: IndirizziComponent, canActivate: [AuthGuardService] },
   { path: 'area-riservata/indirizzi/aggiungi', component: AggiungiIndirizzoComponent, canActivate: [AuthGuardService] },
   { path: 'area-riservata/dettaglio-account', component: DettagliAccountComponent, canActivate: [AuthGuardService] },
+  { path: 'area-riservata/logout', component: LogoutComponent, canActivate: [AuthGuardService] },
 
 
   { path: 'home', component: HomeComponent },

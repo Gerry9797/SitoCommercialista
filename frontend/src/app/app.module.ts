@@ -76,6 +76,7 @@ import { PdfSvgComponent } from './bricks/svg/pdf-svg/pdf-svg.component';
 import { FileDownloadCardComponent } from './bricks/cards/file-download-card/file-download-card.component';
 import { WebinarCardComponent } from './bricks/cards/webinar-card/webinar-card.component';
 import { ErrorComponent } from './components/error/error.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 export function playerFactory() {
   return player;
@@ -145,7 +146,8 @@ registerLocaleData(localeIt);
     PdfSvgComponent,
     FileDownloadCardComponent,
     WebinarCardComponent,
-    ErrorComponent
+    ErrorComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

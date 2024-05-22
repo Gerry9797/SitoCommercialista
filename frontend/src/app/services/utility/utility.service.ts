@@ -1,8 +1,10 @@
 import { HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
 import { SITE_CONFIG } from 'src/app/app.config';
+import { InternalSessionManagerService } from '../session/internal-session-manager.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +12,9 @@ import { SITE_CONFIG } from 'src/app/app.config';
 export class UtilityService {
 
   constructor(
-    private tokenStorage: TokenStorageService
+    private tokenStorage: TokenStorageService,
+    private router: Router,
+    private internalSessionManager: InternalSessionManagerService
   ) { }
 
   ConfirmedValidator(controlName: string, matchingControlName: string) {
@@ -34,7 +38,9 @@ export class UtilityService {
 
   logout(): void {
     this.tokenStorage.signOut();
-    window.location.reload();
+    this.internalSessionManager.setRefreshAfterLoginLogout();
+    this.router.navigate(['/autenticazione'])
+    // window.location.reload();
     // setTimeout(() => {
     //   this.notifyService.showInfo("Logout effettuato");
     // }, 1000);
