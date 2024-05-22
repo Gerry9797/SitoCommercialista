@@ -32715,10 +32715,6 @@ body.rtl.woocommerce #content div.product .elementor-widget-woocommerce-product-
     transition-duration: var(--forms-buttons-hover-transition-duration,.3s)
 }
 
-.elementor-widget-woocommerce-my-account .e-my-account-tab:not(.e-my-account-tab__dashboard--custom) .woocommerce .login p:nth-child(3) {
-    margin-top: 20px
-}
-
 .elementor-widget-woocommerce-my-account .e-my-account-tab:not(.e-my-account-tab__dashboard--custom) .woocommerce .woocommerce-form__input-checkbox {
     vertical-align: middle
 }

@@ -13,7 +13,7 @@
                   <div class="u-columns col2-set" id="customer_login">
                     <div class="u-column1 col-1">
                       <h2>Accedi</h2>
-                      <form [formGroup]="formSignin" class="woocommerce-form woocommerce-form-login login" style="min-height: 352px">
+                      <form [formGroup]="formSignin" class="woocommerce-form woocommerce-form-login login" style="min-height: 352px" method="post">
                         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                           <label for="username">
                             Nome utente o indirizzo email&nbsp;
@@ -24,7 +24,7 @@
                             class="woocommerce-Input woocommerce-Input--text input-text"
                             name="username"
                             id="username"
-                            autocomplete="email"                         
+                            autocomplete="username"                         
                             formControlName="signin_email"
                           />
                         </p>
@@ -34,7 +34,7 @@
                             <span class="required">*</span>
                           </label>
                           <span class="password-input">
-                            <app-input-with-validation id="signin_password" name="signin_password" type="password" placeholder="" [formRef]="formSignin" controlName="signin_password" [validation]=false></app-input-with-validation>
+                            <app-input-with-validation id="signin_password" name="signin_password" type="password" placeholder="" [formRef]="formSignin" controlName="signin_password" [validation]=false [autocompleteName]="'current-password'"></app-input-with-validation>
                           </span>
                         </p>
                         <p class="form-row" style="margin-top: 20px;">

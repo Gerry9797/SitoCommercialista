@@ -6,7 +6,7 @@
     
     <!-- TYPE INPUT PASSWORD  -->
     <div *ngIf="type == 'password'" style="position: relative;">
-        <input  class="input-passw" id="{{id}}" type="{{currentTypePassword}}" placeholder="{{placeholder}}" formControlName="{{controlName}}"
+        <input  class="input-passw" id="{{id}}" autocomplete="{{autocompleteName}}" name="password" type="{{currentTypePassword}}" placeholder="{{placeholder}}" formControlName="{{controlName}}"
         [class.border-error]="formControlInput?.invalid && (formControlInput?.dirty || formControlInput?.touched)">
         <i *ngIf="currentTypePassword === 'password'" class="fas fa-eye" (click)="changeTypePasswordInText()"></i>
         <i *ngIf="currentTypePassword === 'text'" class="fas fa-eye-slash" (click)="changeTypePasswordInPassword()"></i>

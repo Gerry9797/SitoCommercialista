@@ -17,6 +17,7 @@ export class InputWithValidationComponent implements OnInit {
   @Input() maxChars: number | null = null
   @Input() id: string = Math.random().toString();
   @Input() validation: boolean = true;
+  @Input() autocompleteName: string = "";
 
   currentTypePassword: string = "password";
   formControlInput: AbstractControl | null = new FormControl(null);
