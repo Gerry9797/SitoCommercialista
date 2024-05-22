@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { IListItem } from 'src/app/models/list-item.model';
 import { UtilityService } from 'src/app/services/utility/utility.service';
 
@@ -14,12 +15,19 @@ export class InnerMenuAreaRiservataComponent implements OnInit {
   menuRiservatoItems: IListItem[] = [];
 
   constructor(
-    private utilityService: UtilityService
+    private utilityService: UtilityService,
+    private activatedRoute: ActivatedRoute
   ) {}
   
   ngOnInit(): void {
     this.loadAreaRiservataMenu();
-    this.setActiveItem();
+    this.handleSelectionItemMenu();
+  }
+
+  handleSelectionItemMenu() {
+    let relativeUrl = "/" + this.activatedRoute.snapshot.url.join('/');
+    let activeItemObj = this.menuRiservatoItems.find(item => item.href == relativeUrl)
+    this.activeItem = activeItemObj?.activeItemKey;
   }
 
   loadAreaRiservataMenu() {
@@ -36,12 +44,12 @@ export class InnerMenuAreaRiservataComponent implements OnInit {
       },
       {
         label: "Ordini",
-        href: "/area-riservata/ordini/",
+        href: "/area-riservata/ordini",
         activeItemKey: "ordini"
       },
       {
         label: "Indirizzi",
-        href: "/area-riservata/indirizzi/",
+        href: "/area-riservata/indirizzi",
         activeItemKey: "indirizzi"
       },
       {
@@ -51,14 +59,19 @@ export class InnerMenuAreaRiservataComponent implements OnInit {
       },
       {
         label: "Esci",
-        href: "/area-riservata/logout/",
+        href: "/area-riservata/logout",
         activeItemKey: "logout"
       }
     ]
   }
 
-  setActiveItem() {
-    this.activeItem = this.menuRiservatoItems[0].activeItemKey;
+  setActiveItem(key: string | undefined) {
+    if (key) {
+      this.activeItem = key;
+    }
+    else {
+      this.activeItem = this.menuRiservatoItems[0].activeItemKey;
+    }
   }
 
   logout(): void {

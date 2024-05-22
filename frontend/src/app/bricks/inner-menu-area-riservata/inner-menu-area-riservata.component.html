@@ -2,7 +2,7 @@
     <ul>
       @for (listItem of menuRiservatoItems; track listItem) {
       <li class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--dashboard" [class.is-active]="activeItem == listItem.activeItemKey">
-        <a [routerLink]="listItem.href">
+        <a [routerLink]="listItem.href" (click)="setActiveItem(listItem.activeItemKey)">
           {{listItem.label}}
         </a>
       </li>
