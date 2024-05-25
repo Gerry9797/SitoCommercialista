@@ -6,7 +6,6 @@ import { AuthService } from 'src/app/_services/auth.service';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
 import { SITE_CONFIG } from 'src/app/app.config';
 import { NotificationMessage } from 'src/app/models/notification-message.model';
-import { ErrorViewerHandlerService } from 'src/app/services/errors/error-viewer-handler.service';
 import { InternalSessionManagerService } from 'src/app/services/session/internal-session-manager.service';
 import { UtilityService } from 'src/app/services/utility/utility.service';
 
@@ -53,7 +52,6 @@ export class LoginSignupComponent implements OnInit {
     private authService: AuthService,
     private tokenStorage: TokenStorageService,
     private router: Router,
-    private errorViewer: ErrorViewerHandlerService,
     // private notifyService: NotificationService,
     // private spinner: NgxSpinnerService,
     // private dialogService: DialogService,
