@@ -29,7 +29,8 @@ input[type="password"] {
   outline: none;
   color: var( --e-global-typography-text-font-size );
   /* font-weight: bold; */
-  border-radius: 14px;
+  /* border-radius: 14px; */
+  border-radius: var(--forms-fields-border-radius, 0);
 }
 
 .fa-eye, .fa-eye-slash {

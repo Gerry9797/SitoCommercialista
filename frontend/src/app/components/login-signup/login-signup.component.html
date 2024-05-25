@@ -9,24 +9,17 @@
               <div class="e-my-account-tab e-my-account-tab__dashboard">
                 <!-- <span class="elementor-hidden">[woocommerce_my_account]</span> -->
                 <div class="woocommerce">
-                  <app-notices-block *ngIf="message" [message]="message.description" [status]="message.status" ></app-notices-block>
+                  <app-notices-block *ngIf="message" [idCustom]="idGeneralNoticesBlock" [title]="message.title" [message]="message.description" [status]="message.status"></app-notices-block>
                   <div class="u-columns col2-set" id="customer_login">
                     <div class="u-column1 col-1">
                       <h2>Accedi</h2>
-                      <form [formGroup]="formSignin" class="woocommerce-form woocommerce-form-login login" style="min-height: 352px" method="post">
+                      <form #formAccedi [formGroup]="formSignin" class="woocommerce-form woocommerce-form-login login" style="min-height: 352px" method="post">
                         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                          <label for="username">
-                            Nome utente o indirizzo email&nbsp;
+                          <label for="signin_email">
+                            Indirizzo email&nbsp;
                             <span class="required">*</span>
                           </label>
-                          <input
-                            type="text"
-                            class="woocommerce-Input woocommerce-Input--text input-text"
-                            name="username"
-                            id="username"
-                            autocomplete="username"                         
-                            formControlName="signin_email"
-                          />
+                          <app-input-with-validation id="signin_email" name="signin_email" type="email" placeholder="" [formRef]="formSignin" controlName="signin_email" [validation]=true [autocompleteName]="'username'" [showErrors]="showErrorSignin" style="display: contents;"></app-input-with-validation>
                         </p>
                         <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                           <label for="signin_password">
@@ -34,7 +27,7 @@
                             <span class="required">*</span>
                           </label>
                           <span class="password-input">
-                            <app-input-with-validation id="signin_password" name="signin_password" type="password" placeholder="" [formRef]="formSignin" controlName="signin_password" [validation]=false [autocompleteName]="'current-password'"></app-input-with-validation>
+                            <app-input-with-validation id="signin_password" name="signin_password" type="password" placeholder="" [formRef]="formSignin" controlName="signin_password" [validation]=true [autocompleteName]="'current-password'" [showErrors]="showErrorSignin"></app-input-with-validation>
                           </span>
                         </p>
                         <p class="form-row" style="margin-top: 20px;">
@@ -48,7 +41,7 @@
                             Accedi
                           </button>
                           
-                          <label class="d-flex align-items-center woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+                          <!-- <label class="d-flex align-items-center woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
                             <input
                               class="woocommerce-form__input woocommerce-form__input-checkbox"
                               name="rememberme"
@@ -57,7 +50,7 @@
                               value="forever"
                             />
                             <span class="ml-1 mt-1n">Ricordami</span>
-                          </label>
+                          </label> -->
                         </p>
                         <p class="woocommerce-LostPassword lost_password">
                           <a
@@ -65,37 +58,47 @@
                             >Password dimenticata?</a
                           >
                         </p>
+                        <p *ngIf="isMobile" class="woocommerce-LostPassword lost_password" style="margin-top: 10px;">
+                          <span
+                            class="not-yet-account"
+                            (click)="scrollToRegistrationFormOnMobile()"
+                            >Non hai un account? <u>REGISTRATI</u></span
+                          >
+                        </p>
                       </form>
                     </div>
                     <div class="u-column2 col-2">
                       <h2>Registrati</h2>
-                      <form
-                        [formGroup]="formSignup"
-                        method="post"
-                        class="woocommerce-form woocommerce-form-register register"
-                        style="min-height: 352px"
-                      >
-                        <p
-                          class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide"
-                        >
-                          <label for="reg_email"
-                            >Indirizzo email&nbsp;<span class="required"
-                              >*</span
-                            ></label
-                          >
-                          <input
-                            type="email"
-                            class="woocommerce-Input woocommerce-Input--text input-text"
-                            name="email"
-                            id="reg_email"
-                            autocomplete="email"
-                            formControlName="signup_email"
-                          />
+                      <form #formRegistrati [formGroup]="formSignup" method="post" class="woocommerce-form woocommerce-form-register register" style="min-height: 352px">
+                        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                          <label for="signup_email">
+                            Indirizzo email&nbsp;
+                            <span class="required">*</span>
+                          </label>
+                          <app-input-with-validation id="signup_email" name="signup_email" type="email" placeholder="" [formRef]="formSignup" controlName="signup_email" [validation]=true [autocompleteName]="'email'" [showErrors]="showErrorSignup" style="display: contents;"></app-input-with-validation>
                         </p>
-                        <p>
+                        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                          <label for="signup_password">
+                            Password&nbsp;
+                            <span class="required">*</span>
+                          </label>
+                          <span class="password-input">
+                            <app-input-with-validation id="signup_password" name="signup_password" type="password" placeholder="" [formRef]="formSignup" controlName="signup_password" [validation]=true [showErrors]="showErrorSignup"></app-input-with-validation>
+                          </span>
+                        </p>
+                        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                          <label for="signup_retypePassword">
+                            Conferma password&nbsp;
+                            <span class="required">*</span>
+                          </label>
+                          <span class="password-input">
+                            <app-input-with-validation id="signup_retypePassword" name="signup_retypePassword" type="password" placeholder="" [formRef]="formSignup" controlName="signup_retypePassword" [validation]=true [showErrors]="showErrorSignup"></app-input-with-validation>
+                          </span>
+                        </p>
+                        <!-- <p>
                           Un link per impostare una nuova password verrà inviato
                           al tuo indirizzo email.
-                        </p>
+                        </p> -->
                         <div class="woocommerce-privacy-policy-text">
                           <p>
                             I tuoi dati personali verranno utilizzati unicamente per

@@ -212,3 +212,13 @@
 .password-input {
     width: 100%;
 }
+
+.not-yet-account {
+    color: var(--links-normal-color);
+}
+
+.not-yet-account:hover {
+    color: var(--links-hover-color);
+    cursor: pointer;
+}
+

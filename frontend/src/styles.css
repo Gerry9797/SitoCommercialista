@@ -62543,3 +62543,7 @@ span.color-primary {
     scrollbar-width: thin;
     scrollbar-color: #888 #f1f1f1;
   }
+
+  button:focus, [type=submit]:focus, [type=button]:focus {
+    outline: none;
+  }

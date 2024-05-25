@@ -13,10 +13,10 @@ import com.commercialista.backend.exception.GenericException;
  *  */
 public class WsProblema implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private String codice;
-	private String stato;
-	private String titolo;
-	private String descrizione;
+	private String code;
+	private String status;
+	private String title;
+	private String message;
 
 	/**
 	 * *
@@ -30,11 +30,11 @@ public class WsProblema implements Serializable {
 	 * @param stato       * @param titolo
 	 * @param descrizione
 	 */
-	public WsProblema(String codice, String stato, String titolo, String descrizione) {
-		this.codice = codice;
-		this.stato = stato;
-		this.titolo = titolo;
-		this.descrizione = descrizione;
+	public WsProblema(String code, String status, String title, String message) {
+		this.code = code;
+		this.status = status;
+		this.title = title;
+		this.message = message;
 	}
 
 	/**
@@ -126,12 +126,12 @@ public class WsProblema implements Serializable {
 	/**
 	 * @param ex * @return
 	 */
-	public static WsProblema of(String codice, int stato, String titolo, String message) {
+	public static WsProblema of(String code, int status, String title, String message) {
 		WsProblema problema = new WsProblema();
-		problema.setCodice(codice);
-		problema.setStato("" + stato);
-		problema.setTitolo(titolo);
-		problema.setDescrizione(message);
+		problema.setCode(code);
+		problema.setStatus("" + status);
+		problema.setTitle(title);
+		problema.setMessage(message);
 		return problema;
 	}
 
@@ -143,17 +143,17 @@ public class WsProblema implements Serializable {
 			return "";
 		}
 		List<String> tokens = new ArrayList<>();
-		if (!isEmpty(error.getCodice())) {
-			tokens.add(error.getCodice().trim());
+		if (!isEmpty(error.getCode())) {
+			tokens.add(error.getCode().trim());
 		}
-		if (!isEmpty(error.getStato())) {
-			tokens.add(error.getStato().trim());
+		if (!isEmpty(error.getStatus())) {
+			tokens.add(error.getStatus().trim());
 		}
-		if (!isEmpty(error.getTitolo())) {
-			tokens.add(error.getTitolo().trim());
+		if (!isEmpty(error.getTitle())) {
+			tokens.add(error.getTitle().trim());
 		}
-		if (!isEmpty(error.getDescrizione())) {
-			tokens.add(error.getDescrizione().trim());
+		if (!isEmpty(error.getMessage())) {
+			tokens.add(error.getMessage().trim());
 		}
 		return String.join(" - ", tokens);
 	}
@@ -185,49 +185,49 @@ public class WsProblema implements Serializable {
 		return output;
 	}
 
-	public String getCodice() {
-		return codice;
+	public String getCode() {
+		return code;
 	}
 
-	public void setCodice(String codice) {
-		this.codice = codice;
+	public void setCode(String code) {
+		this.code = code;
 	}
 
-	public String getStato() {
-		return stato;
+	public String getStatus() {
+		return status;
 	}
 
-	public void setStato(String stato) {
-		this.stato = stato;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
-	public String getTitolo() {
-		return titolo;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setTitolo(String titolo) {
-		this.titolo = titolo;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
-	public String getDescrizione() {
-		return descrizione;
+	public String getMessage() {
+		return message;
 	}
 
-	public void setDescrizione(String descrizione) {
-		this.descrizione = descrizione;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("WsProblema [codice=");
-		builder.append(codice);
-		builder.append(", stato=");
-		builder.append(stato);
-		builder.append(", titolo=");
-		builder.append(titolo);
-		builder.append(", descrizione=");
-		builder.append(descrizione);
+		builder.append("WsProblema [code=");
+		builder.append(code);
+		builder.append(", status=");
+		builder.append(status);
+		builder.append(", title=");
+		builder.append(title);
+		builder.append(", message=");
+		builder.append(message);
 		builder.append("]");
 		return builder.toString();
 	}

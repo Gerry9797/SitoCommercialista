@@ -1,5 +1,5 @@
-<div class="woocommerce-notices-wrapper">
+<div id="{{idCustom}}" class="woocommerce-notices-wrapper">
   <ul class="woocommerce-{{status}}" role="alert">
-    <li>{{message}}</li>
+    <li><strong *ngIf="title">{{title}}:</strong>&nbsp;{{message}}</li>
   </ul>
 </div>

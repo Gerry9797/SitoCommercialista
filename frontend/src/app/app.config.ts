@@ -42,10 +42,16 @@ export const SITE_CONFIG = {
         },
         loginSignup: {
             MAX_EMAIL_LEN: 50,
-            MAX_PASSWORD_LEN: 120
+            MAX_PASSWORD_LEN: 50
         }
     },
     support: {
         email: "support@latuacommercialista.it"
+    },
+    errors: {
+        msgTechnicalError: {
+            title: "Errore tecnico",
+            message: "riprova o contatta l'assistenza se il problema persiste"
+        }
     }
 }

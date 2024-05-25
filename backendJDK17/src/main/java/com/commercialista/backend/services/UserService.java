@@ -178,11 +178,11 @@ public class UserService {
 	
 	public ResponseEntity<?> checkViolations(SignupRequest signUpRequest) {
 		if (userRepository.existsByUsername(signUpRequest.getUsername())) {
-			return ResponseEntity.badRequest().body(new MessageResponse("Errore: Username già esistente!"));
+			return ResponseEntity.badRequest().body(new MessageResponse("Username già esistente!"));
 		}
 
 		if (userRepository.existsByEmail(signUpRequest.getEmail())) {
-			return ResponseEntity.badRequest().body(new MessageResponse("Errore: Email già in uso!"));
+			return ResponseEntity.badRequest().body(new MessageResponse("Email già in uso!"));
 		}
 		return null;
 	}

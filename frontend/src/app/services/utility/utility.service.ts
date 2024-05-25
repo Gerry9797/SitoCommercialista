@@ -1,5 +1,5 @@
 import { HttpHeaders, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { ElementRef, Injectable } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
@@ -86,6 +86,42 @@ export class UtilityService {
       + " " + SITE_CONFIG.datiPersonali.sede.cap
       + " " + SITE_CONFIG.datiPersonali.sede.localita
       + " (" + SITE_CONFIG.datiPersonali.sede.provincia + ")"
+  }
+
+  scrollToElementIfNotInView(targetElement: ElementRef) {
+    let element = targetElement.nativeElement;
+    let rect = element.getBoundingClientRect();
+
+    // Verifica se l'elemento è visibile nella finestra
+    let isInView = rect.top >= 0 && rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+
+    if (!isInView) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  scrollToElementIfNotInViewExcludingHeader(idElemTarget: string) {
+    debugger
+    let element = document.getElementById(idElemTarget);
+    if (element) {
+      let rect = element.getBoundingClientRect();
+      let margin = 100; // Margine di 20 pixel sotto la parte superiore della finestra
+  
+      // Verifica se l'elemento è visibile nella finestra con il margine
+      let isInView = rect.top >= margin && rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+  
+      if (!isInView) {
+        window.scrollTo({
+          top: window.scrollY + rect.top - margin,
+          behavior: 'smooth'
+        });
+      }
+    }
+
   }
 
 }
