@@ -107,7 +107,7 @@ export class UtilityService {
     let element = document.getElementById(idElemTarget);
     if (element) {
       let rect = element.getBoundingClientRect();
-      let margin = 100; // Margine di 20 pixel sotto la parte superiore della finestra
+      let margin = 120; // Margine di 20 pixel sotto la parte superiore della finestra
   
       // Verifica se l'elemento è visibile nella finestra con il margine
       let isInView = rect.top >= margin && rect.left >= 0 &&
