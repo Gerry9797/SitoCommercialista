@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -18,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.commercialista.backend.controllers.AuthController;
 import com.commercialista.backend.enums.StatiAccountEnum;
+import com.commercialista.backend.exception.ResourceNotFoundException;
 import com.commercialista.backend.models.Account;
 import com.commercialista.backend.models.ERole;
 import com.commercialista.backend.models.Role;
@@ -208,6 +210,25 @@ public class UserService {
 			throw new Exception("Account sospeso, contattaci se lo ritieni un errore");
 		}
 		return user;
+	}
+	
+	@Transactional(rollbackFor = Exception.class, readOnly = false)
+	public void deleteUtenteAndAccount(Long userId, LoginRequest request) throws Exception {
+		Account account = accountRepository.findById(userId)
+    			.orElseThrow(() -> new ResourceNotFoundException("Account non trovato per questo ID : " + userId));
+    	
+    	User user = userRepository.findById(userId)
+    			.orElseThrow(() -> new ResourceNotFoundException("Utente non trovato per questo ID : " + userId));
+    	
+    	BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+    	boolean isPasswordCorrect = encoder.matches(request.getPassword(), user.getPassword());
+    	if(!isPasswordCorrect) {
+    		throw new Exception("La password inserità non è corretta!");
+    	}
+    	
+    	roleRepository.deleteByUserId(userId);
+    	accountRepository.delete(account);
+    	userRepository.delete(user);
 	}
 
 }

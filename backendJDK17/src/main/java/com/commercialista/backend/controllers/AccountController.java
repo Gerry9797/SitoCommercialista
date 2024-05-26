@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -19,7 +20,9 @@ import com.commercialista.backend.exception.ResourceNotFoundException;
 import com.commercialista.backend.models.Account;
 import com.commercialista.backend.models.User;
 import com.commercialista.backend.payload.request.ChangePasswordRequest;
+import com.commercialista.backend.payload.request.LoginRequest;
 import com.commercialista.backend.repository.AccountRepository;
+import com.commercialista.backend.repository.RoleRepository;
 import com.commercialista.backend.repository.UserRepository;
 import com.commercialista.backend.security.services.UserDetailsImpl;
 import com.commercialista.backend.services.EmailSenderService;
@@ -41,6 +44,9 @@ public class AccountController {
 	
 	@Autowired
 	UserRepository userRepository;
+	
+	@Autowired
+	RoleRepository roleRepository;
 	
 	@Autowired
 	UserService userService;
@@ -202,6 +208,17 @@ public class AccountController {
     	
     	user.setPassword(encoder.encode(request.getNewPassword()) );
     	userRepository.save(user);
+		return ResponseEntity.ok().body(true);
+    	
+    }
+	
+	@DeleteMapping("/account/{userId}/deleteUser")
+    public ResponseEntity<Boolean> removeUserAndAccountFromTheSystem(
+    		@PathVariable(value = "userId") Long userId,
+    		@Valid @RequestBody LoginRequest request
+    		) throws Exception {
+  
+    	userService.deleteUtenteAndAccount(userId, request);
 		return ResponseEntity.ok().body(true);
     	
     }
