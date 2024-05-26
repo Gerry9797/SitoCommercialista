@@ -2,6 +2,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { Component, ElementRef, HostListener, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { AuthService } from 'src/app/_services/auth.service';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
 import { SITE_CONFIG } from 'src/app/app.config';
@@ -53,7 +54,7 @@ export class LoginSignupComponent implements OnInit {
     private tokenStorage: TokenStorageService,
     private router: Router,
     // private notifyService: NotificationService,
-    // private spinner: NgxSpinnerService,
+    private spinner: NgxSpinnerService,
     // private dialogService: DialogService,
     private internalSessionManager: InternalSessionManagerService,
     // private dynamicMetadataService: DynamicMetadataService,
@@ -109,18 +110,17 @@ export class LoginSignupComponent implements OnInit {
      this.message = null; // resetta il messaggio di errore generico
     
      if(this.checkAndValidateForm(this.formSignin)){
-      //  this.spinner.show("spinner");
+       this.spinner.show("spinner");
        this.authService.login(email, password).subscribe(
          data => {
            this.tokenStorage.saveToken(data.accessToken);
            this.tokenStorage.saveUser(data);
-          //  this.spinner.hide("spinner");
+           this.spinner.hide("spinner");
            this.generalErrorMessageSignin = null
            this.redirectAfterLogin();
          },
          err => {
-          debugger
-          //  this.spinner.hide("spinner");
+          this.spinner.hide("spinner");
            if(err?.error.message){
              this.generalErrorMessageSignin = err.error.message
              this.setAndFocusGeneralNotification(
@@ -156,19 +156,16 @@ export class LoginSignupComponent implements OnInit {
    }
 
    signup(){
-    //  console.log("signup click");
-    //  console.log(this.formSignup);
-    debugger;
  
      let username = ""; // non gestito uno username
      let email = this.formSignup.get('signup_email')?.value
      let password = this.formSignup.get('signup_password')?.value
  
      if(this.checkAndValidateForm(this.formSignup)){
-      //  this.spinner.show("spinner");
+      this.spinner.show("spinner");
        this.authService.register(username, email, password).subscribe(
          data => {
-          //  this.spinner.hide("spinner");
+          this.spinner.hide("spinner");
           //  this.openModalEmailSent(email);
            this.generalErrorMessageSignup = null;
          },
@@ -195,7 +192,7 @@ export class LoginSignupComponent implements OnInit {
              );
             //  this.notifyService.showError(this.translateService.instant('general.errors.msgTechnicalError'));
            }
-          //  this.spinner.hide("spinner");
+          this.spinner.hide("spinner");
          }
        );
      }

@@ -77,6 +77,7 @@ import { FileDownloadCardComponent } from './bricks/cards/file-download-card/fil
 import { WebinarCardComponent } from './bricks/cards/webinar-card/webinar-card.component';
 import { ErrorComponent } from './components/error/error.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 export function playerFactory() {
   return player;
@@ -162,7 +163,8 @@ registerLocaleData(localeIt);
     MatFormFieldModule,
     MatInputModule,
     OverlayModule,
-    AsyncPipe
+    AsyncPipe,
+    NgxSpinnerModule
   ],
   providers: [
     authInterceptorProviders,

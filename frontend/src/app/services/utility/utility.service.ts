@@ -103,7 +103,7 @@ export class UtilityService {
   }
 
   scrollToElementIfNotInViewExcludingHeader(idElemTarget: string) {
-    debugger
+  
     let element = document.getElementById(idElemTarget);
     if (element) {
       let rect = element.getBoundingClientRect();
