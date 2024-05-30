@@ -5,22 +5,32 @@ import java.awt.color.ICC_Profile;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.StringWriter;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.apache.pdfbox.io.IOUtils;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.runtime.RuntimeConstants;
 import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
+import org.jsoup.Jsoup;
+import org.jsoup.helper.W3CDom;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 import org.xhtmlrenderer.pdf.ITextRenderer;
 
+import com.commercialista.backend.security.services.rendering.AutoFont;
+import com.commercialista.backend.security.services.rendering.AutoFont.CSSFont;
 import com.commercialista.backend.security.services.rendering.ChainingReplacedElementFactory;
 import com.commercialista.backend.security.services.rendering.ImageReplacedElementFactory;
 import com.commercialista.backend.security.services.rendering.SVGReplacedElementFactory;
@@ -28,6 +38,8 @@ import com.lowagie.text.pdf.BaseFont;
 import com.lowagie.text.pdf.PdfCopy;
 import com.lowagie.text.pdf.PdfReader;
 import com.lowagie.text.pdf.PdfWriter;
+import com.openhtmltopdf.pdfboxout.PdfRendererBuilder;
+import com.openhtmltopdf.pdfboxout.PdfRendererBuilder.PdfAConformance;
 
 @Service
 public class PdfService {
@@ -122,6 +134,45 @@ public class PdfService {
         String html = renderTemplate(templateName, templateParameters);
         byte[] pdf = convertHtmlToPdf(html);
         return convertPdfToPdfA(pdf);
+    }
+    
+    public byte[] generateAccessiblePdf(String templateName, Map<String, Object> templateParameters) throws Exception {
+
+    	PdfAConformance pdfaLevel = PdfAConformance.PDFA_3_A;
+    	
+        String html = renderTemplate(templateName, templateParameters);
+        try (ByteArrayInputStream xmlInputStream = new ByteArrayInputStream(html.getBytes("UTF-8"))) { 
+            // Parse the XML content 
+            W3CDom w3cDom = new W3CDom(); 
+            org.jsoup.nodes.Document jsoupDoc = Jsoup.parse(xmlInputStream, "UTF-8", ""); 
+ 
+            URL fontDirURL = PdfService.class.getClassLoader().getResource("fonts"); 
+            if (fontDirURL == null) { 
+                throw new RuntimeException("Font directory not found in resources."); 
+            } 
+            Path fontDirectory = Paths.get(fontDirURL.toURI()); 
+            List<CSSFont> fonts = AutoFont.findFontsInDirectory(fontDirectory);
+ 
+            PdfRendererBuilder builder = new PdfRendererBuilder(); 
+            AutoFont.toBuilder(builder, fonts); 
+ 
+            builder.useFastMode(); 
+            builder.usePdfUaAccessbility(true); 
+            builder.usePdfAConformance(pdfaLevel); 
+            builder.withW3cDocument(w3cDom.fromJsoup(jsoupDoc), ""); 
+ 
+            try (InputStream colorProfile = PdfService.class.getResourceAsStream("/colorspaces/sRGB.icc")) { 
+                byte[] colorProfileBytes = IOUtils.toByteArray(colorProfile); 
+                builder.useColorProfile(colorProfileBytes); 
+            } 
+ 
+            ByteArrayOutputStream baos = new ByteArrayOutputStream(); 
+ 
+            builder.toStream(baos); 
+            builder.run(); 
+ 
+            return baos.toByteArray(); 
+        }
     }
 
 }

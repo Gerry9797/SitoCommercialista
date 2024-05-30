@@ -126,5 +126,16 @@ public class TestPdfController {
 		headers.setContentType(MediaType.APPLICATION_PDF);headers.setContentDispositionFormData("attachment", filename);
 		headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");return new ResponseEntity<>(bytePdf, headers, HttpStatus.OK);
 	}
+	
+	@GetMapping("/getPdfAccessibleFromTemplateReadingValuesFromXmlString")
+	public ResponseEntity<byte[]> getAccessiblePdfFromTemplateReadingValuesFromXmlString() throws Exception {
+		// mappa con valori da utilizzare nel template .vm
+		Map parameters = new HashMap<>();
+		byte[] bytePdf = pdfService.generateAccessiblePdf("pdf/modelloEsempioAccessibile", parameters);
+		String filename = "esempio-accessibile.pdf";
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_PDF);headers.setContentDispositionFormData("attachment", filename);
+		headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");return new ResponseEntity<>(bytePdf, headers, HttpStatus.OK);
+	}
 
 }

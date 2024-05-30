@@ -1,0 +1,1158 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Il titolo del tuo documento</title>
+    <meta name="author" content="Nome dell'autore">
+    <meta name="description" content="Descrizione del documento">
+    <style>
+
+
+        /* =============== Global CSS =============== */
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            /* Define css variables here (not supported by Flying Saucer) */
+            --gray: #aaa;
+        }
+        html {
+            font-size: 10px;
+        }
+        body {
+            width: 100%;
+            min-height: 100vh;
+            background-color: white;
+            font-family: 'Titillium Web';
+        }
+        * {
+            font-family: 'Titillium Web';
+        }
+
+        /* =============== Common =============== */
+        /* Main container */
+        .container {
+            width: 100%;
+            max-width: 100%;
+            margin: 40px auto; /* vertically */
+            padding: 0 10px; /* horizontally */
+        }
+        .container > * {
+            margin-bottom: 40px; /* space between elements */
+        }
+        .container > *:last-child {
+            margin-bottom: 0; /* no space at bottom page */
+        }
+
+        /* Base element container */
+        .containerElement {
+            width: 100%;
+            page-break-inside: avoid;
+            margin-top: 10px;
+        }
+
+        /* TextField, Label, Helptext */
+        .labelRelative {
+            position: relative;
+        }
+        .labelAbsolute {
+            position: absolute;
+            top: -7px;
+            left: 8px;
+            padding: 0 5px;
+            font-size: 14px;
+            color: #666;
+            background-color: white;
+        }
+        .labelAbsolute > * {
+            display: inline;
+        }
+        .content { /* with border like <input type="text"/> */
+            border-width: 1px;
+            border-color: #d9d9d9;
+            border-style: solid;
+            border-radius: 4px;
+            padding: 10px 13px;
+            font-size: 14px;
+            height: fit-content;
+            min-height: 20px;
+            margin-bottom: 5px; /* space for helptext */
+            margin-right: 10px;
+        }
+        .content:last-child {
+            margin-right: 0;
+        }
+        .helptext {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Option (Checkbox or Radio) */
+        .containerOption {
+            width: 100%;
+            margin-bottom: 5px; /* space between options */
+        }
+        .textOption {
+            display: inline-block;
+            vertical-align: middle; /* allineamento verticale */
+            text-align: start; /* allineamento orizzontale */
+            /*white-space: nowrap; */ /* non wrappa il contenuto */
+
+            font-size: 16px;
+            margin-left: 8px; /* space between icon and text */
+        }
+        .textOption > * {
+            display: inline;
+        }
+
+        /* =============== Util =============== */
+        .wrap-text {
+            word-wrap: break-word;
+        }
+        .utilCollapseText {
+            display: inline-block;
+            max-width: 94%;
+            height: 20px;
+            white-space: nowrap; /* non wrappa il contenuto */
+            overflow: hidden; /* nasconde il resto del contenuto */
+            text-overflow: ellipsis; /* mette i ... alla fine */
+        }
+        .utilAlignRight { /* works with items of "display:inline-block", place it to parent container */
+            text-align: right;
+        }
+        .utilPositionRight { /* works only when item is alone in container */
+            position: relative;
+            right: 0;
+            margin-left: auto;
+        }
+
+        /* =============== Icons =============== */
+        /* Generic Icon */
+        .icon {
+            display: inline-block;
+            vertical-align: middle; /* allineamento verticale */
+            text-align: center; /* allineamento orizzontale */
+            font-size: 15px; /* additional size */
+        }
+        .icon > * {
+            height: 15px; /* size */
+            width: 15px; /* size */
+            vertical-align: text-bottom; /* posizionamento verticale */
+        }
+
+        /* Checkbox Icon */
+        .iconCheckbox {
+            display: inline-block;
+            vertical-align: middle; /* allineamento verticale */
+            text-align: center; /* allineamento orizzontale */
+
+            border: 1px solid #d9d9d9;
+            border-radius: 3px;
+
+            height: 15px; /* square */
+            width: 15px; /* square */
+
+            cursor: pointer;
+        }
+        .iconCheckbox[checked="true"] {
+            border-color: #666;
+            background-color: #666;
+            color: white;
+        }
+
+        /* Radio Icon */
+        .iconRadio {
+            display: inline-block;
+            vertical-align: middle; /* allineamento verticale */
+            text-align: center; /* allineamento orizzontale */
+
+            border: 1px solid #d9d9d9;
+            border-radius: 100%;
+
+            height: 15px; /* circle */
+            width: 15px; /* circle */
+
+            cursor: pointer;
+        }
+        .iconRadio[checked="true"] {
+            border-color: #d9d9d9;
+            border-width: 4px;
+            background-color: #818181;
+        }
+
+        /* =============== 1) [Input] Text Element =============== */
+        /* (use of Common: TextField, Label, Helptext) */
+
+        /* =============== 2) [Input] Numeric Element =============== */
+        /* (use of Common: TextField, Label, Helptext) */
+
+        /* =============== 3) [Input] Date Element =============== */
+        /* (use of Common: TextField, Label, Helptext) */
+
+        /* =============== 4) [Input] Currency Element =============== */
+        /* (use of Common: TextField, Label, Helptext) */
+
+        /* TODO (?) =============== 5) [Input] Upload Element =============== */
+
+        /* =============== 6) [Input] Checkbox Element =============== */
+        /* (use of Common: Option) */
+        .label_checkbox {
+            margin-left: 8px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #aaa;
+        }
+        .label_checkbox > * {
+            display: inline;
+        }
+        .helptext_checkbox {
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        /* =============== 7) [Input] SingleChoice Element =============== */
+        /* (use of Common: Option) */
+        .label_singlechoice {
+            margin-left: 8px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #aaa;
+        }
+        .label_singlechoice > * {
+            display: inline;
+        }
+        .helptext_singlechoice {
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        /* =============== 8) [Input] MultipleChoice Element =============== */
+        /* (use of Common: Option) */
+        .label_multiplechoice {
+            margin-left: 8px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #aaa;
+        }
+        .label_multiplechoice > * {
+            display: inline;
+        }
+        .helptext_multiplechoice {
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        /* =============== 9) [Graphic] Divider Element (Title Divider) =============== */
+        .containerTitleAndLine {
+            width: 100%;
+            position: relative;
+        }
+        .horizontalLine {
+            position: absolute;
+            top: 14px;
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background-color: black ;
+        }
+        .containerTitle {
+            position: relative;
+            display: inline-block;
+            width: 90%;
+            line-height: 1.4; /* to center vertically the line divider */
+            padding-right: 10px; /* previene wrapping disordinato */
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .textTitle {
+            background-color: rgb(255, 255, 255); /* copre la linea del divider */
+            padding-right: 20px;
+        }
+        .textTitle > * {
+            display: inline;
+        }
+
+        /* =============== 10) [Graphic] Page Element (Page Divider) =============== */
+        .containerPageDivider {
+            padding: 2px 8px; /* posizione testo */
+            height: 32px;
+            background-color: rgb(233, 237, 247);
+            /* TODO: Implementare vai a pagina nuova */
+        }
+
+        /* =============== 11) [Graphic] Paragraph Element =============== */
+        .paragraph {
+            font-size: 16px;
+        }
+
+        /* =============== 12) [Graphic] Info Element (Box Informativo) =============== */
+        .containerInfo_warning {
+            height: fit-content;
+            padding: 20px 24px;
+            border-width: 1px;
+            border-color: #ffd77a;
+            border-style: solid;
+            border-radius: 4px;
+            background-color: #fff9e6;
+        }
+
+        .containerInfo {
+            height: fit-content;
+            padding: 20px 24px;
+            border-width: 1px;
+            border-color: rgb(143, 200, 252);
+            border-style: solid;
+            border-radius: 4px;
+            background-color: rgb(228, 242, 253);
+        }
+        .textInfo {
+            font-size: 16px;
+        }
+
+        /* =============== 13) [Container] Row Element =============== */
+        .containerRowElement {
+            width: 100%;
+            /*border: 2px solid rgb(240, 240, 240);*/
+            /*border-radius: 8px;*/
+        }
+        /*.header_row {*/
+        /*    padding: 2px 8px; !* posizione testo *!*/
+        /*    height: 24px;*/
+        /*    background-color: rgb(240, 240, 240);*/
+        /*    border-top-left-radius: 5px;*/
+        /*    border-top-right-radius: 5px;*/
+        /*}*/
+        .table-container {
+            width: 100%;
+            /* space between, removed */
+        }
+        .table-item {
+            vertical-align: top;
+        }
+
+        /* =============== 14) [Container] Column Element =============== */
+        .containerColumnElement {
+            width: 100%;
+            /*border: 2px solid rgb(240, 240, 240);*/
+            /*border-radius: 8px;*/
+        }
+        .header_column {
+            padding: 2px 8px; /* posizione testo */
+            height: 24px;
+            background-color: rgb(240, 240, 240);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .containerChildren_column {
+            width: 100%;
+            padding: 8px;
+        }
+        .containerChildren_column > * {
+            margin-bottom: 20px; /* Spazio tra gli elementi */
+        }
+        .containerChildren_column > *:last-child {
+            margin-bottom: 0; /* Annulla spazio ultimo elemento */
+        }
+
+        /* =============== 15) [Container] Question Element =============== */
+        /* wrap: Question */
+        .containerQuestionElement {
+            width: 100%;
+            /*border: 2px solid rgb(240, 240, 240);*/
+            /*border-radius: 8px;*/
+        }
+        .header_question {
+            padding: 2px 8px; /* posizione testo */
+            height: 24px;
+            background-color: rgb(240, 240, 240);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        /* wrap: Titolo, Descrizione, Children */
+        .containerTitlePlusChildren_question {
+            padding: 8px;
+        }
+        .containerTitlePlusChildren_question > * {
+            margin-bottom: 20px;
+        }
+        .containerTitlePlusChildren_question > *:last-child {
+            margin-bottom: 0;
+        }
+        /* Titolo (use of DividerElement) */
+        /* Descrizione */
+        .description_question {
+            font-size: 14px;
+        }
+        /* Children */
+        .containerChildren_question {
+            width: 100%;
+        }
+        .containerChildren_question > * {
+            margin-bottom: 20px; /* Spazio tra gli elementi */
+        }
+        .containerChildren_question > *:last-child {
+            margin-bottom: 0; /* Annulla spazio ultimo elemento */
+        }
+
+        /* =============== 16) [Computed] ComputedBoolean Element =============== */
+        /* (use of Common: Option) */
+        .label_computedboolean {
+            margin-left: 8px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #aaa;
+        }
+        .label_computedboolean > * {
+            display: inline;
+        }
+
+        /* =============== 17) [Computed] ComputedNumber Element =============== */
+        /* (use of Common: TextField, Label) */
+
+        /* =============== 18) [Computed] ComputedString Element =============== */
+        /* (use of Common: TextField, Label) */
+
+        /* =============== 19) [Advanced] Confirm Element =============== */
+        /* Container all of Buttons */
+        .containerButtons {
+            width: 100%;
+            white-space: nowrap; /* non wrappa il contenuto */
+        }
+        .containerButtons > * {
+            margin-left: 20px; /* space between buttons */
+        }
+        .containerButtons > *:first-child {
+            margin-left: 0; /* cancel space on first button */
+        }
+
+        /* Single Button */
+        .containerButton {
+            display: inline-block;
+            padding: 10px 13px;
+
+            background-color: #4150aa;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .containerButton:hover {
+            background-color: #2e2eff;
+        }
+        .containerButton > * {
+            margin-left: 8px; /* space between icon and text */
+            color: white;
+        }
+        .containerButton > *:first-child {
+            margin-left: 0; /* cancel space on icon */
+        }
+
+        /* Label Button */
+        .textButton {
+            display: inline-block;
+            vertical-align: middle; /* allineamento verticale */
+            text-align: center; /* allineamento orizzontale */
+            font-size: 16px;
+            color: white;
+        }
+
+        /* =============== 20) [Advanced] Repeatable Element =============== */
+        .containerRepeatableElement {
+            width: 100%;
+            /*border: 2px solid rgb(240, 240, 240);*/
+            /*border-radius: 8px;*/
+        }
+        /* Header */
+        /*.header_repeatable {*/
+        /*    height: 24px; !* altezza riga header *!*/
+        /*    padding: 2px 8px;*/
+        /*    background-color: rgb(240, 240, 240);*/
+        /*    border-top-left-radius: 5px;*/
+        /*    border-top-right-radius: 5px;*/
+        /*}*/
+        /* Main Container */
+        .containerRepetitionsPlusDescription {
+            /*margin: 10px; !* space for secondary border *!*/
+            width: 97%; /* space for secondary border */
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+        }
+        /* Contenitore Ripetizioni */
+        .containerRepetitions {
+            width: 100%;
+        }
+        /* Contenitore Singola Ripetizione */
+        .containerSingleRepetition {
+            padding: 8px;
+            border-bottom: 1px solid #d9d9d9; /* divider ripetizioni */
+        }
+        /* Numero */
+        .numberRepetition {
+            font-size: 14px;
+        }
+        /* Elementi Ripetizione (Column Children) */
+        .containerElementsRepetition {
+            width: 100%;
+            padding: 8px;
+        }
+        .containerElementsRepetition > * {
+            margin-bottom: 20px; /* space between elements */
+        }
+        .containerElementsRepetition > *:last-child {
+            margin-bottom: 0; /* cancel space on last element */
+        }
+        /* Icona Rimuovi */
+        .iconRemove {
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            text-align: center;
+            /* vertical-align: middle; !* not work *! */
+            font-size: 23px;
+            width: 40px;
+            height: 40px;
+            background-color: #f5f5f5;
+        }
+        /* Contenitore Descrizione Ripetizioni */
+        .containerDescription_repeatable {
+            width: 100%;
+            padding: 8px;
+        }
+        .description_repeatable {
+            width: 100%; /* force align button to right */
+            font-size: 14px;
+        }
+        .buttonAggiungi {
+            display: inline-block;
+            white-space: nowrap; /* non wrappa il contenuto */
+            padding: 10px 13px;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            text-align: center; /* allineamento orizzontale */
+            vertical-align: middle; /* allineamento verticale */
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .buttonAggiungi:hover {
+            border-color: #2e2eff;
+            color: #2e2eff;
+        }
+
+        /* =============== 21) [Advanced] Subsection Element =============== */
+        .containerSubsectionElement {
+            width: 100%;
+            border: 2px solid rgb(240, 240, 240);
+            border-radius: 8px;
+        }
+        .header_subsection {
+            padding: 2px 8px; /* posizione testo */
+            height: 24px;
+            background-color: rgb(240, 240, 240);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .containerChildren_subsection {
+            width: 100%;
+            padding: 8px;
+        }
+        .containerChildren_subsection > * {
+            margin-bottom: 20px; /* Spazio tra gli elementi */
+        }
+        .containerChildren_subsection > *:last-child {
+            margin-bottom: 0; /* Annulla spazio ultimo elemento */
+        }
+
+        /* =============== 22) [Advanced] Async Select Element =============== */
+        /* (use of Common: TextField, Label, Helptext) */
+
+        /* =============== 23) [Advanced] TableInput Element =============== */
+        /* Table */
+        .containerTableinput {
+            width: 100%;
+            border-spacing: 1px; /* space between elements */
+            /* border-collapse: separate; */
+        }
+
+        /* Header */
+        firstRow-headerTableInput {
+            width: 100%;
+        }
+        .firstRow-headerTableInput > *:first-child {
+            border-top-left-radius: 4px;
+        }
+        .firstRow-headerTableInput > *:last-child {
+            border-top-right-radius: 4px;
+        }
+        .secondRow-headerTableInput {}
+
+
+        /* Row */
+        .rowTableInput {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        /*!* Item Header *!*/
+        .itemHeaderTableInput {
+        /*    !* vertical-align: top; *!*/
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            overflow-wrap: break-word;
+            padding: 4px 8px;
+            cursor: pointer;
+        }
+
+        /*!* Item *!*/
+        .itemTableInput {
+            text-align: center;
+            /* vertical-align: top; */
+            padding: 4px 8px;
+        }
+        .itemTableInput > p {
+            display: inline;
+        }
+        .firstCell {
+            text-align: start;
+        }
+
+
+        /* =============== 24) [Advanced] Repeat Controller Element =============== */
+        /* (use of Common: TextField, Label, Helptext) */
+
+        /* =============== 25) [Advanced] Button Element =============== */
+        /* (use of ConfirmElement) */
+
+
+
+
+        /* New styles */
+        .mainColor {
+            color: black ; /* context */
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        .nameSection > * {
+            display: inline;
+        }
+        .codeSection > * {
+            display: inline;
+        }
+        .header {
+            margin-top: 10px;
+            position: running(header);
+        }
+        .page::before {
+            content: counter(page)
+        }
+        .pages::before {
+            content: counter(pages)
+        }
+        .footer {
+            margin-bottom: 10px;
+            position: running(footer);
+        }
+
+        @page {
+            size: A4;
+            margin: 20mm;
+            padding: 0;
+            border: 0;
+            margin-bottom: 160px;
+            margin-top: 160px;
+        }
+
+        @page {
+           @top-center {
+               content: element(header);
+           }
+        }
+
+        @page {
+           @bottom-center { content: element(footer) }
+        }
+
+        .containerheader {
+            position: running(header);
+        }
+
+        .headerText {
+/*            position: absolute; */
+            margin-top: 0px;
+            margin-left: 0px;
+            height: 160;
+        }
+
+        .headerImages {
+            /* position: absolute; */
+            margin-top: 100px;
+            margin-left: 0px;
+        }
+
+        .headerImage {
+            margin: 5px 5px;
+            height: 50px;
+            align-items: $header.imagesAlignment;
+            width: 50px;
+        }
+
+        .containerfooter {
+            position: running(footer);
+        }
+
+        .footerText {
+            /* position: absolute; */
+            margin-top: 0px;
+            margin-left: 0px;
+            height: 160;
+        }
+
+        .footerImages {
+            /* position: absolute; */
+            margin-top: 100px;
+            margin-left: 0px;
+        }
+
+        .footerImage {
+            margin: 5px 5px;
+            height: 50px;
+            align-items: $footer.imagesAlignment;
+            width: 50px;
+        }
+
+        /* =============== =============== =============== =============== */
+    </style>
+    
+    <link rel="external" href="mailto:urp@regione.emilia-romagna.it" />
+    <link rel="external" href="http://wwwservizi.regione.emilia-romagna.it/autonomie/anagraficaeellconsultazione/" />
+</head>
+<body>
+	<bookmarks> 
+		<bookmark name="Titolo richiesta" href="#titolo-richiesta" />
+	   <bookmark name="Informativa Privacy" href="#informativa-privacy" />  
+    </bookmarks>
+<div class="container">
+
+<!-- ________________________________ BannerElement.vm ________________________________ -->
+    <div class="containerheader">
+<!-- ________________________________ BannerText.vm ________________________________ -->
+    <div class="headerText"><h2>Regione Emilia Romagna  <span class="page"></span> di  <span class="pages"></span></h2></div>
+<!-- ________________________________ BannerImages.vm ________________________________ -->
+
+
+    </div>
+
+<h1 id="titolo-richiesta">
+	<span class="nameSection">
+        Richiesta Tesserino raccolta funghi
+    </span>
+</h1>
+
+<!-- ________________________________ BannerElement.vm ________________________________ -->
+    <div class="containerfooter">
+<!-- ________________________________ BannerText.vm ________________________________ -->
+    <div class="footerText"><h2>Modulo Richiesta tesserino Raccolta funghi</h2><p> <span class="page"></span> di  <span class="pages"></span></p></div>
+<!-- ________________________________ BannerImages.vm ________________________________ -->
+
+
+    </div>
+
+<!-- ________________________________ BannerElement.vm ________________________________ -->
+    <div class="containerheader">
+<!-- ________________________________ BannerText.vm ________________________________ -->
+    <div class="headerText"><h2>Regione Emilia Romagna  <span class="page"></span> di  <span class="pages"></span></h2></div>
+<!-- ________________________________ BannerImages.vm ________________________________ -->
+
+
+    </div>
+
+<h1 id="informativa-privacy">
+	<p><strong>Informativa Privacy</strong></p>
+</h1>
+
+
+
+<!-- ________________________________ BannerElement.vm ________________________________ -->
+    <div class="containerfooter">
+<!-- ________________________________ BannerText.vm ________________________________ -->
+    <div class="footerText"><h2>Modulo Richiesta tesserino Raccolta funghi</h2><p> <span class="page"></span> di  <span class="pages"></span></p></div>
+<!-- ________________________________ BannerImages.vm ________________________________ -->
+
+
+    </div>
+
+<!-- ________________________________ 11) [Graphic] ParagraphElement.vm ________________________________ -->
+<div class="containerElement">
+    <span class="paragraph">
+            <p><strong>1. Premessa </strong>Ai sensi dell’art. 13 del Regolamento europeo n. 679/2016, la Giunta della Regione Emilia-Romagna, in qualità di “Titolare” del trattamento, è tenuta a fornirle informazioni in merito all’utilizzo dei suoi dati personali. <br><br><strong>2. Identità e i dati di contatto del titolare del trattamento</strong> Il Titolare del trattamento dei dati personali di cui alla presente Informativa è la Giunta della Regione Emilia-Romagna, con sede in Bologna, Viale Aldo Moro n. 52, CAP 40127. Al fine di semplificare le modalità di inoltro e ridurre i tempi per il riscontro si invita a presentare le richieste di cui al paragrafo n. 10, alla Regione Emilia-Romagna, Ufficio per le relazioni con il pubblico (Urp), per iscritto o recandosi direttamente presso lo sportello Urp. L’Urp è aperto dal lunedì al venerdì dalle 9 alle 13 in Viale Aldo Moro 52, 40127 Bologna (Italia): telefono 800-662200, fax 051-527.5360, e-mail <a target="_blank" title="email regione emilia romagna" role="link" rel="noopener noreferrer nofollow" href="mailto:urp@regione.emilia-romagna.it">urp@regione.emilia-romagna.it</a>. <br><br><strong>3. Il Responsabile della protezione dei dati personali</strong> Il Responsabile della protezione dei dati designato dall’Ente è contattabile all’indirizzo mail dpo@regione.emilia-romagna.it o presso la sede della Regione Emilia-Romagna di Viale Aldo Moro n. 30. <br><br><strong>4. Responsabili del trattamento</strong> L’Ente può avvalersi di soggetti terzi per l’espletamento di attività e relativi trattamenti di dati personali di cui mantiene la titolarità. Conformemente a quanto stabilito dalla normativa, tali soggetti assicurano livelli di esperienza, capacità e affidabilità tali da garantire il rispetto delle vigenti disposizioni in materia di trattamento, ivi compreso il profilo della sicurezza dei dati. L’Ente Formalizza istruzioni, compiti ed oneri in capo a tali soggetti terzi con la designazione degli stessi a "Responsabili del trattamento". Sottopone tali soggetti a verifiche periodiche al fine di constatare il mantenimento dei livelli di garanzia registrati in occasione dell’affidamento dell’incarico iniziale. <br><br><strong>5. Soggetti autorizzati al trattamento</strong> I Suoi dati personali sono trattati da personale interno previamente autorizzato e designato quale incaricato del trattamento, a cui sono impartite idonee istruzioni in ordine a misure, accorgimenti, modus operandi, tutti volti alla concreta tutela dei suoi dati personali. 6. Finalità e base giuridica del trattamento Il trattamento dei suoi dati personali viene effettuato dalla Giunta della Regione Emilia-Romagna per lo svolgimento di funzioni istituzionali e, pertanto, ai sensi dell’art. 6 comma 1 lett. e) del regolamento europeo n. 679/2016 non necessita del suo consenso. I dati personali sono trattati per le seguenti finalità: a) Rilascio del tesserino autorizzativo per la raccolta dei funghi epigei nel territorio della Regione Emilia-Romagna, ai sensi della L.R. n. 6/1996; b) Rilascio dell’autorizzazione in deroga alla L.R. n. 6/1996 per la raccolta dei funghi epigei nel territorio della Regione Emilia-Romagna <br><br><strong>7. Destinatari dei dati personali</strong> I suoi dati personali sono oggetto di comunicazione al Gruppo dei Carabinieri Forestali competente per territorio e, in caso di richiesta di effettuare la raccolta nelle aree protette regionali, agli Enti di Gestione per i Parchi e la Biodiversità competenti per territorio (determinazione dirigenziale 23 marzo 2018, n. 3969, legge regionale 2 aprile 1996, n. 6, art. 7, comma 2). <br><br><strong>8. Trasferimento dei dati personali a Paesi extra U</strong>E I suoi dati personali non sono trasferiti al di fuori dell’Unione europea. <br><br><strong>9. Periodo di conservazione</strong> I suoi dati sono conservati per un periodo non superiore a quello necessario per il perseguimento delle finalità sopra menzionate. A tal fine, anche mediante controlli periodici, viene verificata costantemente la stretta pertinenza, non eccedenza e indispensabilità dei dati rispetto al rapporto, alla prestazione o all'incarico in corso, da instaurare o cessati, anche con riferimento ai dati che Lei fornisce di propria iniziativa. I dati che, anche a seguito delle verifiche, risultano eccedenti o non pertinenti o non indispensabili non sono utilizzati, salvo che per l'eventuale conservazione, a norma di legge, dell'atto o del documento che li contiene.<br><br><strong>10. I suoi diritti</strong> Nella sua qualità di interessato, Lei ha diritto: • di accesso ai dati personali; • di ottenere la rettifica o la cancellazione degli stessi o la limitazione del trattamento che lo riguardano; • di opporsi al trattamento; • di proporre reclamo al Garante per la protezione dei dati personali.<br><br><strong>11. Conferimento dei dati</strong> Il conferimento dei Suoi dati è facoltativo, ma necessario per le finalità sopra indicate. Il mancato conferimento comporterà l’impossibilità di rilasciare il tesserino autorizzativo alla raccolta dei funghi epigei e l’autorizzazione in deroga alla raccolta dei funghi epigei.</p>
+    </span>
+</div>
+<!-- ________________________________ 6) [Input] CheckboxElement.vm ________________________________ -->
+<div class="containerElement">
+
+    <!-- Label -->
+    <div class="label_checkbox utilCollapseText">
+            
+    </div>
+
+    <!-- Option -->
+    <div class="containerOption">
+
+        <!-- Checkbox -->
+            <div class="iconCheckbox" checked="true"> V </div>
+
+        <!-- Label Option -->
+        <div class="textOption">
+                <p>Conferma per presa visione informativa privacy</p>
+        </div>
+
+    </div>
+
+    <!-- HelpText -->
+    <div class="helptext_checkbox">
+    </div>
+
+</div><!-- ________________________________ 12) [Graphic] InfoElement.vm ________________________________ -->
+<div class="containerElement">
+    <div class="containerInfo_warning">
+        <div class="textInfo">
+            <table style="border: 0px; ">
+                <tr>
+                    <td style="vertical-align: top;">
+                            <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #907129; color: white; text-align: center; margin-right: 4px; line-height: 20px; padding-bottom: 4px;"><b>!</b></div>
+                    </td>
+                    <td>
+
+                            <p>Nell'elenco a tendina sono proposti solo i comuni per i quali è possibile raccogliere funghi epigei con una autorizzazione rilasciata dalla Regione Emilia Romagna. Se il comune non è presente in elenco, consultare la <a target="_blank" title="guida alla compilazione" role="link" rel="noopener noreferrer nofollow" href="http://wwwservizi.regione.emilia-romagna.it/autonomie/anagraficaeellconsultazione/" role="link"><strong>guida alla compilazione </strong></a>per individuare l'ente competente per il territorio su cui si desidera effettuare la raccolta. E' possibile, anche, recuperare l'indicazione dell'ente competente e l'URL del sito per il rilascio dei tesserini nella sezione "<strong>Trova Ente Competente</strong>".</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div><!-- ________________________________ 1) [Input] TextElement.vm ________________________________ -->
+<div class="containerElement" width="9.090909090909092%">
+
+    <!-- Label -->
+    <div class="labelRelative">
+        <span class="labelAbsolute utilCollapseText">
+                <p>Seleziona il comune dove effettuare la raccolta</p>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+            Agazzano
+    </div>
+
+    <!-- HelpText -->
+    <div class="helptext">
+                <p>La Regione rilascia l'autorizzazione solo per i comuni in elenco. </p>
+    </div>
+
+</div><!-- ________________________________ 13) [Container] RowElement.vm ________________________________ -->
+<div class="containerRowElement">
+
+    <!-- Header -->
+    <!--<div class="header_row">-->
+    <!--RIGA-->
+    <!--</div>-->
+
+    <!-- Children Container -->
+    <table class="table-container">
+    <tr>
+
+        <!-- Children -->
+
+            <!-- Child -->
+            <td class="table-item" width="50.0%">
+<!-- ________________________________ 1) [Input] TextElement.vm ________________________________ -->
+<div class="containerElement" width="50.0%">
+
+    <!-- Label -->
+    <div class="labelRelative">
+        <span class="labelAbsolute utilCollapseText">
+                <p>Nome del dichiarante</p>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+            Gerardo
+    </div>
+
+    <!-- HelpText -->
+    <div class="helptext">
+    </div>
+
+</div>            </td>
+
+
+            <!-- Child -->
+            <td class="table-item" width="50.0%">
+<!-- ________________________________ 1) [Input] TextElement.vm ________________________________ -->
+<div class="containerElement" width="50.0%">
+
+    <!-- Label -->
+    <div class="labelRelative">
+        <span class="labelAbsolute utilCollapseText">
+                <p>Cognome del dichiarante</p>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+            Corbisiero
+    </div>
+
+    <!-- HelpText -->
+    <div class="helptext">
+    </div>
+
+</div>            </td>
+
+
+    </tr>
+    </table>
+
+</div>
+
+<!-- ________________________________ 13) [Container] RowElement.vm ________________________________ -->
+<div class="containerRowElement">
+
+    <!-- Header -->
+    <!--<div class="header_row">-->
+    <!--RIGA-->
+    <!--</div>-->
+
+    <!-- Children Container -->
+    <table class="table-container">
+    <tr>
+
+        <!-- Children -->
+
+            <!-- Child -->
+            <td class="table-item" width="33.333333333333336%">
+<!-- ________________________________ 1) [Input] TextElement.vm ________________________________ -->
+<div class="containerElement" width="33.333333333333336%">
+
+    <!-- Label -->
+    <div class="labelRelative">
+        <span class="labelAbsolute utilCollapseText">
+                <p>Codice Fiscale del dichiarante</p>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+            CRBGRD97E22F138G
+    </div>
+
+    <!-- HelpText -->
+    <div class="helptext">
+    </div>
+
+</div>            </td>
+
+
+            <!-- Child -->
+            <td class="table-item" width="33.333333333333336%">
+<!-- ________________________________ 1) [Input] TextElement.vm ________________________________ -->
+<div class="containerElement" width="33.333333333333336%">
+
+    <!-- Label -->
+    <div class="labelRelative">
+        <span class="labelAbsolute utilCollapseText">
+                <p>Mail del dichiarante</p>
+        </span>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+            gerrycorbisiero@gmail.com
+    </div>
+
+    <!-- HelpText -->
+    <div class="helptext">
+    </div>
+
+</div>            </td>
+
+
+            <!-- Child -->
+            <td class="table-item" width="33.333333333333336%">
+            </td>
+
+
+    </tr>
+    </table>
+
+</div>
+
+<!-- ________________________________ 7) [Input] SingleChoiceElement.vm ________________________________ -->
+<div class="containerElement">
+
+    <!-- Label -->
+    <div class="labelRelative">
+        <span class="labelAbsolute utilCollapseText">
+                <p>Tipo di autorizzazione</p>
+        </span>
+    </div>
+
+    <!-- Options -->
+    <div class="content">
+
+            <!-- Option -->
+            <div class="containerOption">
+
+                <!-- Label Option -->
+                    <p>Valida per sei mesi dalla data di rilascio con importo fisso a 10,00€</p>
+
+            </div>
+
+    </div>
+    <!-- HelpText -->
+    <div class="helptext">
+    </div>
+
+
+</div><!-- ________________________________ 6) [Input] CheckboxElement.vm ________________________________ -->
+<div class="containerElement">
+
+    <!-- Label -->
+    <div class="label_checkbox utilCollapseText">
+            
+    </div>
+
+    <!-- Option -->
+    <div class="containerOption">
+
+        <!-- Checkbox -->
+            <div class="iconCheckbox"></div>
+
+        <!-- Label Option -->
+        <div class="textOption">
+                <p>Beneficiario diverso dal richiedente </p>
+        </div>
+
+    </div>
+
+    <!-- HelpText -->
+    <div class="helptext_checkbox">
+    </div>
+
+</div><!-- ________________________________ 13) [Container] RowElement.vm ________________________________ -->
+<div class="containerRowElement">
+
+    <!-- Header -->
+    <!--<div class="header_row">-->
+    <!--RIGA-->
+    <!--</div>-->
+
+    <!-- Children Container -->
+    <table class="table-container">
+    <tr>
+
+        <!-- Children -->
+
+    </tr>
+    </table>
+
+</div>
+
+<!-- ________________________________ 12) [Graphic] InfoElement.vm ________________________________ -->
+<div class="containerElement">
+    <div class="containerInfo_info">
+        <div class="textInfo">
+            <table style="border: 0px; ">
+                <tr>
+                    <td style="vertical-align: top;">
+                            <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #3a6f98; color: white; text-align: center; margin-right: 4px; line-height: 20px; padding-bottom: 4px;"><b>i</b></div>
+                    </td>
+                    <td>
+
+                            <p>
+Salta direttamente al contenuto
+Navigazione
+Salta al contenuto
+Seguici su 										seguici su 
+									linkedinlinkedin 										seguici su 
+									instagraminstagram 										seguici su 
+									youtubeyoutube 										seguici su 
+									telegramtelegram 										seguici su 
+									twittertwitter
+ITA 
+Logo GPDPGarante per la protezione dei dati personali
+
+Inserire il testo o il doc web
+ I miei diritti
+ Imprese ed enti
+Menu principale
+L'Autorità 
+Temi 
+Normativa e provvedimenti 
+News e comunicazione 
+Amministrazione trasparente
+Informativa protezione dati
+Home Footer Informativa protezione dati
+INFORMAZIONI SUL TRATTAMENTO DEI DATI PERSONALI
+
+Ascolta
+Stampa
+PDF
+Ultimo aggiornamento: 5 luglio 2023
+
+VEDI ANCHE SOCIAL MEDIA POLICY
+
+INFORMAZIONI SUL TRATTAMENTO DEI DATI PERSONALI
+degli utenti che consultano i siti web del
+Garante per la protezione dei dati personali
+
+ai sensi dell'articolo 13 del Regolamento (UE) 2016/679
+
+PERCHÉ QUESTE INFORMAZIONI
+
+Ai sensi  del Regolamento (UE) 2016/679 (di seguito "Regolamento"), questa pagina descrive le modalità di trattamento dei dati personali degli utenti che consultano i siti web del Garante per la protezione dei dati personali (di seguito "Garante") accessibili per via telematica ai seguenti indirizzi:
+
+https://www.garanteprivacy.it
+https://garanteprivacy.it
+https://www.gpdp.it
+https://gpdp.it
+https://www.dataprotection.org
+https://dataprotection.org
+https://servizi.gpdp.it
+https://gws.gpdp.it
+https://ambasciatoriprivacy.it/
+Le presenti informazioni non riguardano altri siti, pagine o servizi online raggiungibili tramite link ipertestuali eventualmente pubblicati nei siti ma riferiti a risorse esterne al dominio del Garante.
+
+TITOLARE DEL TRATTAMENTO
+
+A seguito della consultazione dei siti sopra elencati possono essere trattati dati relativi a persone fisiche identificate o identificabili.
+
+Titolare del trattamento è il Garante per la protezione dei dati personali, con sede in Piazza Venezia 11, IT-00187, Roma (Email: protocollo@gpdp.it, PEC*: protocollo@pec.gpdp.it, centralino +39 06.696771).
+
+RESPONSABILE DELLA PROTEZIONE DEI DATI
+
+Il Responsabile della Protezione dei Dati (RPD) è raggiungibile al seguente indirizzo: Garante per la protezione dei personali - Responsabile della Protezione dei dati personali, Piazza Venezia 11, IT-00187, Roma, email: rpd@gpdp.it.
+
+BASE GIURIDICA DEL TRATTAMENTO
+
+I dati personali indicati in questa pagina sono trattati dal Garante nell'esecuzione dei propri compiti di interesse pubblico o comunque connessi all'esercizio dei propri pubblici poteri, ivi incluso il compito di promuovere la consapevolezza e favorire la comprensione del pubblico riguardo ai rischi, alle norme, alle garanzie e ai diritti in relazione al trattamento e, altresì, di promuovere la consapevolezza dei titolari del trattamento e dei responsabili del trattamento riguardo agli obblighi imposti loro dal Regolamento (art. 57, par. 1, lett. b) e d), del Regolamento).
+
+TIPI DI DATI TRATTATI E FINALITÀ DEL TRATTAMENTO
+
+Dati di navigazione   
+
+I sistemi informatici e le procedure software preposte al funzionamento di questo sito acquisiscono, nel corso del loro normale esercizio, alcuni dati personali la cui trasmissione è implicita nell'uso dei protocolli di comunicazione di Internet.
+
+In questa categoria di dati rientrano gli indirizzi IP o i nomi a dominio dei computer e dei terminali utilizzati dagli utenti, gli indirizzi in notazione URI/URL (Uniform Resource Identifier/Locator) delle risorse richieste, l'orario della richiesta, il metodo utilizzato nel sottoporre la richiesta al server, la dimensione del file ottenuto in risposta, il codice numerico indicante lo stato della risposta data dal server (buon fine, errore, ecc.) ed altri parametri relativi al sistema operativo e a</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div><!-- ________________________________ NotFoundElement.vm ________________________________ -->
+<div> Nuovo elemento. </div></div>
+</body>
+</html>
