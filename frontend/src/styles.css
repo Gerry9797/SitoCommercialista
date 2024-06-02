@@ -62547,3 +62547,67 @@ span.color-primary {
   button:focus, [type=submit]:focus, [type=button]:focus {
     outline: none;
   }
+
+  /* dialog  */
+  /* dialog  */
+.p-dialog .p-dialog-header {
+    color: var(--e-global-color-primary) !important;
+    padding-right: 46px;
+  }
+  
+  .p-dialog .p-dialog-header-icons {
+    position: absolute;
+    right: 8px;
+    top: 14px;
+  }
+  
+  .p-dialog .p-dialog-header .p-dialog-header-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--e-global-color-primary);
+    border: 0 none;
+    background: gainsboro;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    margin-right: 0.5rem;
+    padding: 6.2px;
+  }
+  .p-dialog-header {
+    background-color: #e9ecef !important;
+  }
+  
+  @media (min-width: 767px) {
+    .p-dialog-header {
+      background-color: #e9ecef !important;
+      text-align: center;
+      justify-content: center !important;
+      width: 100%;
+      margin: auto;
+    }
+    .text-center {
+      text-align: center !important;
+    }
+  
+    .p-dialog-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 1rem;
+      border-bottom: 1px solid #e9ecef;
+      border-top-left-radius: 0.3rem;
+      border-top-right-radius: 0.3rem;
+    }
+  
+    .p-dialog-header-icons {
+      position: absolute;
+      right: 40px;
+    }
+  }
+
+  .p-dialog-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .p-dialog-content h5 {
+    font-size: 1.25rem;
+}
