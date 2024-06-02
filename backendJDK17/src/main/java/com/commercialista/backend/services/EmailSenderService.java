@@ -37,8 +37,8 @@ public class EmailSenderService {
     @Value("${custom.server.frontend.base-url}")
     private String FEBaseUrl;
     
-    @Value("${custom.server.backend.base-url}")
-    private String BEBaseUrl;
+    @Value("${custom.email.base-url-server-for-content}")
+    private String BEBaseUrlForContent;
     
     @Value("${custom.email.no-response-email}")
     private String noResponseEmail;
@@ -85,16 +85,16 @@ public class EmailSenderService {
     
     //riempie il modello da passare a freemarker con coppie chiave valore comuni in ogni email (es. logo, link sito...)
     private void fillModelWithCommonValues(Map<String, Object> model) {
-    	model.put("logo_src", BEBaseUrl + logoInEmailRelativePath);
+    	model.put("logo_src", BEBaseUrlForContent + logoInEmailRelativePath);
     	model.put("api_url", FEBaseUrl);
     	model.put("sito_href", siteDomain);
     	model.put("sito_href_full", FEBaseUrl);
         model.put("nome_sito", siteName);
         model.put("support_email", supportEmail);
         model.put("no_response_email", noResponseEmail);
-        model.put("bollino_sito", BEBaseUrl + bollinoSitoRelativePath);
-        model.put("bg_banner", BEBaseUrl + bgBannerRelativePath);
-        model.put("info_icon", BEBaseUrl + infoIconRelativePath);
+        model.put("bollino_sito", BEBaseUrlForContent + bollinoSitoRelativePath);
+        model.put("bg_banner", BEBaseUrlForContent + bgBannerRelativePath);
+        model.put("info_icon", BEBaseUrlForContent + infoIconRelativePath);
         model.put("pannelloGestisciAnnunciFE", FEBaseUrl + "/prova");
         }
     
@@ -117,46 +117,12 @@ public class EmailSenderService {
 
         fillModelWithCommonValues(model);
         
-
-    	 model.put("CONTENT_TITLE",  "Il tuo account non è ancora stato attivato.");
-    	 model.put("CONTENT_CONFIRM",  "Conferma la tua registrazione adesso!");
-    	 model.put("CONTENT_LANDSCAPE", "Ci teniamo a garantire la tua sicurezza, pertanto tutti i dati riservati saranno trattati esclusivamente per la gestione delle funzionalità che il nostro sito offre e non saranno divulgati all'esterno di esso. Dopo aver confermato il tuo account potrai ");
-    	 model.put("CONTENT_LANDSCAPE2", "sbloccare");
-    	 model.put("CONTENT_LANDSCAPE3", " tante ");
-    	 model.put("CONTENT_LANDSCAPE4", "funzionalità esclusive");
-    	 model.put("CONTENT_HELLO",  "Ciao");
-         model.put("CONTENT_DESC1",  "il tuo account su");
-         model.put("CONTENT_DESC2",  "non è stato ancora attivato");
-         model.put("CONTENT_DESC3",  "Ti");
-         model.put("CONTENT_DESC4",  "per confermare la tua email. Se non confermi entro questo periodo di tempo, il tuo account e tutti idati associati verranno eliminati.");
-         model.put("CONTENT_CLICK",  "Clicca sul pulsante per confermare la tua registrazione.");
-         model.put("CONTENT_BUTTON",  "CONFERMA REGISTRAZIONE");
-         model.put("CONTENT_NEEDS",  "Hai bisogno di competenze digitali e/o di sviluppo software?");
-         model.put("CONTENT_CONTACT",  "Contattaci");
-         model.put("CONTENT_BE_TOP",  "per essere sempre al Top!");
-         model.put("CONTENT_NO_RESP",  "Questa email è stata inviata automaticamente.");
-         model.put("CONTENT_NO_RESP2",  "Non rispondere a questo messaggio. ");
-         model.put("CONTENT_NO_RESP3",  "Ti serve aiuto? Contattaci all’indirizzo email");
-         model.put("CONTENT_TERMS",  "Termini e condizioni");
-         model.put("CONTENT_PRIVACY",  "Informativa sulla privacy");
-         model.put("CONTENT_CONTACTS",  "Contatti");
-       
-        
         //fill params
         model.put("user_email", user.getEmail());
         
         Date expirationDate = DateManager.addDaysToDate(account.getDataPubb(), 6);
         long remainingDays = DateManager.getDayDifference(new Date(), expirationDate);
-        String giorniOgiorno = "giorni";
-        String rimangonoOrimane = "rimangono";
-        if(remainingDays <= 1) {
-        	remainingDays = 1;
-        	giorniOgiorno = "giorno";
-        	rimangonoOrimane = "rimane";
-        }
-        model.put("giorni_rimasti", remainingDays);
-        model.put("rimangono_o_rimane", rimangonoOrimane);
-        model.put("giorni_o_giorno", giorniOgiorno);
+        model.put("remainingDays", remainingDays);
         
         String verification_url = FEBaseUrl + "/users/" + account.getIdUser() + "/confirm/" + account.getVerificationCode();
         model.put("verification_url", verification_url);

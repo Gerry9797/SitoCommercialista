@@ -306,7 +306,7 @@
                             "
                           >
                             <span style="font-size: 18px; color: #ffffff">
-                              ${CONTENT_TITLE}
+                              Il tuo account non è ancora stato attivato.
                             </span>
                           </p>
                           <p
@@ -318,7 +318,7 @@
                             "
                           >
                             <span style="font-size: 18px; color: #ffffff">
-                              ${CONTENT_CONFIRM}
+                              Conferma la tua registrazione adesso!
                             </span>
                           </p>
                         </div>
@@ -357,7 +357,7 @@
 									        <tr>
 									            <td style="vertical-align:top"><img border="0" src="${info_icon}" width="25" class="CToWUd"></td>
 									            <td><span style="padding-left:10px;padding-right:0px;font-size:14px;display:inline-block">
-									                <span style="font-size:16px;line-height:19px"><span style="font-size:14px;line-height:19px">${CONTENT_LANDSCAPE}<strong>${CONTENT_LANDSCAPE2}</strong>${CONTENT_LANDSCAPE3}<strong>${CONTENT_LANDSCAPE4}<strong>.
+									                <span style="font-size:16px;line-height:19px"><span style="font-size:14px;line-height:19px">Ci teniamo a garantire la tua sicurezza, pertanto tutti i dati riservati saranno trattati esclusivamente per la gestione delle funzionalità che il nostro sito offre e non saranno divulgati all'esterno di esso. Dopo aver confermato il tuo account potrai <strong>sbloccare</strong> tante <strong>funzionalità esclusive<strong>.
 									                 <#-- <a href="${pannelloGestisciAnnunciFE}" rel="noopener" style="text-decoration:none;color:#007bff" target="_blank" data-saferedirecturl="https://www.google.com/url?q=${pannelloGestisciAnnunciFE}&amp;source=gmail&amp;ust=1647885411652000&amp;usg=AOvVaw2te1UA_A5ZUulnxP8bdDgZ"> Vai al pannello di Gestione Annunci</a></strong></span></span> -->
 									            </span></td>
 									        </tr>
@@ -375,7 +375,7 @@
                             "
                           >
                             <span style="color: #666666; font-size: 15px"
-                              >${CONTENT_HELLO}
+                              >Ciao
                               <strong
                                 ><a
                                   href="mailto:${user_email}"
@@ -403,7 +403,7 @@
                             "
                           >
                             <span style="font-size: 15px">
-                              ${CONTENT_DESC1}
+                              il tuo account su
                               <a
                                 href="${sito_href_full}"
                                 rel="noopener"
@@ -413,7 +413,7 @@
                                 >${nome_sito}</a
                               >
 
-                              , ${CONTENT_DESC2}.
+                              , non è stato ancora attivato.
                             </span>
                           </p>
                           <p
@@ -424,8 +424,8 @@
                             "
                           >
                             <br /><span style="font-size: 15px">
-                              ${CONTENT_DESC3} ${rimangono_o_rimane} <strong>${giorni_rimasti} ${giorni_o_giorno}</strong> 
-                              ${CONTENT_DESC4}
+                              Ti <#if remainingDays == 1>resta <strong>1 giorno</strong><#else>restano <strong>${remainingDays} giorni</strong></#if> 
+                              per confermare la tua email. Se non confermi entro questo periodo di tempo, il tuo account e tutti idati associati verranno eliminati.
                             </span>
                           </p>
                           <p
@@ -437,7 +437,7 @@
                           >
                             <br />
                             <span style="font-size: 15px">
-                              ${CONTENT_CLICK}
+                              Clicca sul pulsante per confermare la tua registrazione.
                             </span>
                           </p>
                         </div>
@@ -540,7 +540,7 @@
                                 <span
                                   style="font-size: 14px; line-height: 28px"
                                 >
-                                  ${CONTENT_BUTTON}
+                                  CONFERMA REGISTRAZIONE
                                 </span>
                               </span>
                             </span>
@@ -666,7 +666,7 @@
                                 <span
                                   style="line-height: 26px; font-size: 22px"
                                 >
-                                  ${CONTENT_NEEDS}
+                                  Hai bisogno di competenze digitali e/o di sviluppo software?
                                 </span>
                               </span>
                             </p>
@@ -682,7 +682,7 @@
                                 <span
                                   style="line-height: 21px; font-size: 18px"
                                 >
-                                  <strong>${CONTENT_CONTACT}</strong> ${CONTENT_BE_TOP}
+                                  <strong>Contattaci</strong> per essere sempre al Top!
                                 </span>
                               </span>
                             </p>
@@ -785,7 +785,7 @@
                                 font-size: 12px;
                                 line-height: 14px;
                               "
-                              >${CONTENT_NO_RESP}</span
+                              >Questa email è stata inviata automaticamente.</span
                             >
                           </p>
                           <p
@@ -802,8 +802,8 @@
                                 font-size: 12px;
                                 line-height: 14px;
                               "
-                              >${CONTENT_NO_RESP2} <br />
-                              ${CONTENT_NO_RESP3}
+                              >Non rispondere a questo messaggio. <br />
+                              Ti serve aiuto? Contattaci all’indirizzo email
                                 </span
                             ><a
                               href="mailto:${support_email}"
@@ -928,7 +928,7 @@
                                 style="text-decoration: none; color: #007bff"
                                 target="_blank"
                                 data-saferedirecturl="https://www.google.com/url?q=${api_url}terms-and-conditions/&amp;source=gmail&amp;ust=1637319934974000&amp;usg=AOvVaw2rgQ9CWeAO0QGMLzmBgaK9"
-                                >${CONTENT_TERMS}</a
+                                >Termini e condizioni</a
                               >
                               |
                               <a
@@ -937,7 +937,7 @@
                                 style="text-decoration: none; color: #007bff"
                                 target="_blank"
                                 data-saferedirecturl="https://www.google.com/url?q=${api_url}privacy-policy/&amp;source=gmail&amp;ust=1637319934974000&amp;usg=AOvVaw3T_BAiz7WxeAI_0xj_z46h"
-                                >${CONTENT_PRIVACY}</a
+                                >Informativa sulla privacy</a
                               >
                               |
                               <a
@@ -946,7 +946,7 @@
                                 style="text-decoration: none; color: #007bff"
                                 target="_blank"
                                 data-saferedirecturl="https://www.google.com/url?q=${api_url}contacts/&amp;source=gmail&amp;ust=1637319934974000&amp;usg=AOvVaw0oSpeFeQj6rsjKx8_AbV3_"
-                                >${CONTENT_CONTACTS}</a
+                                >Contatti</a
                               ></span
                             >
                           </p>
