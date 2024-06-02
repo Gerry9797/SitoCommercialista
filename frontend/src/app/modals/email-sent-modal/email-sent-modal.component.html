@@ -1,0 +1,32 @@
+<div class="panelar py-4">
+    <div class="feedback text-center pt-4">
+      <h1>
+        <i
+          aria-hidden="true"
+          class="fa fa-envelope animated"
+          style="color: var(--palette-A-1b) !important"
+        ></i>
+      </h1>
+      <h5>Il tuo account NON è ancora attivo</h5>
+      <p class="text-well">
+        Presto riceverai una email a <b>{{email}}</b> per confermare la tua registrazione.
+      </p>
+      <hr class="my-3" />
+      <p class="text-well">
+        Se non dovessi trovarla, controlla la tua cartella di posta indesiderata, l'email potrebbe essere lì.
+        <br />
+        HAI 6 GIORNI DI TEMPO PER CONFERMARE LA REGISTRAZIONE.
+
+        <br />
+        Se non confermi entro questo periodo di tempo, il tuo account e tutti i dati associati verranno eliminati.
+      </p>
+      <p class="text-well">
+        Se hai bisogno di aiuto contattaci: 
+        <a
+          href="mailto:{{ emailAssistenza }}?Subject=Supporto per la Registrazione&body=Ciao, ho problemi con la registrazione. La mia email è {{email}}!"
+          style="color: var(--palette-A-1b) !important"
+          >{{ emailAssistenza }}</a
+        >
+      </p>
+    </div>
+  </div>

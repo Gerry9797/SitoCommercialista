@@ -78,6 +78,8 @@ import { WebinarCardComponent } from './bricks/cards/webinar-card/webinar-card.c
 import { ErrorComponent } from './components/error/error.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import {DynamicDialogModule} from 'primeng/dynamicdialog';
+import { EmailSentModalComponent } from './modals/email-sent-modal/email-sent-modal.component';
 
 export function playerFactory() {
   return player;
@@ -148,7 +150,8 @@ registerLocaleData(localeIt);
     FileDownloadCardComponent,
     WebinarCardComponent,
     ErrorComponent,
-    LogoutComponent
+    LogoutComponent,
+    EmailSentModalComponent
   ],
   imports: [
     BrowserModule,
@@ -164,7 +167,8 @@ registerLocaleData(localeIt);
     MatInputModule,
     OverlayModule,
     AsyncPipe,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    DynamicDialogModule
   ],
   providers: [
     authInterceptorProviders,

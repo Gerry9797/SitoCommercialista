@@ -3,9 +3,11 @@ import { Component, ElementRef, HostListener, Inject, OnInit, PLATFORM_ID, ViewC
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { DialogService } from 'primeng/dynamicdialog';
 import { AuthService } from 'src/app/_services/auth.service';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
 import { SITE_CONFIG } from 'src/app/app.config';
+import { EmailSentModalComponent } from 'src/app/modals/email-sent-modal/email-sent-modal.component';
 import { NotificationMessage } from 'src/app/models/notification-message.model';
 import { InternalSessionManagerService } from 'src/app/services/session/internal-session-manager.service';
 import { UtilityService } from 'src/app/services/utility/utility.service';
@@ -13,7 +15,8 @@ import { UtilityService } from 'src/app/services/utility/utility.service';
 @Component({
   selector: 'app-login-signup',
   templateUrl: './login-signup.component.html',
-  styleUrls: ['./login-signup.component.css']
+  styleUrls: ['./login-signup.component.css'],
+  providers: [DialogService]
 })
 export class LoginSignupComponent implements OnInit {
 
@@ -59,6 +62,7 @@ export class LoginSignupComponent implements OnInit {
     private internalSessionManager: InternalSessionManagerService,
     // private dynamicMetadataService: DynamicMetadataService,
     @Inject(PLATFORM_ID) private platformId: Object,
+    private dialogService: DialogService
   ) { 
     this.formSignin = this.formBuilder.group({
       signin_email: new FormControl(null, [Validators.required, Validators.email, Validators.maxLength(this.MAX_EMAIL_LEN)]),
@@ -166,7 +170,7 @@ export class LoginSignupComponent implements OnInit {
        this.authService.register(username, email, password).subscribe(
          data => {
           this.spinner.hide("spinner");
-          //  this.openModalEmailSent(email);
+           this.openModalEmailSent(email);
            this.generalErrorMessageSignup = null;
          },
          err => {
@@ -201,6 +205,25 @@ export class LoginSignupComponent implements OnInit {
       this.showErrorSignup = true;
      }
    }
+
+   openModalEmailSent(email: string){
+    let emailSentDialogRef = this.dialogService.open(EmailSentModalComponent, {
+      header: "CONFERMA LA TUA EMAIL PER ACCEDERE",
+      contentStyle: { 'max-height': '600px', overflow: 'auto' },
+      style: {'max-width': '880px'},
+      width: '90%',
+      baseZIndex: 10000,
+      data: {
+        email: `${email}`
+      }
+    })
+
+    emailSentDialogRef.onClose.subscribe((result) => {
+      // this.activateSignin(); // to activate switch of mobile forms
+      // const signInButton = document.getElementById('signIn')
+      // signInButton?.click(); // to activate switch of desktop forms
+    })
+  }
 
    checkAndValidateForm(formToCheck: FormGroup){
     Object.keys(formToCheck.controls).forEach(field => { // {1}
