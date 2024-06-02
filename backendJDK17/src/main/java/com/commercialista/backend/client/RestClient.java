@@ -12,18 +12,23 @@ import java.util.stream.Collectors;
 
 import javax.net.ssl.SSLContext;
 
+import org.apache.hc.client5.http.classic.HttpClient;
+import org.apache.hc.client5.http.config.ConnectionConfig;
+import org.apache.hc.client5.http.config.RequestConfig;
 import org.apache.hc.client5.http.impl.classic.HttpClientBuilder;
-import org.apache.hc.client5.http.impl.classic.HttpClients;
+import org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager;
 import org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManagerBuilder;
-import org.apache.hc.client5.http.io.HttpClientConnectionManager;
 import org.apache.hc.client5.http.ssl.NoopHostnameVerifier;
 import org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory;
 import org.apache.hc.client5.http.ssl.SSLConnectionSocketFactoryBuilder;
+import org.apache.hc.core5.http.io.SocketConfig;
 import org.apache.hc.core5.ssl.SSLContexts;
 import org.apache.hc.core5.ssl.TrustStrategy;
+import org.apache.hc.core5.util.Timeout;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -31,8 +36,9 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
-import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -61,6 +67,40 @@ public class RestClient {
 			LOGGER.error("logRequest: " + e.getMessage(), e);
 		}
 	}
+
+	private static void logMultipartRequest(String url, String method, Object body) {
+		try {
+			ObjectMapper om = new ObjectMapper();
+			om.registerModule(new JavaTimeModule());
+			om.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+			// om.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, true);
+			// om.findAndRegisterModules();
+
+			MultiValueMap<String, Object> bodyMap = (MultiValueMap<String, Object>) body;
+			StringBuilder bodyString = new StringBuilder();
+			for (String key : bodyMap.keySet()) {
+				for (Object value : bodyMap.get(key)) {
+					bodyString.append(System.lineSeparator());
+					bodyString.append("Part " + key + System.lineSeparator());
+					if (value instanceof ByteArrayResource) {
+						ByteArrayResource byteArrayResource = (ByteArrayResource) value;
+						if (byteArrayResource.getByteArray() != null) {
+							bodyString.append("Byte array " + byteArrayResource.getByteArray().length);
+						} else {
+							bodyString.append("Byte array");
+						}
+					} else {
+						bodyString.append(om.writeValueAsString(value));
+					}
+					bodyString.append(System.lineSeparator());
+					bodyString.append("---------------------------");
+				}
+			}
+			LOGGER.info("url: {} method: {} requestBody: {}", url, method, bodyString);
+		} catch (Exception e) {
+			LOGGER.error("logRequest: " + e.getMessage(), e);
+        }
+    }
 
 	private static void logResponse(Object body) {
 		try {
@@ -105,7 +145,8 @@ public class RestClient {
 	 * @return
 	 */
 	private static RestTemplate getRestTemplate(boolean disableCertificateValidation, boolean enablePoolConnection) {
-		HttpClientBuilder httpClientBuilder = HttpClients.custom();
+		HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();  //HttpClients.custom();
+		PoolingHttpClientConnectionManager cm; //new PoolingHttpClientConnectionManager();	
 		
 //		if (enablePoolConnection) {
 //			PoolingHttpClientConnectionManager connectionManager = new PoolingHttpClientConnectionManager();
@@ -125,26 +166,66 @@ public class RestClient {
 		                .setHostnameVerifier(new NoopHostnameVerifier())
 		                .build();
 				
-				HttpClientConnectionManager cm = PoolingHttpClientConnectionManagerBuilder.create()
+				 cm = PoolingHttpClientConnectionManagerBuilder.create()
 		                .setSSLSocketFactory(sslSocketFactory)
 		                .build();
-				
-				
 				
 				//SSLConnectionSocketFactory csf = new SSLConnectionSocketFactory(sslContext, new NoopHostnameVerifier());
 				//httpClientBuilder.setSSLSocketFactory(csf);
 				httpClientBuilder.setConnectionManager(cm);
 
 			} catch (KeyManagementException | NoSuchAlgorithmException | KeyStoreException e) {
+				cm = PoolingHttpClientConnectionManagerBuilder.create().build();
 				LOGGER.error(e.getMessage(), e);
 			}
 		}
+		else
+		{
+			cm =  PoolingHttpClientConnectionManagerBuilder.create().build();
+			
+		}
+		
+		
 
-		HttpComponentsClientHttpRequestFactory clientHttpRequestFactory = new HttpComponentsClientHttpRequestFactory();
-		clientHttpRequestFactory.setHttpClient(httpClientBuilder.build());
-		clientHttpRequestFactory.setConnectTimeout(0);
-		//clientHttpRequestFactory.setReadTimeout(0);
-		clientHttpRequestFactory.setConnectionRequestTimeout(0);
+		
+//		clientHttpRequestFactory.setHttpClient(httpClientBuilder.build());
+//		clientHttpRequestFactory.setConnectTimeout(0);
+//		
+//		//clientHttpRequestFactory.setReadTimeout(0);
+//		clientHttpRequestFactory.setConnectionRequestTimeout(0);
+		
+		
+		////
+		// Connect timeout
+        ConnectionConfig connectionConfig = ConnectionConfig.custom()
+                .setConnectTimeout(Timeout.ofMilliseconds(0))
+                .build();
+
+        // Socket timeout
+        SocketConfig socketConfig = SocketConfig.custom()
+                .setSoTimeout(Timeout.ofMilliseconds(0))
+                .build();
+
+        // Connection request timeout
+        RequestConfig requestConfig = RequestConfig.custom()
+                .setConnectionRequestTimeout(Timeout.ofMilliseconds(0))
+                .build();
+        
+        
+        cm.setDefaultSocketConfig(socketConfig);
+        cm.setDefaultConnectionConfig(connectionConfig);
+        
+        
+     
+
+        HttpClient httpClient = HttpClientBuilder.create()
+                .setConnectionManager(cm)
+                .setDefaultRequestConfig(requestConfig)
+                .build();
+        
+        HttpComponentsClientHttpRequestFactory clientHttpRequestFactory = new HttpComponentsClientHttpRequestFactory();
+        clientHttpRequestFactory.setHttpClient(httpClient);
+		////
 
 		RestTemplate restTemplate = new RestTemplate(clientHttpRequestFactory);
 
@@ -156,18 +237,6 @@ public class RestClient {
 		restTemplate.setInterceptors(interceptors);
 		
 		return restTemplate;
-	}
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public static RestTemplate getDefaultRestTemplate() {
-		SimpleClientHttpRequestFactory httpRequestFactory = new SimpleClientHttpRequestFactory();
-		httpRequestFactory.setConnectTimeout(0);
-		httpRequestFactory.setReadTimeout(0);
-		
-		return new RestTemplate(httpRequestFactory);
 	}
 	
 	/**
@@ -328,7 +397,11 @@ public class RestClient {
 			httpHeaders.setContentType(MediaType.APPLICATION_JSON);
 		}
 
-		logRequest(url, method.toString(), body);
+		if (httpHeaders.getContentType() != null && httpHeaders.getContentType().equals(MediaType.MULTIPART_FORM_DATA)) {
+			logMultipartRequest(url, method.toString(), body);
+		} else {
+			logRequest(url, method.toString(), body);
+		}
 		
 		HttpEntity<Object> requestEntity = new HttpEntity<>(body, httpHeaders);
 		ResponseEntity<T> responseEntity = restTemplate.exchange(url, method, requestEntity, responseType, uriVariables);
