@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 
-import com.commercialista.backend.security.services.PdfService;
+import com.commercialista.backend.services.PdfService;
 import com.commercialista.backend.utils.FormateManager;
 
 @CrossOrigin(origins = "*", maxAge = 3600)

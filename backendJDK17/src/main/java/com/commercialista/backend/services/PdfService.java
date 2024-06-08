@@ -1,4 +1,4 @@
-package com.commercialista.backend.security.services;
+package com.commercialista.backend.services;
 
 import java.awt.color.ColorSpace;
 import java.awt.color.ICC_Profile;
@@ -29,11 +29,11 @@ import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 import org.xhtmlrenderer.pdf.ITextRenderer;
 
-import com.commercialista.backend.security.services.rendering.AutoFont;
-import com.commercialista.backend.security.services.rendering.AutoFont.CSSFont;
-import com.commercialista.backend.security.services.rendering.ChainingReplacedElementFactory;
-import com.commercialista.backend.security.services.rendering.ImageReplacedElementFactory;
-import com.commercialista.backend.security.services.rendering.SVGReplacedElementFactory;
+import com.commercialista.backend.services.rendering.AutoFont;
+import com.commercialista.backend.services.rendering.ChainingReplacedElementFactory;
+import com.commercialista.backend.services.rendering.ImageReplacedElementFactory;
+import com.commercialista.backend.services.rendering.SVGReplacedElementFactory;
+import com.commercialista.backend.services.rendering.AutoFont.CSSFont;
 import com.lowagie.text.pdf.BaseFont;
 import com.lowagie.text.pdf.PdfCopy;
 import com.lowagie.text.pdf.PdfReader;

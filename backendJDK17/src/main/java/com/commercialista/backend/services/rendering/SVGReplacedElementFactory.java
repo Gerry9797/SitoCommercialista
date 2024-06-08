@@ -1,4 +1,4 @@
-package com.commercialista.backend.security.services.rendering;
+package com.commercialista.backend.services.rendering;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

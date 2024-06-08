@@ -18757,7 +18757,7 @@ a.wt-cli-ccpa-opt-out {
     display: none!important
 }
 
-.woocommerce-error,.woocommerce-info,.woocommerce-message {
+.woocommerce-error,.woocommerce-info,.woocommerce-message,.woocommerce-warning {
     padding: 1em 2em 1em 3.5em;
     margin: 0 0 2em;
     position: relative;
@@ -18769,16 +18769,16 @@ a.wt-cli-ccpa-opt-out {
     word-wrap: break-word
 }
 
-.woocommerce-error::after,.woocommerce-error::before,.woocommerce-info::after,.woocommerce-info::before,.woocommerce-message::after,.woocommerce-message::before {
+.woocommerce-error::after,.woocommerce-error::before,.woocommerce-info::after,.woocommerce-info::before,.woocommerce-message::after,.woocommerce-message::before,.woocommerce-warning::after,.woocommerce-warning::before {
     content: " ";
     display: table
 }
 
-.woocommerce-error::after,.woocommerce-info::after,.woocommerce-message::after {
+.woocommerce-error::after,.woocommerce-info::after,.woocommerce-message::after,.woocommerce-warning::after {
     clear: both
 }
 
-.woocommerce-error::before,.woocommerce-info::before,.woocommerce-message::before {
+.woocommerce-error::before,.woocommerce-info::before,.woocommerce-message::before,.woocommerce-warning::before {
     font-family: "Font Awesome 6 Free";
     content: "\f06a" !important;
     font-weight: 900;
@@ -18795,12 +18795,15 @@ a.wt-cli-ccpa-opt-out {
 .woocommerce-message::before {
     content: "\f058" !important;
 }
+.woocommerce-warning::before {
+    content:"\f071" !important;
+}
 
-.woocommerce-error .button,.woocommerce-info .button,.woocommerce-message .button {
+.woocommerce-error .button,.woocommerce-info .button,.woocommerce-message .buttonm.woocommerce-warning .button {
     float: right
 }
 
-.woocommerce-error li,.woocommerce-info li,.woocommerce-message li {
+.woocommerce-error li,.woocommerce-info li,.woocommerce-message li,.woocommerce-warning li {
     list-style: none outside!important;
     padding-left: 0!important;
     margin-left: 0!important
@@ -18835,6 +18838,13 @@ a.wt-cli-ccpa-opt-out {
 .woocommerce-error::before {
     content: "\e016";
     color: #b81c23
+}
+.woocommerce-warning {
+    border-top-color: #b68f23;
+}
+.woocommerce-warning::before {
+    content: "\e016";
+    color: #b68f23;
 }
 
 .woocommerce-account .woocommerce::after,.woocommerce-account .woocommerce::before {

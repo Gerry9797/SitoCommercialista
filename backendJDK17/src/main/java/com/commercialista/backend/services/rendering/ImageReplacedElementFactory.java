@@ -1,4 +1,4 @@
-package com.commercialista.backend.security.services.rendering;
+package com.commercialista.backend.services.rendering;
 
 import com.lowagie.text.Image;
 import org.apache.commons.io.IOUtils;

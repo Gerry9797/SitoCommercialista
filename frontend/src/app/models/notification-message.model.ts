@@ -1,5 +1,5 @@
 export interface NotificationMessage {
     title?: string;
     description: string;
-    status: string;
+    status: "error" | "info" | "message" | "warning";
 }

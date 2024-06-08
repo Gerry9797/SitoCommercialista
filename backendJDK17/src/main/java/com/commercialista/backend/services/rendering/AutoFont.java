@@ -1,6 +1,6 @@
 // https://github.com/danfickle/openhtmltopdf/wiki/AutoFont
 
-package com.commercialista.backend.security.services.rendering;
+package com.commercialista.backend.services.rendering;
 
 import java.io.IOException;
 import java.nio.file.FileVisitOption;

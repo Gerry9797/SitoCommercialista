@@ -219,6 +219,15 @@ export class LoginSignupComponent implements OnInit {
     })
 
     emailSentDialogRef.onClose.subscribe((result) => {
+      this.formSignup.reset();
+      this.setAndFocusGeneralNotification(
+        {
+          title: "Attenzione",
+          description: "Non appena avrai confermato la registrazione all'email che hai indicato potrai effettuare l'accesso.",
+          status: 'info'
+         } as NotificationMessage,
+         this.idGeneralNoticesBlock
+       );
       // this.activateSignin(); // to activate switch of mobile forms
       // const signInButton = document.getElementById('signIn')
       // signInButton?.click(); // to activate switch of desktop forms

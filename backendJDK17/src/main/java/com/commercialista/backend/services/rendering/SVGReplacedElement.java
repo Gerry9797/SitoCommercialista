@@ -1,4 +1,4 @@
-package com.commercialista.backend.security.services.rendering;
+package com.commercialista.backend.services.rendering;
 
 import com.lowagie.text.pdf.PdfContentByte;
 import com.lowagie.text.pdf.PdfTemplate;
