@@ -1,6 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { TokenStorageService } from 'src/app/_services/token-storage.service';
+import { UserModel } from 'src/app/models/user.model';
 import { UserDataService } from 'src/app/services/data/user-data.service';
 import { UtilityService } from 'src/app/services/utility/utility.service';
 
@@ -11,7 +12,7 @@ import { UtilityService } from 'src/app/services/utility/utility.service';
 })
 export class BachecaComponent implements OnInit {
   
-  user: any = null;
+  user: UserModel = {} as UserModel;
   accountDet: ModelAccount.AccountBean = {} as ModelAccount.AccountBean;
 
   constructor(
@@ -25,7 +26,9 @@ export class BachecaComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       this.utilityService.scrollToTop();
       this.getDataLoggedUser();
-      this.getAccountDetails();
+      if (this.user.id) {
+        this.getAccountDetails();
+      }
     }
   }
 

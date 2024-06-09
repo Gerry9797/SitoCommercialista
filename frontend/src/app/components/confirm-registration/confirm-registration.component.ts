@@ -42,8 +42,7 @@ export class ConfirmRegistrationComponent implements OnInit {
     
   }
 
-  confirmRegistration(){
-    debugger
+  confirmRegistration(){    
     this.userService.confirmRegistration(this.id, this.verificationCode).subscribe(
       response => {
         // console.log(response);
