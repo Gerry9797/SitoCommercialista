@@ -124,7 +124,7 @@ public class EmailSenderService {
         long remainingDays = DateManager.getDayDifference(new Date(), expirationDate);
         model.put("remainingDays", remainingDays);
         
-        String verification_url = FEBaseUrl + "/users/" + account.getIdUser() + "/confirm/" + account.getVerificationCode();
+        String verification_url = FEBaseUrl + "/account/" + account.getIdUser() + "/conferma/" + account.getVerificationCode();
         model.put("verification_url", verification_url);
 
         freemarkerConfig.getTemplate("template_conferma_registrazione.ftlh").process(model, stringWriter);

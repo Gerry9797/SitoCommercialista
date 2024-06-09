@@ -1,0 +1,49 @@
+.wrapper-verification {
+    min-height: 65vh;
+    margin-top: 150px;
+}
+
+.main-title {
+    font-size: 1.4rem;
+    font-weight: 500 !important;
+    margin-bottom: 42px;
+    word-break: break-word;
+  }
+  
+  .main-title.home {
+    font-size: 1.8rem;
+    font-weight: 500 !important;
+    margin-bottom: 2px;
+  }
+
+  .fa-thumbs-up{
+      transform: scaleX(-1);
+  }
+
+  .fa-thumbs-down{
+    transform: scaleX(-1);
+}
+
+  .animated-thumbs {
+    animation: shake-thumbs 3.875s ease infinite;
+  }
+  
+  @keyframes shake-thumbs {
+    10%,
+    90% {
+      transform: translate3d(-1px, 0, 0) rotate(-1deg);
+    }
+    20%,
+    80% {
+      transform: translate3d(2px, 0, 0) rotate(-1.5deg);
+    }
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-4px, 0, 0) rotate(-2deg);
+    }
+    40%,
+    60% {
+      transform: translate3d(4px, 0, 0) rotate(2deg);
+    }
+  }

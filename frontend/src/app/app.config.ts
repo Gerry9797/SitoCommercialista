@@ -30,6 +30,9 @@ export const SITE_CONFIG = {
         dataAggiornamento: "marzo 2023"
     },
     settings: {
+        backend: {
+            baseUrl: "http://localhost:8080/backend/api/"
+        },
         security: {
             encodeSessionValues: false,
             token1: "ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnpkV0lp",

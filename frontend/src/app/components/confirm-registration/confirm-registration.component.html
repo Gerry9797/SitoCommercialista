@@ -1,0 +1,74 @@
+<div class="wrapper-verification">
+  <div *ngIf="verifiedUser">
+    <p
+      class="main-title page text-center font-weight-bold mb-4"
+      style="color: var(--e-global-color-primary) !important"
+    >
+      Il tuo account è stato attivato con successo!
+    </p>
+
+    <div class="feedback">
+      <div class="container mt-3">
+        <div class="text-center">
+          <h1>
+            <i
+              aria-hidden="true"
+              class="fa fa-thumbs-up animated-thumbs"
+              style="color: var(--e-global-color-primary) !important"
+            ></i>
+          </h1>
+          <h5 class="mt-5">
+            Se desideri tornare alla schermata di Login puoi farlo cliccando su
+          </h5>
+          <h5>
+            <a
+              routerLink="/autenticazione"
+              class="waves-effect center-butt"
+              style="color: var(--e-global-color-primary) !important"
+            >
+              <i class="fas fa-arrow-left mr-2"></i>
+              Accedi</a
+            >
+          </h5>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isError">
+
+    <p
+      class="main-title page text-center font-weight-bold mb-4"
+      style="color: var(--e-global-color-primary) !important"
+    >
+      E' stato riscontrato un errore...
+    </p>
+
+    <div class="feedback">
+      <div class="container mt-3">
+        <div class="text-center">
+          <h1>
+            <i
+              aria-hidden="true"
+              class="fa fa-thumbs-down animated-thumbs"
+              style="color: var(--e-global-color-primary) !important"
+            ></i>
+          </h1>
+          <h5 class="mt-5">
+            Riprova ricaricando la pagina oppure se il probelma persiste
+            contatta l'assistenza inviando una mail a
+            <a
+              href="mailto:{{ supportEmail }}"
+              class="waves-effect center-butt"
+              style="color: var(--e-global-color-primary) !important"
+              >{{ supportEmail }}</a
+            >
+          </h5>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -15,8 +15,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.commercialista.backend.dto.AccountDTO;
+import com.commercialista.backend.dto.UserDTO;
 import com.commercialista.backend.enums.StatiAccountEnum;
 import com.commercialista.backend.exception.ResourceNotFoundException;
+import com.commercialista.backend.mapper.AccountMapper;
+import com.commercialista.backend.mapper.UserMapper;
 import com.commercialista.backend.models.Account;
 import com.commercialista.backend.models.User;
 import com.commercialista.backend.payload.request.ChangePasswordRequest;
@@ -58,23 +62,21 @@ public class AccountController {
 	EmailSenderService emailSenderService;
 	
 	@GetMapping("/account/{userId}/details")
-	public ResponseEntity<Account> getAccountDetails(HttpServletRequest request, @PathVariable(value = "userId") Long userId) throws Exception{
+	public ResponseEntity<AccountDTO> getAccountDetails(HttpServletRequest request, @PathVariable(value = "userId") Long userId) throws Exception{
 		
 		UserDetailsImpl userDet = loggedUserManager.getLoggedUserDetails(request);
 		Long loggedUserId = userDet.getId();
 		if(loggedUserId != userId) {
-			throw new Exception("Permission Denied! Your account is not that!");
+			throw new Exception("Accesso vietato! Non è il tuo account!");
 		}
 		Account account = accountRepository.findById(userId)
     			.orElseThrow(() -> new ResourceNotFoundException("Account non trovato per questo ID : " + userId));
 	
-		//remove verification code from response
-		account.setVerificationCode(null);
-		return ResponseEntity.ok().body(account);
+		return ResponseEntity.ok().body(AccountMapper.toDto(account));
 	}
     
 	@PutMapping("/account/{userId}/confirm/{verificationCode}")
-    public ResponseEntity<User> verifyAccountById(@PathVariable(value = "userId") Long userId, @PathVariable(value = "verificationCode") String verificationCode)
+    public ResponseEntity<UserDTO> verifyAccountById(@PathVariable(value = "userId") Long userId, @PathVariable(value = "verificationCode") String verificationCode)
         throws ResourceNotFoundException, IOException, TemplateException, MessagingException {
   
     	Account account = accountRepository.findById(userId)
@@ -86,7 +88,7 @@ public class AccountController {
     	}
     	User user = userRepository.findById(userId)
     			.orElseThrow(() -> new ResourceNotFoundException("User non trovato per questo ID : " + userId));
-		return ResponseEntity.ok().body(user);
+		return ResponseEntity.ok().body(UserMapper.toDto(user));
     	
     }
 	
@@ -125,7 +127,7 @@ public class AccountController {
 	
 	
 	@PutMapping("/account/{userId}/newEmail/{newEmail}/{verificationCode}")
-    public ResponseEntity<User> changeEmail(@PathVariable(value = "userId") Long userId, @PathVariable(value = "verificationCode") String verificationCode, @PathVariable(value = "newEmail") String newEmail)
+    public ResponseEntity<UserDTO> changeEmail(@PathVariable(value = "userId") Long userId, @PathVariable(value = "verificationCode") String verificationCode, @PathVariable(value = "newEmail") String newEmail)
         throws Exception {
   
     	Account account = accountRepository.findById(userId)
@@ -142,14 +144,13 @@ public class AccountController {
     	}
     	
     	user.setEmail(newEmail);
-    	user.setUsername(newEmail.split("@")[0]);
     	userRepository.save(user);
-		return ResponseEntity.ok().body(user);
+		return ResponseEntity.ok().body(UserMapper.toDto(user));
     	
     }
 	
 	@PutMapping("/account/{userId}/newPassword")
-    public ResponseEntity<User> changePassword(
+    public ResponseEntity<UserDTO> changePassword(
     		@PathVariable(value = "userId") Long userId, 
     		@Valid @RequestBody ChangePasswordRequest request)
     		throws Exception {
@@ -169,7 +170,7 @@ public class AccountController {
     	
     	user.setPassword(encoder.encode(request.getNewPassword()) );
     	userRepository.save(user);
-		return ResponseEntity.ok().body(user);
+		return ResponseEntity.ok().body(UserMapper.toDto(user));
     	
     }
 	

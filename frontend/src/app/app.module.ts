@@ -80,6 +80,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import { EmailSentModalComponent } from './modals/email-sent-modal/email-sent-modal.component';
+import { ConfirmRegistrationComponent } from './components/confirm-registration/confirm-registration.component';
 
 export function playerFactory() {
   return player;
@@ -151,7 +152,8 @@ registerLocaleData(localeIt);
     WebinarCardComponent,
     ErrorComponent,
     LogoutComponent,
-    EmailSentModalComponent
+    EmailSentModalComponent,
+    ConfirmRegistrationComponent
   ],
   imports: [
     BrowserModule,

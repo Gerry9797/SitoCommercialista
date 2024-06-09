@@ -34,9 +34,11 @@ import { LoadingPlaceholderComponent } from './bricks/loading-placeholder/loadin
 import { AuthGuardService } from './services/route-guards/auth-guard.service';
 import { ErrorComponent } from './components/error/error.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { ConfirmRegistrationComponent } from './components/confirm-registration/confirm-registration.component';
 
 const routes: Routes = [
 
+  // PUBLIC PAGES
   { path: '', component: HomepageComponent },
   { path: 'chi-sono', component: AboutComponent },
   { path: 'contatti', component: ContattiComponent },
@@ -62,6 +64,9 @@ const routes: Routes = [
   { path: 'area-riservata/indirizzi/aggiungi', component: AggiungiIndirizzoComponent, canActivate: [AuthGuardService] },
   { path: 'area-riservata/dettaglio-account', component: DettagliAccountComponent, canActivate: [AuthGuardService] },
   { path: 'area-riservata/logout', component: LogoutComponent, canActivate: [AuthGuardService] },
+
+  // UTILITY PAGES
+  { path: 'account/:id/conferma/:token', component: ConfirmRegistrationComponent },
 
 
   { path: 'home', component: HomeComponent },

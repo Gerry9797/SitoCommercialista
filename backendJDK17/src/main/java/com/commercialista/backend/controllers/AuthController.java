@@ -109,7 +109,7 @@ public class AuthController {
 			e.printStackTrace();
 			return ResponseEntity
 					.badRequest()
-					.body(new MessageResponse("Error while send Email!"));
+					.body(new MessageResponse("Errore nell'invio della mail!"));
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 			e.printStackTrace();
@@ -119,7 +119,7 @@ public class AuthController {
 		}
 
 
-		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
+		return ResponseEntity.ok(new MessageResponse("Utente registrato con successo!"));
 	}
 
 

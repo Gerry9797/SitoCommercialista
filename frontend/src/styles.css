@@ -62621,3 +62621,13 @@ span.color-primary {
   .p-dialog-content h5 {
     font-size: 1.25rem;
 }
+
+/* other style  */
+.mat-typography h1 {
+    font: unset !important;
+    font-size: 2.5rem !important;
+}
+.mat-typography h5 {
+    font: unset !important;
+    font-size: 1.25rem !important;
+}
