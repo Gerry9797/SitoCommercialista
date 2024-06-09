@@ -8,14 +8,8 @@ import { UtilityService } from 'src/app/services/utility/utility.service';
   styleUrls: ['./indirizzi.component.css'],
 })
 export class IndirizziComponent implements OnInit {
-  message: NotificationMessage | null = null;
 
-  // message: NotificationMessage = {
-  //   description: 'Indirizzo modificato correttamente.',
-  //   status: 'message',
-  // };
-
-  address: any = true;
+  address: any = false;
 
   constructor(
     private utilityService: UtilityService

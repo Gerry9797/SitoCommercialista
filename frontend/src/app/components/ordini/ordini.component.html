@@ -1,43 +1,6 @@
-<main id="content" class="site-main page hentry">
-  <div class="page-content">
-    <div class="elementor elementor-3895">
-      <app-intestazione-area-decorated [title]="'Area Riservata'"></app-intestazione-area-decorated>
-      <section class="elementor-section elementor-top-section elementor-element elementor-element-area-riservata-content-main elementor-section-boxed elementor-section-height-default elementor-section-height-default">
-        <div class="elementor-container elementor-column-gap-default">
-          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element ">
-            <div class="elementor-widget-wrap elementor-element-populated">
-              <div class="elementor-element elementor-element-area-riservata-content-div e-my-account-tabs-vertical elementor-widget elementor-widget-woocommerce-my-account">
-                <div class="elementor-widget-container">
-                  <div class="e-my-account-tab e-my-account-tab__orders">
-                    <span class="elementor-hidden">[woocommerce_my_account]</span>
-                    <div class="woocommerce">
-                      <app-inner-menu-area-riservata activeItem="ordini"></app-inner-menu-area-riservata>
-
-                      <div class="woocommerce-MyAccount-content">
-                        <div
-                          class="woocommerce-MyAccount-content-wrapper-no-data"
-                        >
-                          <div class="woocommerce-notices-wrapper"></div>
-
-                          <div class="woocommerce-info">
-                            Non è stato ancora effettuato alcun ordine.
-                            <a
-                              class="woocommerce-Button button"
-                              href="/ebook-e-guide"
-                              >Sfoglia prodotti</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div class="post-tags"></div>
-  </div>
-</main>
+<div class="woocommerce-info">
+  Non è stato ancora effettuato alcun ordine.
+  <a class="woocommerce-Button button" routerLink="/ebook-e-guide"
+    >Sfoglia prodotti</a
+  >
+</div>

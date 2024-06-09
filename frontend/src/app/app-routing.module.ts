@@ -35,6 +35,7 @@ import { AuthGuardService } from './services/route-guards/auth-guard.service';
 import { ErrorComponent } from './components/error/error.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { ConfirmRegistrationComponent } from './components/confirm-registration/confirm-registration.component';
+import { AreaRiservataComponent } from './components/area-riservata/area-riservata.component';
 
 const routes: Routes = [
 
@@ -57,10 +58,11 @@ const routes: Routes = [
   { path: 'prenota-consulenza', component: PrenotaConsulenzaComponent },
 
   // AREA RISERVATA 
-  { path: 'area-riservata/bacheca', component: BachecaComponent, canActivate: [AuthGuardService]},
+  { path: 'area-riservata', redirectTo: 'area-riservata/bacheca', pathMatch: 'full'},
+  { path: 'area-riservata/bacheca', component: AreaRiservataComponent, data: {activeItem: "bacheca", showBorderBlock: true}, canActivate: [AuthGuardService]},
   { path: 'area-riservata/gestisci-appuntamento', component: GestisciAppuntamentiComponent, canActivate: [AuthGuardService] },
-  { path: 'area-riservata/ordini', component: OrdiniComponent, canActivate: [AuthGuardService] },
-  { path: 'area-riservata/indirizzi', component: IndirizziComponent, canActivate: [AuthGuardService] },
+  { path: 'area-riservata/ordini', component: AreaRiservataComponent, data: {activeItem: "ordini", showBorderBlock: false}, canActivate: [AuthGuardService] },
+  { path: 'area-riservata/indirizzi', component: AreaRiservataComponent, data: {activeItem: "indirizzi", showBorderBlock: false}, canActivate: [AuthGuardService] },
   { path: 'area-riservata/indirizzi/aggiungi', component: AggiungiIndirizzoComponent, canActivate: [AuthGuardService] },
   { path: 'area-riservata/dettaglio-account', component: DettagliAccountComponent, canActivate: [AuthGuardService] },
   { path: 'area-riservata/logout', component: LogoutComponent, canActivate: [AuthGuardService] },

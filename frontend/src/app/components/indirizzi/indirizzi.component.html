@@ -1,66 +1,29 @@
-<main id="content" class="site-main page hentry">
-  <div class="page-content">
-    <div class="elementor elementor-3895">
-      <app-intestazione-area-decorated [title]="'Area Riservata'"></app-intestazione-area-decorated>
-      <section class="elementor-section elementor-top-section elementor-element elementor-element-area-riservata-content-main elementor-section-boxed elementor-section-height-default elementor-section-height-default">
-        <div class="elementor-container elementor-column-gap-default">
-          <div class="elementor-column elementor-col-100 elementor-top-column elementor-element ">
-            <div class="elementor-widget-wrap elementor-element-populated">
-              <div class="elementor-element elementor-element-area-riservata-content-div e-my-account-tabs-vertical elementor-widget elementor-widget-woocommerce-my-account">
-                <div class="elementor-widget-container">
-                  <div class="e-my-account-tab e-my-account-tab__edit-address">
-                    <span class="elementor-hidden">[woocommerce_my_account]</span>
-                    <div class="woocommerce">
-                      <app-inner-menu-area-riservata activeItem="indirizzi"></app-inner-menu-area-riservata>
+<p>
+  I seguenti indirizzi saranno usati come predefiniti nella pagina di riepilogo
+  dell'ordine.
+</p>
 
-                      <div class="woocommerce-MyAccount-content">
-                        <div class="woocommerce-MyAccount-content-wrapper">
-                          <app-notices-block
-                            *ngIf="message"
-                            [message]="message.description"
-                            [status]="message.status"
-                          ></app-notices-block>
-
-                          <p>
-                            I seguenti indirizzi saranno usati come predefiniti
-                            nella pagina di riepilogo dell'ordine.
-                          </p>
-
-                          <div class="u-column1 col-1 woocommerce-Address">
-                            <header class="woocommerce-Address-title title">
-                              <h3>Indirizzo di fatturazione</h3>
-                              <a
-                                *ngIf="!address"
-                                routerLink="/area-riservata/indirizzi/aggiungi"
-                                class="edit"
-                                >Aggiungi</a
-                              >
-                              <a
-                              *ngIf="address"
-                              routerLink="/area-riservata/indirizzi/aggiungi"
-                              class="edit"
-                              >Modifica</a
-                            >
-                            </header>
-                            <address *ngIf="!address" style="height: 87px">
-                              Non hai ancora impostato questo tipo di indirizzo.
-                            </address>
-                            <address *ngIf="address" style="height: 231px">
-                              corbisiero srl<br />Gerardo Corbisiero<br />Via
-                              Ciorani, fraz. Lombardi<br />4<br />84085<br />MERCATO
-                              SAN SEVERINO<br />SALERNO
-                            </address>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-</main>
+<div class="u-column1 woocommerce-Address">
+  <header class="woocommerce-Address-title title">
+    <h3>Indirizzo di fatturazione</h3>
+    <a
+      *ngIf="!address"
+      routerLink="/area-riservata/indirizzi/aggiungi"
+      class="edit">
+      Aggiungi
+    </a>
+    <a
+      *ngIf="address"
+      routerLink="/area-riservata/indirizzi/aggiungi"
+      class="edit">
+      Modifica
+    </a>
+  </header>
+  <address *ngIf="!address" style="height: 87px">
+    Non hai ancora impostato questo tipo di indirizzo.
+  </address>
+  <address *ngIf="address" style="height: 231px">
+    corbisiero srl<br />Gerardo Corbisiero<br />Via Ciorani, fraz. Lombardi<br />4<br />84085<br />MERCATO
+    SAN SEVERINO<br />SALERNO
+  </address>
+</div>

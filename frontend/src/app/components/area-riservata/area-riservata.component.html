@@ -1,0 +1,43 @@
+<main id="content" class="site-main page hentry">
+    <div class="page-content">
+      <div class="elementor elementor-3895">
+        <app-intestazione-area-decorated [title]="'Area Riservata'"></app-intestazione-area-decorated>
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-area-riservata-content-main elementor-section-boxed elementor-section-height-default elementor-section-height-default">
+          <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element ">
+              <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-area-riservata-content-div e-my-account-tabs-vertical elementor-widget elementor-widget-woocommerce-my-account">
+                  <div class="elementor-widget-container">
+                    <div class="e-my-account-tab e-my-account-tab__dashboard">
+
+                      <div class="woocommerce">
+                        <app-inner-menu-area-riservata [activeItem]="activeItem"></app-inner-menu-area-riservata>
+  
+                        <div class="woocommerce-MyAccount-content">
+                          <div class="woocommerce-MyAccount-content-wrapper{{showBorderBlock ? '' : 'no-data'}}">
+                            <app-notices-block
+                                *ngIf="message"
+                                [message]="message.description"
+                                [status]="message.status">
+                            </app-notices-block>
+
+                            <!-- content selection (child) -->
+                            <app-bacheca *ngIf="activeItem == 'bacheca'"></app-bacheca>
+                            <app-ordini *ngIf="activeItem == 'ordini'"></app-ordini>
+                            <app-indirizzi *ngIf="activeItem == 'indirizzi'"></app-indirizzi>
+                          
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="post-tags"></div>
+    </div>
+  </main>
+  
