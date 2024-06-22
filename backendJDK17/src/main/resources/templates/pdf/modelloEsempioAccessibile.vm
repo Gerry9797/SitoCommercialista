@@ -729,16 +729,12 @@
     <link rel="external" href="http://wwwservizi.regione.emilia-romagna.it/autonomie/anagraficaeellconsultazione/" />
 </head>
 <body>
-	<bookmarks> 
-		<bookmark name="Titolo richiesta" href="#titolo-richiesta" />
-	   <bookmark name="Informativa Privacy" href="#informativa-privacy" />  
-    </bookmarks>
 <div class="container">
 
 <!-- ________________________________ BannerElement.vm ________________________________ -->
     <div class="containerheader">
 <!-- ________________________________ BannerText.vm ________________________________ -->
-    <div class="headerText"><h2>Regione Emilia Romagna  <span class="page"></span> di  <span class="pages"></span></h2></div>
+    <div class="headerText"><span>Regione Emilia Romagna  <span class="page"></span> di  <span class="pages"></span></span></div>
 <!-- ________________________________ BannerImages.vm ________________________________ -->
 
 
@@ -753,7 +749,7 @@
 <!-- ________________________________ BannerElement.vm ________________________________ -->
     <div class="containerfooter">
 <!-- ________________________________ BannerText.vm ________________________________ -->
-    <div class="footerText"><h2>Modulo Richiesta tesserino Raccolta funghi</h2><p> <span class="page"></span> di  <span class="pages"></span></p></div>
+    <div class="footerText"><span>Modulo Richiesta tesserino Raccolta funghi</span><p> <span class="page"></span> di  <span class="pages"></span></p></div>
 <!-- ________________________________ BannerImages.vm ________________________________ -->
 
 
@@ -762,22 +758,22 @@
 <!-- ________________________________ BannerElement.vm ________________________________ -->
     <div class="containerheader">
 <!-- ________________________________ BannerText.vm ________________________________ -->
-    <div class="headerText"><h2>Regione Emilia Romagna  <span class="page"></span> di  <span class="pages"></span></h2></div>
+    <div class="headerText"><span>Regione Emilia Romagna  <span class="page"></span> di  <span class="pages"></span></span></div>
 <!-- ________________________________ BannerImages.vm ________________________________ -->
 
 
     </div>
 
-<h1 id="informativa-privacy">
+<h2 id="informativa-privacy">
 	<p><strong>Informativa Privacy</strong></p>
-</h1>
+</h2>
 
 
 
 <!-- ________________________________ BannerElement.vm ________________________________ -->
     <div class="containerfooter">
 <!-- ________________________________ BannerText.vm ________________________________ -->
-    <div class="footerText"><h2>Modulo Richiesta tesserino Raccolta funghi</h2><p> <span class="page"></span> di  <span class="pages"></span></p></div>
+    <div class="footerText"><span>Modulo Richiesta tesserino Raccolta funghi</span><p> <span class="page"></span> di  <span class="pages"></span></p></div>
 <!-- ________________________________ BannerImages.vm ________________________________ -->
 
 

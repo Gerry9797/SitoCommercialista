@@ -1,21 +1,18 @@
 package com.commercialista.backend.services;
 
-import java.awt.color.ColorSpace;
-import java.awt.color.ICC_Profile;
+import java.awt.Font;
+import java.awt.FontFormatException;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
-import java.net.URL;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.nio.charset.StandardCharsets;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
+import java.util.UUID;
 
 import org.apache.pdfbox.io.IOUtils;
 import org.apache.velocity.Template;
@@ -25,25 +22,21 @@ import org.apache.velocity.runtime.RuntimeConstants;
 import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
 import org.jsoup.Jsoup;
 import org.jsoup.helper.W3CDom;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
-import org.w3c.dom.Document;
-import org.xhtmlrenderer.pdf.ITextRenderer;
 
-import com.commercialista.backend.services.rendering.AutoFont;
-import com.commercialista.backend.services.rendering.ChainingReplacedElementFactory;
-import com.commercialista.backend.services.rendering.ImageReplacedElementFactory;
-import com.commercialista.backend.services.rendering.SVGReplacedElementFactory;
-import com.commercialista.backend.services.rendering.AutoFont.CSSFont;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.PdfCopy;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfWriter;
+import com.openhtmltopdf.outputdevice.helper.BaseRendererBuilder;
 import com.openhtmltopdf.pdfboxout.PdfRendererBuilder;
 import com.openhtmltopdf.pdfboxout.PdfRendererBuilder.PdfAConformance;
 
 @Service
 public class PdfService {
 
+    private static final Logger logger = LoggerFactory.getLogger(PdfService.class);
     private final VelocityEngine velocityEngine;
     private final DateTimeFormatter dateFormatter;
 
@@ -68,111 +61,141 @@ public class PdfService {
         return renderedTemplate.toString();
     }
 
-    private byte[] convertHtmlToPdf(String html) throws Exception {
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        factory.setNamespaceAware(true);
-        DocumentBuilder builder = factory.newDocumentBuilder();
+    public byte[] generateAccessiblePdf(String templateName, Map<String, Object> templateParameters, String titoloPdf, String lingua) throws Exception {
 
-        html = html.replaceAll("<br>", "<br/>");
-        // Input
-        Document inputDoc = builder.parse(new ByteArrayInputStream(html.getBytes()));
-        
-        ITextRenderer renderer = new ITextRenderer();
+        PdfAConformance pdfaLevel = PdfAConformance.PDFA_3_A;
 
-        // Add external fonts
-        renderer.getFontResolver().addFont("fonts/TitilliumWeb-Black.ttf", BaseFont.IDENTITY_H, true);
-        renderer.getFontResolver().addFont("fonts/TitilliumWeb-Bold.ttf", BaseFont.IDENTITY_H, true);
-        renderer.getFontResolver().addFont("fonts/TitilliumWeb-BoldItalic.ttf", BaseFont.IDENTITY_H, true);
-        renderer.getFontResolver().addFont("fonts/TitilliumWeb-ExtraLight.ttf", BaseFont.IDENTITY_H, true);
-        renderer.getFontResolver().addFont("fonts/TitilliumWeb-ExtraLightItalic.ttf", BaseFont.IDENTITY_H, true);
-        renderer.getFontResolver().addFont("fonts/TitilliumWeb-Italic.ttf", BaseFont.IDENTITY_H, true);
-        renderer.getFontResolver().addFont("fonts/TitilliumWeb-Light.ttf", BaseFont.IDENTITY_H, true);
-        renderer.getFontResolver().addFont("fonts/TitilliumWeb-LightItalic.ttf", BaseFont.IDENTITY_H, true);
-        renderer.getFontResolver().addFont("fonts/TitilliumWeb-Regular.ttf", BaseFont.IDENTITY_H, true);
-        renderer.getFontResolver().addFont("fonts/TitilliumWeb-SemiBold.ttf", BaseFont.IDENTITY_H, true);
-        renderer.getFontResolver().addFont("fonts/TitilliumWeb-SemiBoldItalic.ttf", BaseFont.IDENTITY_H, true);
-        
-        ChainingReplacedElementFactory chainingReplacedElementFactory = new ChainingReplacedElementFactory();
-        chainingReplacedElementFactory.addReplacedElementFactory(new SVGReplacedElementFactory());
-        chainingReplacedElementFactory.addReplacedElementFactory(new ImageReplacedElementFactory(renderer.getSharedContext().getReplacedElementFactory()));
-        renderer.getSharedContext().setReplacedElementFactory(chainingReplacedElementFactory);
-        
-        renderer.setDocument(inputDoc, "");
-        renderer.layout();
-        
-        ByteArrayOutputStream output = new ByteArrayOutputStream();
-        renderer.createPDF(output);
-        
-        // Output
-        return output.toByteArray();
-    }
-
-    public byte[] convertPdfToPdfA(byte[] pdf) throws IOException {
-
-        ICC_Profile icc = ICC_Profile.getInstance(ColorSpace.CS_sRGB);
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
-        try (com.lowagie.text.Document document = new com.lowagie.text.Document();
-             PdfReader reader = new PdfReader(new ByteArrayInputStream(pdf))) {
-
-            PdfCopy pdfCopy = new PdfCopy(document, outputStream);
-            pdfCopy.setPDFXConformance(PdfWriter.PDFA1B);
-            pdfCopy.createXmpMetadata();
-
-            document.open();
-            pdfCopy.setOutputIntents("", "", "", "", icc);
-
-            for (int i = 1; i <= reader.getNumberOfPages(); i++)
-                pdfCopy.addPage(pdfCopy.getImportedPage(reader, i));
-        }
-
-        return outputStream.toByteArray();
-    }
-
-    public byte[] generatePdf(String templateName, Map<String, Object> templateParameters) throws Exception {
+        // cofigurazione metadati pdf
+        templateParameters.put("lingua", lingua);
+        templateParameters.put("titoloPdf", titoloPdf);
 
         String html = renderTemplate(templateName, templateParameters);
-        byte[] pdf = convertHtmlToPdf(html);
-        return convertPdfToPdfA(pdf);
-    }
-    
-    public byte[] generateAccessiblePdf(String templateName, Map<String, Object> templateParameters) throws Exception {
+        String htmlWithBookmarks = addBookmarks(html);
+        try (ByteArrayInputStream xmlInputStream = new ByteArrayInputStream(htmlWithBookmarks.getBytes(StandardCharsets.UTF_8))) {
+            // Parse the XML content
+            W3CDom w3cDom = new W3CDom();
+            org.jsoup.nodes.Document jsoupDoc = Jsoup.parse(xmlInputStream, "UTF-8", "");
 
-    	PdfAConformance pdfaLevel = PdfAConformance.PDFA_3_A;
-    	
-        String html = renderTemplate(templateName, templateParameters);
-        try (ByteArrayInputStream xmlInputStream = new ByteArrayInputStream(html.getBytes("UTF-8"))) { 
-            // Parse the XML content 
-            W3CDom w3cDom = new W3CDom(); 
-            org.jsoup.nodes.Document jsoupDoc = Jsoup.parse(xmlInputStream, "UTF-8", ""); 
- 
-            URL fontDirURL = PdfService.class.getClassLoader().getResource("fonts"); 
-            if (fontDirURL == null) { 
-                throw new RuntimeException("Font directory not found in resources."); 
-            } 
-            Path fontDirectory = Paths.get(fontDirURL.toURI()); 
-            List<CSSFont> fonts = AutoFont.findFontsInDirectory(fontDirectory);
- 
-            PdfRendererBuilder builder = new PdfRendererBuilder(); 
-            AutoFont.toBuilder(builder, fonts); 
- 
-            builder.useFastMode(); 
-            builder.usePdfUaAccessbility(true); 
-            builder.usePdfAConformance(pdfaLevel); 
-            builder.withW3cDocument(w3cDom.fromJsoup(jsoupDoc), ""); 
- 
-            try (InputStream colorProfile = PdfService.class.getResourceAsStream("/colorspaces/sRGB.icc")) { 
-                byte[] colorProfileBytes = IOUtils.toByteArray(colorProfile); 
-                builder.useColorProfile(colorProfileBytes); 
-            } 
- 
-            ByteArrayOutputStream baos = new ByteArrayOutputStream(); 
- 
-            builder.toStream(baos); 
-            builder.run(); 
- 
-            return baos.toByteArray(); 
+            PdfRendererBuilder builder = new PdfRendererBuilder();
+
+            List<String> fontsName = List.of(
+                    "TitilliumWeb-Black.ttf",
+                    "TitilliumWeb-Bold.ttf",
+                    "TitilliumWeb-BoldItalic.ttf",
+                    "TitilliumWeb-ExtraLight.ttf",
+                    "TitilliumWeb-ExtraLightItalic.ttf",
+                    "TitilliumWeb-Italic.ttf",
+                    "TitilliumWeb-Light.ttf",
+                    "TitilliumWeb-LightItalic.ttf",
+                    "TitilliumWeb-Regular.ttf",
+                    "TitilliumWeb-SemiBold.ttf",
+                    "TitilliumWeb-SemiBoldItalic.ttf"
+            );
+
+            loadFontsFromClasspath(builder, "fonts", fontsName);
+
+            builder.useFastMode();
+            builder.usePdfUaAccessbility(true);
+            builder.usePdfAConformance(pdfaLevel);
+            builder.withW3cDocument(w3cDom.fromJsoup(jsoupDoc), "");
+
+            try (InputStream colorProfile = new ClassPathResource("colorspaces/sRGB.icc").getInputStream()) {
+                byte[] colorProfileBytes = IOUtils.toByteArray(colorProfile);
+                builder.useColorProfile(colorProfileBytes);
+            }
+
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+
+            builder.toStream(baos);
+            builder.run();
+
+            return baos.toByteArray();
         }
+    }
+
+    private void loadFontsFromClasspath(PdfRendererBuilder builder, String fontsDir, List<String> fontsName) throws IOException, FontFormatException {
+
+        for (String fontFileName : fontsName) {
+            String fontPath = fontsDir + "/" + fontFileName;
+            try (InputStream fontInputStream = new ClassPathResource(fontPath).getInputStream()) {
+                Font font = Font.createFont(Font.TRUETYPE_FONT, fontInputStream);
+
+                String family = font.getFamily();
+                String name = font.getFontName(Locale.US).toLowerCase(Locale.US);
+                int weight = 400;
+
+                if (name.contains("thin")) {
+                    weight = 100;
+                } else if (name.contains("light")) {
+                    if (name.contains("extra")) {
+                        weight = 200;
+                    } else {
+                        weight = 300;
+                    }
+                } else if (name.contains("medium")) {
+                    weight = 500;
+                } else if (name.contains("bold")) {
+                    if (name.contains("semi")) {
+                        weight = 600;
+                    } else if (name.contains("extra")) {
+                        weight = 800;
+                    } else {
+                        weight = 700;
+                    }
+                } else if (name.contains("black")) {
+                    weight = 900;
+                }
+
+                BaseRendererBuilder.FontStyle style = name.contains("italic") ? BaseRendererBuilder.FontStyle.ITALIC : BaseRendererBuilder.FontStyle.NORMAL;
+
+                builder.useFont(() -> {
+                    try {
+                        return new ClassPathResource(fontPath).getInputStream();
+                    } catch (IOException e) {
+                        logger.error("Caricamento del font non riuscito: " + fontPath);
+                        throw new RuntimeException(e);
+                    }
+                }, family, weight, style, true);
+
+            }
+        }
+    }
+
+
+    private String addBookmarks(String html) {
+        // Parse the HTML content with Jsoup
+        org.jsoup.nodes.Document document = Jsoup.parse(html);
+        // Find all header tags (h1 to h5)
+        Elements headerTags = document.select("h1, h2, h3, h4, h5");
+        // Create the bookmarks element
+        Element bookmarksElement = document.createElement("bookmarks");
+
+        // Iterate over each header tag
+        for (Element header : headerTags) {
+            // Ensure the header has an id
+            if (header.id().isEmpty()) {
+                // Generate a random id
+                String randomId = "id-" + UUID.randomUUID().toString();
+                header.attr("id", randomId);
+            }
+
+            // Extract the text from the header and its children
+            String headerText = header.text();
+
+            // Create the bookmark element
+            Element bookmark = document.createElement("bookmark");
+            bookmark.attr("href", "#" + header.id());
+            bookmark.attr("name", headerText);
+
+            // Add the bookmark to the bookmarks element
+            bookmarksElement.appendChild(bookmark);
+        }
+
+        // Insert the bookmarks element at the beginning of the body
+        document.body().prependChild(bookmarksElement);
+
+        // Return the modified HTML
+        return document.html();
     }
 
 }

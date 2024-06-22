@@ -31,7 +31,7 @@ public class TestPdfController {
 	@Autowired
 	PdfService pdfService;
 
-	@GetMapping("/getPdfFromTemplateReadingValuesFromXmlString")
+	@GetMapping("/getPdfAccessibleFromTemplateReadingValuesFromXmlString")
 	public ResponseEntity<byte[]> getPdfFromTemplateReadingValuesFromXmlString() throws Exception {
 		String RT = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n"
 				+ "<RT xmlns=\"http://www.digitpa.gov.it/schemas/2011/Pagamenti/\">\n"
@@ -120,18 +120,18 @@ public class TestPdfController {
 		parameters.put("importoOperazione",
 				FormateManager.formattaImportoString(Double.valueOf(12.2d)) + " €");
 		parameters.put("causale", "causale prova");
-		byte[] bytePdf = pdfService.generatePdf("pdf/modelloRicevutaPagamento", parameters);
+		byte[] bytePdf = pdfService.generateAccessiblePdf("pdf/modelloRicevutaPagamento", parameters, "titolo esempio", "it-IT");
 		String filename = "ricevuta-pagamento.pdf";
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_PDF);headers.setContentDispositionFormData("attachment", filename);
 		headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");return new ResponseEntity<>(bytePdf, headers, HttpStatus.OK);
 	}
 	
-	@GetMapping("/getPdfAccessibleFromTemplateReadingValuesFromXmlString")
+	@GetMapping("/getPdfAccessibleFromTemplate")
 	public ResponseEntity<byte[]> getAccessiblePdfFromTemplateReadingValuesFromXmlString() throws Exception {
 		// mappa con valori da utilizzare nel template .vm
 		Map parameters = new HashMap<>();
-		byte[] bytePdf = pdfService.generateAccessiblePdf("pdf/modelloEsempioAccessibile", parameters);
+		byte[] bytePdf = pdfService.generateAccessiblePdf("pdf/modelloEsempioAccessibile", parameters, "titolo esempio", "it-IT");
 		String filename = "esempio-accessibile.pdf";
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_PDF);headers.setContentDispositionFormData("attachment", filename);
