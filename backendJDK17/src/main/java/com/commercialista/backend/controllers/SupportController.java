@@ -15,11 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.commercialista.backend.payload.request.MessageRequest;
 import com.commercialista.backend.services.SupportService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @CrossOrigin(origins="*")
 @RestController
 @RequestMapping("/api/support")
+@Tag(name = "Supporto")
 public class SupportController {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(SupportController.class);
@@ -28,6 +31,8 @@ public class SupportController {
 	SupportService supportService;
 	
     @PostMapping(value = "/send-message", consumes = {"application/json; charset: 'utf-8'"}, produces = {"application/json; charset: 'utf-8'"})
+    @Operation(summary = "Invia un messaggio al supporto",
+    description = "Invia un messaggio tramite email al supporto")
     public Map<String, Boolean> sendMessageToSupport(
     		@Valid @RequestBody MessageRequest messageRequest
     		) throws Exception {

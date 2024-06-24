@@ -34,6 +34,7 @@ import com.commercialista.backend.services.UserService;
 import com.commercialista.backend.utils.LoggedUserManager;
 
 import freemarker.template.TemplateException;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.mail.MessagingException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
@@ -41,6 +42,7 @@ import jakarta.validation.Valid;
 @CrossOrigin(origins="*")
 @RestController
 @RequestMapping("/api/user")
+@Tag(name = "Account")
 public class AccountController {
 	
 	@Autowired

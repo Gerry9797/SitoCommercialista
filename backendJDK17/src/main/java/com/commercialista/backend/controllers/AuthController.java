@@ -34,12 +34,16 @@ import com.commercialista.backend.security.services.UserDetailsImpl;
 import com.commercialista.backend.services.UserService;
 
 import freemarker.template.TemplateException;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.mail.MessagingException;
 import jakarta.validation.Valid;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/auth")
+@Tag(name = "Accesso / Registrazione Standard")
 public class AuthController {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(AuthController.class);
@@ -70,6 +74,8 @@ public class AuthController {
 	
 
 	@PostMapping("/signin")
+    @Operation(summary = "Login con credenziali standard (email e password)",
+    description = "Restituisce il token jwt e l'id dell'utente una volta validate le credenziali di login standard")
 	public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) throws Exception {
 
 		// controlla se esiste un utente con email e password indicate e se ha un account attivo sul sistema
@@ -91,8 +97,10 @@ public class AuthController {
 	}
 
 	@PostMapping("/signup")
+    @Operation(summary = "Registrazione con credenziali standard (email e password)",
+    description = "Registra un utente sul sistema, solo un admin può registrare un utente con permessi diversi da USER")
 	public ResponseEntity<?> registerUser( @RequestBody SignupRequest signUpRequest,
-			@RequestHeader(name = "Authorization", required = false) String authorizationHeader) throws Exception {
+			@RequestHeader(name = "Authorization", required = false) @Parameter(description = "token preso dal jwt se presente per registrare un utente con permessi diversi da USER", required = false) String authorizationHeader) throws Exception {
 		
 		// gestione dello username nascosta all'utente, viene impostato uno UUID
 		userService.generaUsername(signUpRequest);
