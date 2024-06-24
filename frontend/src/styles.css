@@ -62464,7 +62464,7 @@ span.color-primary {
     margin: 0 !important;
 }
 
-.mat-typography {
+::ng-deep .mat-typography {
     font: unset !important;
     font-family: var(--e-global-typography-text-font-family) !important;
     font-size: var(--e-global-typography-text-font-size) !important;
@@ -62623,11 +62623,11 @@ span.color-primary {
 }
 
 /* other style  */
-.mat-typography h1 {
+/* .mat-typography h1 {
     font: unset !important;
     font-size: 2.5rem !important;
 }
 .mat-typography h5 {
     font: unset !important;
     font-size: 1.25rem !important;
-}
+} */
