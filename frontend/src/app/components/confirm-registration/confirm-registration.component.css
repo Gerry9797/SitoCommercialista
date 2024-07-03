@@ -27,6 +27,17 @@
   .animated-thumbs {
     animation: shake-thumbs 3.875s ease infinite;
   }
+
+  h1 {
+    font: 400 40px / 32px Roboto, sans-serif !important;
+    font-family: var(--font-family) !important;
+  }
+
+  h5 {
+    font: 400 18px / 20px Roboto, sans-serif !important;
+    font-family: var(--font-family) !important;
+    line-height: 30px !important;
+  }
   
   @keyframes shake-thumbs {
     10%,

@@ -47,7 +47,6 @@ export class AreaRiservataComponent {
   }
 
   getActiveItem() {
-    debugger
     this.route.data.subscribe(data => {
       this.activeItem = data['activeItem'];
       this.showBorderBlock = data['showBorderBlock'];

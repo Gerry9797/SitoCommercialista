@@ -1,23 +1,29 @@
 .animated {
-    animation: shake-wait2 3.875s ease infinite;
+  animation: shake-wait2 3.875s ease infinite;
+}
+
+p {
+  font: 400 14px / 24px Roboto, sans-serif;
+  font-family: var(--font-family) !important;
+  letter-spacing: inherit !important;
 }
 
 @keyframes shake-wait2 {
-    10%,
-    90% {
-        transform: translate3d(-1px, 0, 0) rotate(-1.0deg);
-    }
-    20%,
-    80% {
-        transform: translate3d(2px, 0, 0) rotate(-1.5deg);
-    }
-    30%,
-    50%,
-    70% {
-        transform: translate3d(-4px, 0, 0) rotate(-2.0deg);
-    }
-    40%,
-    60% {
-        transform: translate3d(4px, 0, 0) rotate(2.0deg);
-    }
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0) rotate(-1deg);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0) rotate(-1.5deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0) rotate(-2deg);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0) rotate(2deg);
+  }
 }
