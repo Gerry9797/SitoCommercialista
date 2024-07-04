@@ -1,4 +1,4 @@
-package com.commercialista.backend.models;
+package com.commercialista.backend.enums;
 
 public enum ERole {
   ROLE_USER,

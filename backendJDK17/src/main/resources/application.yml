@@ -21,6 +21,8 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER
+  
+  #mail settings
   mail:
     host: smtps.aruba.it
     port: 465
@@ -37,6 +39,19 @@ spring:
             fallback: false
         debug: true
 
+  # scheduler threads settings
+  task:
+    scheduling:
+      pool:
+        size: 5
+        
+springdoc:
+  # swagger-ui.path: /docs/swagger-ui.html
+  swagger-ui.enabled: true
+  # api-docs.path: /docs/api-docs
+  api-docs.enabled: true
+        
+        
 configuration:
   app:
     jwtSecret: "======================Commerci=alista=========================="
@@ -82,4 +97,8 @@ custom:
       base-url: http://localhost:8080
   
   scheduler:
-    enable: false
+    remove-user-with-expired-confirmation: # scheduler che elimina gli account che non hanno confermato la registrazione dopo più di un certo numero di giorni
+      enabled: true
+      cron: "0 0 3 * * ?"  # si attiva alle 3:00 AM ogni giorno
+      maxNumDaysForConfirmation: 6  # giorni dopo i quali una transazione di un pagamento ancora in stato PENDENTE viene messa in FALLIMENTO
+  

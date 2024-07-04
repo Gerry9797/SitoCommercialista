@@ -1,15 +1,20 @@
 package com.commercialista.backend.scheduler;
 
 import java.text.MessageFormat;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import com.commercialista.backend.repository.AccountRepository;
+import com.commercialista.backend.repository.RoleRepository;
+import com.commercialista.backend.repository.UserRepository;
+import com.commercialista.backend.services.UserService;
 
 import jakarta.transaction.Transactional;
 
@@ -18,11 +23,15 @@ public class SchedulerService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SchedulerService.class);
 
-	@Value("${custom.scheduler.enable}")
-	private boolean enableScheduler;
-
+	@Value("${custom.scheduler.remove-user-with-expired-confirmation.enabled}")
+	private boolean enableJobRemoveUserWithExpiredConfirmation;
+	
+	@Value("${custom.scheduler.remove-user-with-expired-confirmation.maxNumDaysForConfirmation}")
+	private int maxNumDaysForConfirmation;
+	
 	@Autowired
-	private AccountRepository accountRepository;
+	private UserService userService;
+	
 
 //	@Scheduled(fixedRate = 1000) //ogni secondo
 //	public void scheduleFixedRateTask() {
@@ -39,14 +48,16 @@ public class SchedulerService {
 //	}
 
 	// Fires at 3:00 AM every day:
-	@Scheduled(cron = "0 0 3 * * ?", zone = "Europe/Rome")
+	@Scheduled(cron = "${custom.scheduler.remove-user-with-expired-confirmation.cron}", zone = "Europe/Rome")
 	@Transactional
-	public void ScheduledRemoveAnnunciNonConfermatiEntro6Giorni() {
-		if(enableScheduler) {
+	@Async("scheduler")
+	public void ScheduledRemoveAnnunciNonConfermatiEntroNGiorni() {
+		if(enableJobRemoveUserWithExpiredConfirmation) {
 			System.out.println("Avviato task di rimozione degli account non confermati entro 6 giorni dalla registrazione");
-		    int accountRimossi = accountRepository.removeAccountsNonConfermatiDa6gg();
+			int accountRimossi = userService.removeAccountNonConfermatiDaNDays(maxNumDaysForConfirmation);
+			
 		    System.out.println(MessageFormat.format("Sono stati rimossi {0} account", accountRimossi));
-		    System.out.println("Terminato task di rimozione degli account non confermati entro 6 giorni dalla registrazione");
+		    System.out.println(MessageFormat.format("Terminato task di rimozione degli account non confermati entro {0} giorni dalla registrazione", maxNumDaysForConfirmation));
 		}
 	}
 

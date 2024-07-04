@@ -18,10 +18,10 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.commercialista.backend.controllers.AuthController;
+import com.commercialista.backend.enums.ERole;
 import com.commercialista.backend.enums.StatiAccountEnum;
 import com.commercialista.backend.exception.ResourceNotFoundException;
 import com.commercialista.backend.models.Account;
-import com.commercialista.backend.models.ERole;
 import com.commercialista.backend.models.Role;
 import com.commercialista.backend.models.User;
 import com.commercialista.backend.payload.request.LoginRequest;
@@ -163,14 +163,14 @@ public class UserService {
 	}
 
 	@Transactional(rollbackFor = Exception.class, readOnly = false)
-	public int removeAccountNonConfermatiDa6gg() {
-		List<Long> idsAccountsToRemove = accountRepository.findAccountsNotConfirmedAfter6Days(); 
-		for(Long currId: idsAccountsToRemove) {
-			roleRepository.deleteByUserId(currId);
-			userRepository.deleteById(currId);
-			accountRepository.deleteById(currId);
+	public int removeAccountNonConfermatiDaNDays(int days) {
+		List<Long> userIdsToRemove = accountRepository.findAccountsNotConfirmedAfterNDays(days); 
+		if (userIdsToRemove != null && !userIdsToRemove.isEmpty()) {
+			roleRepository.deleteByUserIdIn(userIdsToRemove);
+			userRepository.deleteAllById(userIdsToRemove);
+			accountRepository.deleteAllById(userIdsToRemove);
 		}
-		return idsAccountsToRemove.size();
+		return userIdsToRemove.size();
 	}
 
 

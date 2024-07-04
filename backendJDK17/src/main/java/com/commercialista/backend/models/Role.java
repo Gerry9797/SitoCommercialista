@@ -1,5 +1,7 @@
 package com.commercialista.backend.models;
 
+import com.commercialista.backend.enums.ERole;
+
 import jakarta.persistence.*;
 
 @Entity
