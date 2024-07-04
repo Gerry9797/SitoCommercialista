@@ -98,7 +98,7 @@ custom:
   
   scheduler:
     remove-user-with-expired-confirmation: # scheduler che elimina gli account che non hanno confermato la registrazione dopo più di un certo numero di giorni
-      enabled: true
+      enabled: false
       cron: "0 0 3 * * ?"  # si attiva alle 3:00 AM ogni giorno
       maxNumDaysForConfirmation: 6  # giorni dopo i quali una transazione di un pagamento ancora in stato PENDENTE viene messa in FALLIMENTO
   
