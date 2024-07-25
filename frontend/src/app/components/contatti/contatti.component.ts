@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { SITE_CONFIG } from 'src/app/app.config';
 import { UtilityService } from 'src/app/services/utility/utility.service';
+import { LottieComponent, AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-contatti',

@@ -47,3 +47,8 @@
       transform: translate3d(4px, 0, 0) rotate(2deg);
     }
   }
+
+  h1 {
+    font: 400 36px / 32px Roboto, sans-serif;
+    font-size: 2.5rem;
+  }

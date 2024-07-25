@@ -1,3 +1,9 @@
+h2 {
+    font: 500 27px / 37px Roboto, sans-serif;
+    letter-spacing: inherit;
+    /* line-height: 1.5 !important; */
+}
+
 .elementor-4966 .elementor-element.elementor-element-4699c0f {
     margin-top: 0px;
     margin-bottom: 100px;
@@ -5885,7 +5891,7 @@ body .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-lab
     font-size: 16px;
     color: var(--am-c-sb-text);
     border-radius: .5rem 0 0 .5rem;
-    background-color: var(--am-c-sb-bgr);
+    background-color: var(--palette1-color-primary);
     padding: 16px 8px;
     transition: width .3s ease-in-out
 }
@@ -6500,7 +6506,7 @@ body .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-lab
     justify-content: center;
     width: 24px;
     height: 24px;
-    background-color: var(--am-c-sb-bgr);
+    background-color: var(--palette1-color-primary);
     border-radius: 50%;
     border: 1px solid var(--am-c-sb-checker-border);
     transition: border .3s ease-in-out;
@@ -6687,7 +6693,7 @@ body .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-lab
     font-size: 16px;
     color: var(--am-c-sb-text);
     border-radius: .5rem 0 0 .5rem;
-    background-color: var(--am-c-sb-bgr);
+    background-color: var(--palette1-color-primary);
     padding: 16px 8px;
     transition: width .3s ease-in-out
 }
@@ -7302,7 +7308,7 @@ body .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-lab
     justify-content: center;
     width: 24px;
     height: 24px;
-    background-color: var(--am-c-sb-bgr);
+    background-color: var(--palette1-color-primary);
     border-radius: 50%;
     border: 1px solid var(--am-c-sb-checker-border);
     transition: border .3s ease-in-out;
@@ -11819,8 +11825,8 @@ a.fc-event,a.fc-event:hover {
 }
 
 .amelia-v2-booking #amelia-container .am-advsc__slots-item {
-    --am-c-advsc-slot-bgr: var(--am-c-cal-init-op10);
-    --am-c-advsc-slot-border: var(--am-c-cal-init-op60);
+    --palette1-color-primary: var(--am-c-cal-init-op10);
+    --palette1-color-accent: #D9B1A7;
     width: 100%;
     flex: 50%;
     padding: 0 6px;
@@ -16837,8 +16843,8 @@ a.fc-event,a.fc-event:hover {
 }
 
 .amelia-v2-booking #amelia-container .am-advsc__slots-item__selected {
-    --am-c-advsc-slot-bgr: var(--am-c-cal-selected);
-    --am-c-advsc-slot-border: var(--am-c-cal-selected);
+    --palette1-color-primary: var(--e-global-color-primary);
+    --palette1-color-accent: var(--palette1-color-secondary-hover);
     --am-c-advsc-slot-text: var(--am-c-cal-selected-text)
 }
 
@@ -16851,9 +16857,9 @@ a.fc-event,a.fc-event:hover {
     line-height: 1.6;
     color: var(--am-c-advsc-slot-text);
     padding: 7px;
-    border: 1px solid var(--am-c-advsc-slot-border);
+    border: 1px solid var(--palette1-color-accent);
     border-radius: var(--am-rad-advsc-slot);
-    background-color: var(--am-c-advsc-slot-bgr);
+    background-color: var(--palette1-color-primary);
     cursor: pointer
 }
 
@@ -17195,8 +17201,8 @@ a.fc-event,a.fc-event:hover {
 }
 
 #amelia-app-backend-new .am-advsc__slots-item {
-    --am-c-advsc-slot-bgr: var(--am-c-cal-init-op10);
-    --am-c-advsc-slot-border: var(--am-c-cal-init-op60);
+    --palette1-color-primary: var(--am-c-cal-init-op10);
+    --palette1-color-accent: #D9B1A7;
     width: 100%;
     flex: 50%;
     padding: 0 6px;
@@ -22213,8 +22219,8 @@ a.fc-event,a.fc-event:hover {
 }
 
 #amelia-app-backend-new .am-advsc__slots-item__selected {
-    --am-c-advsc-slot-bgr: var(--am-c-cal-selected);
-    --am-c-advsc-slot-border: var(--am-c-cal-selected);
+    --palette1-color-primary: var(--am-c-cal-selected);
+    --palette1-color-accent: var(--am-c-cal-selected);
     --am-c-advsc-slot-text: var(--am-c-cal-selected-text)
 }
 
@@ -22227,9 +22233,9 @@ a.fc-event,a.fc-event:hover {
     line-height: 1.6;
     color: var(--am-c-advsc-slot-text);
     padding: 7px;
-    border: 1px solid var(--am-c-advsc-slot-border);
+    border: 1px solid var(--palette1-color-accent);
     border-radius: var(--am-rad-advsc-slot);
-    background-color: var(--am-c-advsc-slot-bgr);
+    background-color: var(--palette1-color-primary);
     cursor: pointer
 }
 
@@ -38052,7 +38058,10 @@ a.fc-event,a.fc-event:hover {
 }
 
 .am-icon-user:before {
-    content: "\e90a"
+    content: "\f007";
+    font-family: 'Font Awesome 6 Free';
+    font-size: 17px;
+    /* content: "\e90a" */
 }
 
 .am-icon-users:before {
@@ -38068,7 +38077,10 @@ a.fc-event,a.fc-event:hover {
 }
 
 .am-icon-date-time:before {
-    content: "\e931"
+    content: "\f017";
+    font-family: 'Font Awesome 6 Free';
+    font-size: 17px;
+    /* content: "\e931" */
 }
 
 .am-icon-event:before {
@@ -38100,7 +38112,10 @@ a.fc-event,a.fc-event:hover {
 }
 
 .am-icon-payment:before {
-    content: "\e932"
+    content: "\f09d";
+    font-family: 'Font Awesome 6 Free';
+    font-size: 17px;
+    /* content: "\e932" */
 }
 
 .am-icon-gallery:before {
@@ -38220,7 +38235,10 @@ a.fc-event,a.fc-event:hover {
 }
 
 .am-icon-arrow-circle-right:before {
-    content: "\e92f"
+    content: "\f359";
+    font-family: 'Font Awesome 6 Free';
+    font-size: 17px;
+    font-weight: 900;
 }
 
 .am-icon-refresh:before {
@@ -38248,7 +38266,11 @@ a.fc-event,a.fc-event:hover {
 }
 
 .am-icon-arrow-up:before {
-    content: "\e905"
+    content: "\f077";
+    font-family: 'Font Awesome 6 Free';
+    font-size: 17px;
+    font-weight: 900;
+    /* content: "\e905" */
 }
 
 .am-icon-arrow-down:before {
@@ -38256,11 +38278,19 @@ a.fc-event,a.fc-event:hover {
 }
 
 .am-icon-arrow-left:before {
-    content: "\e906"
+    content: "\f053";
+    font-family: 'Font Awesome 6 Free';
+    font-size: 17px;
+    font-weight: 900;
+    /* content: "\e906" */
 }
 
 .am-icon-arrow-right:before {
-    content: "\e907"
+    content: "\f054";
+    font-family: 'Font Awesome 6 Free';
+    font-size: 17px;
+    font-weight: 900;
+    /* content: "\e907" */
 }
 
 .am-icon-outlook:before {
@@ -38423,4 +38453,8 @@ a.fc-event,a.fc-event:hover {
 .amelia-v2-booking .am-no-services * {
     font-family: Amelia Roboto,sans-serif;
     box-sizing: border-box
+}
+
+p, li {
+    font-size: 16px;
 }

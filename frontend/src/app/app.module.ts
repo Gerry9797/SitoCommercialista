@@ -20,8 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContattiComponent } from './components/contatti/contatti.component';
-import { LottieModule } from 'ngx-lottie';
-import player from 'lottie-web';
+import { LottieComponent, provideLottieOptions } from 'ngx-lottie';
+// import player from 'lottie-web';
 import { EbookComponent } from './components/ebook/ebook.component';
 import { WebinarComponent } from './components/webinar/webinar.component';
 import { ArticoliComponent } from './components/articoli/articoli.component';
@@ -78,14 +78,15 @@ import { WebinarCardComponent } from './bricks/cards/webinar-card/webinar-card.c
 import { ErrorComponent } from './components/error/error.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import {DynamicDialogModule} from 'primeng/dynamicdialog';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { EmailSentModalComponent } from './modals/email-sent-modal/email-sent-modal.component';
 import { ConfirmRegistrationComponent } from './components/confirm-registration/confirm-registration.component';
 import { AreaRiservataComponent } from './components/area-riservata/area-riservata.component';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
-export function playerFactory() {
-  return player;
-}
+// export function playerFactory() {
+//   return player;
+// }
 
 // Registra i dati della lingua italiana
 registerLocaleData(localeIt);
@@ -164,7 +165,7 @@ registerLocaleData(localeIt);
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    LottieModule.forRoot({ player: playerFactory }),
+    // LottieModule.forRoot({ player: playerFactory }),
     // AutoCompleteModule,
     MatAutocompleteModule,
     MatFormFieldModule,
@@ -172,10 +173,15 @@ registerLocaleData(localeIt);
     OverlayModule,
     AsyncPipe,
     NgxSpinnerModule,
-    DynamicDialogModule
+    DynamicDialogModule,
+    LottieComponent,
+    NgScrollbarModule
   ],
   providers: [
     authInterceptorProviders,
+    provideLottieOptions({
+      player: () => import('lottie-web'),
+    }),
     // Imposta la lingua italiana come lingua predefinita
     { provide: LOCALE_ID, useValue: 'it-IT' },
   ],

@@ -62508,7 +62508,7 @@ span.color-primary {
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: rgb(0 0 0 / 20%);
     border-radius: 10px;
   }
   
@@ -62524,7 +62524,7 @@ span.color-primary {
   /* Stile per Firefox */
   body {
     scrollbar-width: thin;
-    scrollbar-color: #888 #f1f1f1;
+    scrollbar-color: rgb(0 0 0 / 20%) #f1f1f1;
   }
 
   /* div scrollabili barra custom  */
@@ -62631,3 +62631,7 @@ span.color-primary {
     font: unset !important;
     font-size: 1.25rem !important;
 } */
+
+.line-heighth-1-1 {
+ line-height: 1.1;
+}

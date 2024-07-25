@@ -15,7 +15,9 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
     "lib": [
       "es2018",
       "dom"
