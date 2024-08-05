@@ -37,6 +37,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -412,6 +413,50 @@ public class RestClient {
 		LOGGER.debug("tempo esecuzione: {}", app);
 		
 		return out;
+	}
+
+	/**
+	 *
+	 * @param <T>
+	 * @param url
+	 * @param method
+	 * @param httpHeaders
+	 * @param body
+	 * @param responseType
+	 * @param uriVariables
+	 * @return
+	 */
+	public static <T> ResponseEntity<T> sendWithUriVariablesCompleteResponse(String url,
+															 HttpMethod method,
+															 HttpHeaders httpHeaders,
+															 Object body,
+															 Class<T> responseType,
+															 Object... uriVariables) {
+		long start = new Date().getTime();
+		RestTemplate restTemplate = getRestTemplate(url);
+
+		if (httpHeaders == null) {
+			httpHeaders = new HttpHeaders();
+		}
+		if (httpHeaders.getContentType() == null && body != null) {
+			httpHeaders.setContentType(MediaType.APPLICATION_JSON);
+		}
+
+		if (httpHeaders.getContentType() != null && httpHeaders.getContentType().equals(MediaType.MULTIPART_FORM_DATA)) {
+			logMultipartRequest(url, method.toString(), body);
+		} else {
+			logRequest(url, method.toString(), body);
+		}
+
+		HttpEntity<Object> requestEntity = new HttpEntity<>(body, httpHeaders);
+		ResponseEntity<T> responseEntity = restTemplate.exchange(url, method, requestEntity, responseType, uriVariables);
+
+		logResponse(responseEntity);
+		long end = new Date().getTime();
+		long app = end - start;
+		LOGGER.debug("tempo esecuzione: {}", app);
+
+		return responseEntity;
 	}
 
 	
