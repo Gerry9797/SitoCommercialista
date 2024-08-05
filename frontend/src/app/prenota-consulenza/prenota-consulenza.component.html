@@ -253,7 +253,70 @@
                           </div>
                           <!---->
                           <div class="am-fs-dt__calendar am-fs__main-content" style="padding: 0px;">
-                            <ng-scrollbar style="--scrollbar-border-radius: 10px;">
+
+                            <div *ngIf="calendarLoading && !calendarReady" class="el-skeleton is-animated am-skeleton-slots am-skeleton-slots">
+                              <div class="am-skeleton-slots-filters">
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                              </div>
+                              <div class="am-skeleton-slots-weekdays">
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                              </div>
+                              <div class="am-skeleton-slots-days">
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                                <div class="el-skeleton__item el-skeleton__text"></div>
+                              </div>
+                            </div>
+
+                            <ng-scrollbar *ngIf="calendarLoading && calendarReady" style="--scrollbar-border-radius: 10px;">
                               <div style="padding: 16px 32px;">
                                 <div class="am-fs-dt__calendar">
                                   <div
@@ -337,18 +400,18 @@
                                           <div
                                             class="select-trigger el-tooltip__trigger el-tooltip__trigger"
                                           >
-                                            <!--v-if-->
+                                            
                                             <div
                                               class="el-input el-input--default el-input--suffix"
                                             >
-                                              <!-- input --><!-- prepend slot --><!--v-if--><input
+                                              <!-- input --><!-- prepend slot --><input
                                                 class="el-input__inner"
                                                 name=""
                                                 type="text"
                                                 readonly=""
                                                 autocomplete="off"
                                                 placeholder="Select"
-                                              /><!-- prefix slot --><!--v-if--><!-- suffix slot --><span
+                                              /><!-- prefix slot --><!-- suffix slot --><span
                                                 class="el-input__suffix"
                                                 ><span
                                                   class="el-input__suffix-inner"
@@ -357,9 +420,9 @@
                                                     ><span
                                                       class="am-icon-arrow-up"
                                                     ></span></i
-                                                  ><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></span
-                                                ><!--v-if--></span
-                                              ><!-- append slot --><!--v-if-->
+                                                  ></span
+                                                ></span
+                                              ><!-- append slot -->
                                             </div>
                                           </div>
                                         </div>
@@ -406,18 +469,18 @@
                                           <div
                                             class="select-trigger el-tooltip__trigger el-tooltip__trigger"
                                           >
-                                            <!--v-if-->
+                                            
                                             <div
                                               class="el-input el-input--default el-input--suffix"
                                             >
-                                              <!-- input --><!-- prepend slot --><!--v-if--><input
+                                              <!-- input --><!-- prepend slot --><input
                                                 class="el-input__inner"
                                                 name=""
                                                 type="text"
                                                 readonly=""
                                                 autocomplete="off"
                                                 placeholder="Select"
-                                              /><!-- prefix slot --><!--v-if--><!-- suffix slot --><span
+                                              /><!-- prefix slot --><!-- suffix slot --><span
                                                 class="el-input__suffix"
                                                 ><span
                                                   class="el-input__suffix-inner"
@@ -426,9 +489,9 @@
                                                     ><span
                                                       class="am-icon-arrow-up"
                                                     ></span></i
-                                                  ><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--></span
-                                                ><!--v-if--></span
-                                              ><!-- append slot --><!--v-if-->
+                                                  ></span
+                                                ></span
+                                              ><!-- append slot -->
                                             </div>
                                           </div>
                                         </div>
