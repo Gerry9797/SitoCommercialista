@@ -65,7 +65,9 @@
                     <div
                       id="amelia-container"
                       class="am-fs__wrapper"
+                      [class.width-mw-main-less]="isLeftMenuCalendarClosed"
                       style="
+                      transition: 1s;
                         --am-c-primary: rgba(222, 128, 94, 1);
                         --am-c-success: rgba(255, 255, 255, 1);
                         --am-c-error: #b4190f;
@@ -96,6 +98,7 @@
                     >
                       <div
                         class="am-fs-sb"
+                        [class.left-menu-calendar-closed]="isLeftMenuCalendarClosed"
                         style="
                           --am-c-sb-text-op5: rgba(255, 255, 255, 0.05);
                           --am-c-sb-text-op10: rgba(255, 255, 255, 0.1);
@@ -104,6 +107,7 @@
                           --am-c-scroll-op10: rgba(255, 255, 255, 0.1);
                           width: 240px;
                           padding-bottom: 65px;
+                          transition: 1s;
                         "
                       >
                         <!-- SKELETON LEFT MENU CALENDAR -->
@@ -128,19 +132,20 @@
                         </div>
 
                         <!-- LEFT MENU CALENDAR  -->
-                        <div [class.d-block]="calendarLoading && calendarReady" class="am-fs-sb__step-wrapper" style="display: none;">
+                        <div *ngIf="calendarLoading && calendarReady" class="am-fs-sb__step-wrapper">
                           <div class="am-fs-sb__step">
                             <div class="am-fs-sb__step-inner">
                               <div class="am-fs-sb__step-icon">
                                 <span class="am-icon-date-time"></span
                                 ><!---->
                               </div>
-                              <p class="am-fs-sb__step-heading">
+                              <p [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-heading">
                                 Data e Orario
                               </p>
-                              <div class="am-fs-sb__step-checker"><!----></div>
+                              <div [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker"><!----></div>
+                              <div [@fadeOut]="!isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker checker-collapsed-closed"><!----></div>
                             </div>
-                            <span class="am-fs-sb__step-selection__wrapper"
+                            <span [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-selection__wrapper"
                               ><p class="am-fs-sb__step-selection">
                                 <span>1 febbraio 2024 - 15:00</span>
                               </p></span
@@ -152,10 +157,12 @@
                                 <span class="am-icon-user"></span
                                 ><!---->
                               </div>
-                              <p class="am-fs-sb__step-heading">Informazioni</p>
-                              <div class="am-fs-sb__step-checker"><!----></div>
+                              <p [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-heading">Informazioni</p>
+                              <div [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker"><!----></div>
+                              <div [@fadeOut]="!isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker checker-collapsed-closed"><!----></div>
                             </div>
                             <span
+                              [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'"
                               class="am-fs-sb__step-selection__wrapper"
                             ></span>
                           </div>
@@ -165,19 +172,21 @@
                                 <span class="am-icon-payment"></span
                                 ><!---->
                               </div>
-                              <p class="am-fs-sb__step-heading">Pagamenti</p>
-                              <div class="am-fs-sb__step-checker"><!----></div>
+                              <p [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-heading">Pagamenti</p>
+                              <div [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker"><!----></div>
+                              <div [@fadeOut]="!isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker checker-collapsed-closed"><!----></div>
                             </div>
                             <span
+                              [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'"
                               class="am-fs-sb__step-selection__wrapper"
                             ></span>
                           </div>
                         </div>
                         <div class="am-fs-sb__footer">
                           <!---->
-                          <div class="am-fs-sb__menu">
-                            <span class="am-fs-sb__menu-text">Chiudi menu</span
-                            ><span class="am-icon-arrow-circle-right"></span>
+                          <div class="am-fs-sb__menu" style="position: relative; min-height: 38px;" [class.am-collapsed]="isLeftMenuCalendarClosed">
+                            <span [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__menu-text">Chiudi menu</span
+                            ><span class="am-icon-arrow-circle-right" (click)="toggleLeftMenuCalendar()"></span>
                           </div>
                         </div>
                       </div>
@@ -273,10 +282,11 @@
                                 <div class="el-skeleton__item el-skeleton__text"></div>
                               </div>
                             </div>
-
+                            
+                            <!-- [class.d-block]="calendarLoading && calendarReady" display: none;-->
                             <!-- CALENDAR COMPONENT -->
-                            <ng-scrollbar [class.d-block]="calendarLoading && calendarReady" style="--scrollbar-border-radius: 10px; display: none;">
-                              <div style="padding: 16px 32px;">
+                            <ng-scrollbar *ngIf="calendarLoading && calendarReady" style="--scrollbar-border-radius: 10px; visibility: auto">
+                              <div style="padding: 16px 32px; padding-bottom: 5px">
                                 <div class="am-fs-dt__calendar">
                                   <div
                                     class="am-advsc__wrapper"
@@ -362,34 +372,6 @@
                                             
                                             <div class="el-input el-input--default el-input--suffix">
                                     
-                                              <!-- <input
-                                                class="el-input__inner"
-                                                name="mese"
-                                                type="text"
-                                                readonly=""
-                                                autocomplete="off"
-                                                [(ngModel)]="selectedMese"
-                                                [popper]="popperContentMese"
-                                                [popperShowOnStart]="false"
-                                                [popperTrigger]="triggerPopper"
-                                                [popperPlacement]="positionPopper"
-                                                />
-                                              <span class="el-input__suffix">
-                                                <span class="el-input__suffix-inner">
-                                                  <i class="el-icon el-select__caret el-input__icon">
-                                                    <span class="am-icon-arrow-up"></span>
-                                                  </i>
-                                                </span>
-                                              </span> -->
-                                              <!-- <popper-content #popperContentMese>
-                                                <div style="background-color: #fff !important; z-index: 999999999999999;">
-                                                  <ul>
-                                                    <li>Settembre</li>
-                                                    <li>Ottobre</li>
-                                                    <li>Novembre</li>
-                                                  </ul>
-                                                </div>
-                                                </popper-content> -->
                                                 <p-dropdown 
                                                     [options]="mesi" 
                                                     [(ngModel)]="selectedMese"/>
