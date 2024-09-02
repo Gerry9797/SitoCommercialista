@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 :root {
 
@@ -62634,4 +62635,9 @@ span.color-primary {
 
 .line-heighth-1-1 {
  line-height: 1.1;
+}
+
+.d-none-opacity {
+    display: none !important;
+    opacity: 0 !important;
 }

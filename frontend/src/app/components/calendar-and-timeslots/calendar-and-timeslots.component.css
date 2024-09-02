@@ -1,0 +1,153 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #e1b0b0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-item {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .menu-item.selected {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .close-menu {
+    margin-top: auto;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .dropdown {
+    position: relative;
+    margin-right: 10px;
+  }
+  
+  .dropdown-button {
+    background-color: #e1b0b0;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #e1b0b0;
+    border-radius: 5px;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    z-index: 1;
+  }
+  
+  .dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .arrow-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow-button {
+    background-color: #e1b0b0;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin-left: 5px;
+  }
+  
+  .calendar {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .day {
+    background-color: #f5f5f5;
+    color: #555;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .day.disabled {
+    background-color: #e1b0b0;
+    color: white;
+  }
+  
+  .day.selected {
+    background-color: #e1b0b0;
+    color: white;
+  }
+  
+  .time-selection {
+    margin-top: 20px;
+  }
+  
+  .time-button {
+    background-color: #e1b0b0;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .time-button.selected {
+    background-color: #c98989;
+  }
+  
+  .continue-button {
+    margin-top: 20px;
+  }
+  
+  .continue-button button {
+    background-color: #e1b0b0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  

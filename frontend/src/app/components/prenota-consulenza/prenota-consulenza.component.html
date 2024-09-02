@@ -1,7 +1,4 @@
-<main
-  id="content"
-  class="site-main post-4966 page hentry"
->
+<main id="content" class="site-main post-4966 page hentry">
   <div class="page-content">
     <div
       data-elementor-type="wp-page"
@@ -52,63 +49,6 @@
                 data-widget_type="stepbooking.default"
               >
                 <div class="elementor-widget-container">
-                  <script>
-                    if (
-                      typeof hasAmeliaEntitiesApiCall === "undefined" &&
-                      "" === ""
-                    ) {
-                      var hasAmeliaEntitiesApiCall = true;
-                    }
-                    var ameliaShortcodeData =
-                      typeof ameliaShortcodeData === "undefined"
-                        ? []
-                        : ameliaShortcodeData;
-                    ameliaShortcodeData.push({
-                      hasApiCall:
-                        typeof hasAmeliaEntitiesApiCall !== "undefined" &&
-                        hasAmeliaEntitiesApiCall,
-                      trigger: "",
-                      trigger_type: "",
-                      triggered_form: "sbsNew",
-                      in_dialog: "",
-                      show: "",
-                      counter: "1000",
-                      category: "",
-                      service: "3",
-                      employee: "1",
-                      location: "",
-                      package: "",
-                    });
-                    var ameliaShortcodeDataTriggered =
-                      typeof ameliaShortcodeDataTriggered === "undefined"
-                        ? []
-                        : ameliaShortcodeDataTriggered;
-                    if (
-                      ameliaShortcodeData[ameliaShortcodeData.length - 1]
-                        .trigger !== ""
-                    ) {
-                      if (
-                        ameliaShortcodeDataTriggered.filter(
-                          (a) =>
-                            a.counter ===
-                            ameliaShortcodeData[ameliaShortcodeData.length - 1]
-                              .counter
-                        ).length === 0
-                      ) {
-                        ameliaShortcodeDataTriggered.push(
-                          ameliaShortcodeData.pop()
-                        );
-                      } else {
-                        ameliaShortcodeData.pop();
-                      }
-                    }
-                    if (
-                      typeof hasAmeliaEntitiesApiCall !== "undefined" &&
-                      hasAmeliaEntitiesApiCall
-                    ) {
-                      hasAmeliaEntitiesApiCall = false;
-                    }
-                  </script>
                   <div
                     id="amelia-v2-booking-1000"
                     class="amelia-v2-booking amelia-v2-booking-1000-loaded"
@@ -121,11 +61,6 @@
                       rel="preconnect"
                       href="https://fonts.gstatic.com"
                       crossorigin=""
-                    /><link
-                      rel="stylesheet"
-                      type="text/css"
-                      href="/wp-content/plugins/ameliabooking/v3/src/assets/scss/common/fonts/font.css"
-                      media="all"
                     />
                     <div
                       id="amelia-container"
@@ -154,7 +89,7 @@
                         --am-c-skeleton-op60: rgba(50, 69, 89, 0.6);
                         --am-c-skeleton-sb-op20: rgba(255, 255, 255, 0.2);
                         --am-c-skeleton-sb-op60: rgba(255, 255, 255, 0.6);
-                        --am-font-family: Amelia Montserrat, sans-serif;
+                        --am-font-family: Montserrat, sans-serif;
                         --am-mw-main: 760px;
                         --am-brad-main: 0 0.5rem 0.5rem 0;
                       "
@@ -171,7 +106,29 @@
                           padding-bottom: 65px;
                         "
                       >
-                        <div class="am-fs-sb__step-wrapper">
+                        <!-- SKELETON LEFT MENU CALENDAR -->
+                        <div *ngIf="calendarLoading && !calendarReady" class="am-fs-sb__step-wrapper">
+                          <div class="el-skeleton is-animated">
+                            <div>
+                              <div class="el-skeleton-item-wrapper">
+                                <div class="el-skeleton__item el-skeleton__text"><!--v-if--></div>
+                              </div>
+                            </div>
+                            <div>
+                              <div class="el-skeleton-item-wrapper">
+                                <div class="el-skeleton__item el-skeleton__text"><!--v-if--></div>
+                              </div>
+                            </div>
+                            <div>
+                              <div class="el-skeleton-item-wrapper">
+                                <div class="el-skeleton__item el-skeleton__text"><!--v-if--></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- LEFT MENU CALENDAR  -->
+                        <div [class.d-block]="calendarLoading && calendarReady" class="am-fs-sb__step-wrapper" style="display: none;">
                           <div class="am-fs-sb__step">
                             <div class="am-fs-sb__step-inner">
                               <div class="am-fs-sb__step-icon">
@@ -254,6 +211,7 @@
                           <!---->
                           <div class="am-fs-dt__calendar am-fs__main-content" style="padding: 0px;">
 
+                            <!-- SKELETON CALENDAR COMPONENT  -->
                             <div *ngIf="calendarLoading && !calendarReady" class="el-skeleton is-animated am-skeleton-slots am-skeleton-slots">
                               <div class="am-skeleton-slots-filters">
                                 <div class="el-skeleton__item el-skeleton__text"></div>
@@ -316,7 +274,8 @@
                               </div>
                             </div>
 
-                            <ng-scrollbar *ngIf="calendarLoading && calendarReady" style="--scrollbar-border-radius: 10px;">
+                            <!-- CALENDAR COMPONENT -->
+                            <ng-scrollbar [class.d-block]="calendarLoading && calendarReady" style="--scrollbar-border-radius: 10px; display: none;">
                               <div style="padding: 16px 32px;">
                                 <div class="am-fs-dt__calendar">
                                   <div
@@ -393,7 +352,7 @@
                                               89,
                                               0.03
                                             );
-                                            --am-font-family: Amelia Montserrat,
+                                            --am-font-family: Montserrat,
                                               sans-serif;
                                           "
                                         >
@@ -401,28 +360,39 @@
                                             class="select-trigger el-tooltip__trigger el-tooltip__trigger"
                                           >
                                             
-                                            <div
-                                              class="el-input el-input--default el-input--suffix"
-                                            >
-                                              <!-- input --><!-- prepend slot --><input
+                                            <div class="el-input el-input--default el-input--suffix">
+                                    
+                                              <!-- <input
                                                 class="el-input__inner"
-                                                name=""
+                                                name="mese"
                                                 type="text"
                                                 readonly=""
                                                 autocomplete="off"
-                                                placeholder="Select"
-                                              /><!-- prefix slot --><!-- suffix slot --><span
-                                                class="el-input__suffix"
-                                                ><span
-                                                  class="el-input__suffix-inner"
-                                                  ><i
-                                                    class="el-icon el-select__caret el-input__icon"
-                                                    ><span
-                                                      class="am-icon-arrow-up"
-                                                    ></span></i
-                                                  ></span
-                                                ></span
-                                              ><!-- append slot -->
+                                                [(ngModel)]="selectedMese"
+                                                [popper]="popperContentMese"
+                                                [popperShowOnStart]="false"
+                                                [popperTrigger]="triggerPopper"
+                                                [popperPlacement]="positionPopper"
+                                                />
+                                              <span class="el-input__suffix">
+                                                <span class="el-input__suffix-inner">
+                                                  <i class="el-icon el-select__caret el-input__icon">
+                                                    <span class="am-icon-arrow-up"></span>
+                                                  </i>
+                                                </span>
+                                              </span> -->
+                                              <!-- <popper-content #popperContentMese>
+                                                <div style="background-color: #fff !important; z-index: 999999999999999;">
+                                                  <ul>
+                                                    <li>Settembre</li>
+                                                    <li>Ottobre</li>
+                                                    <li>Novembre</li>
+                                                  </ul>
+                                                </div>
+                                                </popper-content> -->
+                                                <p-dropdown 
+                                                    [options]="mesi" 
+                                                    [(ngModel)]="selectedMese"/>
                                             </div>
                                           </div>
                                         </div>
@@ -462,7 +432,7 @@
                                               89,
                                               0.03
                                             );
-                                            --am-font-family: Amelia Montserrat,
+                                            --am-font-family: Montserrat,
                                               sans-serif;
                                           "
                                         >
@@ -575,7 +545,7 @@
                                       <div
                                         aria-labelledby=""
                                         class="fc-view-harness fc-view-harness-active"
-                                        style="height: 240px"
+                                        style="height: 311px"
                                       >
                                         <div
                                           class="fc-daygrid fc-dayGridMonth-view fc-view"
@@ -724,14 +694,14 @@
                                                     >
                                                       <div
                                                         class="fc-daygrid-body fc-daygrid-body-balanced"
-                                                        style="width: -webkit-fill-available"
+                                                        style="width: -webkit-fill-available; height: 100%"
                                                       >
                                                         <table
                                                           role="presentation"
                                                           class="fc-scrollgrid-sync-table"
                                                           style="
                                                             width: -webkit-fill-available;
-                                                            height: 193px;
+                                                            height: 100%;
                                                           "
                                                         >
                                                           <colgroup></colgroup>
@@ -2342,7 +2312,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="am-advsc__slots-wrapper">
+                                    <div [class.d-none-opacity]="!calendarDaySelected" class="am-advsc__slots-wrapper">
                                       <div class="am-advsc__slots-heading">
                                         1 febbraio 2024 - 15:00
                                       </div>

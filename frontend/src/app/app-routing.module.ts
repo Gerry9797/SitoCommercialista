@@ -29,13 +29,14 @@ import { AggiungiIndirizzoComponent } from './components/aggiungi-indirizzo/aggi
 import { DettagliAccountComponent } from './components/dettagli-account/dettagli-account.component';
 import { ConsulenzaAziendaComponent } from './components/consulenza-azienda/consulenza-azienda.component';
 import { ConsulenzaPrivatiComponent } from './components/consulenza-privati/consulenza-privati.component';
-import { PrenotaConsulenzaComponent } from './prenota-consulenza/prenota-consulenza.component';
+import { PrenotaConsulenzaComponent } from './components/prenota-consulenza/prenota-consulenza.component';
 import { LoadingPlaceholderComponent } from './bricks/loading-placeholder/loading-placeholder.component';
 import { AuthGuardService } from './services/route-guards/auth-guard.service';
 import { ErrorComponent } from './components/error/error.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { ConfirmRegistrationComponent } from './components/confirm-registration/confirm-registration.component';
 import { AreaRiservataComponent } from './components/area-riservata/area-riservata.component';
+import { CalendarAndTimeslotsComponent } from './components/calendar-and-timeslots/calendar-and-timeslots.component';
 
 const routes: Routes = [
 

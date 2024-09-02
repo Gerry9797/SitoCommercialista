@@ -52,7 +52,7 @@ import { InputWithValidationComponent } from './bricks/input-with-validation/inp
 import { DettagliAccountComponent } from './components/dettagli-account/dettagli-account.component';
 import { ConsulenzaAziendaComponent } from './components/consulenza-azienda/consulenza-azienda.component';
 import { ConsulenzaPrivatiComponent } from './components/consulenza-privati/consulenza-privati.component';
-import { PrenotaConsulenzaComponent } from './prenota-consulenza/prenota-consulenza.component';
+import { PrenotaConsulenzaComponent } from './components/prenota-consulenza/prenota-consulenza.component';
 import { LoadingPlaceholderComponent } from './bricks/loading-placeholder/loading-placeholder.component';
 import { PresentationComponent } from './components/presentation/presentation.component';
 import { BusinessButtonsComponent } from './bricks/business-buttons/business-buttons.component';
@@ -83,6 +83,9 @@ import { EmailSentModalComponent } from './modals/email-sent-modal/email-sent-mo
 import { ConfirmRegistrationComponent } from './components/confirm-registration/confirm-registration.component';
 import { AreaRiservataComponent } from './components/area-riservata/area-riservata.component';
 import { NgScrollbarModule } from 'ngx-scrollbar';
+import { NgxPopperjsModule } from 'ngx-popperjs';
+import { DropdownModule } from 'primeng/dropdown';
+import { CalendarAndTimeslotsComponent } from './components/calendar-and-timeslots/calendar-and-timeslots.component';
 
 // export function playerFactory() {
 //   return player;
@@ -156,7 +159,8 @@ registerLocaleData(localeIt);
     LogoutComponent,
     EmailSentModalComponent,
     ConfirmRegistrationComponent,
-    AreaRiservataComponent
+    AreaRiservataComponent,
+    CalendarAndTimeslotsComponent
   ],
   imports: [
     BrowserModule,
@@ -175,7 +179,9 @@ registerLocaleData(localeIt);
     NgxSpinnerModule,
     DynamicDialogModule,
     LottieComponent,
-    NgScrollbarModule
+    NgScrollbarModule,
+    NgxPopperjsModule,
+    DropdownModule
   ],
   providers: [
     authInterceptorProviders,
