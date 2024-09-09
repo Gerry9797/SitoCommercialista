@@ -16874,7 +16874,7 @@ a.wt-cli-ccpa-opt-out {
     margin: 0 0 1.618em!important
 }
 
-.twentyfourteen .tfwc div.product.hentry.has-post-thumbnail {
+.twentyfourteen .tfwc div.product..has-post-thumbnail {
     margin-top: 0
 }
 
@@ -19725,10 +19725,6 @@ dd,dl,dt,li,ol,ul {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent
-}
-
-@charset "UTF-8";.comments-area a,.page-content a {
-    text-decoration: underline
 }
 
 .alignright {

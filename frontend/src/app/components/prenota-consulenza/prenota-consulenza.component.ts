@@ -10,6 +10,18 @@ interface City {
   code: string;
 }
 
+interface LeftMenuItems {
+  label: string;
+  description?: string;
+  iconClass: string;
+  checked: boolean;
+}
+
+interface GiorniDelMese {
+  day: number,
+  month: number
+}
+
 @Component({
   selector: 'app-prenota-consulenza',
   templateUrl: './prenota-consulenza.component.html',
@@ -42,6 +54,25 @@ export class PrenotaConsulenzaComponent implements OnInit {
 
     formCalendar!: FormGroup;
 
+    leftMenuItems: LeftMenuItems[] = [
+      {
+        label: "Data e Orario",
+        description: "1 febbraio 2024 - 15:00",
+        iconClass: "am-icon-date-time",
+        checked: false
+      },
+      {
+        label: "Informazioni",
+        iconClass: "am-icon-user",
+        checked: false
+      },
+      {
+        label: "Pagamenti",
+        iconClass: "am-icon-payment",
+        checked: false
+      }
+    ];
+
     // popper imports:
     positionPopper = NgxPopperjsPlacements.BOTTOM;
     triggerPopper = NgxPopperjsTriggers.click;
@@ -52,7 +83,186 @@ export class PrenotaConsulenzaComponent implements OnInit {
       'Novembre'
     ]
 
+    anni: string[] = [
+      '2024'
+    ]
+
+    giorniDelMese: GiorniDelMese[] = [
+      {
+        day: 1,
+        month: 8
+      },
+      {
+        day: 2,
+        month: 8
+      },
+      {
+        day: 3,
+        month: 8
+      },
+      {
+        day: 4,
+        month: 8
+      },
+      {
+        day: 5,
+        month: 8
+      },      
+      {
+        day: 6,
+        month: 8
+      },      
+      {
+        day: 7,
+        month: 8
+      },      
+      {
+        day: 8,
+        month: 8
+      },      
+      {
+        day: 9,
+        month: 8
+      },      
+      {
+        day: 10,
+        month: 8
+      },      
+      {
+        day: 11,
+        month: 8
+      },      
+      {
+        day: 12,
+        month: 8
+      },      
+      {
+        day: 13,
+        month: 8
+      },      
+      {
+        day: 14,
+        month: 8
+      },      
+      {
+        day: 15,
+        month: 8
+      },      
+      {
+        day: 16,
+        month: 8
+      },      
+      {
+        day: 17,
+        month: 8
+      },      
+      {
+        day: 18,
+        month: 8
+      },      
+      {
+        day: 19,
+        month: 8
+      },      
+      {
+        day: 20,
+        month: 8
+      },
+      {
+        day: 21,
+        month: 8
+      },
+      {
+        day: 22,
+        month: 8
+      },
+      {
+        day: 23,
+        month: 8
+      },
+      {
+        day: 24,
+        month: 8
+      },
+      {
+        day: 25,
+        month: 8
+      },
+      {
+        day: 26,
+        month: 8
+      },
+      {
+        day: 27,
+        month: 8
+      },
+      {
+        day: 28,
+        month: 8
+      },
+      {
+        day: 29,
+        month: 8
+      },
+      {
+        day: 30,
+        month: 8
+      },
+      {
+        day: 31,
+        month: 8
+      },
+      {
+        day: 1,
+        month: 9
+      },
+      {
+        day: 2,
+        month: 9
+      },
+      {
+        day: 3,
+        month: 9
+      },
+      {
+        day: 4,
+        month: 9
+      },
+      {
+        day: 5,
+        month: 9
+      },      
+      {
+        day: 6,
+        month: 9
+      },      
+      {
+        day: 7,
+        month: 9
+      },      
+      {
+        day: 6,
+        month: 9
+      },      
+      {
+        day: 9,
+        month: 9
+      },      
+      {
+        day: 10,
+        month: 9
+      },      
+      {
+        day: 11,
+        month: 9
+      }
+    ]
+    giorniDellaSettimana: string[] = [
+      "lun", "mar", "mer", "gio", "ven", "sab", "dom"
+    ]
+
     selectedMese = this.mesi[0];
+    selectedAnno = this.anni[0];
 
     constructor(
       private formBuilder: FormBuilder,

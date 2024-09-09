@@ -1,4 +1,4 @@
-.elementor-4966 {
+.prenota-main-div {
     --am-hmin-select-option: 32px;
     --am-h-select-option: auto;
     --am-flh-select-option: 1.4;
@@ -91,104 +91,104 @@ h2 {
     letter-spacing: inherit;
 }
 
-.elementor-4966 .elementor-element.elementor-element-4699c0f {
+.prenota-main-div .elementor-element.prenota-wrapper-div {
     margin-top: 0px;
     margin-bottom: 100px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-47cc3c9.elementor-column > .elementor-widget-wrap {
+.prenota-main-div .elementor-element.prenota-wrapper-col-1.elementor-column > .elementor-widget-wrap {
     justify-content: flex-start;
 }
 
-.elementor-4966 .elementor-element.elementor-element-848f2b0 {
+.prenota-main-div .elementor-element.prenota-div-title {
     text-align: left;
 }
 
-.elementor-4966 .elementor-element.elementor-element-848f2b0 .elementor-heading-title {
+.prenota-main-div .elementor-element.prenota-div-title .elementor-heading-title {
     color: var( --e-global-color-primary );
     font-family: "DM Serif Display", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.elementor-4966 .elementor-element.elementor-element-c1046e0 {
+.prenota-main-div .elementor-element.prenota-div-subtitle {
     text-align: left;
 }
 
-.elementor-4966 .elementor-element.elementor-element-c1046e0 .elementor-heading-title {
+.prenota-main-div .elementor-element.prenota-div-subtitle .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 35px;
     font-weight: 600;
 }
 
-.elementor-4966 .elementor-element.elementor-element-c1046e0 > .elementor-widget-container {
+.prenota-main-div .elementor-element.prenota-div-subtitle > .elementor-widget-container {
     margin: 0px 0px 0px 0px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-e1979b4 > .elementor-widget-container {
+.prenota-main-div .elementor-element.prenota-div-col-1-inner > .elementor-widget-container {
     margin: -60px 0px 0px 0px;
 }
 
-.elementor-bc-flex-widget .elementor-4966 .elementor-element.elementor-element-f849bdb.elementor-column .elementor-widget-wrap {
+.elementor-bc-flex-widget .prenota-main-div .elementor-element.prenota-wrapper-col-2.elementor-column .elementor-widget-wrap {
     align-items: flex-start;
 }
 
-.elementor-4966 .elementor-element.elementor-element-f849bdb.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+.prenota-main-div .elementor-element.prenota-wrapper-col-2.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
     align-content: flex-start;
     align-items: flex-start;
 }
 
-.elementor-4966 .elementor-element.elementor-element-f849bdb > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+.prenota-main-div .elementor-element.prenota-wrapper-col-2 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
     margin-bottom: 10px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-f849bdb > .elementor-element-populated {
+.prenota-main-div .elementor-element.prenota-wrapper-col-2 > .elementor-element-populated {
     margin: 0px 0px 0px 0px;
     --e-column-margin-right: 0px;
     --e-column-margin-left: 0px;
     padding: 40px 10px 0px 10px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-d8f4738 {
+.prenota-main-div .elementor-element.elementor-element-d8f4738 {
     text-align: left;
 }
 
-.elementor-4966 .elementor-element.elementor-element-d8f4738 .elementor-heading-title {
+.prenota-main-div .elementor-element.elementor-element-d8f4738 .elementor-heading-title {
     color: var( --e-global-color-primary );
     font-family: "DM Serif Display", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.elementor-4966 .elementor-element.elementor-element-c06287c {
+.prenota-main-div .elementor-element.elementor-element-c06287c {
     text-align: left;
 }
 
-.elementor-4966 .elementor-element.elementor-element-c06287c .elementor-heading-title {
+.prenota-main-div .elementor-element.elementor-element-c06287c .elementor-heading-title {
     color: var( --e-global-color-text );
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 35px;
     font-weight: 600;
 }
 
-.elementor-4966 .elementor-element.elementor-element-c06287c > .elementor-widget-container {
+.prenota-main-div .elementor-element.elementor-element-c06287c > .elementor-widget-container {
     margin: 0px 0px 0px 0px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-7134e6d {
+.prenota-main-div .elementor-element.elementor-element-7134e6d {
     --spacer-size: 40px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-a841d5b:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-4966 .elementor-element.elementor-element-a841d5b > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+.prenota-main-div .elementor-element.elementor-element-a841d5b:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .prenota-main-div .elementor-element.elementor-element-a841d5b > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: #FDF7F6;
 }
 
-.elementor-4966 .elementor-element.elementor-element-a841d5b > .elementor-element-populated, .elementor-4966 .elementor-element.elementor-element-a841d5b > .elementor-element-populated > .elementor-background-overlay, .elementor-4966 .elementor-element.elementor-element-a841d5b > .elementor-background-slideshow {
+.prenota-main-div .elementor-element.elementor-element-a841d5b > .elementor-element-populated, .prenota-main-div .elementor-element.elementor-element-a841d5b > .elementor-element-populated > .elementor-background-overlay, .prenota-main-div .elementor-element.elementor-element-a841d5b > .elementor-background-slideshow {
     border-radius: 10px 10px 10px 10px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-a841d5b > .elementor-element-populated {
+.prenota-main-div .elementor-element.elementor-element-a841d5b > .elementor-element-populated {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin: 0px 0px 0px 0px;
     --e-column-margin-right: 0px;
@@ -196,40 +196,40 @@ h2 {
     padding: 25px 15px 20px 15px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-a841d5b > .elementor-element-populated > .elementor-background-overlay {
+.prenota-main-div .elementor-element.elementor-element-a841d5b > .elementor-element-populated > .elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.elementor-4966 .elementor-element.elementor-element-a922fac img {
+.prenota-main-div .elementor-element.elementor-element-a922fac img {
     width: 49%;
 }
 
-.elementor-4966 .elementor-element.elementor-element-a922fac > .elementor-widget-container {
+.prenota-main-div .elementor-element.elementor-element-a922fac > .elementor-widget-container {
     margin: 20px 0px 0px 0px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-2ed74112 > .elementor-container {
+.prenota-main-div .elementor-element.elementor-element-2ed74112 > .elementor-container {
     max-width: 875px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-2ed74112 {
+.prenota-main-div .elementor-element.elementor-element-2ed74112 {
     margin-top: 20px;
     margin-bottom: 200px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-2e69dd36.elementor-column > .elementor-widget-wrap {
+.prenota-main-div .elementor-element.elementor-element-2e69dd36.elementor-column > .elementor-widget-wrap {
     justify-content: flex-start;
 }
 
-.elementor-4966 .elementor-element.elementor-element-2e69dd36:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .elementor-4966 .elementor-element.elementor-element-2e69dd36 > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+.prenota-main-div .elementor-element.elementor-element-2e69dd36:not(.elementor-motion-effects-element-type-background) > .elementor-widget-wrap, .prenota-main-div .elementor-element.elementor-element-2e69dd36 > .elementor-widget-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: #FCF6F38F;
 }
 
-.elementor-4966 .elementor-element.elementor-element-2e69dd36 > .elementor-element-populated, .elementor-4966 .elementor-element.elementor-element-2e69dd36 > .elementor-element-populated > .elementor-background-overlay, .elementor-4966 .elementor-element.elementor-element-2e69dd36 > .elementor-background-slideshow {
+.prenota-main-div .elementor-element.elementor-element-2e69dd36 > .elementor-element-populated, .prenota-main-div .elementor-element.elementor-element-2e69dd36 > .elementor-element-populated > .elementor-background-overlay, .prenota-main-div .elementor-element.elementor-element-2e69dd36 > .elementor-background-slideshow {
     border-radius: 12px 12px 12px 12px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-2e69dd36 > .elementor-element-populated {
+.prenota-main-div .elementor-element.elementor-element-2e69dd36 > .elementor-element-populated {
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     margin: 20px 20px 20px 20px;
     --e-column-margin-right: 20px;
@@ -237,62 +237,62 @@ h2 {
     padding: 30px 50px 30px 50px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-2e69dd36 > .elementor-element-populated > .elementor-background-overlay {
+.prenota-main-div .elementor-element.elementor-element-2e69dd36 > .elementor-element-populated > .elementor-background-overlay {
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
 
-.elementor-4966 .elementor-element.elementor-element-600f7e00 {
+.prenota-main-div .elementor-element.elementor-element-600f7e00 {
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 19px;
     font-weight: 700;
 }
 
-.elementor-4966 .elementor-element.elementor-element-50d63c9 {
+.prenota-main-div .elementor-element.elementor-element-50d63c9 {
     color: #ED7A57;
     font-family: "Raleway", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 17px;
     font-weight: 600;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group {
     padding-right: calc( 10px/2 );
     padding-left: calc( 10px/2 );
     margin-bottom: 20px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-form-fields-wrapper {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-form-fields-wrapper {
     margin-left: calc( -10px/2 );
     margin-right: calc( -10px/2 );
     margin-bottom: -20px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group.recaptcha_v3-bottomleft, .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group.recaptcha_v3-bottomright {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group.recaptcha_v3-bottomleft, .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group.recaptcha_v3-bottomright {
     margin-bottom: 0;
 }
 
-body.rtl .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-labels-inline .elementor-field-group > label {
+body.rtl .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-labels-inline .elementor-field-group > label {
     padding-left: 0px;
 }
 
-body:not(.rtl) .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-labels-inline .elementor-field-group > label {
+body:not(.rtl) .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-labels-inline .elementor-field-group > label {
     padding-right: 0px;
 }
 
-body .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-labels-above .elementor-field-group > label {
+body .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-labels-above .elementor-field-group > label {
     padding-bottom: 0px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group > label, .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-subgroup label {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group > label, .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-subgroup label {
     color: var( --e-global-color-text );
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group > label {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group > label {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-type-html {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-type-html {
     padding-bottom: 0px;
     color: var( --e-global-color-text );
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -300,33 +300,33 @@ body .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-lab
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group .elementor-field {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group .elementor-field {
     color: var( --e-global-color-text );
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group .elementor-field, .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-subgroup label {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group .elementor-field, .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-subgroup label {
     font-family: var( --e-global-typography-text-font-family ), Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: var( --e-global-typography-text-font-size );
     font-weight: var( --e-global-typography-text-font-weight );
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group:not(.elementor-field-type-upload) .elementor-field:not(.elementor-select-wrapper) {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group:not(.elementor-field-type-upload) .elementor-field:not(.elementor-select-wrapper) {
     border-color: #B8C2D1;
     border-width: 0px 0px 1px 0px;
     border-radius: 0px 0px 0px 0px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group .elementor-select-wrapper select {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group .elementor-select-wrapper select {
     border-color: #B8C2D1;
     border-width: 0px 0px 1px 0px;
     border-radius: 0px 0px 0px 0px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group .elementor-select-wrapper::before {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group .elementor-select-wrapper::before {
     color: #B8C2D1;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-button {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-button {
     font-family: "Poppins", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -340,46 +340,46 @@ body .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-lab
     padding: 4px 30px 4px 30px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .e-form__buttons__wrapper__button-next {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .e-form__buttons__wrapper__button-next {
     background-color: var( --e-global-color-primary );
     color: var( --e-global-color-0482cab );
     border-color: var( --e-global-color-0482cab );
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-button[type="submit"] {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-button[type="submit"] {
     background-color: var( --e-global-color-primary );
     color: var( --e-global-color-0482cab );
     border-color: var( --e-global-color-0482cab );
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-button[type="submit"] svg * {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-button[type="submit"] svg * {
     fill: var( --e-global-color-0482cab );
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .e-form__buttons__wrapper__button-previous {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .e-form__buttons__wrapper__button-previous {
     background-color: var( --e-global-color-accent );
     color: #ffffff;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .e-form__buttons__wrapper__button-next:hover {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .e-form__buttons__wrapper__button-next:hover {
     background-color: var( --e-global-color-accent );
     color: #FFFFFF;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-button[type="submit"]:hover {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-button[type="submit"]:hover {
     background-color: var( --e-global-color-accent );
     color: #FFFFFF;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-button[type="submit"]:hover svg * {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-button[type="submit"]:hover svg * {
     fill: #FFFFFF;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .e-form__buttons__wrapper__button-previous:hover {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .e-form__buttons__wrapper__button-previous:hover {
     color: #ffffff;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-message {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-message {
     font-family: "Roboto", Calibri Light, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -390,15 +390,15 @@ body .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-lab
     letter-spacing: 0px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-message.elementor-message-success {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-message.elementor-message-success {
     color: #141313;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-message.elementor-message-danger {
+.prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-message.elementor-message-danger {
     color: #E86B18;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e {
+.prenota-main-div .elementor-element.elementor-element-ff0714e {
     --e-form-steps-indicators-spacing: 20px;
     --e-form-steps-indicator-padding: 30px;
     --e-form-steps-indicator-inactive-secondary-color: #ffffff;
@@ -408,161 +408,161 @@ body .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-lab
     --e-form-steps-divider-gap: 10px;
 }
 
-.elementor-4966 .elementor-element.elementor-element-ff0714e > .elementor-widget-container {
+.prenota-main-div .elementor-element.elementor-element-ff0714e > .elementor-widget-container {
     padding: 0% 0% 0% 0%;
 }
 
 @media(max-width: 1024px) {
-    .elementor-4966 .elementor-element.elementor-element-4699c0f {
+    .prenota-main-div .elementor-element.prenota-wrapper-div {
         margin-top:3%;
         margin-bottom: 3%;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-47cc3c9 > .elementor-element-populated {
+    .prenota-main-div .elementor-element.prenota-wrapper-col-1 > .elementor-element-populated {
         padding: 20px 20px 20px 20px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-c1046e0 .elementor-heading-title {
+    .prenota-main-div .elementor-element.prenota-div-subtitle .elementor-heading-title {
         font-size: 30px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-f849bdb > .elementor-element-populated {
+    .prenota-main-div .elementor-element.prenota-wrapper-col-2 > .elementor-element-populated {
         padding: 20px 20px 20px 20px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-c06287c .elementor-heading-title {
+    .prenota-main-div .elementor-element.elementor-element-c06287c .elementor-heading-title {
         font-size: 30px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-2ed74112 {
+    .prenota-main-div .elementor-element.elementor-element-2ed74112 {
         margin-top: 3%;
         margin-bottom: 3%;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-2e69dd36 > .elementor-element-populated {
+    .prenota-main-div .elementor-element.elementor-element-2e69dd36 > .elementor-element-populated {
         padding: 20px 20px 20px 20px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group > label {
+    .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group > label {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-type-html {
+    .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-type-html {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group .elementor-field, .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-subgroup label {
+    .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group .elementor-field, .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-subgroup label {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-message {
+    .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-message {
         font-size: 14px;
         line-height: 21px;
     }
 }
 
 @media(max-width: 767px) {
-    .elementor-4966 .elementor-element.elementor-element-4699c0f {
+    .prenota-main-div .elementor-element.prenota-wrapper-div {
         margin-top:4%;
         margin-bottom: 4%;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-47cc3c9 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    .prenota-main-div .elementor-element.prenota-wrapper-col-1 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
         margin-bottom: 0px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-c1046e0 .elementor-heading-title {
+    .prenota-main-div .elementor-element.prenota-div-subtitle .elementor-heading-title {
         font-size: 25px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-c1046e0 > .elementor-widget-container {
+    .prenota-main-div .elementor-element.prenota-div-subtitle > .elementor-widget-container {
         margin: 7px 0px 0px 0px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-e1979b4 > .elementor-widget-container {
+    .prenota-main-div .elementor-element.prenota-div-col-1-inner > .elementor-widget-container {
         margin: -80px 0px 0px 0px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-c06287c .elementor-heading-title {
+    .prenota-main-div .elementor-element.elementor-element-c06287c .elementor-heading-title {
         font-size: 25px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-2ed74112 {
+    .prenota-main-div .elementor-element.elementor-element-2ed74112 {
         margin-top: 4%;
         margin-bottom: 4%;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-2e69dd36 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    .prenota-main-div .elementor-element.elementor-element-2e69dd36 > .elementor-widget-wrap > .elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
         margin-bottom: 0px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-2e69dd36 > .elementor-element-populated {
+    .prenota-main-div .elementor-element.elementor-element-2e69dd36 > .elementor-element-populated {
         margin: 10px 10px 10px 10px;
         --e-column-margin-right: 10px;
         --e-column-margin-left: 10px;
         padding: 10px 10px 10px 10px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-600f7e00 {
+    .prenota-main-div .elementor-element.elementor-element-600f7e00 {
         font-size: 18px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group > label {
+    .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group > label {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-type-html {
+    .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-type-html {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-group .elementor-field, .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-field-subgroup label {
+    .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-group .elementor-field, .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-field-subgroup label {
         font-size: var( --e-global-typography-text-font-size );
     }
 
-    .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-button {
+    .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-button {
         font-size: 12px;
         letter-spacing: 0px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-message {
+    .prenota-main-div .elementor-element.elementor-element-ff0714e .elementor-message {
         font-size: 14px;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-ff0714e > .elementor-widget-container {
+    .prenota-main-div .elementor-element.elementor-element-ff0714e > .elementor-widget-container {
         padding: 0% 0% 0% 0%;
     }
 }
 
 @media(min-width: 768px) {
-    .elementor-4966 .elementor-element.elementor-element-47cc3c9 {
+    .prenota-main-div .elementor-element.prenota-wrapper-col-1 {
         width:60%;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-f849bdb {
+    .prenota-main-div .elementor-element.prenota-wrapper-col-2 {
         width: 40%;
     }
 }
 
 @media(max-width: 1024px) and (min-width:768px) {
-    .elementor-4966 .elementor-element.elementor-element-47cc3c9 {
+    .prenota-main-div .elementor-element.prenota-wrapper-col-1 {
         width:100%;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-f849bdb {
+    .prenota-main-div .elementor-element.prenota-wrapper-col-2 {
         width: 100%;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-a841d5b {
+    .prenota-main-div .elementor-element.elementor-element-a841d5b {
         width: 100%;
     }
 
-    .elementor-4966 .elementor-element.elementor-element-2e69dd36 {
+    .prenota-main-div .elementor-element.elementor-element-2e69dd36 {
         width: 100%;
     }
 }
 
 
-.elementor-4966 {
+.prenota-main-div {
     --el-color-white: #ffffff;
     --el-color-black: #000000;
     --el-color-primary: #409eff;
@@ -2413,7 +2413,7 @@ body .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-lab
     height: 0
 }
 
-.elementor-4966 {
+.prenota-main-div {
     --el-popup-modal-bg-color: var(--el-color-black);
     --el-popup-modal-opacity: .5
 }
@@ -10075,7 +10075,7 @@ a.fc-event,a.fc-event:hover {
     background: var(--fc-neutral-bg-color, rgba(208, 208, 208, .3))
 }
 
-.elementor-4966 {
+.prenota-main-div {
     --fc-daygrid-event-dot-width: 8px
 }
 
@@ -34789,7 +34789,7 @@ a.fc-event,a.fc-event:hover {
     --el-skeleton-color: var(--am-c-skeleton-op20)
 }
 
-.elementor-4966 {
+.prenota-main-div {
     --am-c-primary: #1246D6;
     --am-c-success: #019719;
     --am-c-error: #DC180B;
@@ -35065,6 +35065,9 @@ p-dropdown ::ng-deep .p-inputwrapper span {
     }
     .fc-view-harness.fc-view-harness-active {
         height: 401px !important;
+    }
+    .am-progress-bar {
+        display: flex !important;
     }
 }
 

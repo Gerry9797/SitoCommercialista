@@ -1,67 +1,27 @@
-<main id="content" class="site-main post-4966 page hentry">
+<main id="content" class="site-main">
   <div class="page-content">
-    <div
-      data-elementor-type="wp-page"
-      data-elementor-id="4966"
-      class="elementor elementor-4966"
-      data-elementor-post-type="page"
-    >
-      <section
-        class="elementor-section elementor-top-section elementor-element elementor-element-4699c0f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-        data-id="4699c0f"
-        data-element_type="section"
-      >
+    <div class="elementor prenota-main-div">
+      <section class="elementor-section elementor-top-section elementor-element prenota-wrapper-div elementor-section-boxed elementor-section-height-default elementor-section-height-default">
         <div class="elementor-container elementor-column-gap-default">
-          <div
-            class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-47cc3c9"
-            data-id="47cc3c9"
-            data-element_type="column"
-          >
+          <div class="elementor-column elementor-col-50 elementor-top-column elementor-element prenota-wrapper-col-1">
             <div class="elementor-widget-wrap elementor-element-populated">
-              <div
-                class="elementor-element elementor-element-848f2b0 elementor-hidden-desktop elementor-widget elementor-widget-heading"
-                data-id="848f2b0"
-                data-element_type="widget"
-                data-widget_type="heading.default"
-              >
+              <div class="elementor-element prenota-div-title elementor-hidden-desktop elementor-widget elementor-widget-heading">
                 <div class="elementor-widget-container">
                   <h2 class="elementor-heading-title elementor-size-default">
                     Servizio ai privati
                   </h2>
                 </div>
               </div>
-              <div
-                class="elementor-element elementor-element-c1046e0 elementor-hidden-desktop elementor-widget elementor-widget-heading"
-                data-id="c1046e0"
-                data-element_type="widget"
-                data-widget_type="heading.default"
-              >
+              <div class="elementor-element prenota-div-subtitle elementor-hidden-desktop elementor-widget elementor-widget-heading">
                 <div class="elementor-widget-container">
                   <h2 class="elementor-heading-title elementor-size-default">
                     Impariamo a leggere la tua busta paga
                   </h2>
                 </div>
               </div>
-              <div
-                class="elementor-element elementor-element-e1979b4 elementor-widget elementor-widget-stepbooking"
-                data-id="e1979b4"
-                data-element_type="widget"
-                data-widget_type="stepbooking.default"
-              >
+              <div class="elementor-element prenota-div-col-1-inner elementor-widget elementor-widget-stepbooking">
                 <div class="elementor-widget-container">
-                  <div
-                    id="amelia-v2-booking-1000"
-                    class="amelia-v2-booking amelia-v2-booking-1000-loaded"
-                    data-v-app=""
-                  >
-                    <link
-                      rel="preconnect"
-                      href="https://fonts.googleapis.com"
-                    /><link
-                      rel="preconnect"
-                      href="https://fonts.gstatic.com"
-                      crossorigin=""
-                    />
+                  <div class="amelia-v2-booking">
                     <div
                       id="amelia-container"
                       class="am-fs__wrapper"
@@ -113,77 +73,39 @@
                         <!-- SKELETON LEFT MENU CALENDAR -->
                         <div *ngIf="calendarLoading && !calendarReady" class="am-fs-sb__step-wrapper">
                           <div class="el-skeleton is-animated">
-                            <div>
-                              <div class="el-skeleton-item-wrapper">
-                                <div class="el-skeleton__item el-skeleton__text"><!--v-if--></div>
+                            @for (leftMenuItem of leftMenuItems; track leftMenuItem) {
+                              <div>
+                                <div class="el-skeleton-item-wrapper">
+                                  <div class="el-skeleton__item el-skeleton__text"></div>
+                                </div>
                               </div>
-                            </div>
-                            <div>
-                              <div class="el-skeleton-item-wrapper">
-                                <div class="el-skeleton__item el-skeleton__text"><!--v-if--></div>
-                              </div>
-                            </div>
-                            <div>
-                              <div class="el-skeleton-item-wrapper">
-                                <div class="el-skeleton__item el-skeleton__text"><!--v-if--></div>
-                              </div>
-                            </div>
+                            }
                           </div>
                         </div>
 
                         <!-- LEFT MENU CALENDAR  -->
                         <div *ngIf="calendarLoading && calendarReady" class="am-fs-sb__step-wrapper">
-                          <div class="am-fs-sb__step">
-                            <div class="am-fs-sb__step-inner">
-                              <div class="am-fs-sb__step-icon">
-                                <span class="am-icon-date-time"></span
-                                ><!---->
+                          @for (leftMenuItem of leftMenuItems; track leftMenuItem) {
+                            <div class="am-fs-sb__step">
+                              <div class="am-fs-sb__step-inner">
+                                <div class="am-fs-sb__step-icon">
+                                  <span class="{{leftMenuItem.iconClass}}"></span>
+                                </div>
+                                <p [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-heading">
+                                  {{leftMenuItem.label}}
+                                </p>
+                                <div [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker"></div>
+                                <div [@fadeOut]="!isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker checker-collapsed-closed"></div>
                               </div>
-                              <p [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-heading">
-                                Data e Orario
-                              </p>
-                              <div [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker"><!----></div>
-                              <div [@fadeOut]="!isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker checker-collapsed-closed"><!----></div>
+                              <span [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-selection__wrapper">
+                                <p *ngIf="leftMenuItem.description" class="am-fs-sb__step-selection">
+                                  <span>{{leftMenuItem.description}}</span>
+                                </p>
+                              </span>
                             </div>
-                            <span [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-selection__wrapper"
-                              ><p class="am-fs-sb__step-selection">
-                                <span>1 febbraio 2024 - 15:00</span>
-                              </p></span
-                            >
-                          </div>
-                          <div class="am-fs-sb__step">
-                            <div class="am-fs-sb__step-inner">
-                              <div class="am-fs-sb__step-icon">
-                                <span class="am-icon-user"></span
-                                ><!---->
-                              </div>
-                              <p [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-heading">Informazioni</p>
-                              <div [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker"><!----></div>
-                              <div [@fadeOut]="!isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker checker-collapsed-closed"><!----></div>
-                            </div>
-                            <span
-                              [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'"
-                              class="am-fs-sb__step-selection__wrapper"
-                            ></span>
-                          </div>
-                          <div class="am-fs-sb__step">
-                            <div class="am-fs-sb__step-inner">
-                              <div class="am-fs-sb__step-icon">
-                                <span class="am-icon-payment"></span
-                                ><!---->
-                              </div>
-                              <p [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-heading">Pagamenti</p>
-                              <div [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker"><!----></div>
-                              <div [@fadeOut]="!isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__step-checker checker-collapsed-closed"><!----></div>
-                            </div>
-                            <span
-                              [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'"
-                              class="am-fs-sb__step-selection__wrapper"
-                            ></span>
-                          </div>
+                          }
                         </div>
                         <div class="am-fs-sb__footer">
-                          <!---->
                           <div class="am-fs-sb__menu" style="position: relative; min-height: 38px;" [class.am-collapsed]="isLeftMenuCalendarClosed">
                             <span [@fadeOut]="isLeftMenuCalendarClosed ? 'hidden' : 'visible'" class="am-fs-sb__menu-text">Chiudi menu</span
                             ><span class="am-icon-arrow-circle-right" (click)="toggleLeftMenuCalendar()"></span>
@@ -202,26 +124,20 @@
                             class="am-fs__main-heading"
                             style="
                               --am-step-length: 25%;
-                              --am-c-main-heading-text-op15: rgba(
-                                50,
-                                69,
-                                89,
-                                0.15
-                              );
+                              --am-c-main-heading-text-op15: rgba(50,69,89,0.15);
                             "
                           >
-                            <span class="am-fs__main-heading-inner"
-                              ><!----><span
-                                class="am-fs__main-heading-inner-title"
-                                >Data e Orario</span
-                              ></span
-                            >
+                            <span class="am-fs__main-heading-inner">
+                              <span class="am-fs__main-heading-inner-title">
+                                Data e Orario
+                              </span>
+                            </span>
                           </div>
-                          <!---->
+                          
                           <div class="am-fs-dt__calendar am-fs__main-content" style="padding: 0px;">
 
                             <!-- mobile stepper  -->
-                            <div class="am-progress-bar" style="--am-step-length: 25%; --am-c-main-heading-text-op15: rgba(50, 69, 89, 0.15);">
+                            <div class="am-progress-bar" style="display: none; --am-step-length: 25%; --am-c-main-heading-text-op15: rgba(50, 69, 89, 0.15);">
                               <span class="am-step am-current-step"></span>
                               <span class="am-step"></span>
                               <span class="am-step"></span>
@@ -291,14 +207,12 @@
                               </div>
                             </div>
                             
-                            <!-- [class.d-block]="calendarLoading && calendarReady" display: none;-->
                             <!-- CALENDAR COMPONENT -->
                             <ng-scrollbar *ngIf="calendarLoading && calendarReady" style="--scrollbar-border-radius: 10px; visibility: auto">
                               <div class="header-content-inner-scroll" style="padding: 16px 32px; padding-bottom: 5px">
                                 <div class="am-fs-dt__calendar">
                                   <div
                                     class="am-advsc__wrapper"
-                                    slots="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
                                     style="
                                       --am-c-advsc-bgr-op10: rgba(50, 69, 89, 0.1);
                                       --am-c-cal-init: rgba(217, 161, 160, 1);
@@ -309,36 +223,19 @@
                                       --am-c-cal-init-op60: rgba(217, 161, 160, 0.6);
                                       --am-c-cal-selected: rgba(217, 161, 160, 1);
                                       --am-c-cal-selected-text: #ffffff;
-                                      --am-c-cal-selected-op80: rgba(
-                                        217, 161, 160
+                                      --am-c-cal-selected-op80: rgba( 217, 161, 160
                                         0.8
                                       );
-                                      --am-c-cal-disabled: rgba(
-                                        112,
-                                        108,
-                                        108,
-                                        0.05
-                                      );
+                                      --am-c-cal-disabled: rgba(112, 108, 108, 0.05);
                                       --am-c-cal-disabled-text: #8c959a;
-                                      --am-c-cal-disabled-op10: rgba(
-                                        112,
-                                        108,
-                                        108,
-                                        0.1
-                                      );
-                                      --am-c-cal-disabled-op60: rgba(
-                                        112,
-                                        108,
-                                        108,
-                                        0.4
-                                      );
+                                      --am-c-cal-disabled-op10: rgba(112, 108, 108, 0.1 );
+                                      --am-c-cal-disabled-op60: rgba(112, 108, 108, 0.4 );
                                     "
                                   >
                                     <div class="am-advsc__header">
                                       <div class="am-select-wrapper">
                                         <div
                                           class="el-select el-select--default am-select am-select--medium"
-                                          popper-options="[object Object]"
                                           prefix-icon=""
                                           dropdown-arrow-visibility="false"
                                           style="
@@ -346,43 +243,17 @@
                                             --am-c-select-border: #d1d5d7;
                                             --am-c-select-text: rgba(50, 69, 89, 1);
                                             --am-c-select-placeholder: #808a90;
-                                            --am-c-select-shadow: rgba(
-                                              50,
-                                              69,
-                                              89,
-                                              0.05
-                                            );
-                                            --am-c-select-text-op60: rgba(
-                                              50,
-                                              69,
-                                              89,
-                                              0.6
-                                            );
-                                            --am-c-select-text-op40: rgba(
-                                              50,
-                                              69,
-                                              89,
-                                              0.4
-                                            );
-                                            --am-c-select-text-op10: rgba(
-                                              50,
-                                              69,
-                                              89,
-                                              0.03
-                                            );
+                                            --am-c-select-shadow: rgba(50, 69, 89, 0.05);
+                                            --am-c-select-text-op60: rgba(50, 69, 89, 0.6);
+                                            --am-c-select-text-op40: rgba(50, 69, 89, 0.4);
+                                            --am-c-select-text-op10: rgba(50, 69, 89, 0.03);
                                             --am-font-family: Montserrat,
                                               sans-serif;
                                           "
                                         >
-                                          <div
-                                            class="select-trigger el-tooltip__trigger el-tooltip__trigger"
-                                          >
-                                            
+                                          <div class="select-trigger el-tooltip__trigger el-tooltip__trigger">
                                             <div class="el-input el-input--default el-input--suffix">
-                                    
-                                                <p-dropdown 
-                                                    [options]="mesi" 
-                                                    [(ngModel)]="selectedMese"/>
+                                                <p-dropdown [options]="mesi" [(ngModel)]="selectedMese"/>
                                             </div>
                                           </div>
                                         </div>
@@ -398,269 +269,78 @@
                                             --am-c-select-border: #d1d5d7;
                                             --am-c-select-text: rgba(50, 69, 89, 1);
                                             --am-c-select-placeholder: #808a90;
-                                            --am-c-select-shadow: rgba(
-                                              50,
-                                              69,
-                                              89,
-                                              0.05
-                                            );
-                                            --am-c-select-text-op60: rgba(
-                                              50,
-                                              69,
-                                              89,
-                                              0.6
-                                            );
-                                            --am-c-select-text-op40: rgba(
-                                              50,
-                                              69,
-                                              89,
-                                              0.4
-                                            );
-                                            --am-c-select-text-op10: rgba(
-                                              50,
-                                              69,
-                                              89,
-                                              0.03
-                                            );
-                                            --am-font-family: Montserrat,
-                                              sans-serif;
+                                            --am-c-select-shadow: rgba(50, 69, 89, 0.05);
+                                            --am-c-select-text-op60: rgba(50, 69, 89, 0.6);
+                                            --am-c-select-text-op40: rgba(50, 69, 89, 0.4);
+                                            --am-c-select-text-op10: rgba(50, 69, 89, 0.03);
+                                            --am-font-family: Montserrat, sans-serif;
                                           "
                                         >
-                                          <div
-                                            class="select-trigger el-tooltip__trigger el-tooltip__trigger"
-                                          >
-                                            
-                                            <div
-                                              class="el-input el-input--default el-input--suffix"
-                                            >
-                                              <!-- input --><!-- prepend slot --><input
-                                                class="el-input__inner"
-                                                name=""
-                                                type="text"
-                                                readonly=""
-                                                autocomplete="off"
-                                                placeholder="Select"
-                                              /><!-- prefix slot --><!-- suffix slot --><span
-                                                class="el-input__suffix"
-                                                ><span
-                                                  class="el-input__suffix-inner"
-                                                  ><i
-                                                    class="el-icon el-select__caret el-input__icon"
-                                                    ><span
-                                                      class="am-icon-arrow-up"
-                                                    ></span></i
-                                                  ></span
-                                                ></span
-                                              ><!-- append slot -->
+                                          <div class="select-trigger el-tooltip__trigger el-tooltip__trigger">
+                                            <div class="el-input el-input--default el-input--suffix">
+                                              <p-dropdown [options]="anni" [(ngModel)]="selectedAnno"/>
                                             </div>
                                           </div>
                                         </div>
                                       </div>
+
                                       <div class="am-button-group">
                                         <button
-                                          id=""
                                           class="am-button am-button--plain am-button--medium am-button--secondary is-icon-only"
                                           type="button"
                                           style="
                                             --am-c-btn-first: #1a2c37;
                                             --am-c-btn-second: #ffffff;
-                                            --am-c-btn-first-op80: rgba(
-                                              26,
-                                              44,
-                                              55,
-                                              0.8
-                                            );
-                                            --am-c-btn-first-op30: rgba(
-                                              26,
-                                              44,
-                                              55,
-                                              0.3
-                                            );
-                                            --am-c-btn-first-op20: rgba(
-                                              26,
-                                              44,
-                                              55,
-                                              0.1
-                                            );
+                                            --am-c-btn-first-op80: rgba(26, 44, 55, 0.8);
+                                            --am-c-btn-first-op30: rgba(26, 44, 55, 0.3);
+                                            --am-c-btn-first-op20: rgba(26, 44, 55, 0.1);
                                           "
                                         >
-                                          <!----><span
-                                            class="am-icon-arrow-left"
-                                          ></span
-                                          ><!----><!----><!----><!----></button
-                                        ><button
-                                          id=""
+                                          <span class="am-icon-arrow-left" ></span>
+                                        </button>
+                                        <button
                                           class="am-button am-button--plain am-button--medium am-button--secondary is-icon-only"
                                           type="button"
                                           style="
                                             --am-c-btn-first: #1a2c37;
                                             --am-c-btn-second: #ffffff;
-                                            --am-c-btn-first-op80: rgba(
-                                              26,
-                                              44,
-                                              55,
-                                              0.8
-                                            );
-                                            --am-c-btn-first-op30: rgba(
-                                              26,
-                                              44,
-                                              55,
-                                              0.3
-                                            );
-                                            --am-c-btn-first-op20: rgba(
-                                              26,
-                                              44,
-                                              55,
-                                              0.1
-                                            );
+                                            --am-c-btn-first-op80: rgba(26, 44, 55, 0.8);
+                                            --am-c-btn-first-op30: rgba(26, 44, 55, 0.3);
+                                            --am-c-btn-first-op20: rgba(26, 44, 55, 0.1);
                                           "
                                         >
-                                          <!----><span
-                                            class="am-icon-arrow-right"
-                                          ></span
-                                          ><!----><!----><!----><!---->
+                                          <span class="am-icon-arrow-right"></span>
                                         </button>
                                       </div>
                                     </div>
-                                    <div class="am-advsc__duration"><!----></div>
+                                    <div class="am-advsc__duration"></div>
                                     <div class="am-advsc__time-zone">
                                       <span>Europe/Rome</span>
                                     </div>
-                                    <div
-                                      attrs="[object Object]"
-                                      class="am-advsc fc fc-media-screen fc-direction-ltr fc-theme-standard"
-                                      am-mobile="false"
-                                      am-mobile-s="false"
-                                    >
+                                    <div class="am-advsc fc fc-media-screen fc-direction-ltr fc-theme-standard">
                                       <div
                                         aria-labelledby=""
                                         class="fc-view-harness fc-view-harness-active"
                                         style="height: 311px"
                                       >
-                                        <div
-                                          class="fc-daygrid fc-dayGridMonth-view fc-view"
-                                        >
-                                          <table
-                                            role="grid"
-                                            class="fc-scrollgrid fc-scrollgrid-liquid"
-                                          >
+                                        <div class="fc-daygrid fc-dayGridMonth-view fc-view">
+                                          <table role="grid" class="fc-scrollgrid fc-scrollgrid-liquid">
                                             <thead role="rowgroup">
-                                              <tr
-                                                role="presentation"
-                                                class="fc-scrollgrid-section fc-scrollgrid-section-header"
-                                              >
+                                              <tr role="presentation" class="fc-scrollgrid-section fc-scrollgrid-section-header">
                                                 <th role="presentation">
                                                   <div class="fc-scroller-harness">
-                                                    <div
-                                                      class="fc-scroller"
-                                                      style="overflow: hidden"
-                                                    >
-                                                      <table
-                                                        role="presentation"
-                                                        class="fc-col-header"
-                                                        style="width: -webkit-fill-available"
-                                                      >
+                                                    <div class="fc-scroller" style="overflow: hidden">
+                                                      <table role="presentation" class="fc-col-header" style="width: -webkit-fill-available">
                                                         <colgroup></colgroup>
                                                         <thead role="presentation">
                                                           <tr role="row">
-                                                            <th
-                                                              role="columnheader"
-                                                              class="fc-col-header-cell fc-day fc-day-mon am-advsc__dayGridMonth-header-cell"
-                                                            >
-                                                              <div
-                                                                class="fc-scrollgrid-sync-inner"
-                                                              >
-                                                                <a
-                                                                  aria-label="lunedì"
-                                                                  class="fc-col-header-cell-cushion"
-                                                                  >lun</a
-                                                                >
-                                                              </div>
-                                                            </th>
-                                                            <th
-                                                              role="columnheader"
-                                                              class="fc-col-header-cell fc-day fc-day-tue am-advsc__dayGridMonth-header-cell"
-                                                            >
-                                                              <div
-                                                                class="fc-scrollgrid-sync-inner"
-                                                              >
-                                                                <a
-                                                                  aria-label="martedì"
-                                                                  class="fc-col-header-cell-cushion"
-                                                                  >mar</a
-                                                                >
-                                                              </div>
-                                                            </th>
-                                                            <th
-                                                              role="columnheader"
-                                                              class="fc-col-header-cell fc-day fc-day-wed am-advsc__dayGridMonth-header-cell"
-                                                            >
-                                                              <div
-                                                                class="fc-scrollgrid-sync-inner"
-                                                              >
-                                                                <a
-                                                                  aria-label="mercoledì"
-                                                                  class="fc-col-header-cell-cushion"
-                                                                  >mer</a
-                                                                >
-                                                              </div>
-                                                            </th>
-                                                            <th
-                                                              role="columnheader"
-                                                              class="fc-col-header-cell fc-day fc-day-thu am-advsc__dayGridMonth-header-cell"
-                                                            >
-                                                              <div
-                                                                class="fc-scrollgrid-sync-inner"
-                                                              >
-                                                                <a
-                                                                  aria-label="giovedì"
-                                                                  class="fc-col-header-cell-cushion"
-                                                                  >gio</a
-                                                                >
-                                                              </div>
-                                                            </th>
-                                                            <th
-                                                              role="columnheader"
-                                                              class="fc-col-header-cell fc-day fc-day-fri am-advsc__dayGridMonth-header-cell"
-                                                            >
-                                                              <div
-                                                                class="fc-scrollgrid-sync-inner"
-                                                              >
-                                                                <a
-                                                                  aria-label="venerdì"
-                                                                  class="fc-col-header-cell-cushion"
-                                                                  >ven</a
-                                                                >
-                                                              </div>
-                                                            </th>
-                                                            <th
-                                                              role="columnheader"
-                                                              class="fc-col-header-cell fc-day fc-day-sat am-advsc__dayGridMonth-header-cell am-advsc__dayGridMonth-header-weekend"
-                                                            >
-                                                              <div
-                                                                class="fc-scrollgrid-sync-inner"
-                                                              >
-                                                                <a
-                                                                  aria-label="sabato"
-                                                                  class="fc-col-header-cell-cushion"
-                                                                  >sab</a
-                                                                >
-                                                              </div>
-                                                            </th>
-                                                            <th
-                                                              role="columnheader"
-                                                              class="fc-col-header-cell fc-day fc-day-sun am-advsc__dayGridMonth-header-cell am-advsc__dayGridMonth-header-weekend"
-                                                            >
-                                                              <div
-                                                                class="fc-scrollgrid-sync-inner"
-                                                              >
-                                                                <a
-                                                                  aria-label="domenica"
-                                                                  class="fc-col-header-cell-cushion"
-                                                                  >dom</a
-                                                                >
-                                                              </div>
-                                                            </th>
+                                                            @for (giornoDellaSettimana of giorniDellaSettimana; track giornoDellaSettimana) {
+                                                              <th role="columnheader" class="fc-col-header-cell fc-day fc-day-mon am-advsc__dayGridMonth-header-cell">
+                                                                <div class="fc-scrollgrid-sync-inner">
+                                                                  <a class="fc-col-header-cell-cushion">{{giornoDellaSettimana}}</a>
+                                                                </div>
+                                                              </th>
+                                                            }
                                                           </tr>
                                                         </thead>
                                                       </table>
@@ -2326,10 +2006,10 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <!---->
+                                    
                                   </div>
                                 </div>
-                                <!---->
+                                
                                 <div
                                   class="am-slide-popup__up am-package-popup"
                                   style="
@@ -2421,13 +2101,13 @@
                                           );
                                         "
                                       >
-                                        <!----><!----><!----><span
+                                        <span
                                           class="am-button__inner"
                                           >Ignora i pacchetti e continua con il
                                           servizio selezionato</span
                                         >
                                         <div class="am-fs__ps-pill">€80,0000</div>
-                                        <!---->
+                                        
                                       </button>
                                     </div>
                                   </div>
@@ -2444,7 +2124,7 @@
                               --am-c-success-op20: rgba(255, 255, 255, 0.2);
                             "
                           >
-                            <!----><!----><!----><!----><button
+                            <button
                               id=""
                               class="am-button am-button--filled am-button--default am-button--primary am-button-continue"
                               type="button"
@@ -2456,10 +2136,10 @@
                                 --am-c-btn-first-op20: rgba(217, 161, 160, 0.1);
                               "
                             >
-                              <!----><!----><!----><span
+                              <span
                                 class="am-button__inner"
                                 >Continua</span
-                              ><!---->
+                              >
                             </button>
                           </div>
                         </div>
@@ -2470,11 +2150,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f849bdb"
-            data-id="f849bdb"
-            data-element_type="column"
-          >
+          <div class="elementor-column elementor-col-50 elementor-top-column elementor-element prenota-wrapper-col-2">
             <div class="elementor-widget-wrap elementor-element-populated">
               <div
                 class="elementor-element elementor-element-d8f4738 elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-heading"
