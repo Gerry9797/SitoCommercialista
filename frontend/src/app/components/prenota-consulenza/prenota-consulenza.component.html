@@ -220,6 +220,14 @@
                           <!---->
                           <div class="am-fs-dt__calendar am-fs__main-content" style="padding: 0px;">
 
+                            <!-- mobile stepper  -->
+                            <div class="am-progress-bar" style="--am-step-length: 25%; --am-c-main-heading-text-op15: rgba(50, 69, 89, 0.15);">
+                              <span class="am-step am-current-step"></span>
+                              <span class="am-step"></span>
+                              <span class="am-step"></span>
+                              <span class="am-step"></span>
+                            </div>
+
                             <!-- SKELETON CALENDAR COMPONENT  -->
                             <div *ngIf="calendarLoading && !calendarReady" class="el-skeleton is-animated am-skeleton-slots am-skeleton-slots">
                               <div class="am-skeleton-slots-filters">
@@ -286,7 +294,7 @@
                             <!-- [class.d-block]="calendarLoading && calendarReady" display: none;-->
                             <!-- CALENDAR COMPONENT -->
                             <ng-scrollbar *ngIf="calendarLoading && calendarReady" style="--scrollbar-border-radius: 10px; visibility: auto">
-                              <div style="padding: 16px 32px; padding-bottom: 5px">
+                              <div class="header-content-inner-scroll" style="padding: 16px 32px; padding-bottom: 5px">
                                 <div class="am-fs-dt__calendar">
                                   <div
                                     class="am-advsc__wrapper"
@@ -2294,7 +2302,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div [class.d-none-opacity]="!calendarDaySelected" class="am-advsc__slots-wrapper">
+                                    <div [class.d-none]="!calendarDaySelected" class="am-advsc__slots-wrapper">
                                       <div class="am-advsc__slots-heading">
                                         1 febbraio 2024 - 15:00
                                       </div>

@@ -82,6 +82,8 @@
     --el-transition-fade-linear: opacity var(--el-transition-duration-fast) linear;
     --el-transition-border: border-color var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier);
     --el-transition-color: color var(--el-transition-duration-fast) var(--el-transition-function-ease-in-out-bezier);
+    --am-c-option-selected: var(--palette1-color-primary);
+    --am-c-select-option-bgr:rgba(50, 69, 89, 0.1);
 }
 
 h2 {
@@ -7088,7 +7090,7 @@ body .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-lab
 
 .amelia-v2-booking #amelia-container .am-fs__main-content {
     display: block;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     height: 444px;
     padding: 16px 32px
 }
@@ -7132,7 +7134,7 @@ body .elementor-4966 .elementor-element.elementor-element-ff0714e .elementor-lab
 
 #amelia-app-backend-new .am-fs__main-content {
     display: block;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     height: 444px;
     padding: 16px 32px
 }
@@ -35048,4 +35050,51 @@ p-dropdown ::ng-deep .p-inputwrapper span {
     text-align: center;
     transition: 1s ease-in-out;
     transition-delay: 0.5s !important;
+}
+
+
+@media only screen and (max-width: 618px) { 
+    .am-fs-sb {
+        display: none !important;
+    }
+    #amelia-container .am-advsc__header > div {
+        margin-right: 8px !important;
+    }
+    ::ng-deep .header-content-inner-scroll {
+        padding: 16px !important;
+    }
+    .fc-view-harness.fc-view-harness-active {
+        height: 401px !important;
+    }
+}
+
+
+::ng-deep .p-element.p-icon-wrapper {
+    width: 12px;
+}
+
+::ng-deep .p-dropdown-trigger {
+    width: 13px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+::ng-deep .p-element.p-dropdown-label.p-inputtext {
+    font-size: 15px;
+    padding-right: 0px;
+}
+
+::ng-deep .p-dropdown-items .p-highlight {
+    background-color: var(--am-c-select-option-bgr) !important; /* Colore di default */
+  }
+  ::ng-deep .p-dropdown-items:hover .p-highlight {
+    background-color: initial !important; /* Reimposta lo stile o applicane uno diverso */
+  }
+
+::ng-deep .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    color: var(--am-c-option-selected) !important;
+    /* background-color: var(--am-c-select-option-bgr) !important; */
+}
+::ng-deep .p-ripple.p-element.p-dropdown-item:hover {
+    background-color: var(--am-c-select-option-bgr) !important;
 }
