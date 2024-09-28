@@ -1,13 +1,17 @@
-// export const BE_API = "http://192.168.1.15:8080/backend/api/"
-// export const BE_API = "https://www.devmind360.com:8443/backend/api/"
-// export const FE_URL = "https://www.devmind360.com"
-
-// export const NOME = "DevMind"
-// export const NOME_SITO = "DevMind360.com";
-// export const NOME_AZIENDA = "DevMind360"
-// export const SEDE_AZIENDA = "Via Lombardi 4, Ciorani, Mercato San Severino, Salerno (84085), Italia"
-// export const SUPPORT_EMAIL = "assistenza@devmind360.com"
-
-
-
+export const MAP_MESI = new Map<number, string>([
+    [1, 'Gennaio'],
+    [2, 'Febbraio'],
+    [3, 'Marzo'],
+    [4, 'Aprile'],
+    [5, 'Maggio'],
+    [6, 'Giugno'],
+    [7, 'Luglio'],
+    [8, 'Agosto'],
+    [9, 'Settembre'],
+    [10, 'Ottobre'],
+    [11, 'Novembre'],
+    [12, 'Dicembre']
+  ]);
+  
+  
 

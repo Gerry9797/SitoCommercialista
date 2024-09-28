@@ -378,6 +378,33 @@
                                                           <tbody
                                                             role="presentation"
                                                           >
+
+                                                            <!-- @for (giornoDelMese of giorniDelMese; track giornoDelMese; let rowIndex = $index) {
+                                                              @if (rowIndex % 7 === 0) {
+                                                                <tr role="row">
+                                                                  @for (giornoDelMeseNellaRiga of giorniDelMese.slice(rowIndex, rowIndex + 7); track giornoDelMeseNellaRiga; let colIndex = $index) {
+                                                                    <td
+                                                                      role="gridcell"
+                                                                      class="fc-daygrid-day fc-day fc-day-mon fc-day-future am-advsc__dayGridMonth-cell am-advsc__dayGridMonth-disabled"
+                                                                      [attr.data-date]="giornoDelMeseNellaRiga.day + mapMesi.get(giornoDelMeseNellaRiga.month)! + giornoDelMeseNellaRiga.year"
+                                                                      [attr.aria-labelledby]="'fc-dom-467' + rowIndex + colIndex"
+                                                                    >
+                                                                      <div class="fc-daygrid-day-frame fc-scrollgrid-sync-inner">
+                                                                        <div class="fc-daygrid-day-top">
+                                                                          <a id="fc-dom-467{{rowIndex}}{{colIndex}}" class="fc-daygrid-day-number" [attr.aria-label]="giornoDelMeseNellaRiga.day + mapMesi.get(giornoDelMeseNellaRiga.month)! + giornoDelMeseNellaRiga.year">{{giornoDelMeseNellaRiga.day}}</a>
+                                                                        </div>
+                                                                        <div class="fc-daygrid-day-events">
+                                                                          <div class="fc-daygrid-day-bottom" style="margin-top: 0px;"></div>
+                                                                        </div>
+                                                                        <div class="fc-daygrid-day-bg"></div>
+                                                                      </div>
+                                                                    </td>
+                                                                  }
+                                                                </tr>
+                                                              }
+                                                            } -->
+
+
                                                             <tr role="row">
                                                               <td
                                                                 role="gridcell"
