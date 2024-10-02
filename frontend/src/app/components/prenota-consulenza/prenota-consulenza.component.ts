@@ -1,13 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { UtilityService } from '../../services/utility/utility.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { MAP_MESI } from 'src/app/app.constants';
-
-interface City {
-  name: string;
-  code: string;
-}
+import { GiornoDelMese } from 'src/app/models/calendar-reservation.model';
+import { NgScrollbar } from 'ngx-scrollbar';
 
 interface LeftMenuItems {
   label: string;
@@ -15,13 +12,6 @@ interface LeftMenuItems {
   iconClass: string;
   checked: boolean;
 }
-
-interface GiorniDelMese {
-  day: number,
-  month: number,
-  year: number
-}
-
 @Component({
   selector: 'app-prenota-consulenza',
   templateUrl: './prenota-consulenza.component.html',
@@ -47,11 +37,13 @@ interface GiorniDelMese {
 })
 export class PrenotaConsulenzaComponent implements OnInit {
 
+    @ViewChild('calendarScrollbar') calendarScrollbarRef!: NgScrollbar;
+
     mapMesi = MAP_MESI;
 
     calendarLoading: boolean = false;
     calendarReady: boolean = false;
-    calendarDaySelected: number|undefined = undefined;
+
     isLeftMenuCalendarClosed: boolean = false;
 
     formCalendar!: FormGroup;
@@ -85,216 +77,316 @@ export class PrenotaConsulenzaComponent implements OnInit {
       '2024'
     ]
 
-    giorniDelMese: GiorniDelMese[] = [
+    giorniDelMese: GiornoDelMese[] = [
       {
         day: 1,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 2,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false,
+        isToday: true
       },
       {
         day: 3,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 4,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 5,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },      
       {
         day: 6,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },      
       {
         day: 7,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },      
       {
         day: 8,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },      
       {
         day: 9,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },      
       {
         day: 10,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },      
       {
         day: 11,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: true,
+        occupancyPercentage: 33,
+        orariPrenotazione : [
+          "15:00",
+          "16:00",
+          "17:00"
+        ]
       },      
       {
         day: 12,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },      
       {
         day: 13,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },      
       {
         day: 14,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },      
       {
         day: 15,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },      
       {
         day: 16,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: true,
+        occupancyPercentage: 33
       },      
       {
         day: 17,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },      
       {
         day: 18,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: true,
+        occupancyPercentage: 66,
+        orariPrenotazione : [
+          "15:00"
+        ]
       },      
       {
         day: 19,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },      
       {
         day: 20,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 21,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 22,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 23,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 24,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 25,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: true,
+        occupancyPercentage: 33
       },
       {
         day: 26,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 27,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 28,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 29,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 30,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: true,
+        occupancyPercentage: 33
       },
       {
         day: 31,
         month: 8,
-        year: 2024
+        year: 2024,
+        monthState: 'CURRENT',
+        enabled: false
       },
       {
         day: 1,
         month: 9,
-        year: 2024
+        year: 2024,
+        monthState: 'FUTURE',
+        enabled: true,
+        occupancyPercentage: 33
       },
       {
         day: 2,
         month: 9,
-        year: 2024
+        year: 2024,
+        monthState: 'FUTURE',
+        enabled: false
       },
       {
         day: 3,
         month: 9,
-        year: 2024
+        year: 2024,
+        monthState: 'FUTURE',
+        enabled: false
       },
       {
         day: 4,
         month: 9,
-        year: 2024
+        year: 2024,
+        monthState: 'FUTURE',
+        enabled: false
       },
       {
         day: 5,
         month: 9,
-        year: 2024
+        year: 2024,
+        monthState: 'FUTURE',
+        enabled: false
       },      
       {
         day: 6,
         month: 9,
-        year: 2024
+        year: 2024,
+        monthState: 'FUTURE',
+        enabled: false
       },      
       {
         day: 7,
         month: 9,
-        year: 2024
+        year: 2024,
+        monthState: 'FUTURE',
+        enabled: false
       },      
       {
-        day: 6,
+        day: 8,
         month: 9,
-        year: 2024
+        year: 2024,
+        monthState: 'FUTURE',
+        enabled: true,
+        occupancyPercentage: 33
       },      
       {
         day: 9,
         month: 9,
-        year: 2024
+        year: 2024,
+        monthState: 'FUTURE',
+        enabled: false
       },      
       {
         day: 10,
         month: 9,
-        year: 2024
+        year: 2024,
+        monthState: 'FUTURE',
+        enabled: false
       },      
       {
         day: 11,
         month: 9,
-        year: 2024
+        year: 2024,
+        monthState: 'FUTURE',
+        enabled: false
       }
     ]
     giorniDellaSettimana: string[] = [
@@ -303,6 +395,8 @@ export class PrenotaConsulenzaComponent implements OnInit {
 
     selectedMese = this.mesi[0];
     selectedAnno = this.anni[0];
+    selectedGiornoDelMese: null | GiornoDelMese = null
+    selectedOrario: null | string = null;
 
     constructor(
       private formBuilder: FormBuilder,
@@ -335,5 +429,30 @@ export class PrenotaConsulenzaComponent implements OnInit {
 
     toggleLeftMenuCalendar() {
       this.isLeftMenuCalendarClosed = !this.isLeftMenuCalendarClosed;
+    }
+
+    selectDay(day: GiornoDelMese) {
+      this.selectedGiornoDelMese = day;
+      let orariDisponibili = this.selectedGiornoDelMese.orariPrenotazione;
+      if (orariDisponibili != null && orariDisponibili.length > 0) {
+        this.selectedOrario = orariDisponibili[0];
+      } else {
+        this.selectedOrario = null;
+      }
+      setTimeout(() => {
+        this.scrollToBottomOfCalendar();
+      }, 200);
+      
+    }
+
+    selectTime(time: string) {
+      this.selectedOrario = time;
+    }
+
+    scrollToBottomOfCalendar() {
+      if (this.calendarScrollbarRef) {
+        // Scorrimento dolce verso il fondo
+        this.calendarScrollbarRef.scrollTo({ bottom: 0, duration: 300 });  // Durata in millisecondi
+      }
     }
 }

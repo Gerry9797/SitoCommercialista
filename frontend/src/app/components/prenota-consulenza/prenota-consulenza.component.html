@@ -208,7 +208,7 @@
                             </div>
                             
                             <!-- CALENDAR COMPONENT -->
-                            <ng-scrollbar *ngIf="calendarLoading && calendarReady" style="--scrollbar-border-radius: 10px; visibility: auto">
+                            <ng-scrollbar #calendarScrollbar *ngIf="calendarLoading && calendarReady" style="--scrollbar-border-radius: 10px; visibility: auto">
                               <div class="header-content-inner-scroll" style="padding: 16px 32px; padding-bottom: 5px">
                                 <div class="am-fs-dt__calendar">
                                   <div
@@ -223,9 +223,7 @@
                                       --am-c-cal-init-op60: rgba(217, 161, 160, 0.6);
                                       --am-c-cal-selected: rgba(217, 161, 160, 1);
                                       --am-c-cal-selected-text: #ffffff;
-                                      --am-c-cal-selected-op80: rgba( 217, 161, 160
-                                        0.8
-                                      );
+                                      --am-c-cal-selected-op80: rgba( 217, 161, 160, 0.8);
                                       --am-c-cal-disabled: rgba(112, 108, 108, 0.05);
                                       --am-c-cal-disabled-text: #8c959a;
                                       --am-c-cal-disabled-op10: rgba(112, 108, 108, 0.1 );
@@ -355,9 +353,7 @@
                                                 class="fc-scrollgrid-section fc-scrollgrid-section-body fc-scrollgrid-section-liquid"
                                               >
                                                 <td role="presentation">
-                                                  <div
-                                                    class="fc-scroller-harness fc-scroller-harness-liquid"
-                                                  >
+                                                  <div class="fc-scroller-harness fc-scroller-harness-liquid">
                                                     <div
                                                       class="fc-scroller fc-scroller-liquid-absolute"
                                                       style="overflow: hidden auto"
@@ -375,19 +371,24 @@
                                                           "
                                                         >
                                                           <colgroup></colgroup>
-                                                          <tbody
-                                                            role="presentation"
-                                                          >
+                                                          <tbody role="presentation">
 
-                                                            <!-- @for (giornoDelMese of giorniDelMese; track giornoDelMese; let rowIndex = $index) {
+                                                            @for (giornoDelMese of giorniDelMese; track giornoDelMese; let rowIndex = $index) {
                                                               @if (rowIndex % 7 === 0) {
                                                                 <tr role="row">
                                                                   @for (giornoDelMeseNellaRiga of giorniDelMese.slice(rowIndex, rowIndex + 7); track giornoDelMeseNellaRiga; let colIndex = $index) {
                                                                     <td
                                                                       role="gridcell"
-                                                                      class="fc-daygrid-day fc-day fc-day-mon fc-day-future am-advsc__dayGridMonth-cell am-advsc__dayGridMonth-disabled"
+                                                                      class="fc-daygrid-day fc-day fc-day-mon fc-day-future am-advsc__dayGridMonth-cell"
+                                                                      [class.fc-day-today]="giornoDelMeseNellaRiga.isToday"
+                                                                      [class.am-advsc__dayGridMonth-disabled]="!(giornoDelMeseNellaRiga.enabled)"
+                                                                      [class.am-advsc__dayGridMonth-selected]="giornoDelMeseNellaRiga === selectedGiornoDelMese"
+                                                                      [class.fc-day-past]="giornoDelMeseNellaRiga.monthState == 'PAST'"
+                                                                      [class.fc-day-future]="giornoDelMeseNellaRiga.monthState == 'FUTURE'"
+                                                                      [class.fc-day-other]="giornoDelMeseNellaRiga.monthState != 'CURRENT'"
                                                                       [attr.data-date]="giornoDelMeseNellaRiga.day + mapMesi.get(giornoDelMeseNellaRiga.month)! + giornoDelMeseNellaRiga.year"
                                                                       [attr.aria-labelledby]="'fc-dom-467' + rowIndex + colIndex"
+                                                                      (click)="selectDay(giornoDelMeseNellaRiga)"
                                                                     >
                                                                       <div class="fc-daygrid-day-frame fc-scrollgrid-sync-inner">
                                                                         <div class="fc-daygrid-day-top">
@@ -396,16 +397,25 @@
                                                                         <div class="fc-daygrid-day-events">
                                                                           <div class="fc-daygrid-day-bottom" style="margin-top: 0px;"></div>
                                                                         </div>
-                                                                        <div class="fc-daygrid-day-bg"></div>
+                                                                        <div class="fc-daygrid-day-bg">
+                                                                          <!-- parte per gestire il riempimento -->
+                                                                          
+                                                                          <div class="fc-daygrid-bg-harness" style="left: 0px; right: 0px;">
+                                                                            <div class="fc-bg-event fc-event fc-event-start fc-event-end fc-event-future am-advsc__occupancy">
+                                                                              <div class="am-advsc__slot-wrapper" [style.height]="giornoDelMeseNellaRiga?.occupancyPercentage ? giornoDelMeseNellaRiga.occupancyPercentage + '%' : '0%'"></div>
+                                                                            </div>
+                                                                          </div>
+
+                                                                        </div>
                                                                       </div>
                                                                     </td>
                                                                   }
                                                                 </tr>
                                                               }
-                                                            } -->
+                                                            }
 
 
-                                                            <tr role="row">
+                                                            <!-- <tr role="row">
                                                               <td
                                                                 role="gridcell"
                                                                 class="fc-daygrid-day fc-day fc-day-mon fc-day-future am-advsc__dayGridMonth-cell am-advsc__dayGridMonth-disabled"
@@ -1996,7 +2006,7 @@
                                                                   ></div>
                                                                 </div>
                                                               </td>
-                                                            </tr>
+                                                            </tr> -->
                                                           </tbody>
                                                         </table>
                                                       </div>
@@ -2009,136 +2019,26 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <div [class.d-none]="!calendarDaySelected" class="am-advsc__slots-wrapper">
+
+                                    <!-- SLOT ORARI DA SELEZIONARE  -->
+                                    <div *ngIf="selectedGiornoDelMese" class="am-advsc__slots-wrapper">
                                       <div class="am-advsc__slots-heading">
-                                        1 febbraio 2024 - 15:00
+                                        {{selectedGiornoDelMese!.day}} {{mapMesi.get(selectedGiornoDelMese!.month)}} {{selectedGiornoDelMese.year}} - {{selectedOrario}}
                                       </div>
                                       <div class="am-advsc__slots">
-                                        <div
-                                          class="am-advsc__slots-item am-advsc__slots-item__selected"
-                                        >
-                                          <div class="am-advsc__slots-item__inner">
-                                            15:00
+                                        @for (orario of selectedGiornoDelMese.orariPrenotazione; track orario; let rowIndex = $index) {
+                                        <div class="am-advsc__slots-item" [class.am-advsc__slots-item__selected]="selectedOrario == orario">
+                                          <div class="am-advsc__slots-item__inner" (click)="selectTime(orario)">
+                                            {{orario}}
                                           </div>
                                         </div>
-                                        <div class="am-advsc__slots-item">
-                                          <div class="am-advsc__slots-item__inner">
-                                            16:00
-                                          </div>
-                                        </div>
-                                        <div class="am-advsc__slots-item">
-                                          <div class="am-advsc__slots-item__inner">
-                                            17:00
-                                          </div>
-                                        </div>
+                                        }
                                       </div>
                                     </div>
                                     
                                   </div>
                                 </div>
                                 
-                                <div
-                                  class="am-slide-popup__up am-package-popup"
-                                  style="
-                                    --am-c-ps-text-op60: rgba(50, 69, 89, 0.6);
-                                    --am-c-ps-text-op20: rgba(50, 69, 89, 0.2);
-                                    display: none;
-                                  "
-                                >
-                                  <div
-                                    class="am-slide-popup__up-inner am-slide-popup__up-inner-mobile"
-                                  >
-                                    <p class="am-fs__popup-x">
-                                      <span class="am-icon-close"></span>
-                                    </p>
-                                    <div class="am-fs__ps-popup">
-                                      <div class="am-fs__ps-popup__heading">
-                                        Ehi, ci sono pacchetti speciali con questo
-                                        servizio, dai un'occhiata!
-                                      </div>
-                                      <div
-                                        class="am-fs__ps am-fs__ps-popup"
-                                        style="
-                                          --am-c-ps-text: rgba(50, 69, 89, 1);
-                                          --am-c-ps-text-op60: rgba(
-                                            50,
-                                            69,
-                                            89,
-                                            0.6
-                                          );
-                                          --am-c-ps-text-op20: rgba(
-                                            50,
-                                            69,
-                                            89,
-                                            0.2
-                                          );
-                                          --am-c-ps-text-op06: rgba(
-                                            50,
-                                            69,
-                                            89,
-                                            0.06
-                                          );
-                                          --am-c-primary-op10: rgba(
-                                            222,
-                                            128,
-                                            94,
-                                            0.1
-                                          );
-                                          --am-c-scroll-op30: rgba(
-                                            222,
-                                            128,
-                                            94,
-                                            0.3
-                                          );
-                                          --am-c-scroll-op10: rgba(
-                                            222,
-                                            128,
-                                            94,
-                                            0.1
-                                          );
-                                          --am-c-success-op10: rgba(
-                                            255,
-                                            255,
-                                            255,
-                                            0.1
-                                          );
-                                        "
-                                      ></div>
-                                      <div class="am-fs__ps-popup__or">Oppure</div>
-                                    </div>
-                                    <div class="am-slide-popup__up-footer">
-                                      <button
-                                        id=""
-                                        class="am-button am-button--filled am-button--medium am-button--primary am-package-popup-continue am-fs__ps-popup__btn-mobile"
-                                        type="button"
-                                        style="
-                                          --am-c-btn-first: rgba(217, 161, 160, 1);
-                                          --am-c-btn-second: #ffffff;
-                                          --am-c-btn-first-op80: rgba(
-                                            217, 161, 160,
-                                            0.8
-                                          );
-                                          --am-c-btn-first-op30: rgba(
-                                            217, 161, 160,
-                                            0.3
-                                          );
-                                          --am-c-btn-first-op20: rgba(
-                                            217, 161, 160,
-                                            0.1
-                                          );
-                                        "
-                                      >
-                                        <span
-                                          class="am-button__inner"
-                                          >Ignora i pacchetti e continua con il
-                                          servizio selezionato</span
-                                        >
-                                        <div class="am-fs__ps-pill">€80,0000</div>
-                                        
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
                               </div>
 
                             </ng-scrollbar>
@@ -2154,6 +2054,7 @@
                             <button
                               id=""
                               class="am-button am-button--filled am-button--default am-button--primary am-button-continue"
+                              [class.is-disabled]="!selectedGiornoDelMese || !selectedOrario"
                               type="button"
                               style="
                                 --am-c-btn-first: rgba(217, 161, 160, 1);
