@@ -48,6 +48,8 @@ export class PrenotaConsulenzaComponent implements OnInit {
 
     formCalendar!: FormGroup;
 
+
+
     leftMenuItems: LeftMenuItems[] = [
       {
         label: "Data e Orario",
@@ -397,6 +399,8 @@ export class PrenotaConsulenzaComponent implements OnInit {
     selectedAnno = this.anni[0];
     selectedGiornoDelMese: null | GiornoDelMese = null
     selectedOrario: null | string = null;
+    
+    step: number = 1;
 
     constructor(
       private formBuilder: FormBuilder,
@@ -453,6 +457,16 @@ export class PrenotaConsulenzaComponent implements OnInit {
       if (this.calendarScrollbarRef) {
         // Scorrimento dolce verso il fondo
         this.calendarScrollbarRef.scrollTo({ bottom: 0, duration: 300 });  // Durata in millisecondi
+      }
+    }
+
+    nextStep() {
+      this.step += 1;
+    }
+
+    prevStep() {
+      if (this.step > 1) {
+        this.step -= 1;
       }
     }
 }
