@@ -5,9 +5,9 @@ export const SITE_CONFIG = {
         cognome: "Autiero",
         contatti: {
             email: "info@latuacommercialista.it",
-            telefono: "3405272618",
-            linkedin: "https://www.linkedin.com/company/valentina-filippini-consulente-del-lavoro/",
-            instagram: "https://www.instagram.com/cdl_valentina_filippini/",
+            telefono: "3246871084",
+            linkedin: "https://www.linkedin.com/in/aisia-autiero-6542b5250/",
+            instagram: "https://www.instagram.com/la.tua.commercialista/",
             sitoWeb: "www.latuacommercialista.it",
             dominio: "latuacommercialista.it",
             sitoWebHttps: "https://latuacommercialista.it"

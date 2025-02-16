@@ -1,0 +1,5 @@
+@media (min-width: 782px) {
+    .height-service-card-adapt {
+        height: -webkit-fill-available;
+    }
+}
