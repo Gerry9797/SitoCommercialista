@@ -52148,7 +52148,7 @@ input[type="search"].elementor-search-form__input {
 
 .elementor-homepage .elementor-element.elementor-element-357a8b9:not(.elementor-motion-effects-element-type-background), .elementor-homepage .elementor-element.elementor-element-357a8b9 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
     background-color: #F9F0EB;
-    background-image: url("https://valentinafilippini.it/wp-content/vf_home_.jpg");
+    background-image: url("assets/pictures/sito_home_.webp");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -52566,7 +52566,7 @@ body.elementor-page-7:not(.elementor-motion-effects-element-type-background), bo
     }
 
     .elementor-homepage .elementor-element.elementor-element-357a8b9:not(.elementor-motion-effects-element-type-background), .elementor-homepage .elementor-element.elementor-element-357a8b9 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
-        background-image: url("https://valentinafilippini.it/wp-content/uploads/2022/09/vf_home_mobile.jpeg");
+        background-image: url("assets/pictures/sito_home_mobile.webp");
         background-position: 86% 126px;
         background-size: 817px auto;
     }
