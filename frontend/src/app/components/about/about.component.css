@@ -981,3 +981,7 @@
   margin-bottom: 0%;
   padding: 0px 0px 0px 0px;
 }
+
+.elementor-widget-text-editor {
+  line-height: 1.5;
+}

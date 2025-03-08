@@ -16,6 +16,7 @@ export const SITE_CONFIG = {
             cap: "84098",
             localita: "Pontecagnano",
             provincia: "SA",
+            provinciaEstesa: "Salerno",
             indirizzo: "Via Francesco Petrarca 4"
         },
         pIva: {

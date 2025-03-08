@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { SITE_CONFIG } from 'src/app/app.config';
 import { UtilityService } from 'src/app/services/utility/utility.service';
 
 @Component({
@@ -8,6 +9,8 @@ import { UtilityService } from 'src/app/services/utility/utility.service';
 })
 export class AboutComponent implements OnInit {
 
+  revisoreLegaleFlag: boolean = SITE_CONFIG.revisoreLegale
+  siteConfig = SITE_CONFIG
 
   constructor(
     private utilityService: UtilityService
