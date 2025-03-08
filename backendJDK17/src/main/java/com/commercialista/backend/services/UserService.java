@@ -83,7 +83,7 @@ public class UserService {
 		Set<Role> roles = new HashSet<>();
 
 		if (strRoles == null) {
-			Role userRole = roleRepository.findByName(ERole.ROLE_USER)
+			Role userRole = roleRepository.findById(ERole.ROLE_USER)
 					.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 			roles.add(userRole);
 		} else {
@@ -93,19 +93,19 @@ public class UserService {
 			strRoles.forEach(role -> {
 				switch (role) {
 				case "admin":
-					Role adminRole = roleRepository.findByName(ERole.ROLE_ADMIN)
+					Role adminRole = roleRepository.findById(ERole.ROLE_ADMIN)
 							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 					roles.add(adminRole);
 
 					break;
 				case "mod":
-					Role modRole = roleRepository.findByName(ERole.ROLE_MODERATOR)
+					Role modRole = roleRepository.findById(ERole.ROLE_MODERATOR)
 							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 					roles.add(modRole);
 
 					break;
 				default:
-					Role userRole = roleRepository.findByName(ERole.ROLE_USER)
+					Role userRole = roleRepository.findById(ERole.ROLE_USER)
 							.orElseThrow(() -> new RuntimeException("Error: Role is not found."));
 					roles.add(userRole);
 				}
@@ -128,7 +128,7 @@ public class UserService {
 					String username = jwtUtils.getUserNameFromJwtToken(jwtToken);
 					User operationUser = userRepository.findByUsername(username)
 							.orElseThrow(() -> new Exception("Nessuno username trovato appartenente a questo token"));
-					if (!operationUser.getRoles().stream().map(role -> role.getName()).collect(Collectors.toSet())
+					if (!operationUser.getRoles().stream().map(role -> role.getId()).collect(Collectors.toSet())
 							.contains(ERole.ROLE_ADMIN)) {
 						throw new Exception("Solo un admin può censire un utente con permessi non standard");
 					}
@@ -164,7 +164,7 @@ public class UserService {
 
 	@Transactional(rollbackFor = Exception.class, readOnly = false)
 	public int removeAccountNonConfermatiDaNDays(int days) {
-		List<Long> userIdsToRemove = accountRepository.findAccountsNotConfirmedAfterNDays(days); 
+		List<UUID> userIdsToRemove = accountRepository.findAccountsNotConfirmedAfterNDays(days);
 		if (userIdsToRemove != null && !userIdsToRemove.isEmpty()) {
 			roleRepository.deleteByUserIdIn(userIdsToRemove);
 			userRepository.deleteAllById(userIdsToRemove);
@@ -213,7 +213,7 @@ public class UserService {
 	}
 	
 	@Transactional(rollbackFor = Exception.class, readOnly = false)
-	public void deleteUtenteAndAccount(Long userId, LoginRequest request) throws Exception {
+	public void deleteUtenteAndAccount(UUID userId, LoginRequest request) throws Exception {
 		Account account = accountRepository.findById(userId)
     			.orElseThrow(() -> new ResourceNotFoundException("Account non trovato per questo ID : " + userId));
     	

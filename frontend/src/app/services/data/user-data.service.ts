@@ -21,23 +21,23 @@ export class UserDataService {
     private http: HttpClient,
     private utilityService: UtilityService) { }
 
-  getAccountDetails(userId: number): Observable<ModelAccount.AccountBean> {
+  getAccountDetails(userId: string): Observable<ModelAccount.AccountBean> {
     return this.http.get<ModelAccount.AccountBean>(USER_DATA_API + `account/${userId}/details`, httpOptions);
   }
 
-  confirmRegistration(userId: number, verificationCode: string) : Observable<UserModel>{
+  confirmRegistration(userId: string, verificationCode: string) : Observable<UserModel>{
     return this.http.put<UserModel>(USER_DATA_API + `account/${userId}/confirm/${verificationCode}`, null, httpOptions);
   }
 
-  sendEmailToConfirmEmailChange(userId: number, newEmail: string) {
+  sendEmailToConfirmEmailChange(userId: string, newEmail: string) {
     return this.http.put<Boolean>(USER_DATA_API + `account/${userId}/changeEmailRequest`, newEmail, httpOptions);
   }
 
-  confirmChangeEmail(userId: number, verificationCode: string, newEmail: string) : Observable<UserModel>{
+  confirmChangeEmail(userId: string, verificationCode: string, newEmail: string) : Observable<UserModel>{
     return this.http.put<UserModel>(USER_DATA_API + `account/${userId}/newEmail/${newEmail}/${verificationCode}`, null);
   }
 
-  changePassword(userId: number, request: ChangePasswordRequest) {
+  changePassword(userId: string, request: ChangePasswordRequest) {
     return this.http.put<UserModel>(USER_DATA_API + `account/${userId}/newPassword`, request);
   }
 
@@ -45,7 +45,7 @@ export class UserDataService {
     return this.http.put<Boolean>(USER_DATA_API + `account/${email}/sendMailToRecoverPassword`, null);
   }
 
-  resetPassword(userId: number, verificationCode: string, request: ChangePasswordRequest) {
+  resetPassword(userId: string, verificationCode: string, request: ChangePasswordRequest) {
     request.verificationCode = verificationCode;
     return this.http.put<boolean>(USER_DATA_API + `account/${userId}/resetPassword`, request, httpOptions);
   }

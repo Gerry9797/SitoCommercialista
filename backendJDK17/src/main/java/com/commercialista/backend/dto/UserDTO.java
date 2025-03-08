@@ -2,12 +2,13 @@ package com.commercialista.backend.dto;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 import com.commercialista.backend.models.Role;
 
 public class UserDTO {
 
-	private Long id;
+	private UUID id;
 
 	private String username;
 
@@ -15,11 +16,11 @@ public class UserDTO {
 
 	private Set<Role> roles = new HashSet<>();
 
-	public Long getId() {
+	public UUID getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 

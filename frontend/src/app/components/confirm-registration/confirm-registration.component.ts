@@ -14,7 +14,7 @@ import { UserDataService } from 'src/app/services/data/user-data.service';
 })
 export class ConfirmRegistrationComponent implements OnInit {
 
-  id!: number;
+  id!: string;
   verificationCode!: string
   verifiedUser: UserModel | null = null;
   isLogged: boolean = false;

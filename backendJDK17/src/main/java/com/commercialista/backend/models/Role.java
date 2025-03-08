@@ -7,35 +7,31 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "roles")
 public class Role {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
 
+  @Id
+  @Column(length = 50)
   @Enumerated(EnumType.STRING)
-  @Column(length = 20)
-  private ERole name;
+  private ERole id;
+
+  private String denominazione;
 
   public Role() {
 
   }
 
-  public Role(ERole name) {
-    this.name = name;
-  }
-
-  public Integer getId() {
+  public ERole getId() {
     return id;
   }
 
-  public void setId(Integer id) {
+  public void setId(ERole id) {
     this.id = id;
   }
 
-  public ERole getName() {
-    return name;
+  public String getDenominazione() {
+    return denominazione;
   }
 
-  public void setName(ERole name) {
-    this.name = name;
+  public void setDenominazione(String denominazione) {
+    this.denominazione = denominazione;
   }
 }

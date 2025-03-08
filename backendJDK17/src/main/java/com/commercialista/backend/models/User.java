@@ -1,13 +1,16 @@
 package com.commercialista.backend.models;
 
+import java.sql.Types;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import org.hibernate.annotations.JdbcTypeCode;
 
 @Entity
 @Table( name = "users", 
@@ -17,8 +20,11 @@ import jakarta.validation.constraints.Size;
         })
 public class User {
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+//  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue
+  @Column(length = 36)
+  @JdbcTypeCode(Types.VARCHAR)
+  private UUID id;
 
   @NotBlank
 //  @Size(max = 20)
@@ -47,11 +53,11 @@ public class User {
     this.password = password;
   }
 
-  public Long getId() {
+  public UUID getId() {
     return id;
   }
 
-  public void setId(Long id) {
+  public void setId(UUID id) {
     this.id = id;
   }
 

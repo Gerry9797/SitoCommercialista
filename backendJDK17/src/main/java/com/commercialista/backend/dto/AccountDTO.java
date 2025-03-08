@@ -1,22 +1,23 @@
 package com.commercialista.backend.dto;
 
 import java.util.Date;
+import java.util.UUID;
 
 import com.commercialista.backend.enums.StatiAccountEnum;
 
 public class AccountDTO {
 
-	private Long idUser;
+	private UUID idUser;
 
 	private StatiAccountEnum status;
 	
 	private Date dataPubb;
 
-	public Long getIdUser() {
+	public UUID getIdUser() {
 		return idUser;
 	}
 
-	public void setIdUser(Long idUser) {
+	public void setIdUser(UUID idUser) {
 		this.idUser = idUser;
 	}
 

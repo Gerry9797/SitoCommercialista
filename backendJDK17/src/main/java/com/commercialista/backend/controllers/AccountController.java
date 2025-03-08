@@ -2,6 +2,7 @@ package com.commercialista.backend.controllers;
 
 import java.io.IOException;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -64,11 +65,11 @@ public class AccountController {
 	EmailSenderService emailSenderService;
 	
 	@GetMapping("/account/{userId}/details")
-	public ResponseEntity<AccountDTO> getAccountDetails(HttpServletRequest request, @PathVariable(value = "userId") Long userId) throws Exception{
+	public ResponseEntity<AccountDTO> getAccountDetails(HttpServletRequest request, @PathVariable(value = "userId") UUID userId) throws Exception{
 		
 		UserDetailsImpl userDet = loggedUserManager.getLoggedUserDetails(request);
-		Long loggedUserId = userDet.getId();
-		if(loggedUserId != userId) {
+		UUID loggedUserId = userDet.getId();
+		if(!loggedUserId.equals(userId)) {
 			throw new Exception("Accesso vietato! Non è il tuo account!");
 		}
 		Account account = accountRepository.findById(userId)
@@ -78,7 +79,7 @@ public class AccountController {
 	}
     
 	@PutMapping("/account/{userId}/confirm/{verificationCode}")
-    public ResponseEntity<UserDTO> verifyAccountById(@PathVariable(value = "userId") Long userId, @PathVariable(value = "verificationCode") String verificationCode)
+    public ResponseEntity<UserDTO> verifyAccountById(@PathVariable(value = "userId") UUID userId, @PathVariable(value = "verificationCode") String verificationCode)
         throws ResourceNotFoundException, IOException, TemplateException, MessagingException {
   
     	Account account = accountRepository.findById(userId)
@@ -97,12 +98,12 @@ public class AccountController {
 	@PutMapping("/account/{userId}/changeEmailRequest")
 	public ResponseEntity<Boolean> requestChangeEmail(
 			HttpServletRequest request,
-			@PathVariable(value = "userId") Long userId,
+			@PathVariable(value = "userId") UUID userId,
 			@Valid @RequestBody String newEmail
 			) throws Exception{
 		
 		UserDetailsImpl userDet = loggedUserManager.getLoggedUserDetails(request);
-		Long loggedUserId = userDet.getId();
+		UUID loggedUserId = userDet.getId();
 		if(loggedUserId != userId) {
 			throw new Exception("Permesso Negato! Questo non è il tuo account!");
 		}
@@ -129,7 +130,7 @@ public class AccountController {
 	
 	
 	@PutMapping("/account/{userId}/newEmail/{newEmail}/{verificationCode}")
-    public ResponseEntity<UserDTO> changeEmail(@PathVariable(value = "userId") Long userId, @PathVariable(value = "verificationCode") String verificationCode, @PathVariable(value = "newEmail") String newEmail)
+    public ResponseEntity<UserDTO> changeEmail(@PathVariable(value = "userId") UUID userId, @PathVariable(value = "verificationCode") String verificationCode, @PathVariable(value = "newEmail") String newEmail)
         throws Exception {
   
     	Account account = accountRepository.findById(userId)
@@ -153,7 +154,7 @@ public class AccountController {
 	
 	@PutMapping("/account/{userId}/newPassword")
     public ResponseEntity<UserDTO> changePassword(
-    		@PathVariable(value = "userId") Long userId, 
+    		@PathVariable(value = "userId") UUID userId,
     		@Valid @RequestBody ChangePasswordRequest request)
     		throws Exception {
   
@@ -196,7 +197,7 @@ public class AccountController {
 	
 	@PutMapping("/account/{userId}/resetPassword")
     public ResponseEntity<Boolean> resetPassword(
-    		@PathVariable(value = "userId") Long userId,
+    		@PathVariable(value = "userId") UUID userId,
     		@Valid @RequestBody ChangePasswordRequest request
     		) throws Exception {
   
@@ -217,7 +218,7 @@ public class AccountController {
 	
 	@DeleteMapping("/account/{userId}/deleteUser")
     public ResponseEntity<Boolean> removeUserAndAccountFromTheSystem(
-    		@PathVariable(value = "userId") Long userId,
+    		@PathVariable(value = "userId") UUID userId,
     		@Valid @RequestBody LoginRequest request
     		) throws Exception {
   
